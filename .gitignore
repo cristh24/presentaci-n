@@ -1,0 +1,10 @@
+node_modules/
+server.log
+preview/
+slides_png/
+imagenes_originales/
+img dat/
+*.pptx
+*.docx
+*.pdf
+.claude/

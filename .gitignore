@@ -8,3 +8,4 @@ img dat/
 *.docx
 *.pdf
 .claude/
+dist/

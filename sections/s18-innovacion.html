@@ -1,7 +1,7 @@
 ﻿<!-- ═══════════════════════════════════════════════
-     SECCIÓN 15 — PROYECTOS DE INNOVACIÓN (PENDIENTE)
+     SECCIÓN 15 — PROYECTOS DE INNOVACIÓN
 ═══════════════════════════════════════════════ -->
-<section>
+<section data-transition="zoom-in fade-out">
 <div class="slide secdiv emerald">
   <div class="secdiv-grid"></div>
   <div class="secdiv-ghost">17</div>
@@ -10,34 +10,435 @@
     <p class="secdiv-tag">Gestión Pedagógica</p>
     <h2 class="secdiv-title" style="font-size:44px" data-typed="PROYECTOS DE<br>INNOVACIÓN">PROYECTOS DE<br>INNOVACIÓN</h2>
     <div class="secdiv-line" style="background:linear-gradient(90deg,#12B870,#0F8A5A)"></div>
-    <p class="secdiv-sub">Logros alcanzados en proyectos de innovación educativa<br>Dr. Sucapuca · Lic. Solorzano Mamani · 2022–2026</p>
+    <p class="secdiv-sub">42 proyectos FONDEP ganadores · VI Concurso Nacional 2024<br>Dr. Sucapuca · Lic. Solorzano Mamani · 2022–2026</p>
   </div>
 </div>
 </section>
 
+<!-- ═══════════════════════════════════════════════
+     SLIDE 1 — RESUMEN + EJES + GRÁFICO FONDEP
+═══════════════════════════════════════════════ -->
 <section>
 <div class="slide slide-content">
   <div class="s-hd">
     <div class="s-hd-t">
-      <h2>Proyectos de Innovación — Logros Alcanzados 2022–2026</h2>
-      <p>Responsable: Dr. Severo Sucapuca Chinoapaza · Lic. Percy Solorzano Mamani</p>
+      <h2>Proyectos de Innovación Educativa FONDEP — 2022–2026</h2>
+      <p>Ganadores UGEL San Román · Dr. Severo Sucapuca Chinoapaza · Lic. Percy Solorzano Mamani</p>
     </div>
     <img class="s-hd-logo" src="/img/image8.png" alt="">
   </div>
-  <div class="s-bd" style="justify-content:center;align-items:center">
-    <div style="text-align:center;max-width:520px">
-      <div style="width:80px;height:80px;border-radius:50%;background:linear-gradient(135deg,#0A5030,#0F8A5A);display:flex;align-items:center;justify-content:center;margin:0 auto 20px;box-shadow:0 8px 24px rgba(14,110,74,.3)">
-        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 22h4"/><path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17H8v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7z" fill="rgba(255,255,255,.2)"/></svg>
+  <div class="s-bd" style="gap:12px;padding:12px 22px 10px">
+
+    <!-- KPIs -->
+    <div class="kpi-row" style="flex-shrink:0">
+      <div class="kpi">
+        <div class="kpi-top" style="background:linear-gradient(90deg,#0A5030,#0F8A5A)"></div>
+        <div class="kpi-bd"><div class="kpi-v" style="color:#0A5030;font-size:30px">42</div><div class="kpi-l">Proyectos FONDEP ganadores</div></div>
       </div>
-      <div style="font-size:18px;font-weight:800;color:var(--navy);margin-bottom:12px">INFORMACIÓN PENDIENTE</div>
-      <div style="background:#ECFDF5;border-radius:var(--r);border:1px solid #A7F3D0;padding:16px 20px;font-size:11px;color:#0A5030;line-height:2;text-align:left">
-        <strong>Responsables:</strong> Dr. Severo Sucapuca Chinoapaza · Lic. Percy Solorzano Mamani<br>
-        <strong>Documento requerido:</strong> Informe de logros alcanzados en proyectos de innovación<br>
-        <strong>Fecha límite:</strong> 11/05/2026
+      <div class="kpi">
+        <div class="kpi-top" style="background:linear-gradient(90deg,var(--navy),var(--blue))"></div>
+        <div class="kpi-bd"><div class="kpi-v" style="color:var(--navy);font-size:30px">10</div><div class="kpi-l">Ganadores VI Concurso Nacional 2024</div></div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-top" style="background:linear-gradient(90deg,#D4A017,#EAC020)"></div>
+        <div class="kpi-bd"><div class="kpi-v" style="color:#7A5012;font-size:30px">5</div><div class="kpi-l">Años de gestión 2022–2026</div></div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-top" style="background:linear-gradient(90deg,#7C3AED,#A855F7)"></div>
+        <div class="kpi-bd"><div class="kpi-v" style="color:#7C3AED;font-size:30px">3</div><div class="kpi-l">Niveles educativos beneficiados</div></div>
       </div>
     </div>
+
+    <!-- Chart + Ejes -->
+    <div style="flex:1;min-height:0;display:flex;gap:14px">
+
+      <!-- Gráfico -->
+      <div class="bars-wrap" style="flex:1;min-width:0">
+        <div class="bars-lbl">PROYECTOS FONDEP POR NIVEL Y AÑO</div>
+        <div style="flex:1;min-height:0;position:relative">
+          <canvas id="innov-fondep-chart"></canvas>
+        </div>
+      </div>
+
+      <!-- Ejes estratégicos -->
+      <div style="flex:0 0 210px;display:flex;flex-direction:column;gap:6px;justify-content:center">
+        <div style="font-size:8px;font-weight:700;letter-spacing:2px;color:var(--gm);margin-bottom:2px">EJES ESTRATÉGICOS UGEL</div>
+        <div style="background:#F0FBF6;border-left:4px solid #0F7A5E;border-radius:0 8px 8px 0;padding:8px 12px;font-size:10px;font-weight:600;color:#0A5030">Formación continua y desempeño docente</div>
+        <div style="background:#EEF2FF;border-left:4px solid var(--blue);border-radius:0 8px 8px 0;padding:8px 12px;font-size:10px;font-weight:600;color:var(--navy)">Ciudadanos competentes en logros de aprendizaje</div>
+        <div style="background:#F5F3FF;border-left:4px solid #7C3AED;border-radius:0 8px 8px 0;padding:8px 12px;font-size:10px;font-weight:600;color:#5B21B6">Gestión y cultura organizacional corporativa</div>
+        <div style="background:#FFF7ED;border-left:4px solid #D4A017;border-radius:0 8px 8px 0;padding:8px 12px;font-size:10px;font-weight:600;color:#7A5012">Innovación e investigación</div>
+        <div style="background:#FEF2F2;border-left:4px solid #DC2626;border-radius:0 8px 8px 0;padding:8px 12px;font-size:10px;font-weight:600;color:#991B1B">Compromisos de gestión escolar</div>
+      </div>
+
+    </div>
+
   </div>
-  <div class="s-ft"><span class="s-ft-t">Pendiente · Proyectos de Innovación · UGEL San Román</span><div class="s-ft-n">—</div></div>
+  <div class="s-ft"><span class="s-ft-t">Fuente: FONDEP · UGEL San Román · Gestión 2022–2026</span><div class="s-ft-n">—</div></div>
 </div>
 </section>
 
+<!-- ═══════════════════════════════════════════════
+     SLIDE 2 — TABLA FONDEP + DEMANDA EDUCATIVA
+═══════════════════════════════════════════════ -->
+<section>
+<div class="slide slide-content">
+  <div class="s-hd">
+    <div class="s-hd-t">
+      <h2>42 Proyectos FONDEP — Distribución por Nivel y Año</h2>
+      <p>Educación Inicial · Primaria · Secundaria · UGEL San Román 2022–2026</p>
+    </div>
+    <img class="s-hd-logo" src="/img/image8.png" alt="">
+  </div>
+  <div class="s-bd" style="gap:14px;padding:12px 22px 10px">
+
+    <div style="flex:1;min-height:0;display:flex;gap:14px">
+
+      <!-- Tabla FONDEP -->
+      <div style="flex:1.2;display:flex;flex-direction:column;gap:0;border-radius:14px;overflow:hidden;box-shadow:var(--sm);border:1px solid var(--gbd)">
+        <div style="background:linear-gradient(90deg,#B91C1C,#DC2626);padding:10px 18px;flex-shrink:0">
+          <span style="font-size:11px;font-weight:800;color:#fff;letter-spacing:1px">PROYECTOS GANADORES FONDEP · 2022–2026</span>
+        </div>
+        <div style="flex:1;overflow:auto;background:#fff">
+          <table style="width:100%;border-collapse:collapse;font-size:11px">
+            <thead><tr style="background:#F8F9FB">
+              <th style="text-align:left;padding:9px 14px;color:var(--navy);font-weight:700;border-bottom:2px solid #E2E8F0">Nivel</th>
+              <th style="text-align:center;padding:9px 10px;color:#B91C1C;font-weight:700;border-bottom:2px solid #E2E8F0">2023 C1</th>
+              <th style="text-align:center;padding:9px 10px;color:#B91C1C;font-weight:700;border-bottom:2px solid #E2E8F0">2023 C2</th>
+              <th style="text-align:center;padding:9px 10px;color:var(--navy);font-weight:700;border-bottom:2px solid #E2E8F0">2024</th>
+              <th style="text-align:center;padding:9px 10px;color:var(--navy);font-weight:700;border-bottom:2px solid #E2E8F0">2025</th>
+              <th style="text-align:center;padding:9px 10px;color:#0A5030;font-weight:700;border-bottom:2px solid #E2E8F0">2026</th>
+              <th style="text-align:center;padding:9px 12px;color:var(--navy);font-weight:800;border-bottom:2px solid #E2E8F0">Total</th>
+            </tr></thead>
+            <tbody>
+              <tr style="border-bottom:1px solid #F1F5F9">
+                <td style="padding:9px 14px;color:var(--gd);font-weight:600">Ed. Inicial</td>
+                <td style="text-align:center;padding:9px 10px;font-weight:700;color:#B91C1C">3</td>
+                <td style="text-align:center;padding:9px 10px;font-weight:700;color:#B91C1C">5</td>
+                <td style="text-align:center;padding:9px 10px;font-weight:700;color:var(--navy)">5</td>
+                <td style="text-align:center;padding:9px 10px;color:var(--gm)">—</td>
+                <td style="text-align:center;padding:9px 10px;font-weight:700;color:#0A5030">1</td>
+                <td style="text-align:center;padding:9px 12px;font-weight:800;color:var(--navy)">14</td>
+              </tr>
+              <tr style="border-bottom:1px solid #F1F5F9;background:#FAFBFF">
+                <td style="padding:9px 14px;color:var(--gd);font-weight:600">Ed. Primaria</td>
+                <td style="text-align:center;padding:9px 10px;font-weight:700;color:#B91C1C">2</td>
+                <td style="text-align:center;padding:9px 10px;font-weight:700;color:#B91C1C">8</td>
+                <td style="text-align:center;padding:9px 10px;font-weight:700;color:var(--navy)">4</td>
+                <td style="text-align:center;padding:9px 10px;font-weight:700;color:var(--navy)">1</td>
+                <td style="text-align:center;padding:9px 10px;font-weight:700;color:#0A5030">2</td>
+                <td style="text-align:center;padding:9px 12px;font-weight:800;color:var(--navy)">17</td>
+              </tr>
+              <tr style="border-bottom:1px solid #F1F5F9">
+                <td style="padding:9px 14px;color:var(--gd);font-weight:600">Ed. Secundaria</td>
+                <td style="text-align:center;padding:9px 10px;font-weight:700;color:#B91C1C">2</td>
+                <td style="text-align:center;padding:9px 10px;font-weight:700;color:#B91C1C">5</td>
+                <td style="text-align:center;padding:9px 10px;font-weight:700;color:var(--navy)">1</td>
+                <td style="text-align:center;padding:9px 10px;font-weight:700;color:var(--navy)">2</td>
+                <td style="text-align:center;padding:9px 10px;font-weight:700;color:#0A5030">1</td>
+                <td style="text-align:center;padding:9px 12px;font-weight:800;color:var(--navy)">11</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr style="background:#F1F5FB;border-top:2px solid #E2E8F0">
+                <td style="padding:9px 14px;font-weight:800;color:var(--navy)">Sub Total</td>
+                <td style="text-align:center;padding:9px 10px;font-weight:800;color:#B91C1C">7</td>
+                <td style="text-align:center;padding:9px 10px;font-weight:800;color:#B91C1C">18</td>
+                <td style="text-align:center;padding:9px 10px;font-weight:800;color:var(--navy)">10</td>
+                <td style="text-align:center;padding:9px 10px;font-weight:800;color:var(--navy)">3</td>
+                <td style="text-align:center;padding:9px 10px;font-weight:800;color:#0A5030">4</td>
+                <td style="text-align:center;padding:9px 12px;font-weight:900;color:#0A5030;font-size:14px">42</td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </div>
+
+      <!-- Demanda educativa -->
+      <div style="flex:1;display:flex;flex-direction:column;gap:8px">
+        <div style="background:linear-gradient(90deg,var(--navy),var(--blue));padding:10px 16px;border-radius:12px 12px 0 0">
+          <span style="font-size:11px;font-weight:800;color:#fff;letter-spacing:1px">DEMANDA EDUCATIVA — UGEL SAN ROMÁN</span>
+        </div>
+        <div style="flex:1;display:flex;flex-direction:column;gap:6px;background:#fff;border:1px solid var(--gbd);border-top:none;border-radius:0 0 12px 12px;padding:12px 14px;box-shadow:var(--sh)">
+          <!-- Inicial -->
+          <div style="display:flex;align-items:center;gap:8px">
+            <span style="flex:0 0 80px;font-size:10px;font-weight:700;color:var(--navy)">Inicial</span>
+            <div style="flex:1;background:#F1F5F9;border-radius:6px;overflow:hidden;height:20px;position:relative">
+              <div style="height:100%;width:59%;background:linear-gradient(90deg,var(--navy),var(--blue));border-radius:6px;display:flex;align-items:center;padding-left:8px">
+                <span style="font-size:9px;font-weight:700;color:#fff">Púb. 8,486</span>
+              </div>
+            </div>
+            <span style="font-size:9px;font-weight:600;color:var(--gm);flex:0 0 70px;text-align:right">Priv. 4,616</span>
+          </div>
+          <!-- Primaria -->
+          <div style="display:flex;align-items:center;gap:8px">
+            <span style="flex:0 0 80px;font-size:10px;font-weight:700;color:var(--navy)">Primaria</span>
+            <div style="flex:1;background:#F1F5F9;border-radius:6px;overflow:hidden;height:20px;position:relative">
+              <div style="height:100%;width:63%;background:linear-gradient(90deg,#0A5030,#0F7A5E);border-radius:6px;display:flex;align-items:center;padding-left:8px">
+                <span style="font-size:9px;font-weight:700;color:#fff">Púb. 27,176</span>
+              </div>
+            </div>
+            <span style="font-size:9px;font-weight:600;color:var(--gm);flex:0 0 70px;text-align:right">Priv. 15,680</span>
+          </div>
+          <!-- Secundaria -->
+          <div style="display:flex;align-items:center;gap:8px">
+            <span style="flex:0 0 80px;font-size:10px;font-weight:700;color:var(--navy)">Secundaria</span>
+            <div style="flex:1;background:#F1F5F9;border-radius:6px;overflow:hidden;height:20px;position:relative">
+              <div style="height:100%;width:91%;background:linear-gradient(90deg,#7C3AED,#A855F7);border-radius:6px;display:flex;align-items:center;padding-left:8px">
+                <span style="font-size:9px;font-weight:700;color:#fff">Púb. 21,577</span>
+              </div>
+            </div>
+            <span style="font-size:9px;font-weight:600;color:var(--gm);flex:0 0 70px;text-align:right">Priv. 2,023</span>
+          </div>
+          <!-- EBA -->
+          <div style="display:flex;align-items:center;gap:8px">
+            <span style="flex:0 0 80px;font-size:10px;font-weight:700;color:var(--navy)">EBA</span>
+            <div style="flex:1;background:#F1F5F9;border-radius:6px;overflow:hidden;height:20px;position:relative">
+              <div style="height:100%;width:100%;background:linear-gradient(90deg,#D4A017,#EAC020);border-radius:6px;display:flex;align-items:center;padding-left:8px">
+                <span style="font-size:9px;font-weight:700;color:#fff">Púb. 2,814 · 100%</span>
+              </div>
+            </div>
+            <span style="font-size:9px;font-weight:600;color:var(--gm);flex:0 0 70px;text-align:right">Priv. 0</span>
+          </div>
+          <!-- CETPRO -->
+          <div style="display:flex;align-items:center;gap:8px">
+            <span style="flex:0 0 80px;font-size:10px;font-weight:700;color:var(--navy)">CETPRO</span>
+            <div style="flex:1;background:#F1F5F9;border-radius:6px;overflow:hidden;height:20px;position:relative">
+              <div style="height:100%;width:100%;background:linear-gradient(90deg,#B91C1C,#DC2626);border-radius:6px;display:flex;align-items:center;padding-left:8px">
+                <span style="font-size:9px;font-weight:700;color:#fff">Púb. 1,434 · 100%</span>
+              </div>
+            </div>
+            <span style="font-size:9px;font-weight:600;color:var(--gm);flex:0 0 70px;text-align:right">Priv. 0</span>
+          </div>
+          <div style="margin-top:4px;padding:8px 10px;background:#F0FBF6;border-radius:8px;border:1px solid #A7F3D0">
+            <span style="font-size:9px;font-weight:700;color:#0A5030">Total matrícula pública: 61,507 estudiantes · UGEL San Román</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+  <div class="s-ft"><span class="s-ft-t">Fuente: FONDEP · Nóminas SIAGIE · UGEL San Román · 2022–2026</span><div class="s-ft-n">—</div></div>
+</div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     SLIDE 3 — VI CONCURSO NACIONAL 2024 · 10 GANADORES
+═══════════════════════════════════════════════ -->
+<section>
+<div class="slide slide-content">
+  <div class="s-hd">
+    <div class="s-hd-t">
+      <h2>VI Concurso Nacional FONDEP 2024 — 10 Proyectos Ganadores</h2>
+      <p>Ceremonia de premiación · 09 mayo 2024 · Auditorium "Teodoro Sakata Andrade" · UGEL San Román</p>
+    </div>
+    <img class="s-hd-logo" src="/img/image8.png" alt="">
+  </div>
+  <div class="s-bd" style="gap:10px;padding:10px 22px 10px">
+
+    <!-- Banda de ceremonia compacta -->
+    <div style="flex-shrink:0;background:linear-gradient(130deg,#0B1D3A,#1A3A6B 60%,#0B2A1A);border-radius:12px;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;box-shadow:0 4px 16px rgba(11,29,58,.3)">
+      <div style="display:flex;align-items:center;gap:18px">
+        <div style="text-align:center;flex-shrink:0">
+          <div style="font-size:46px;font-weight:900;color:#fff;line-height:1;letter-spacing:-1px">10</div>
+          <div style="font-size:9px;font-weight:700;color:rgba(255,255,255,.5);letter-spacing:2px;margin-top:-2px">GANADORES</div>
+        </div>
+        <div style="width:1px;height:44px;background:rgba(255,255,255,.18);flex-shrink:0"></div>
+        <div>
+          <div style="font-size:16px;font-weight:800;color:#fff;line-height:1.2">Proyectos de Innovación Educativa · <span style="color:#EAC020">UGEL San Román</span></div>
+          <div style="font-size:11px;color:rgba(255,255,255,.6);margin-top:5px">VI Concurso Nacional FONDEP 2024 · 09 mayo 2024 · Aud. "Teodoro Sakata Andrade"</div>
+        </div>
+      </div>
+      <div style="display:flex;gap:8px;flex-shrink:0">
+        <div style="background:rgba(212,160,23,.25);border:1px solid rgba(212,160,23,.55);border-radius:10px;padding:8px 16px;text-align:center">
+          <div style="font-size:22px;font-weight:900;color:#fff;line-height:1">1</div>
+          <div style="font-size:9px;color:#EAC020;font-weight:700;letter-spacing:1px">CAT 1</div>
+        </div>
+        <div style="background:rgba(99,140,240,.25);border:1px solid rgba(99,140,240,.55);border-radius:10px;padding:8px 16px;text-align:center">
+          <div style="font-size:22px;font-weight:900;color:#fff;line-height:1">7</div>
+          <div style="font-size:9px;color:#7DA8F5;font-weight:700;letter-spacing:1px">CAT 2</div>
+        </div>
+        <div style="background:rgba(10,80,48,.35);border:1px solid rgba(74,222,128,.45);border-radius:10px;padding:8px 16px;text-align:center">
+          <div style="font-size:22px;font-weight:900;color:#fff;line-height:1">2</div>
+          <div style="font-size:9px;color:#4ADE80;font-weight:700;letter-spacing:1px">CAT 3</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3 columnas -->
+    <div style="flex:1;min-height:0;display:flex;gap:12px">
+
+      <!-- Categoría 1 -->
+      <div style="flex:0 0 235px;display:flex;flex-direction:column;gap:8px">
+        <div style="background:linear-gradient(135deg,#D4A017,#7A5012);border-radius:12px;padding:14px 18px;text-align:center;flex-shrink:0;box-shadow:0 4px 14px rgba(122,80,18,.3)">
+          <div style="font-size:10px;font-weight:700;letter-spacing:2px;color:rgba(255,255,255,.7)">CATEGORÍA 1</div>
+          <div style="font-size:16px;font-weight:800;color:#fff;margin-top:4px">Proyectos Consolidados</div>
+          <div style="font-size:10px;color:rgba(255,255,255,.65);margin-top:4px">Ciclo completo · Resultados medibles</div>
+        </div>
+        <div style="background:#FFFBEB;border:2px solid #D4A017;border-radius:12px;padding:22px 18px;box-shadow:var(--sh);flex:1;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;gap:14px">
+          <div style="background:#D4A017;color:#fff;font-size:14px;font-weight:800;padding:7px 20px;border-radius:24px">IEP 70582</div>
+          <div style="font-size:15px;font-weight:700;color:#7A5012;line-height:1.5">"Manos Ambientales Escurianas Inclusivas Trabajando desde mi Escuela"</div>
+          <div style="background:#FEF3C7;border-radius:10px;padding:12px 14px;width:100%;text-align:left">
+            <div style="font-size:12px;font-weight:700;color:#92400E;margin-bottom:4px">Nivel Primaria</div>
+            <div style="font-size:11px;color:#A0600F;line-height:1.45">Proyecto de educación ambiental con enfoque inclusivo. Participación activa de estudiantes y comunidad educativa en el cuidado del entorno.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Categoría 2 -->
+      <div style="flex:1;display:flex;flex-direction:column;gap:8px">
+        <div style="background:linear-gradient(135deg,var(--navy),var(--blue));border-radius:12px;padding:14px 18px;text-align:center;flex-shrink:0;box-shadow:0 4px 14px rgba(11,29,58,.3)">
+          <div style="font-size:10px;font-weight:700;letter-spacing:2px;color:rgba(255,255,255,.7)">CATEGORÍA 2</div>
+          <div style="font-size:16px;font-weight:800;color:#fff;margin-top:4px">Proyectos en Proceso de Implementación</div>
+          <div style="font-size:10px;color:rgba(255,255,255,.65);margin-top:4px">7 proyectos · Inicial · Primaria · Secundaria</div>
+        </div>
+        <div style="flex:1;min-height:0;display:grid;grid-template-columns:1fr 1fr;gap:7px">
+          <div style="background:#EEF2FF;border:1px solid #C7D2FE;border-radius:10px;padding:13px 14px;display:flex;flex-direction:column;gap:6px">
+            <div style="display:flex;align-items:center;justify-content:space-between;gap:6px">
+              <div style="font-size:13px;font-weight:800;color:var(--blue)">IEI 326</div>
+              <span style="background:#DBEAFE;color:var(--navy);font-size:9px;font-weight:700;padding:2px 9px;border-radius:10px;flex-shrink:0">Inicial</span>
+            </div>
+            <div style="font-size:11px;font-weight:600;color:var(--navy);line-height:1.4">"Jardín Mágico del Mundo de la Salud" — Gigantes Investigadores</div>
+          </div>
+          <div style="background:#EEF2FF;border:1px solid #C7D2FE;border-radius:10px;padding:13px 14px;display:flex;flex-direction:column;gap:6px">
+            <div style="display:flex;align-items:center;justify-content:space-between;gap:6px">
+              <div style="font-size:13px;font-weight:800;color:var(--blue)">IES Perú BIRF</div>
+              <span style="background:#DBEAFE;color:var(--navy);font-size:9px;font-weight:700;padding:2px 9px;border-radius:10px;flex-shrink:0">Secundaria</span>
+            </div>
+            <div style="font-size:11px;font-weight:600;color:var(--navy);line-height:1.4">"Museo Móvil Peruibano" — Competencias históricas Yachaywasi</div>
+          </div>
+          <div style="background:#EEF2FF;border:1px solid #C7D2FE;border-radius:10px;padding:13px 14px;display:flex;flex-direction:column;gap:6px">
+            <div style="display:flex;align-items:center;justify-content:space-between;gap:6px">
+              <div style="font-size:13px;font-weight:800;color:var(--blue)">IEP 70536</div>
+              <span style="background:#DBEAFE;color:var(--navy);font-size:9px;font-weight:700;padding:2px 9px;border-radius:10px;flex-shrink:0">Primaria</span>
+            </div>
+            <div style="font-size:11px;font-weight:600;color:var(--navy);line-height:1.4">Bibligia Explora Mundos Literarios — Biblioteca Híbrida y Gamificación</div>
+          </div>
+          <div style="background:#EEF2FF;border:1px solid #C7D2FE;border-radius:10px;padding:13px 14px;display:flex;flex-direction:column;gap:6px">
+            <div style="display:flex;align-items:center;justify-content:space-between;gap:6px">
+              <div style="font-size:13px;font-weight:800;color:var(--blue)">IEI 358</div>
+              <span style="background:#DBEAFE;color:var(--navy);font-size:9px;font-weight:700;padding:2px 9px;border-radius:10px;flex-shrink:0">Inicial</span>
+            </div>
+            <div style="font-size:11px;font-weight:600;color:var(--navy);line-height:1.4">Calceteritos Lectores — Calceterituc Nawinchayin</div>
+          </div>
+          <div style="background:#EEF2FF;border:1px solid #C7D2FE;border-radius:10px;padding:13px 14px;display:flex;flex-direction:column;gap:6px">
+            <div style="display:flex;align-items:center;justify-content:space-between;gap:6px">
+              <div style="font-size:13px;font-weight:800;color:var(--blue)">IEP 70663 · Dante Nava</div>
+              <span style="background:#DBEAFE;color:var(--navy);font-size:9px;font-weight:700;padding:2px 9px;border-radius:10px;flex-shrink:0">Primaria</span>
+            </div>
+            <div style="font-size:11px;font-weight:600;color:var(--navy);line-height:1.4">Ecoculturas Unidas — Sostenibilidad y convivencia IE</div>
+          </div>
+          <div style="background:#EEF2FF;border:1px solid #C7D2FE;border-radius:10px;padding:13px 14px;display:flex;flex-direction:column;gap:6px">
+            <div style="display:flex;align-items:center;justify-content:space-between;gap:6px">
+              <div style="font-size:13px;font-weight:800;color:var(--blue)">IEI 981 · IEP 70541</div>
+              <span style="background:#DBEAFE;color:var(--navy);font-size:9px;font-weight:700;padding:2px 9px;border-radius:10px;flex-shrink:0">Inic.·Prim.</span>
+            </div>
+            <div style="font-size:11px;font-weight:600;color:var(--navy);line-height:1.4">Mi Laboratorio Kurkunchispaq · Tejiendo Sueños</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Categoría 3 -->
+      <div style="flex:0 0 235px;display:flex;flex-direction:column;gap:8px">
+        <div style="background:linear-gradient(135deg,#0A5030,#0F7A5E);border-radius:12px;padding:14px 18px;text-align:center;flex-shrink:0;box-shadow:0 4px 14px rgba(10,80,48,.3)">
+          <div style="font-size:10px;font-weight:700;letter-spacing:2px;color:rgba(255,255,255,.7)">CATEGORÍA 3</div>
+          <div style="font-size:16px;font-weight:800;color:#fff;margin-top:4px">Investigación-Acción</div>
+          <div style="font-size:10px;color:rgba(255,255,255,.65);margin-top:4px">Investigación aplicada · Nivel Inicial</div>
+        </div>
+        <div style="background:#F0FBF6;border:2px solid #0F7A5E;border-radius:12px;padding:22px 18px;box-shadow:var(--sh);flex:1;display:flex;flex-direction:column;justify-content:center;gap:18px">
+          <div>
+            <div style="display:inline-block;background:#0A5030;color:#fff;font-size:14px;font-weight:800;padding:7px 18px;border-radius:24px;margin-bottom:10px">IEI 305</div>
+            <div style="font-size:14px;font-weight:700;color:#0A5030;line-height:1.45">"Ecovida": Sembrando vida, competencias de espacio y ambiente</div>
+            <div style="font-size:11px;color:#3D7A58;margin-top:7px;line-height:1.4">Nivel Inicial · Educación ambiental y desarrollo de competencias espaciales en niños.</div>
+          </div>
+          <div style="height:1px;background:#A7F3D0"></div>
+          <div>
+            <div style="display:inline-block;background:#0A5030;color:#fff;font-size:14px;font-weight:800;padding:7px 18px;border-radius:24px;margin-bottom:10px">IEI 371</div>
+            <div style="font-size:14px;font-weight:700;color:#0A5030;line-height:1.45">El "Ecojuego" y competencias motrices autónomas</div>
+            <div style="font-size:11px;color:#3D7A58;margin-top:7px;line-height:1.4">Nivel Inicial 3–5 años · Desarrollo motor y autonomía a través del juego ecológico.</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+  <div class="s-ft"><span class="s-ft-t">Fuente: VI Concurso Nacional Proyectos de Innovación Educativa FONDEP 2024 · UGEL San Román</span><div class="s-ft-n">—</div></div>
+</div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     SLIDE 4 — GALERÍA FONDEP (carrusel 1 imagen)
+═══════════════════════════════════════════════ -->
+<section>
+<div class="slide slide-content">
+  <div class="s-hd">
+    <div class="s-hd-t">
+      <h2>Galería — Proyectos de Innovación FONDEP 2022–2026</h2>
+      <p>Equipo UGEL San Román · Ceremonia VI Concurso Nacional · Implementación PIE 2024</p>
+    </div>
+    <img class="s-hd-logo" src="/img/image8.png" alt="">
+  </div>
+  <div class="s-bd" style="padding:10px 22px 10px">
+    <div style="flex:1;min-height:0;border-radius:14px;overflow:hidden;box-shadow:0 8px 32px rgba(11,29,58,.2)">
+      <div class="swiper" style="height:100%">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide" style="position:relative">
+            <img src="/img/innov_equipo.jpg" alt="Equipo UGEL" style="width:100%;height:100%;object-fit:cover;object-position:center 30%">
+            <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(11,29,58,.9));padding:22px 28px">
+              <div style="font-size:13px;font-weight:700;letter-spacing:2px;color:rgba(255,255,255,.7);margin-bottom:6px">UGEL SAN ROMÁN · GESTIÓN 2022–2026</div>
+              <div style="font-size:22px;font-weight:800;color:#fff">Equipo — ¡Comprometidos con una Gestión de Calidad!</div>
+            </div>
+          </div>
+          <div class="swiper-slide" style="position:relative">
+            <img src="/img/innov_calceteritos.jpg" alt="Calceteritos" style="width:100%;height:100%;object-fit:cover;object-position:top">
+            <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(11,29,58,.9));padding:22px 28px">
+              <div style="font-size:13px;font-weight:700;letter-spacing:2px;color:rgba(255,255,255,.7);margin-bottom:6px">PROYECTO FONDEP · IEI 358 · CATEGORÍA 2</div>
+              <div style="font-size:22px;font-weight:800;color:#fff">Calceteritos Lectores — Calceterituc Nawinchayin</div>
+            </div>
+          </div>
+          <div class="swiper-slide" style="position:relative">
+            <img src="/img/innov_ceremonia1.jpg" alt="Ceremonia" style="width:100%;height:100%;object-fit:cover;object-position:top">
+            <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(11,29,58,.9));padding:22px 28px">
+              <div style="font-size:13px;font-weight:700;letter-spacing:2px;color:rgba(255,255,255,.7);margin-bottom:6px">VI CONCURSO NACIONAL FONDEP · UGEL SAN ROMÁN</div>
+              <div style="font-size:22px;font-weight:800;color:#fff">Ceremonia de Premiación — Proyectos de Innovación Educativa</div>
+            </div>
+          </div>
+          <div class="swiper-slide" style="position:relative">
+            <img src="/img/innov_cert.jpg" alt="Diplomas" style="width:100%;height:100%;object-fit:cover;object-position:top">
+            <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(11,29,58,.9));padding:22px 28px">
+              <div style="font-size:13px;font-weight:700;letter-spacing:2px;color:rgba(255,255,255,.7);margin-bottom:6px">VI CONCURSO NACIONAL · 09 MAYO 2024 · FONDEP</div>
+              <div style="font-size:22px;font-weight:800;color:#fff">Entrega de Diplomas — 10 Proyectos Ganadores</div>
+            </div>
+          </div>
+          <div class="swiper-slide" style="position:relative">
+            <img src="/img/innov_aula.jpg" alt="Laboratorio" style="width:100%;height:100%;object-fit:cover;object-position:top">
+            <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(11,29,58,.9));padding:22px 28px">
+              <div style="font-size:13px;font-weight:700;letter-spacing:2px;color:rgba(255,255,255,.7);margin-bottom:6px">IMPLEMENTACIÓN PIE · IEI 326 · CATEGORÍA 2</div>
+              <div style="font-size:22px;font-weight:800;color:#fff">Jardín Mágico del Mundo de la Salud — Laboratorio</div>
+            </div>
+          </div>
+          <div class="swiper-slide" style="position:relative">
+            <img src="/img/innov_grupo1.jpg" alt="Capacitación" style="width:100%;height:100%;object-fit:cover;object-position:top">
+            <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(11,29,58,.9));padding:22px 28px">
+              <div style="font-size:13px;font-weight:700;letter-spacing:2px;color:rgba(255,255,255,.7);margin-bottom:6px">PIE FONDEP 2024 · UGEL SAN ROMÁN</div>
+              <div style="font-size:22px;font-weight:800;color:#fff">Capacitación a Docentes de IIEE en PIE FONDEP</div>
+            </div>
+          </div>
+          <div class="swiper-slide" style="position:relative">
+            <img src="/img/innov_auditorio.jpg" alt="Premiación" style="width:100%;height:100%;object-fit:cover;object-position:top">
+            <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(11,29,58,.9));padding:22px 28px">
+              <div style="font-size:13px;font-weight:700;letter-spacing:2px;color:rgba(255,255,255,.7);margin-bottom:6px">PREMIACIÓN PIE FONDEP 2024 · UGEL SAN ROMÁN</div>
+              <div style="font-size:22px;font-weight:800;color:#fff">IIEE que implementaron Proyectos de Innovación Educativa</div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </div>
+  </div>
+  <div class="s-ft"><span class="s-ft-t">Fuente: FONDEP · VI Concurso Nacional Innovación Educativa 2024 · UGEL San Román</span><div class="s-ft-n">—</div></div>
+</div>
+</section>

@@ -1,43 +1,176 @@
 ﻿<!-- ═══════════════════════════════════════════════
-     SECCIÓN 03 — PAGO DE CTS (PENDIENTE)
+     S4 · DIVISOR CTS / ATS
 ═══════════════════════════════════════════════ -->
-<section>
+<section data-transition="zoom-in fade-out">
 <div class="slide secdiv navy">
   <div class="secdiv-grid"></div>
-  <div class="secdiv-ghost">03</div>
+  <div class="secdiv-ghost">04</div>
   <div class="secdiv-content">
     <img class="secdiv-logo" src="/img/image8.png" alt="UGEL San Román">
     <p class="secdiv-tag">Gestión de Recursos Humanos</p>
-    <h2 class="secdiv-title" style="font-size:52px" data-typed="PAGO DE CTS<br>Y PLANILLAS">PAGO DE CTS<br>Y PLANILLAS</h2>
+    <h2 class="secdiv-title" style="font-size:52px" data-typed="EJECUCIÓN CTS<br>Y ATS">EJECUCIÓN CTS<br>Y ATS</h2>
     <div class="secdiv-line" style="background:linear-gradient(90deg,#60A5FA,#3B82F6)"></div>
-    <p class="secdiv-sub">Compensación por Tiempo de Servicios · PEAS pagados · Monto asignado<br>Dr. Calcina · CPC Pari Mamani · Ing. Condori · 2022–2026</p>
+    <p class="secdiv-sub">Compensación por Tiempo de Servicios · Aguinaldo por Tiempo de Servicios<br>Ejecución presupuestal 2022–2026 · UGEL San Román</p>
   </div>
 </div>
 </section>
 
+<!-- ═══════════════════════════════════════════════
+     S4b · CTS — COMPENSACIÓN POR TIEMPO DE SERVICIOS
+═══════════════════════════════════════════════ -->
 <section>
 <div class="slide slide-content">
   <div class="s-hd">
     <div class="s-hd-t">
-      <h2>Pago de CTS — Compensación por Tiempo de Servicios</h2>
-      <p>Responsable: Dr. Erick Calcina Canaza · CPC Benigno Pari Mamani · Ing. Yefher Condori Mamani</p>
+      <h2>CTS — Compensación por Tiempo de Servicios</h2>
+      <p>Ejecución presupuestal mensualizada 2022–2026 · UE 301 Región Puno-Educación San Román</p>
     </div>
     <img class="s-hd-logo" src="/img/image8.png" alt="">
   </div>
-  <div class="s-bd" style="justify-content:center;align-items:center">
-    <div style="text-align:center;max-width:520px">
-      <div style="width:80px;height:80px;border-radius:50%;background:linear-gradient(135deg,var(--navy),var(--blue));display:flex;align-items:center;justify-content:center;margin:0 auto 20px;box-shadow:0 8px 24px rgba(37,99,235,.3)">
-        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" fill="rgba(255,255,255,.2)"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/><line x1="2" y1="12" x2="22" y2="12"/></svg>
+  <div class="s-bd">
+
+    <!-- KPI row -->
+    <div class="kpi-row" style="margin-bottom:10px">
+      <div class="kpi">
+        <div class="kpi-top" style="background:linear-gradient(90deg,#0B1D3A,#1E4D9B)"></div>
+        <div class="kpi-bd">
+          <div class="kpi-v" style="color:#0B1D3A;font-size:17px">S/ 70,122,662</div>
+          <div class="kpi-l">PIM Total 2022–2026</div>
+        </div>
       </div>
-      <div style="font-size:18px;font-weight:800;color:var(--navy);margin-bottom:12px">INFORMACIÓN PENDIENTE</div>
-      <div style="background:#ECF1FA;border-radius:var(--r);border:1px solid #C3CFDF;padding:16px 20px;font-size:11px;color:#1E40AF;line-height:2;text-align:left">
-        <strong>Responsables:</strong> Dr. Erick Calcina Canaza · CPC Benigno Pari Mamani · Ing. Yefher Condori Mamani<br>
-        <strong>Documento requerido:</strong> Informe detallado — cantidad de PEAS y monto asignado<br>
-        <strong>Fecha límite:</strong> 11/05/2026
+      <div class="kpi">
+        <div class="kpi-top" style="background:linear-gradient(90deg,#0F7A5E,#1A9E7A)"></div>
+        <div class="kpi-bd">
+          <div class="kpi-v" style="color:#0F7A5E;font-size:17px">S/ 70,022,679</div>
+          <div class="kpi-l">Total Ejecutado 2022–2026</div>
+        </div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-top" style="background:linear-gradient(90deg,#D4A017,#EAC020)"></div>
+        <div class="kpi-bd">
+          <div class="kpi-v" style="color:#7A5012;font-size:20px">99.9%</div>
+          <div class="kpi-l">% Ejecución acumulada</div>
+        </div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-top" style="background:linear-gradient(90deg,#1E4D9B,#2E6BC8)"></div>
+        <div class="kpi-bd">
+          <div class="kpi-v" style="color:#1E4D9B;font-size:17px">S/ 14,004,536</div>
+          <div class="kpi-l">Promedio anual ejecutado</div>
+        </div>
       </div>
     </div>
+
+    <!-- Chart -->
+    <div class="chart-row">
+      <div class="bars-wrap" style="flex:1;min-width:0">
+        <div class="bars-lbl">PIM vs. EJECUCIÓN POR AÑO — CTS (en soles)</div>
+        <div style="flex:1;min-height:0;position:relative;padding-bottom:4px">
+          <canvas id="cts-year-chart"></canvas>
+        </div>
+      </div>
+      <div style="flex:0 0 180px;display:flex;flex-direction:column;gap:8px">
+        <div style="background:linear-gradient(135deg,#0B1D3A,#1E4D9B);border-radius:var(--r);padding:14px 16px;color:#fff;flex:1;display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden">
+          <div style="position:absolute;top:0;left:0;right:0;height:4px;background:#D4A017"></div>
+          <div style="font-size:8px;font-weight:700;letter-spacing:2px;color:rgba(255,255,255,.65);margin-bottom:6px">MAYOR EJECUCIÓN</div>
+          <div style="font-size:13px;font-weight:800;line-height:1.2">2026</div>
+          <div style="font-size:22px;font-weight:800;line-height:1;margin-top:4px">S/ 23.4M</div>
+          <div style="font-size:8px;color:rgba(255,255,255,.6);margin-top:4px">100% ejecutado</div>
+        </div>
+        <div style="background:#fff;border-radius:var(--r);border:1px solid var(--gbd);box-shadow:var(--sh);padding:12px 14px">
+          <div style="font-size:8px;font-weight:700;color:var(--gm);letter-spacing:2px;margin-bottom:6px">INCREMENTO 2022→2026</div>
+          <div style="font-size:22px;font-weight:800;color:#0F7A5E">+1,108%</div>
+          <div style="font-size:9px;color:var(--gm);margin-top:2px">de S/1.9M a S/23.4M</div>
+        </div>
+        <div style="background:var(--light);border-radius:var(--r);border:1px solid var(--gbd);padding:10px 14px">
+          <div style="font-size:8px;font-weight:700;color:var(--navy);letter-spacing:1px;margin-bottom:4px">SALDO TOTAL</div>
+          <div style="font-size:14px;font-weight:800;color:var(--navy)">S/ 99,983</div>
+          <div style="font-size:9px;color:var(--gm);margin-top:2px">sin ejecutar (2022–2026)</div>
+        </div>
+      </div>
+    </div>
+
   </div>
-  <div class="s-ft"><span class="s-ft-t">Pendiente · Pago de CTS · UGEL San Román</span><div class="s-ft-n">—</div></div>
+  <div class="s-ft"><span class="s-ft-t">Fuente: EJECUCION CTS ATS 2022-2026 · UE 301 · UGEL San Román</span><div class="s-ft-n">—</div></div>
 </div>
 </section>
 
+<!-- ═══════════════════════════════════════════════
+     S4c · ATS — AGUINALDO POR TIEMPO DE SERVICIOS
+═══════════════════════════════════════════════ -->
+<section>
+<div class="slide slide-content">
+  <div class="s-hd">
+    <div class="s-hd-t">
+      <h2>ATS — Aguinaldo por Tiempo de Servicios</h2>
+      <p>Ejecución presupuestal mensualizada 2022–2026 · UE 301 Región Puno-Educación San Román</p>
+    </div>
+    <img class="s-hd-logo" src="/img/image8.png" alt="">
+  </div>
+  <div class="s-bd">
+
+    <!-- KPI row -->
+    <div class="kpi-row" style="margin-bottom:10px">
+      <div class="kpi">
+        <div class="kpi-top" style="background:linear-gradient(90deg,#0B1D3A,#1E4D9B)"></div>
+        <div class="kpi-bd">
+          <div class="kpi-v" style="color:#0B1D3A;font-size:17px">S/ 7,755,285</div>
+          <div class="kpi-l">PIM Total 2022–2026</div>
+        </div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-top" style="background:linear-gradient(90deg,#0F7A5E,#1A9E7A)"></div>
+        <div class="kpi-bd">
+          <div class="kpi-v" style="color:#0F7A5E;font-size:17px">S/ 5,768,606</div>
+          <div class="kpi-l">Total Ejecutado 2022–2026</div>
+        </div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-top" style="background:linear-gradient(90deg,#D4A017,#EAC020)"></div>
+        <div class="kpi-bd">
+          <div class="kpi-v" style="color:#7A5012;font-size:20px">74.4%</div>
+          <div class="kpi-l">% Ejecución acumulada</div>
+        </div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-top" style="background:linear-gradient(90deg,#1E4D9B,#2E6BC8)"></div>
+        <div class="kpi-bd">
+          <div class="kpi-v" style="color:#1E4D9B;font-size:17px">S/ 1,153,721</div>
+          <div class="kpi-l">Promedio anual ejecutado</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Chart -->
+    <div class="chart-row">
+      <div class="bars-wrap" style="flex:1;min-width:0">
+        <div class="bars-lbl">PIM vs. EJECUCIÓN POR AÑO — ATS (en soles)</div>
+        <div style="flex:1;min-height:0;position:relative;padding-bottom:4px">
+          <canvas id="ats-year-chart"></canvas>
+        </div>
+      </div>
+      <div style="flex:0 0 180px;display:flex;flex-direction:column;gap:8px">
+        <div style="background:linear-gradient(135deg,#0B1D3A,#1E4D9B);border-radius:var(--r);padding:14px 16px;color:#fff;flex:1;display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden">
+          <div style="position:absolute;top:0;left:0;right:0;height:4px;background:#D4A017"></div>
+          <div style="font-size:8px;font-weight:700;letter-spacing:2px;color:rgba(255,255,255,.65);margin-bottom:6px">MEJOR AÑO</div>
+          <div style="font-size:13px;font-weight:800;line-height:1.2">2023</div>
+          <div style="font-size:22px;font-weight:800;line-height:1;margin-top:4px">S/ 1.74M</div>
+          <div style="font-size:8px;color:rgba(255,255,255,.6);margin-top:4px">100% ejecutado</div>
+        </div>
+        <div style="background:#fff;border-radius:var(--r);border:1px solid var(--gbd);box-shadow:var(--sh);padding:12px 14px">
+          <div style="font-size:8px;font-weight:700;color:var(--gm);letter-spacing:2px;margin-bottom:6px">2026 EN PROCESO</div>
+          <div style="font-size:22px;font-weight:800;color:#D4A017">24.2%</div>
+          <div style="font-size:9px;color:var(--gm);margin-top:2px">S/ 634K de S/ 2.62M PIM</div>
+        </div>
+        <div style="background:var(--light);border-radius:var(--r);border:1px solid var(--gbd);padding:10px 14px">
+          <div style="font-size:8px;font-weight:700;color:var(--navy);letter-spacing:1px;margin-bottom:4px">SALDO 2022–2025</div>
+          <div style="font-size:14px;font-weight:800;color:#0F7A5E">S/ 835.9</div>
+          <div style="font-size:9px;color:var(--gm);margin-top:2px">ejecutado casi al 100%</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="s-ft"><span class="s-ft-t">Fuente: EJECUCION CTS ATS 2022-2026 · UE 301 · UGEL San Román</span><div class="s-ft-n">—</div></div>
+</div>
+</section>

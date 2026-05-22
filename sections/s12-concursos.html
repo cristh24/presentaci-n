@@ -1,7 +1,7 @@
 ﻿<!-- ═══════════════════════════════════════════════
      S14 · SECCIÓN 03 — CONCURSOS
 ═══════════════════════════════════════════════ -->
-<section>
+<section data-transition="zoom-in fade-out">
 <div class="slide secdiv blue">
   <div class="secdiv-grid"></div>
   <div class="secdiv-ghost">11</div>
@@ -30,10 +30,10 @@
       <div style="flex:0 0 340px;position:relative;border-radius:var(--r);overflow:hidden;box-shadow:var(--sm)">
         <div class="swiper" style="height:100%">
           <div class="swiper-wrapper">
-            <div class="swiper-slide"><a href="/img/image52.jpg" class="glightbox photo-link" data-gallery="onem" data-title="Premiación ONEM 2025"><img src="/img/image52.jpg" alt="Premiación ONEM 2025" style="width:100%;height:100%;object-fit:cover"></a></div>
-            <div class="swiper-slide"><a href="/img/image54.jpg" class="glightbox photo-link" data-gallery="onem" data-title="Entrega de Medalla ONEM"><img src="/img/image54.jpg" alt="Entrega medalla" style="width:100%;height:100%;object-fit:cover"></a></div>
-            <div class="swiper-slide"><a href="/img/image53.jpg" class="glightbox photo-link" data-gallery="onem" data-title="Jhoel Anderson Mamani — 2.° BETA Niv.2"><img src="/img/image53.jpg" alt="Alumno Trinomio" style="width:100%;height:100%;object-fit:cover"></a></div>
-            <div class="swiper-slide"><a href="/img/image55.jpg" class="glightbox photo-link" data-gallery="onem" data-title="Leonel Gutierrez Puma — 3.° BETA Niv.2"><img src="/img/image55.jpg" alt="Alumno Trinomio 2" style="width:100%;height:100%;object-fit:cover"></a></div>
+            <div class="swiper-slide"><a href="/img/image52.jpg" class="glightbox photo-link" data-gallery="onem" data-title="Premiación ONEM 2025"><img src="/img/image52.jpg" alt="Premiación ONEM 2025" style="width:100%;height:100%;object-fit:cover;object-position:top"></a></div>
+            <div class="swiper-slide"><a href="/img/image54.jpg" class="glightbox photo-link" data-gallery="onem" data-title="Entrega de Medalla ONEM"><img src="/img/image54.jpg" alt="Entrega medalla" style="width:100%;height:100%;object-fit:cover;object-position:top"></a></div>
+            <div class="swiper-slide"><a href="/img/image53.jpg" class="glightbox photo-link" data-gallery="onem" data-title="Jhoel Anderson Mamani — 2.° BETA Niv.2"><img src="/img/image53.jpg" alt="Alumno Trinomio" style="width:100%;height:100%;object-fit:cover;object-position:top"></a></div>
+            <div class="swiper-slide"><a href="/img/image55.jpg" class="glightbox photo-link" data-gallery="onem" data-title="Leonel Gutierrez Puma — 3.° BETA Niv.2"><img src="/img/image55.jpg" alt="Alumno Trinomio 2" style="width:100%;height:100%;object-fit:cover;object-position:top"></a></div>
           </div>
           <div class="swiper-pagination"></div>
         </div>
@@ -84,52 +84,89 @@
     <div class="s-hd-t"><h2>ONEM 2025 — Premiación y Medallas</h2><p>Olimpiada Nacional Escolar de Matemática · Categoría BETA · UGEL San Román</p></div>
     <img class="s-hd-logo" src="/img/image8.png" alt="">
   </div>
-  <div class="s-bd">
+  <div class="s-bd" style="padding:10px 22px 10px;gap:12px">
     <div style="display:flex;gap:12px;flex:1;min-height:0">
-      <!-- Foto grupal grande -->
-      <div style="flex:2;position:relative;border-radius:var(--r);overflow:hidden;box-shadow:var(--sm)">
-        <img src="/img/image52.jpg" alt="Premiación grupal ONEM 2025" style="width:100%;height:100%;object-fit:cover">
-        <div style="position:absolute;bottom:0;left:0;right:0;padding:16px 18px;background:linear-gradient(to top,rgba(10,22,40,.95),transparent)">
-          <div style="font-size:18px;font-weight:800;color:#fff">Premiación Oficial ONEM 2025</div>
-          <div style="font-size:14px;color:rgba(255,255,255,.7);margin-top:3px">UGEL San Román · Dr. L. Jarid Mamani Llano · Gestión de Calidad</div>
+
+      <!-- Carrusel izquierda -->
+      <div style="flex:1;min-width:0;position:relative;border-radius:14px;overflow:hidden;box-shadow:0 8px 32px rgba(11,29,58,.22)">
+        <div class="swiper" style="height:100%">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide" style="position:relative">
+              <img src="/img/image52.jpg" alt="Premiación grupal" style="width:100%;height:100%;object-fit:cover;object-position:top">
+              <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(11,29,58,.9));padding:20px 24px">
+                <div style="font-size:13px;font-weight:700;letter-spacing:2px;color:rgba(255,255,255,.7);margin-bottom:5px">ONEM 2025 · UGEL SAN ROMÁN</div>
+                <div style="font-size:20px;font-weight:800;color:#fff">Premiación Oficial — Categoría BETA</div>
+              </div>
+            </div>
+            <div class="swiper-slide" style="position:relative">
+              <img src="/img/image54.jpg" alt="Entrega de medalla" style="width:100%;height:100%;object-fit:cover;object-position:top">
+              <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(11,29,58,.9));padding:20px 24px">
+                <div style="font-size:13px;font-weight:700;letter-spacing:2px;color:rgba(255,255,255,.7);margin-bottom:5px">CEREMONIA · OLIMPIADA NACIONAL</div>
+                <div style="font-size:20px;font-weight:800;color:#fff">Entrega de Medallas ONEM 2025</div>
+              </div>
+            </div>
+            <div class="swiper-slide" style="position:relative">
+              <img src="/img/image53.jpg" alt="Jhoel Anderson Mamani" style="width:100%;height:100%;object-fit:cover;object-position:top">
+              <div style="position:absolute;top:14px;left:14px;background:linear-gradient(90deg,#94A3B8,#64748B);color:#fff;font-size:13px;font-weight:800;padding:5px 14px;border-radius:20px">🥈 MEDALLA DE PLATA</div>
+              <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(11,29,58,.9));padding:20px 24px">
+                <div style="font-size:13px;font-weight:700;letter-spacing:2px;color:rgba(255,255,255,.7);margin-bottom:5px">BETA Niv.2 · 2.° PUESTO NACIONAL</div>
+                <div style="font-size:20px;font-weight:800;color:#fff">Jhoel Anderson Mamani Mamani · IE Trinomio</div>
+              </div>
+            </div>
+            <div class="swiper-slide" style="position:relative">
+              <img src="/img/image55.jpg" alt="Leonel Gutierrez Puma" style="width:100%;height:100%;object-fit:cover;object-position:top">
+              <div style="position:absolute;top:14px;left:14px;background:linear-gradient(90deg,#CD7F32,#A0522D);color:#fff;font-size:13px;font-weight:800;padding:5px 14px;border-radius:20px">🥉 MEDALLA DE BRONCE</div>
+              <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(11,29,58,.9));padding:20px 24px">
+                <div style="font-size:13px;font-weight:700;letter-spacing:2px;color:rgba(255,255,255,.7);margin-bottom:5px">BETA Niv.2 · 3.° PUESTO NACIONAL</div>
+                <div style="font-size:20px;font-weight:800;color:#fff">Leonel Gutierrez Puma · IE Trinomio</div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
         </div>
+        <img src="/img/image50-clean.png" alt="ONEM" style="position:absolute;top:12px;right:12px;height:52px;object-fit:contain;filter:drop-shadow(0 2px 8px rgba(0,0,0,.5));z-index:10;pointer-events:none">
       </div>
-      <!-- Foto ceremonia -->
-      <div style="flex:1;position:relative;border-radius:var(--r);overflow:hidden;box-shadow:var(--sm)">
-        <img src="/img/image54.jpg" alt="Ceremonia medalla" style="width:100%;height:100%;object-fit:cover">
-        <div style="position:absolute;top:10px;left:10px;background:var(--gold);color:#fff;font-size:13px;font-weight:800;padding:5px 12px;border-radius:20px">Entrega de Medalla</div>
-      </div>
-      <!-- Retratos + medallas -->
-      <div style="flex:0 0 230px;display:flex;flex-direction:column;gap:9px">
-        <!-- Alumno 1 -->
-        <div style="flex:1;position:relative;border-radius:var(--r);overflow:hidden;box-shadow:var(--sh);background:#fff;display:flex;align-items:stretch">
-          <img src="/img/image53.jpg" alt="Alumno Trinomio" style="width:100px;object-fit:cover;flex-shrink:0">
-          <div style="padding:10px 12px;display:flex;flex-direction:column;justify-content:center">
-            <div style="font-size:12px;font-weight:800;color:#94A3B8;letter-spacing:1px;margin-bottom:4px;background:#F1F5F9;display:inline-block;padding:3px 10px;border-radius:20px">PLATA</div>
-            <div style="font-size:13px;font-weight:800;color:var(--navy);line-height:1.2">JHOEL ANDERSON<br>MAMANI MAMANI</div>
-            <div style="font-size:11px;color:var(--gm);margin-top:3px">BETA Niv.2 — 2.° Puesto</div>
-            <div style="font-size:11px;color:var(--teal);font-weight:600">IE Trinomio</div>
+
+      <!-- Panel medallistas derecha -->
+      <div style="flex:0 0 240px;display:flex;flex-direction:column;gap:10px">
+        <!-- Header panel -->
+        <div style="background:linear-gradient(135deg,#0B1D3A,#1A3A6B);border-radius:12px;padding:14px 16px;text-align:center;flex-shrink:0">
+          <div style="font-size:10px;font-weight:700;letter-spacing:2px;color:rgba(255,255,255,.6);margin-bottom:4px">CATEGORÍA BETA · 2025</div>
+          <div style="font-size:17px;font-weight:900;color:#fff">3 Medallistas</div>
+          <div style="font-size:11px;color:rgba(255,255,255,.6);margin-top:3px">UGEL San Román · ACEROS AREQUIPA</div>
+        </div>
+        <!-- Alumno 1 — Plata -->
+        <div style="flex:1;border-radius:12px;overflow:hidden;box-shadow:var(--sh);background:#fff;display:flex;align-items:stretch;border:2px solid #CBD5E1">
+          <img src="/img/image53.jpg" alt="Jhoel Anderson" style="width:90px;object-fit:cover;object-position:top;flex-shrink:0">
+          <div style="padding:12px 12px;display:flex;flex-direction:column;justify-content:center;gap:4px">
+            <div style="background:#F1F5F9;color:#475569;font-size:11px;font-weight:800;padding:3px 10px;border-radius:20px;display:inline-block;letter-spacing:1px">🥈 PLATA</div>
+            <div style="font-size:13px;font-weight:800;color:var(--navy);line-height:1.25">Jhoel Anderson<br>Mamani Mamani</div>
+            <div style="font-size:11px;color:var(--gm)">BETA Niv.2 · 2.° Puesto</div>
+            <div style="font-size:11px;font-weight:700;color:var(--teal)">IE Trinomio</div>
           </div>
         </div>
-        <!-- Alumno 2 -->
-        <div style="flex:1;position:relative;border-radius:var(--r);overflow:hidden;box-shadow:var(--sh);background:#fff;display:flex;align-items:stretch">
-          <img src="/img/image55.jpg" alt="Alumno Trinomio 2" style="width:100px;object-fit:cover;flex-shrink:0">
-          <div style="padding:10px 12px;display:flex;flex-direction:column;justify-content:center">
-            <div style="font-size:12px;font-weight:800;color:#CD7F32;letter-spacing:1px;margin-bottom:4px;background:#FDF3E7;display:inline-block;padding:3px 10px;border-radius:20px">BRONCE</div>
-            <div style="font-size:13px;font-weight:800;color:var(--navy);line-height:1.2">LEONEL GUTIERREZ<br>PUMA</div>
-            <div style="font-size:11px;color:var(--gm);margin-top:3px">BETA Niv.2 — 3.° Puesto</div>
-            <div style="font-size:11px;color:var(--teal);font-weight:600">IE Trinomio</div>
+        <!-- Alumno 2 — Bronce -->
+        <div style="flex:1;border-radius:12px;overflow:hidden;box-shadow:var(--sh);background:#fff;display:flex;align-items:stretch;border:2px solid #FDE68A">
+          <img src="/img/image55.jpg" alt="Leonel Gutierrez" style="width:90px;object-fit:cover;object-position:top;flex-shrink:0">
+          <div style="padding:12px 12px;display:flex;flex-direction:column;justify-content:center;gap:4px">
+            <div style="background:#FEF3C7;color:#92400E;font-size:11px;font-weight:800;padding:3px 10px;border-radius:20px;display:inline-block;letter-spacing:1px">🥉 BRONCE</div>
+            <div style="font-size:13px;font-weight:800;color:var(--navy);line-height:1.25">Leonel Gutierrez<br>Puma</div>
+            <div style="font-size:11px;color:var(--gm)">BETA Niv.2 · 3.° Puesto</div>
+            <div style="font-size:11px;font-weight:700;color:var(--teal)">IE Trinomio</div>
           </div>
         </div>
-        <!-- Alumno 3 -->
-        <div style="flex:1;border-radius:var(--r);box-shadow:var(--sh);background:linear-gradient(135deg,var(--navy),var(--blue));padding:12px 14px;color:#fff;display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden">
-          <div style="position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--gold),var(--amber))"></div>
-          <div style="font-size:12px;font-weight:800;color:#CD7F32;letter-spacing:1px;margin-bottom:4px;background:rgba(255,255,255,.15);display:inline-block;padding:3px 10px;border-radius:20px">BRONCE</div>
-          <div style="font-size:13px;font-weight:800;line-height:1.2">BRUSS BRYAN<br>MAMANI MENDOZA</div>
-          <div style="font-size:11px;color:rgba(255,255,255,.7);margin-top:3px">BETA Niv.3 — 3.° Puesto</div>
-          <div style="font-size:11px;color:var(--amber);font-weight:600">IE Albert Einstein</div>
+        <!-- Alumno 3 — Bronce (sin foto) -->
+        <div style="flex:1;border-radius:12px;box-shadow:var(--sh);background:linear-gradient(135deg,#0B1D3A,#1A3A6B);padding:14px 14px;color:#fff;display:flex;flex-direction:column;justify-content:center;gap:5px;position:relative;overflow:hidden;border:2px solid #FDE68A">
+          <div style="position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,#CD7F32,#A0522D)"></div>
+          <div style="background:rgba(205,127,50,.2);color:#F59E0B;font-size:11px;font-weight:800;padding:3px 10px;border-radius:20px;display:inline-block;letter-spacing:1px">🥉 BRONCE</div>
+          <div style="font-size:13px;font-weight:800;line-height:1.25">Bruss Bryan<br>Mamani Mendoza</div>
+          <div style="font-size:11px;color:rgba(255,255,255,.65)">BETA Niv.3 · 3.° Puesto</div>
+          <div style="font-size:11px;font-weight:700;color:#FCD34D">IE Albert Einstein</div>
         </div>
       </div>
+
     </div>
   </div>
   <div class="s-ft"><span class="s-ft-t">IE Trinomio e IE Albert Einstein — ONEM 2025 · Categoría BETA · UGEL San Román</span><div class="s-ft-n">39</div></div>
@@ -149,7 +186,7 @@
     <div style="display:flex;gap:11px;flex:1;min-height:0">
       <!-- Foto 1: 3er puesto nacional -->
       <div style="flex:1;position:relative;border-radius:var(--r);overflow:hidden;box-shadow:var(--sm)">
-        <a href="/img/image56.jpg" class="glightbox photo-link" data-gallery="perulec" data-title="3.er Puesto Nacional — Jordy Condori · IEP 70547 Manco Capac"><img src="/img/image56.jpg" alt="3er Puesto Nacional" style="width:100%;height:100%;object-fit:cover"></a>
+        <a href="/img/image56.jpg" class="glightbox photo-link" data-gallery="perulec" data-title="3.er Puesto Nacional — Jordy Condori · IEP 70547 Manco Capac"><img src="/img/image56.jpg" alt="3er Puesto Nacional" style="width:100%;height:100%;object-fit:cover;object-position:top"></a>
         <div style="position:absolute;top:10px;left:10px;background:#DC2626;color:#fff;font-size:14px;font-weight:800;padding:6px 14px;border-radius:20px;pointer-events:none">3.er Puesto NACIONAL</div>
         <div style="position:absolute;bottom:0;left:0;right:0;padding:12px 14px;background:linear-gradient(to top,rgba(10,22,40,.92),transparent);pointer-events:none">
           <div style="font-size:16px;font-weight:700;color:#fff">Categoría B</div>
@@ -158,7 +195,7 @@
       </div>
       <!-- Foto 2: Cartelera lectora -->
       <div style="flex:1;position:relative;border-radius:var(--r);overflow:hidden;box-shadow:var(--sm)">
-        <a href="/img/image57.jpg" class="glightbox photo-link" data-gallery="perulec" data-title="1.er Lugar Macrorregional — Mi Cartelera Lectora Cat. C · IEP 70547"><img src="/img/image57.jpg" alt="Cartelera Lectora" style="width:100%;height:100%;object-fit:cover"></a>
+        <a href="/img/image57.jpg" class="glightbox photo-link" data-gallery="perulec" data-title="1.er Lugar Macrorregional — Mi Cartelera Lectora Cat. C · IEP 70547"><img src="/img/image57.jpg" alt="Cartelera Lectora" style="width:100%;height:100%;object-fit:cover;object-position:top"></a>
         <div style="position:absolute;top:10px;left:10px;background:var(--blue);color:#fff;font-size:14px;font-weight:800;padding:6px 14px;border-radius:20px;pointer-events:none">1.er Lugar Macrorregional</div>
         <div style="position:absolute;bottom:0;left:0;right:0;padding:12px 14px;background:linear-gradient(to top,rgba(10,22,40,.92),transparent);pointer-events:none">
           <div style="font-size:16px;font-weight:700;color:#fff">Mi Cartelera Lectora — Categoría C</div>
@@ -167,7 +204,7 @@
       </div>
       <!-- Foto 3: Entrega premios -->
       <div style="flex:1;position:relative;border-radius:var(--r);overflow:hidden;box-shadow:var(--sm)">
-        <a href="/img/image58.jpg" class="glightbox photo-link" data-gallery="perulec" data-title="1.er Lugar Macrorregional — Mi Bitácora de Lectura Cat. B · IEP 70647"><img src="/img/image58.jpg" alt="Entrega de premios" style="width:100%;height:100%;object-fit:cover"></a>
+        <a href="/img/image58.jpg" class="glightbox photo-link" data-gallery="perulec" data-title="1.er Lugar Macrorregional — Mi Bitácora de Lectura Cat. B · IEP 70647"><img src="/img/image58.jpg" alt="Entrega de premios" style="width:100%;height:100%;object-fit:cover;object-position:top"></a>
         <div style="position:absolute;top:10px;left:10px;background:var(--teal);color:#fff;font-size:14px;font-weight:800;padding:6px 14px;border-radius:20px;pointer-events:none">1.er Lugar Macrorregional</div>
         <div style="position:absolute;bottom:0;left:0;right:0;padding:12px 14px;background:linear-gradient(to top,rgba(10,22,40,.92),transparent);pointer-events:none">
           <div style="font-size:16px;font-weight:700;color:#fff">Mi Bitácora de Lectura — Categoría B</div>
@@ -216,14 +253,14 @@
     <!-- 3 fotos abajo -->
     <div style="display:flex;gap:11px;flex:1;min-height:0">
       <div style="flex:1;position:relative;border-radius:var(--r);overflow:hidden;box-shadow:var(--sm)">
-        <a href="/img/image60.jpg" class="glightbox photo-link" data-gallery="jfen" data-title="Danza Cat. F — Colegio Adventista del Titicaca · 1.er Puesto Nacional JFEN 2025"><img src="/img/image60.jpg" alt="Danza Juegos Florales" style="width:100%;height:100%;object-fit:cover"></a>
+        <a href="/img/image60.jpg" class="glightbox photo-link" data-gallery="jfen" data-title="Danza Cat. F — Colegio Adventista del Titicaca · 1.er Puesto Nacional JFEN 2025"><img src="/img/image60.jpg" alt="Danza Juegos Florales" style="width:100%;height:100%;object-fit:cover;object-position:top"></a>
         <div style="position:absolute;bottom:0;left:0;right:0;padding:10px 14px;background:linear-gradient(to top,rgba(10,22,40,.9),transparent);pointer-events:none">
           <div style="font-size:15px;font-weight:700;color:#fff">Danza — Cat. F · 1.er Puesto Nacional</div>
           <div style="font-size:12px;color:rgba(255,255,255,.7)">Colegio Adventista del Titicaca</div>
         </div>
       </div>
       <div style="flex:1;position:relative;border-radius:var(--r);overflow:hidden;box-shadow:var(--sm)">
-        <a href="/img/image61.jpeg" class="glightbox photo-link" data-gallery="jfen" data-title="Premiación DREP Puno — Juegos Florales Escolares Nacionales 2025"><img src="/img/image61.jpeg" alt="Estudiante con medalla JFEN" style="width:100%;height:100%;object-fit:cover"></a>
+        <a href="/img/image61.jpeg" class="glightbox photo-link" data-gallery="jfen" data-title="Premiación DREP Puno — Juegos Florales Escolares Nacionales 2025"><img src="/img/image61.jpeg" alt="Estudiante con medalla JFEN" style="width:100%;height:100%;object-fit:cover;object-position:top"></a>
         <div style="position:absolute;top:10px;left:10px;background:var(--gold);color:#fff;font-size:13px;font-weight:800;padding:5px 12px;border-radius:20px;pointer-events:none">1.er Lugar JFEN</div>
         <div style="position:absolute;bottom:0;left:0;right:0;padding:10px 14px;background:linear-gradient(to top,rgba(10,22,40,.9),transparent);pointer-events:none">
           <div style="font-size:15px;font-weight:700;color:#fff">Premiación DREP Puno</div>
@@ -231,7 +268,7 @@
         </div>
       </div>
       <div style="flex:1;position:relative;border-radius:var(--r);overflow:hidden;box-shadow:var(--sm)">
-        <a href="/img/image63.jpg" class="glightbox photo-link" data-gallery="jfen" data-title="Teatro Cat. E — IE Santa Catalina · 1.er Puesto Nacional JFEN 2025"><img src="/img/image63.jpg" alt="Estudiante cantando teatro" style="width:100%;height:100%;object-fit:cover"></a>
+        <a href="/img/image63.jpg" class="glightbox photo-link" data-gallery="jfen" data-title="Teatro Cat. E — IE Santa Catalina · 1.er Puesto Nacional JFEN 2025"><img src="/img/image63.jpg" alt="Estudiante cantando teatro" style="width:100%;height:100%;object-fit:cover;object-position:top"></a>
         <div style="position:absolute;top:10px;left:10px;background:var(--blue);color:#fff;font-size:13px;font-weight:800;padding:5px 12px;border-radius:20px;pointer-events:none">Teatro — Cat. E · 1.er Puesto Nacional</div>
         <div style="position:absolute;bottom:0;left:0;right:0;padding:10px 14px;background:linear-gradient(to top,rgba(10,22,40,.9),transparent);pointer-events:none">
           <div style="font-size:15px;font-weight:700;color:#fff">IE Santa Catalina</div>

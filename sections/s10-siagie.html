@@ -1,7 +1,7 @@
 ﻿<!-- ═══════════════════════════════════════════════
      S3 · SECCIÓN 01 — SIAGIE
 ═══════════════════════════════════════════════ -->
-<section>
+<section data-transition="zoom-in fade-out">
 <div class="slide secdiv navy">
   <div class="secdiv-grid"></div>
   <div class="secdiv-ghost">09</div>
@@ -40,17 +40,11 @@
     <!-- Gráfico + desglose -->
     <div style="display:flex;gap:12px;flex:1;min-height:0">
 
-      <!-- Chart horizontal stacked -->
-      <div style="flex:1.6;background:#fff;border-radius:16px;border:1.5px solid #BBF7D0;box-shadow:0 4px 18px rgba(21,128,61,.08);padding:16px 20px;display:flex;flex-direction:column;gap:10px">
+      <!-- Gráfico interactivo AD/A/B/C 2023–2025 -->
+      <div style="flex:1.6;background:#fff;border-radius:16px;border:1.5px solid #BBF7D0;box-shadow:0 4px 18px rgba(21,128,61,.08);padding:16px 20px;display:flex;flex-direction:column;gap:6px">
         <div style="font-size:10px;font-weight:700;letter-spacing:3px;color:#14532D">DISTRIBUCIÓN AD / A / B / C · 2023–2025</div>
         <div style="flex:1;min-height:0;position:relative">
           <canvas id="inicial-chart"></canvas>
-        </div>
-        <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
-          <div style="display:flex;align-items:center;gap:5px"><div style="width:14px;height:10px;border-radius:2px;background:#FCA5A5"></div><span style="font-size:9px;color:#475569;font-weight:600">C — En Inicio</span></div>
-          <div style="display:flex;align-items:center;gap:5px"><div style="width:14px;height:10px;border-radius:2px;background:#EAC020"></div><span style="font-size:9px;color:#475569;font-weight:600">B — En Proceso</span></div>
-          <div style="display:flex;align-items:center;gap:5px"><div style="width:14px;height:10px;border-radius:2px;background:#86EFAC"></div><span style="font-size:9px;color:#475569;font-weight:600">A — Logro Esperado</span></div>
-          <div style="display:flex;align-items:center;gap:5px"><div style="width:14px;height:10px;border-radius:2px;background:#16A34A"></div><span style="font-size:9px;color:#475569;font-weight:600">AD — Logro Destacado</span></div>
         </div>
       </div>
 
@@ -86,14 +80,17 @@
           </div>
         </div>
 
-        <!-- Highlight AD mejora -->
-        <div style="background:linear-gradient(135deg,#14532D,#15803D);border-radius:14px;padding:16px 18px;box-shadow:0 8px 24px rgba(21,128,61,.28);display:flex;flex-direction:column;justify-content:center">
-          <div style="font-size:8px;font-weight:700;color:rgba(255,255,255,.6);letter-spacing:3px;margin-bottom:6px">AD — LOGRO DESTACADO</div>
-          <div style="display:flex;align-items:baseline;gap:10px">
-            <span style="font-size:36px;font-weight:800;color:#fff;line-height:1">10.32%</span>
-            <span style="font-size:13px;color:#86EFAC;font-weight:700">▲ +3.12 pp</span>
+        <!-- Highlight AD mejora + foto inicial -->
+        <div style="background:linear-gradient(135deg,#14532D,#15803D);border-radius:14px;overflow:hidden;box-shadow:0 8px 24px rgba(21,128,61,.28);display:flex;align-items:stretch">
+          <img src="/inicial/1.png" alt="Educación Inicial" style="width:160px;object-fit:cover;object-position:top center;flex:0 0 160px">
+          <div style="padding:14px 16px;display:flex;flex-direction:column;justify-content:center;flex:1">
+            <div style="font-size:8px;font-weight:700;color:rgba(255,255,255,.6);letter-spacing:3px;margin-bottom:6px">AD — LOGRO DESTACADO</div>
+            <div style="display:flex;align-items:baseline;gap:8px">
+              <span style="font-size:32px;font-weight:800;color:#fff;line-height:1">10.32%</span>
+              <span style="font-size:12px;color:#86EFAC;font-weight:700">▲ +3.12 pp</span>
+            </div>
+            <div style="font-size:9px;color:rgba(255,255,255,.5);margin-top:5px">2023 (7.20%) → 2024 (8.30%) → 2025 (10.32%)</div>
           </div>
-          <div style="font-size:9px;color:rgba(255,255,255,.5);margin-top:5px">2023 (7.20%) → 2024 (8.30%) → 2025 (10.32%)</div>
         </div>
       </div>
     </div>
@@ -106,49 +103,84 @@
      S5 · EDUCACIÓN PRIMARIA
 ═══════════════════════════════════════════════ -->
 <section>
-<div class="slide slide-content">
-  <div class="s-hd">
+<div class="slide slide-content" style="background:linear-gradient(150deg,#EFF6FF 0%,#F8FAFF 55%,#EEF2FF 100%)">
+  <div class="s-hd" style="border-bottom:1px solid #BFDBFE">
     <div class="s-hd-t">
       <h2>Logros de Aprendizaje — EDUCACIÓN PRIMARIA</h2>
-      <p>Nivel de Logro Satisfactorio · Fuente: SIAGIE / Power BI Primaria</p>
+      <p>Distribución por niveles AD / A / B / C · UGEL San Román 2023–2025 · Fuente: SIAGIE / IGA</p>
     </div>
     <img class="s-hd-logo" src="/img/image8.png" alt="">
   </div>
-  <div class="s-bd">
-    <div class="kpi-row">
-      <div class="kpi"><div class="kpi-top" style="background:var(--navy)"></div><div class="kpi-bd"><div class="kpi-v" style="color:var(--navy)">97.78%</div><div class="kpi-l">UGEL San Román</div></div></div>
-      <div class="kpi"><div class="kpi-top" style="background:var(--blue)"></div><div class="kpi-bd"><div class="kpi-v" style="color:var(--blue)">98.03%</div><div class="kpi-l">Región Puno</div></div></div>
-      <div class="kpi"><div class="kpi-top" style="background:var(--teal)"></div><div class="kpi-bd"><div class="kpi-v" style="color:var(--teal)">92.29%</div><div class="kpi-l">Nacional</div></div></div>
+  <div class="s-bd" style="padding:12px 22px;gap:11px">
+
+    <!-- KPIs -->
+    <div style="display:flex;gap:10px;flex:0 0 auto">
+      <div class="kpi"><div class="kpi-top" style="background:#1E4D9B"></div><div class="kpi-bd"><div class="kpi-v" style="color:#1E4D9B">97.96%</div><div class="kpi-l">UGEL San Román 2025</div></div></div>
+      <div class="kpi"><div class="kpi-top" style="background:var(--blue)"></div><div class="kpi-bd"><div class="kpi-v" style="color:var(--blue)">98.03%</div><div class="kpi-l">Región Puno 2025</div></div></div>
+      <div class="kpi"><div class="kpi-top" style="background:var(--teal)"></div><div class="kpi-bd"><div class="kpi-v" style="color:var(--teal)">92.29%</div><div class="kpi-l">Nacional 2025</div></div></div>
       <div class="kpi-dk"><div class="kpi-l">MATRICULADOS</div><div class="kpi-v">38,909</div></div>
     </div>
-    <div class="chart-row">
-      <div class="bars-wrap">
-        <div class="bars-lbl">Evolución 2023–2025</div>
-        <div class="bars">
-          <div class="bar-g">
-            <div class="bar-pct" style="color:var(--teal)">94.0%</div>
-            <div class="bar-tr"><div class="bar-fi" style="height:94%;background:linear-gradient(to top,#1A6B8A,#2E6BC8)"></div></div>
-            <div class="bar-yr" style="background:var(--teal)">2023</div>
-          </div>
-          <div class="bar-g">
-            <div class="bar-pct" style="color:var(--blue)">97.0%</div>
-            <div class="bar-tr"><div class="bar-fi" style="height:97%;background:linear-gradient(to top,#1849A9,#2E6BC8)"></div></div>
-            <div class="bar-yr" style="background:var(--blue)">2024</div>
-          </div>
-          <div class="bar-g">
-            <div class="bar-pct" style="color:var(--navy)">98.0%</div>
-            <div class="bar-tr"><div class="bar-fi" style="height:98%;background:linear-gradient(to top,#0D1B4B,#1849A9)"></div></div>
-            <div class="bar-yr" style="background:var(--navy)">2025</div>
-          </div>
+
+    <!-- Gráfico + desglose -->
+    <div style="display:flex;gap:12px;flex:1;min-height:0">
+
+      <!-- Gráfico interactivo AD/A/B/C -->
+      <div style="flex:1.6;background:#fff;border-radius:16px;border:1.5px solid #BFDBFE;box-shadow:0 4px 18px rgba(30,77,155,.08);padding:16px 20px;display:flex;flex-direction:column;gap:6px">
+        <div style="font-size:10px;font-weight:700;letter-spacing:3px;color:#1E3A8A">DISTRIBUCIÓN AD / A / B / C · 2023–2025</div>
+        <div style="flex:1;min-height:0;position:relative">
+          <canvas id="prim-chart"></canvas>
         </div>
       </div>
-      <div class="img-wrap">
-        <img class="s-img" src="/img/image32.jpg" alt="Tabla AD/A/B/C" style="flex:0 0 auto;width:42%">
-        <img class="s-img" src="/img/image35.jpg" alt="Estudiantes Primaria">
+
+      <!-- Desglose 2025 + foto -->
+      <div style="flex:1;display:flex;flex-direction:column;gap:10px">
+
+        <!-- Desglose 2025 -->
+        <div style="flex:1;background:#fff;border-radius:16px;border:1.5px solid #BFDBFE;box-shadow:0 4px 18px rgba(30,77,155,.08);padding:16px 18px;display:flex;flex-direction:column;gap:6px">
+          <div style="font-size:10px;font-weight:700;letter-spacing:2px;color:#1E3A8A;margin-bottom:4px">UGEL SAN ROMÁN · 2025</div>
+          <!-- AD -->
+          <div style="display:flex;align-items:center;gap:8px;background:#EFF6FF;border-radius:8px;padding:7px 10px">
+            <div style="font-size:13px;font-weight:800;color:#1E3A8A;flex:0 0 24px">AD</div>
+            <div style="flex:1;background:#DBEAFE;border-radius:4px;height:11px;overflow:hidden"><div style="height:100%;width:19.25%;background:linear-gradient(90deg,#1E4D9B,#60A5FA);border-radius:4px"></div></div>
+            <div class="kpi-v" style="font-size:15px;font-weight:800;color:#1E4D9B;flex:0 0 55px;text-align:right">19.25%</div>
+          </div>
+          <!-- A -->
+          <div style="display:flex;align-items:center;gap:8px;background:#EFF6FF;border-radius:8px;padding:7px 10px">
+            <div style="font-size:13px;font-weight:800;color:#2563EB;flex:0 0 24px">A</div>
+            <div style="flex:1;background:#DBEAFE;border-radius:4px;height:11px;overflow:hidden"><div style="height:100%;width:78.71%;background:linear-gradient(90deg,#60A5FA,#93C5FD);border-radius:4px"></div></div>
+            <div class="kpi-v" style="font-size:15px;font-weight:800;color:#2563EB;flex:0 0 55px;text-align:right">78.71%</div>
+          </div>
+          <!-- B -->
+          <div style="display:flex;align-items:center;gap:8px;padding:7px 10px">
+            <div style="font-size:13px;font-weight:800;color:#7A4A0A;flex:0 0 24px">B</div>
+            <div style="flex:1;background:#FEF3C7;border-radius:4px;height:11px;overflow:hidden"><div style="height:100%;width:1.78%;background:#FCD34D;border-radius:4px"></div></div>
+            <div class="kpi-v" style="font-size:15px;font-weight:800;color:#7A4A0A;flex:0 0 55px;text-align:right">1.78%</div>
+          </div>
+          <!-- C -->
+          <div style="display:flex;align-items:center;gap:8px;padding:7px 10px">
+            <div style="font-size:13px;font-weight:800;color:#DC2626;flex:0 0 24px">C</div>
+            <div style="flex:1;background:#FEE2E2;border-radius:4px;height:11px;overflow:hidden"><div style="height:100%;width:0.26%;background:#FCA5A5;border-radius:4px"></div></div>
+            <div class="kpi-v" style="font-size:15px;font-weight:800;color:#DC2626;flex:0 0 55px;text-align:right">0.26%</div>
+          </div>
+        </div>
+
+        <!-- Foto + highlight AD -->
+        <div style="background:linear-gradient(135deg,#1E3A8A,#1E4D9B);border-radius:14px;overflow:hidden;box-shadow:0 8px 24px rgba(30,77,155,.28);display:flex;align-items:stretch">
+          <img src="/primaria/1.png" alt="Educación Primaria" style="width:160px;object-fit:cover;object-position:top center;flex:0 0 160px">
+          <div style="padding:14px 16px;display:flex;flex-direction:column;justify-content:center;flex:1">
+            <div style="font-size:8px;font-weight:700;color:rgba(255,255,255,.6);letter-spacing:3px;margin-bottom:6px">AD — LOGRO DESTACADO</div>
+            <div style="display:flex;align-items:baseline;gap:8px">
+              <span style="font-size:32px;font-weight:800;color:#fff;line-height:1">19.25%</span>
+              <span style="font-size:12px;color:#93C5FD;font-weight:700">▲ +2.47 pp</span>
+            </div>
+            <div style="font-size:9px;color:rgba(255,255,255,.5);margin-top:5px">2023 (16.78%) → 2024 (15.78%) → 2025 (19.25%)</div>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
-  <div class="s-ft"><span class="s-ft-t">Fuente: IGA 2023, 2024 y 2025 – Power BI Educación Primaria</span><div class="s-ft-n">26</div></div>
+  <div class="s-ft"><span class="s-ft-t">Fuente: IGA 2023, 2024 y 2025 – SIAGIE · Educación Primaria UGEL San Román</span><div class="s-ft-n">26</div></div>
 </div>
 </section>
 
@@ -156,48 +188,84 @@
      S6 · EDUCACIÓN SECUNDARIA
 ═══════════════════════════════════════════════ -->
 <section>
-<div class="slide slide-content">
-  <div class="s-hd">
+<div class="slide slide-content" style="background:linear-gradient(150deg,#F5F3FF 0%,#FAFAFF 55%,#EDE9FE 100%)">
+  <div class="s-hd" style="border-bottom:1px solid #DDD6FE">
     <div class="s-hd-t">
       <h2>Logros de Aprendizaje — EDUCACIÓN SECUNDARIA</h2>
-      <p>Nivel de Logro Satisfactorio · Fuente: SIAGIE / Power BI Secundaria Pública</p>
+      <p>Distribución por niveles AD / A / B / C · UGEL San Román 2023–2025 · Fuente: SIAGIE / IGA</p>
     </div>
     <img class="s-hd-logo" src="/img/image8.png" alt="">
   </div>
-  <div class="s-bd">
-    <div class="kpi-row">
-      <div class="kpi"><div class="kpi-top" style="background:var(--navy)"></div><div class="kpi-bd"><div class="kpi-v" style="color:var(--navy)">77.40%</div><div class="kpi-l">UGEL San Román</div></div></div>
-      <div class="kpi"><div class="kpi-top" style="background:var(--blue)"></div><div class="kpi-bd"><div class="kpi-v" style="color:var(--blue)">87.29%</div><div class="kpi-l">Región Puno</div></div></div>
-      <div class="kpi"><div class="kpi-top" style="background:var(--teal)"></div><div class="kpi-bd"><div class="kpi-v" style="color:var(--teal)">70.34%</div><div class="kpi-l">Nacional</div></div></div>
+  <div class="s-bd" style="padding:12px 22px;gap:11px">
+
+    <!-- KPIs -->
+    <div style="display:flex;gap:10px;flex:0 0 auto">
+      <div class="kpi"><div class="kpi-top" style="background:#6D28D9"></div><div class="kpi-bd"><div class="kpi-v" style="color:#6D28D9">77.40%</div><div class="kpi-l">UGEL San Román 2025</div></div></div>
+      <div class="kpi"><div class="kpi-top" style="background:var(--blue)"></div><div class="kpi-bd"><div class="kpi-v" style="color:var(--blue)">87.29%</div><div class="kpi-l">Región Puno 2025</div></div></div>
+      <div class="kpi"><div class="kpi-top" style="background:var(--teal)"></div><div class="kpi-bd"><div class="kpi-v" style="color:var(--teal)">70.34%</div><div class="kpi-l">Nacional 2025</div></div></div>
       <div class="kpi-dk"><div class="kpi-l">MATRICULADOS</div><div class="kpi-v">32,814</div></div>
     </div>
-    <div class="chart-row">
-      <div class="bars-wrap">
-        <div class="bars-lbl">Evolución 2023–2025</div>
-        <div class="bars">
-          <div class="bar-g">
-            <div class="bar-pct" style="color:var(--teal)">69.0%</div>
-            <div class="bar-tr"><div class="bar-fi" style="height:69%;background:linear-gradient(to top,#1A6B8A,#2E6BC8)"></div></div>
-            <div class="bar-yr" style="background:var(--teal)">2023</div>
-          </div>
-          <div class="bar-g">
-            <div class="bar-pct" style="color:var(--blue)">73.5%</div>
-            <div class="bar-tr"><div class="bar-fi" style="height:73.5%;background:linear-gradient(to top,#1849A9,#2E6BC8)"></div></div>
-            <div class="bar-yr" style="background:var(--blue)">2024</div>
-          </div>
-          <div class="bar-g">
-            <div class="bar-pct" style="color:var(--navy)">77.4%</div>
-            <div class="bar-tr"><div class="bar-fi" style="height:77.4%;background:linear-gradient(to top,#0D1B4B,#1849A9)"></div></div>
-            <div class="bar-yr" style="background:var(--navy)">2025</div>
-          </div>
+
+    <!-- Gráfico + desglose -->
+    <div style="display:flex;gap:12px;flex:1;min-height:0">
+
+      <!-- Gráfico interactivo AD/A/B/C -->
+      <div style="flex:1.6;background:#fff;border-radius:16px;border:1.5px solid #DDD6FE;box-shadow:0 4px 18px rgba(109,40,217,.08);padding:16px 20px;display:flex;flex-direction:column;gap:6px">
+        <div style="font-size:10px;font-weight:700;letter-spacing:3px;color:#4C1D95">DISTRIBUCIÓN AD / A / B / C · 2023–2025</div>
+        <div style="flex:1;min-height:0;position:relative">
+          <canvas id="sec-breakdown-chart"></canvas>
         </div>
       </div>
-      <div class="img-wrap">
-        <img class="s-img" src="/img/image34-clean.png" alt="Estudiantes Secundaria">
+
+      <!-- Desglose 2025 + foto -->
+      <div style="flex:1;display:flex;flex-direction:column;gap:10px">
+
+        <!-- Desglose 2025 -->
+        <div style="flex:1;background:#fff;border-radius:16px;border:1.5px solid #DDD6FE;box-shadow:0 4px 18px rgba(109,40,217,.08);padding:16px 18px;display:flex;flex-direction:column;gap:6px">
+          <div style="font-size:10px;font-weight:700;letter-spacing:2px;color:#4C1D95;margin-bottom:4px">UGEL SAN ROMÁN · 2025</div>
+          <!-- AD -->
+          <div style="display:flex;align-items:center;gap:8px;background:#F5F3FF;border-radius:8px;padding:7px 10px">
+            <div style="font-size:13px;font-weight:800;color:#4C1D95;flex:0 0 24px">AD</div>
+            <div style="flex:1;background:#EDE9FE;border-radius:4px;height:11px;overflow:hidden"><div style="height:100%;width:20.67%;background:linear-gradient(90deg,#6D28D9,#A78BFA);border-radius:4px"></div></div>
+            <div class="kpi-v" style="font-size:15px;font-weight:800;color:#6D28D9;flex:0 0 55px;text-align:right">20.67%</div>
+          </div>
+          <!-- A -->
+          <div style="display:flex;align-items:center;gap:8px;background:#F5F3FF;border-radius:8px;padding:7px 10px">
+            <div style="font-size:13px;font-weight:800;color:#7C3AED;flex:0 0 24px">A</div>
+            <div style="flex:1;background:#EDE9FE;border-radius:4px;height:11px;overflow:hidden"><div style="height:100%;width:56.73%;background:linear-gradient(90deg,#A78BFA,#C4B5FD);border-radius:4px"></div></div>
+            <div class="kpi-v" style="font-size:15px;font-weight:800;color:#7C3AED;flex:0 0 55px;text-align:right">56.73%</div>
+          </div>
+          <!-- B -->
+          <div style="display:flex;align-items:center;gap:8px;padding:7px 10px">
+            <div style="font-size:13px;font-weight:800;color:#7A4A0A;flex:0 0 24px">B</div>
+            <div style="flex:1;background:#FEF3C7;border-radius:4px;height:11px;overflow:hidden"><div style="height:100%;width:19.22%;background:#FCD34D;border-radius:4px"></div></div>
+            <div class="kpi-v" style="font-size:15px;font-weight:800;color:#7A4A0A;flex:0 0 55px;text-align:right">19.22%</div>
+          </div>
+          <!-- C -->
+          <div style="display:flex;align-items:center;gap:8px;padding:7px 10px">
+            <div style="font-size:13px;font-weight:800;color:#DC2626;flex:0 0 24px">C</div>
+            <div style="flex:1;background:#FEE2E2;border-radius:4px;height:11px;overflow:hidden"><div style="height:100%;width:3.38%;background:#FCA5A5;border-radius:4px"></div></div>
+            <div class="kpi-v" style="font-size:15px;font-weight:800;color:#DC2626;flex:0 0 55px;text-align:right">3.38%</div>
+          </div>
+        </div>
+
+        <!-- Foto + highlight AD -->
+        <div style="background:linear-gradient(135deg,#4C1D95,#6D28D9);border-radius:14px;overflow:hidden;box-shadow:0 8px 24px rgba(109,40,217,.28);display:flex;align-items:stretch">
+          <img src="/secundaria.png" alt="Educación Secundaria" style="width:160px;object-fit:cover;object-position:top center;flex:0 0 160px">
+          <div style="padding:14px 16px;display:flex;flex-direction:column;justify-content:center;flex:1">
+            <div style="font-size:8px;font-weight:700;color:rgba(255,255,255,.6);letter-spacing:3px;margin-bottom:6px">AD — LOGRO DESTACADO</div>
+            <div style="display:flex;align-items:baseline;gap:8px">
+              <span style="font-size:32px;font-weight:800;color:#fff;line-height:1">20.67%</span>
+              <span style="font-size:12px;color:#C4B5FD;font-weight:700">▲ +3.09 pp</span>
+            </div>
+            <div style="font-size:9px;color:rgba(255,255,255,.5);margin-top:5px">2023 (17.58%) → 2024 (20.24%) → 2025 (20.67%)</div>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
-  <div class="s-ft"><span class="s-ft-t">Fuente: IGA 2023, 2024 y 2025 – Power BI Educación Secundaria Pública</span><div class="s-ft-n">27</div></div>
+  <div class="s-ft"><span class="s-ft-t">Fuente: IGA 2023, 2024 y 2025 – SIAGIE · Educación Secundaria UGEL San Román</span><div class="s-ft-n">27</div></div>
 </div>
 </section>
 

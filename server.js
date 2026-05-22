@@ -4,6 +4,8 @@ const path = require("path");
 
 const ROOT        = __dirname;
 const IMAGES_DIR  = path.join(ROOT, "img");
+const INICIAL_DIR = path.join(ROOT, "inicial");
+const PRIMARIA_DIR= path.join(ROOT, "primaria");
 const HTML_FILE   = path.join(ROOT, "presentacion.html");
 const SECTIONS_DIR= path.join(ROOT, "sections");
 const SLIDES_DIR  = path.join(ROOT, "slides_png", "out");
@@ -36,10 +38,39 @@ const server = http.createServer((req, res) => {
     }
   }
 
-  /* ── Imágenes ── */
+  /* ── Imágenes /img/ ── */
   if (req.url.startsWith("/img/")) {
-    const name = path.basename(req.url);
+    const name = path.basename(decodeURIComponent(req.url));
     const file = path.join(IMAGES_DIR, name);
+    if (!fs.existsSync(file)) { res.writeHead(404); return res.end(); }
+    const ext = path.extname(name).toLowerCase();
+    res.writeHead(200, { "Content-Type": MIME[ext] || "application/octet-stream" });
+    return fs.createReadStream(file).pipe(res);
+  }
+
+  /* ── Imágenes /inicial/ ── */
+  if (req.url.startsWith("/inicial/")) {
+    const name = path.basename(decodeURIComponent(req.url));
+    const file = path.join(INICIAL_DIR, name);
+    if (!fs.existsSync(file)) { res.writeHead(404); return res.end(); }
+    const ext = path.extname(name).toLowerCase();
+    res.writeHead(200, { "Content-Type": MIME[ext] || "application/octet-stream" });
+    return fs.createReadStream(file).pipe(res);
+  }
+
+  /* ── Imágenes sueltas en raíz ── */
+  if (/^\/([\w\-]+)\.(png|jpg|jpeg|gif)$/i.test(req.url)) {
+    const file = path.join(ROOT, path.basename(decodeURIComponent(req.url)));
+    if (!fs.existsSync(file)) { res.writeHead(404); return res.end(); }
+    const ext = path.extname(file).toLowerCase();
+    res.writeHead(200, { "Content-Type": MIME[ext] || "application/octet-stream" });
+    return fs.createReadStream(file).pipe(res);
+  }
+
+  /* ── Imágenes /primaria/ ── */
+  if (req.url.startsWith("/primaria/")) {
+    const name = path.basename(decodeURIComponent(req.url));
+    const file = path.join(PRIMARIA_DIR, name);
     if (!fs.existsSync(file)) { res.writeHead(404); return res.end(); }
     const ext = path.extname(name).toLowerCase();
     res.writeHead(200, { "Content-Type": MIME[ext] || "application/octet-stream" });

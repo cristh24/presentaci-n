@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.6.0/dist/reveal.css">
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0/dist/chartjs-plugin-datalabels.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/countup.js@2.8.0/dist/countUp.umd.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.1.0/dist/typed.umd.js"></script>
@@ -516,6 +517,38 @@
 .pv2-bg{filter:brightness(.78) saturate(.92) contrast(1.04)}
 .pv2-ov{background:linear-gradient(90deg,rgba(4,11,22,.94) 0%,rgba(7,23,46,.75) 36%,rgba(7,23,46,.18) 64%,rgba(7,23,46,0) 100%)}
 .pv2-years{background:linear-gradient(135deg,var(--gold),var(--amber) 52%,#F7D98A);-webkit-background-clip:text;background-clip:text}
+
+/* ── Hover interactivo en tarjetas KPI ── */
+.kpi, .kpi-dk {
+  transition: transform .2s ease, box-shadow .2s ease;
+  cursor: default;
+}
+.kpi:hover  { transform: translateY(-4px) scale(1.03); box-shadow: 0 10px 28px rgba(0,0,0,.15) !important; }
+.kpi-dk:hover { transform: translateY(-4px) scale(1.03); box-shadow: 0 10px 28px rgba(0,0,0,.15) !important; }
+
+/* Hover glow en paneles de gráficos */
+.slide-content .s-bd > div {
+  transition: box-shadow .25s ease, transform .25s ease;
+}
+.slide-content .s-bd > div:hover {
+  box-shadow: 0 14px 38px rgba(0,0,0,.13) !important;
+  transform: translateY(-2px);
+}
+
+/* Secdiv — ghost flotante */
+@keyframes ppFloat { 0%,100%{transform:translateY(0);opacity:.05} 50%{transform:translateY(-14px);opacity:.09} }
+.secdiv .secdiv-ghost { animation: ppFloat 5s ease-in-out infinite !important; }
+
+/* Secdiv — línea con pulso de brillo */
+@keyframes ppGlow { 0%,100%{opacity:1;filter:brightness(1)} 50%{opacity:.75;filter:brightness(1.4)} }
+.secdiv .secdiv-line { animation: ppGlow 2.8s ease-in-out infinite !important; }
+
+/* Canvas de gráficos — cursor pointer al hover */
+canvas { cursor: crosshair; }
+
+/* Botones de navegación reveal — más visibles */
+.reveal .controls { opacity: .55; transition: opacity .3s; }
+.reveal .controls:hover { opacity: 1; }
 </style>
 </head>
 <body>
@@ -530,10 +563,16 @@
 
 <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.6.0/dist/reveal.js"></script>
 <script>
+/* datalabels off by default — cada gráfico lo activa explícitamente */
+if (typeof ChartDataLabels !== 'undefined') {
+  Chart.register(ChartDataLabels);
+  Chart.defaults.plugins.datalabels.display = false;
+}
+
 Reveal.initialize({
   hash: true,
   slideNumber: 'c/t',
-  transition: 'slide',
+  transition: 'fade',
   transitionSpeed: 'default',
   width: 1280,
   height: 720,
@@ -672,6 +711,24 @@ function animateSlideIn(slide) {
       {opacity:1, scale:1, duration:.58, stagger:.05, delay:.16, ease:'power3.out'}
     );
   }
+
+  // Paneles flex internos de slides nuevos (inicial, primaria, secundaria, etc.)
+  const sBdPanels = slide.querySelectorAll('.s-bd > div');
+  if (sBdPanels.length) {
+    gsap.fromTo(sBdPanels,
+      {opacity:0, y:22},
+      {opacity:1, y:0, duration:.5, stagger:.08, delay:.25, ease:'power3.out'}
+    );
+  }
+
+  // Paneles internos dentro del área principal de gráficos
+  const innerPanels = slide.querySelectorAll('.s-bd > div > div');
+  if (innerPanels.length) {
+    gsap.fromTo(innerPanels,
+      {opacity:0, scale:.96},
+      {opacity:1, scale:1, duration:.45, stagger:.06, delay:.35, ease:'power2.out'}
+    );
+  }
 }
 
 /* ── tsParticles — cinematic background for section dividers ── */
@@ -690,7 +747,16 @@ async function initParticles() {
         opacity: { value: { min: 0.18, max: 0.55 }, animation: { enable: true, speed: 0.5, sync: false } },
         size: { value: { min: 1, max: 2.5 } }
       },
-      interactivity: { events: { onHover: { enable: false }, onClick: { enable: false } } },
+      interactivity: {
+        events: {
+          onHover: { enable: true, mode: 'repulse' },
+          onClick:  { enable: true, mode: 'push' }
+        },
+        modes: {
+          repulse: { distance: 90, duration: 0.4 },
+          push:    { quantity: 4 }
+        }
+      },
       detectRetina: true
     });
   } catch(e) { /* CDN not loaded */ }
@@ -845,30 +911,129 @@ function initInicialChart() {
   const ctx = document.getElementById('inicial-chart');
   if (!ctx) return;
   _inicialInit = true;
+
+  const DATA = {
+    C:  [0.20, 0.30, 0.58],
+    B:  [4.40, 2.20, 4.62],
+    A:  [88.20, 89.20, 84.48],
+    AD: [7.20,  8.30, 10.32]
+  };
+
   new Chart(ctx, {
     type: 'bar',
     data: {
       labels: ['2023', '2024', '2025'],
       datasets: [
-        { label: 'C — En Inicio',       data: [0.20, 0.30, 0.58], backgroundColor: '#FCA5A5' },
-        { label: 'B — En Proceso',      data: [4.40, 2.20, 4.62], backgroundColor: '#D4A93A' },
-        { label: 'A — Logro Esperado',  data: [88.20, 89.20, 84.48], backgroundColor: '#86EFAC' },
-        { label: 'AD — Logro Destacado',data: [7.20, 8.30, 10.32], backgroundColor: '#16A34A',
-          borderRadius: { topLeft:5, topRight:5, bottomLeft:0, bottomRight:0 }, borderSkipped: false }
+        {
+          label: 'C — En Inicio',
+          data: DATA.C,
+          backgroundColor: '#F87171',
+          hoverBackgroundColor: '#EF4444',
+          datalabels: {
+            display: ctx => ctx.raw >= 0.4,
+            formatter: v => v.toFixed(2) + '%',
+            color: '#fff',
+            font: { size: 8, weight: '700' },
+            anchor: 'center', align: 'center'
+          }
+        },
+        {
+          label: 'B — En Proceso',
+          data: DATA.B,
+          backgroundColor: '#FCD34D',
+          hoverBackgroundColor: '#FBBF24',
+          datalabels: {
+            display: ctx => ctx.raw >= 2,
+            formatter: v => v.toFixed(2) + '%',
+            color: '#78350F',
+            font: { size: 9, weight: '700' },
+            anchor: 'center', align: 'center'
+          }
+        },
+        {
+          label: 'A — Logro Esperado',
+          data: DATA.A,
+          backgroundColor: '#4ADE80',
+          hoverBackgroundColor: '#22C55E',
+          datalabels: {
+            display: true,
+            formatter: v => v.toFixed(2) + '%',
+            color: '#14532D',
+            font: { size: 11, weight: '800' },
+            anchor: 'center', align: 'center'
+          }
+        },
+        {
+          label: 'AD — Logro Destacado',
+          data: DATA.AD,
+          backgroundColor: '#15803D',
+          hoverBackgroundColor: '#166534',
+          datalabels: {
+            display: true,
+            formatter: v => v.toFixed(2) + '%',
+            color: '#fff',
+            font: { size: 9, weight: '700' },
+            anchor: 'center', align: 'center'
+          }
+        }
       ]
     },
     options: {
-      indexAxis: 'y', responsive: true, maintainAspectRatio: false,
+      indexAxis: 'y',
+      responsive: true,
+      maintainAspectRatio: false,
+      animation: { duration: 1000, easing: 'easeOutQuart' },
       plugins: {
-        legend: { display: false },
-        tooltip: { callbacks: { label: ctx => ` ${ctx.dataset.label}: ${ctx.raw}%` } }
+        datalabels: { display: false }, /* sobrescrito por dataset */
+        legend: {
+          display: true,
+          position: 'bottom',
+          labels: {
+            usePointStyle: true,
+            pointStyleWidth: 14,
+            padding: 14,
+            font: { size: 9, weight: '600' },
+            color: '#1E293B'
+          }
+        },
+        tooltip: {
+          mode: 'index',
+          intersect: false,
+          backgroundColor: '#0B1D3A',
+          titleColor: '#F8FAFC',
+          bodyColor: '#CBD5E1',
+          titleFont: { size: 12, weight: '700' },
+          bodyFont: { size: 11 },
+          padding: 14,
+          cornerRadius: 10,
+          callbacks: {
+            title: items => `Año ${items[0].label}`,
+            label: item => {
+              const total = DATA.C[item.dataIndex] + DATA.B[item.dataIndex] +
+                            DATA.A[item.dataIndex] + DATA.AD[item.dataIndex];
+              return ` ${item.dataset.label}: ${item.raw}%`;
+            },
+            afterBody: items => {
+              const i = items[0].dataIndex;
+              const aprobados = (DATA.A[i] + DATA.AD[i]).toFixed(2);
+              return [`─────────────────`, ` ✓ Logro (A+AD): ${aprobados}%`];
+            }
+          }
+        }
       },
       scales: {
-        x: { stacked: true, max: 100, border: { dash: [4,4] },
-             ticks: { callback: v => v+'%', font: { size: 9 }, color: '#94A3B8' },
-             grid: { color: '#F1F5F9' } },
-        y: { stacked: true, grid: { display: false },
-             ticks: { font: { weight: '700', size: 14 }, color: '#1E293B' } }
+        x: {
+          stacked: true,
+          max: 100,
+          border: { dash: [4, 4] },
+          ticks: { callback: v => v + '%', font: { size: 9 }, color: '#94A3B8' },
+          grid: { color: '#F1F5F9' }
+        },
+        y: {
+          stacked: true,
+          grid: { display: false },
+          ticks: { font: { weight: '800', size: 15 }, color: '#1E293B' }
+        }
       }
     }
   });
@@ -912,17 +1077,261 @@ let _primInit = false;
 function initPrimChart() {
   if (_primInit) return;
   const ctx = document.getElementById('prim-chart');
-  if (!ctx) return; _primInit = true;
-  new Chart(ctx, { type:'bar', data:{ labels:['2023','2024','2025'], datasets:[
-    { label:'C — En Inicio',        data:[6.75,4.45,3.38],   backgroundColor:'#FCA5A5' },
-    { label:'B — En Proceso',       data:[24.26,22.02,19.22], backgroundColor:'#D4A93A' },
-    { label:'A — Logro Esperado',   data:[51.41,53.29,56.73], backgroundColor:'#86EFAC' },
-    { label:'AD — Logro Destacado', data:[17.58,20.24,20.67], backgroundColor:'#16A34A',
-      borderRadius:{topLeft:5,topRight:5,bottomLeft:0,bottomRight:0}, borderSkipped:false }
-  ]}, options:{ indexAxis:'y', responsive:true, maintainAspectRatio:false,
-    plugins:{ legend:{display:false}, tooltip:{callbacks:{label:c=>` ${c.dataset.label}: ${c.raw}%`}} },
-    scales:{ x:{stacked:true,max:100,border:{dash:[4,4]},ticks:{callback:v=>v+'%',font:{size:9},color:'#94A3B8'},grid:{color:'#F1F5F9'}},
-             y:{stacked:true,grid:{display:false},ticks:{font:{weight:'700',size:14},color:'#1E293B'}} } } });
+  if (!ctx) return;
+  _primInit = true;
+
+  const DATA = {
+    C:  [2.39, 0.43, 0.26],
+    B:  [3.58, 2.58, 1.78],
+    A:  [77.25, 81.21, 78.71],
+    AD: [16.78, 15.78, 19.25]
+  };
+
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ['2023', '2024', '2025'],
+      datasets: [
+        {
+          label: 'C — En Inicio',
+          data: DATA.C,
+          backgroundColor: '#F87171',
+          hoverBackgroundColor: '#EF4444',
+          datalabels: {
+            display: ctx => ctx.raw >= 0.4,
+            formatter: v => v.toFixed(2) + '%',
+            color: '#fff',
+            font: { size: 8, weight: '700' },
+            anchor: 'center', align: 'center'
+          }
+        },
+        {
+          label: 'B — En Proceso',
+          data: DATA.B,
+          backgroundColor: '#FCD34D',
+          hoverBackgroundColor: '#FBBF24',
+          datalabels: {
+            display: ctx => ctx.raw >= 2,
+            formatter: v => v.toFixed(2) + '%',
+            color: '#78350F',
+            font: { size: 9, weight: '700' },
+            anchor: 'center', align: 'center'
+          }
+        },
+        {
+          label: 'A — Logro Esperado',
+          data: DATA.A,
+          backgroundColor: '#60A5FA',
+          hoverBackgroundColor: '#3B82F6',
+          datalabels: {
+            display: true,
+            formatter: v => v.toFixed(2) + '%',
+            color: '#1E3A8A',
+            font: { size: 11, weight: '800' },
+            anchor: 'center', align: 'center'
+          }
+        },
+        {
+          label: 'AD — Logro Destacado',
+          data: DATA.AD,
+          backgroundColor: '#1E4D9B',
+          hoverBackgroundColor: '#1E3A8A',
+          datalabels: {
+            display: true,
+            formatter: v => v.toFixed(2) + '%',
+            color: '#fff',
+            font: { size: 9, weight: '700' },
+            anchor: 'center', align: 'center'
+          }
+        }
+      ]
+    },
+    options: {
+      indexAxis: 'y',
+      responsive: true,
+      maintainAspectRatio: false,
+      animation: { duration: 1000, easing: 'easeOutQuart' },
+      plugins: {
+        datalabels: { display: false },
+        legend: {
+          display: true,
+          position: 'bottom',
+          labels: {
+            usePointStyle: true,
+            pointStyleWidth: 14,
+            padding: 14,
+            font: { size: 9, weight: '600' },
+            color: '#1E293B'
+          }
+        },
+        tooltip: {
+          mode: 'index',
+          intersect: false,
+          backgroundColor: '#0B1D3A',
+          titleColor: '#F8FAFC',
+          bodyColor: '#CBD5E1',
+          titleFont: { size: 12, weight: '700' },
+          bodyFont: { size: 11 },
+          padding: 14,
+          cornerRadius: 10,
+          callbacks: {
+            title: items => `Año ${items[0].label}`,
+            label: item => ` ${item.dataset.label}: ${item.raw}%`,
+            afterBody: items => {
+              const i = items[0].dataIndex;
+              const aprobados = (DATA.A[i] + DATA.AD[i]).toFixed(2);
+              return [`─────────────────`, ` ✓ Logro (A+AD): ${aprobados}%`];
+            }
+          }
+        }
+      },
+      scales: {
+        x: {
+          stacked: true,
+          max: 100,
+          border: { dash: [4, 4] },
+          ticks: { callback: v => v + '%', font: { size: 9 }, color: '#94A3B8' },
+          grid: { color: '#F1F5F9' }
+        },
+        y: {
+          stacked: true,
+          grid: { display: false },
+          ticks: { font: { weight: '800', size: 15 }, color: '#1E293B' }
+        }
+      }
+    }
+  });
+}
+
+/* ── SECUNDARIA — distribución AD/A/B/C 2023-2025 ── */
+let _secBreakdownInit = false;
+function initSecBreakdownChart() {
+  if (_secBreakdownInit) return;
+  const ctx = document.getElementById('sec-breakdown-chart');
+  if (!ctx) return;
+  _secBreakdownInit = true;
+
+  const DATA = {
+    C:  [6.75, 4.45, 3.38],
+    B:  [24.26, 22.02, 19.22],
+    A:  [51.41, 53.29, 56.73],
+    AD: [17.58, 20.24, 20.67]
+  };
+
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ['2023', '2024', '2025'],
+      datasets: [
+        {
+          label: 'C — En Inicio',
+          data: DATA.C,
+          backgroundColor: '#F87171',
+          hoverBackgroundColor: '#EF4444',
+          datalabels: {
+            display: ctx => ctx.raw >= 2,
+            formatter: v => v.toFixed(2) + '%',
+            color: '#fff',
+            font: { size: 8, weight: '700' },
+            anchor: 'center', align: 'center'
+          }
+        },
+        {
+          label: 'B — En Proceso',
+          data: DATA.B,
+          backgroundColor: '#FCD34D',
+          hoverBackgroundColor: '#FBBF24',
+          datalabels: {
+            display: true,
+            formatter: v => v.toFixed(2) + '%',
+            color: '#78350F',
+            font: { size: 9, weight: '700' },
+            anchor: 'center', align: 'center'
+          }
+        },
+        {
+          label: 'A — Logro Esperado',
+          data: DATA.A,
+          backgroundColor: '#A78BFA',
+          hoverBackgroundColor: '#7C3AED',
+          datalabels: {
+            display: true,
+            formatter: v => v.toFixed(2) + '%',
+            color: '#4C1D95',
+            font: { size: 11, weight: '800' },
+            anchor: 'center', align: 'center'
+          }
+        },
+        {
+          label: 'AD — Logro Destacado',
+          data: DATA.AD,
+          backgroundColor: '#6D28D9',
+          hoverBackgroundColor: '#4C1D95',
+          datalabels: {
+            display: true,
+            formatter: v => v.toFixed(2) + '%',
+            color: '#fff',
+            font: { size: 9, weight: '700' },
+            anchor: 'center', align: 'center'
+          }
+        }
+      ]
+    },
+    options: {
+      indexAxis: 'y',
+      responsive: true,
+      maintainAspectRatio: false,
+      animation: { duration: 1000, easing: 'easeOutQuart' },
+      plugins: {
+        datalabels: { display: false },
+        legend: {
+          display: true,
+          position: 'bottom',
+          labels: {
+            usePointStyle: true,
+            pointStyleWidth: 14,
+            padding: 14,
+            font: { size: 9, weight: '600' },
+            color: '#1E293B'
+          }
+        },
+        tooltip: {
+          mode: 'index',
+          intersect: false,
+          backgroundColor: '#0B1D3A',
+          titleColor: '#F8FAFC',
+          bodyColor: '#CBD5E1',
+          titleFont: { size: 12, weight: '700' },
+          bodyFont: { size: 11 },
+          padding: 14,
+          cornerRadius: 10,
+          callbacks: {
+            title: items => `Año ${items[0].label}`,
+            label: item => ` ${item.dataset.label}: ${item.raw}%`,
+            afterBody: items => {
+              const i = items[0].dataIndex;
+              const aprobados = (DATA.A[i] + DATA.AD[i]).toFixed(2);
+              return [`─────────────────`, ` ✓ Logro (A+AD): ${aprobados}%`];
+            }
+          }
+        }
+      },
+      scales: {
+        x: {
+          stacked: true,
+          max: 100,
+          border: { dash: [4, 4] },
+          ticks: { callback: v => v + '%', font: { size: 9 }, color: '#94A3B8' },
+          grid: { color: '#F1F5F9' }
+        },
+        y: {
+          stacked: true,
+          grid: { display: false },
+          ticks: { font: { weight: '800', size: 15 }, color: '#1E293B' }
+        }
+      }
+    }
+  });
 }
 
 /* ── MATEMÁTICA REGIONES — medida promedio selección 2025 ── */
@@ -1145,20 +1554,207 @@ function initSecChart() {
   new Chart(matCtx, mkCfg([[24.2,22.5],[42.2,40.1],[21.1,21.6],[12.6,15.8]],'#165F4F'));
 }
 
+/* ── Chart.js: FONDEP — Proyectos por nivel y año ── */
+let innovFondepChart = null;
+function initInnovFondepChart() {
+  if (innovFondepChart) return;
+  const ctx = document.getElementById('innov-fondep-chart');
+  if (!ctx) return;
+  innovFondepChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ['2023 C1','2023 C2','2024','2025','2026'],
+      datasets: [
+        { label: 'Inicial',    data: [3,5,5,0,1], backgroundColor: 'rgba(212,160,23,0.85)', borderRadius:6, borderSkipped:false },
+        { label: 'Primaria',   data: [2,8,4,1,2], backgroundColor: 'rgba(30,77,155,0.85)',  borderRadius:6, borderSkipped:false },
+        { label: 'Secundaria', data: [2,5,1,2,1], backgroundColor: 'rgba(15,122,94,0.85)',  borderRadius:6, borderSkipped:false }
+      ]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: {
+        legend: { position:'top', labels:{ font:{family:'Plus Jakarta Sans,sans-serif',size:10,weight:'700'}, color:'#1E293B', boxWidth:12, padding:14 } },
+        tooltip: { backgroundColor:'#0B1D3A', titleFont:{size:12,weight:'700'}, bodyFont:{size:11}, padding:10,
+          callbacks:{ label: c => '  '+c.dataset.label+': '+c.raw+' proyectos' } }
+      },
+      scales: {
+        x: { stacked:true, grid:{display:false}, ticks:{font:{weight:'700',size:11},color:'#1E293B'} },
+        y: { stacked:true, beginAtZero:true, border:{dash:[4,4]}, ticks:{stepSize:5,font:{size:9},color:'#94A3B8'}, grid:{color:'#F1F5F9'} }
+      }
+    }
+  });
+}
+
+/* ── Chart.js: CTS — Compensación por Tiempo de Servicios ── */
+let ctsCtsChartInstance = null;
+function initCtsCtsChart() {
+  if (ctsCtsChartInstance) return;
+  const ctx = document.getElementById('cts-year-chart');
+  if (!ctx) return;
+  ctsCtsChartInstance = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ['2022','2023','2024','2025','2026'],
+      datasets: [
+        {
+          label: 'PIM (S/)',
+          data: [1979178, 8815491, 20179433, 15730674, 23417886],
+          backgroundColor: 'rgba(30,77,155,0.25)',
+          borderColor: 'rgba(30,77,155,0.7)',
+          borderWidth: 2,
+          borderRadius: 6,
+          borderSkipped: false,
+        },
+        {
+          label: 'Ejecución (S/)',
+          data: [1937804, 8779876, 20164692, 15722422, 23417885],
+          backgroundColor: ['rgba(15,122,94,0.85)','rgba(15,122,94,0.85)','rgba(15,122,94,0.85)','rgba(15,122,94,0.85)','rgba(212,160,23,0.90)'],
+          borderRadius: 6,
+          borderSkipped: false,
+          borderWidth: 0,
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { position: 'top', labels: { font: { family: 'Plus Jakarta Sans,sans-serif', size: 10, weight: '700' }, color: '#1E293B', boxWidth: 12, padding: 14 } },
+        tooltip: {
+          backgroundColor: '#0B1D3A',
+          titleFont: { family: 'Plus Jakarta Sans,sans-serif', size: 12, weight: '700' },
+          bodyFont:  { family: 'Plus Jakarta Sans,sans-serif', size: 11 },
+          padding: 10,
+          callbacks: { label: c => '  ' + c.dataset.label + ': S/ ' + Number(c.raw).toLocaleString('es-PE') }
+        }
+      },
+      scales: {
+        x: { grid: { display: false }, ticks: { font: { weight: '700', size: 12 }, color: '#1E293B' } },
+        y: { beginAtZero: true, border: { dash: [4,4] }, ticks: { callback: v => 'S/' + (v/1000000).toFixed(0) + 'M', font: { size: 9 }, color: '#94A3B8' }, grid: { color: '#F1F5F9' } }
+      }
+    }
+  });
+}
+
+/* ── Chart.js: ATS — Aguinaldo por Tiempo de Servicios ── */
+let ctsAtsChartInstance = null;
+function initCtsAtsChart() {
+  if (ctsAtsChartInstance) return;
+  const ctx = document.getElementById('ats-year-chart');
+  if (!ctx) return;
+  ctsAtsChartInstance = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ['2022','2023','2024','2025','2026'],
+      datasets: [
+        {
+          label: 'PIM (S/)',
+          data: [1043292, 1742359, 1482014, 867291, 2620329],
+          backgroundColor: 'rgba(30,77,155,0.25)',
+          borderColor: 'rgba(30,77,155,0.7)',
+          borderWidth: 2,
+          borderRadius: 6,
+          borderSkipped: false,
+        },
+        {
+          label: 'Ejecución (S/)',
+          data: [1042634, 1742359, 1482014, 867113, 634486],
+          backgroundColor: ['rgba(15,122,94,0.85)','rgba(15,122,94,0.85)','rgba(15,122,94,0.85)','rgba(15,122,94,0.85)','rgba(212,160,23,0.75)'],
+          borderRadius: 6,
+          borderSkipped: false,
+          borderWidth: 0,
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { position: 'top', labels: { font: { family: 'Plus Jakarta Sans,sans-serif', size: 10, weight: '700' }, color: '#1E293B', boxWidth: 12, padding: 14 } },
+        tooltip: {
+          backgroundColor: '#0B1D3A',
+          titleFont: { family: 'Plus Jakarta Sans,sans-serif', size: 12, weight: '700' },
+          bodyFont:  { family: 'Plus Jakarta Sans,sans-serif', size: 11 },
+          padding: 10,
+          callbacks: { label: c => '  ' + c.dataset.label + ': S/ ' + Number(c.raw).toLocaleString('es-PE') }
+        }
+      },
+      scales: {
+        x: { grid: { display: false }, ticks: { font: { weight: '700', size: 12 }, color: '#1E293B' } },
+        y: { beginAtZero: true, border: { dash: [4,4] }, ticks: { callback: v => 'S/' + (v/1000).toFixed(0) + 'K', font: { size: 9 }, color: '#94A3B8' }, grid: { color: '#F1F5F9' } }
+      }
+    }
+  });
+}
+
+/* ── Chart.js: Adquisición de Bienes — Gasto anual 2022–2025 ── */
+let adqBienesChartInstance = null;
+function initAdqBienesChart() {
+  if (adqBienesChartInstance) return;
+  const ctx = document.getElementById('adq-bienes-chart');
+  if (!ctx) return;
+  adqBienesChartInstance = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ['2022', '2023', '2024', '2025'],
+      datasets: [{
+        label: 'Gasto S/',
+        data: [306809.52, 85282.17, 431075.90, 177491.00],
+        backgroundColor: [
+          'rgba(30,77,155,.82)',
+          'rgba(15,122,94,.82)',
+          'rgba(212,160,23,.85)',
+          'rgba(124,58,237,.82)'
+        ],
+        borderColor: ['#1E4D9B','#0F7A5E','#D4A017','#7C3AED'],
+        borderWidth: 2,
+        borderRadius: 8,
+        borderSkipped: false
+      }]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          callbacks: {
+            label: ctx => ' S/ ' + ctx.raw.toLocaleString('es-PE', { minimumFractionDigits: 2 })
+          }
+        },
+        datalabels: {
+          anchor: 'end', align: 'end',
+          formatter: v => 'S/' + (v/1000).toFixed(0) + 'K',
+          font: { weight: '800', size: 11 },
+          color: ['#1E4D9B','#0A5030','#7A5012','#7C3AED']
+        }
+      },
+      scales: {
+        x: { border: { display: false }, grid: { display: false }, ticks: { font: { size: 11, weight: '700' }, color: '#475569' } },
+        y: { beginAtZero: true, border: { dash: [4,4] }, ticks: { callback: v => 'S/' + (v/1000).toFixed(0) + 'K', font: { size: 9 }, color: '#94A3B8' }, grid: { color: '#F1F5F9' } }
+      }
+    }
+  });
+}
+
 /* ── Slide event handlers ── */
 function onSlide(slide) {
   triggerBars(slide);
+  if (slide.querySelector('#innov-fondep-chart')) setTimeout(initInnovFondepChart, 200);
+  if (slide.querySelector('#cts-year-chart'))    setTimeout(initCtsCtsChart, 200);
+  if (slide.querySelector('#ats-year-chart'))    setTimeout(initCtsAtsChart, 200);
   if (slide.querySelector('#cdt-chart'))        setTimeout(initCdtChart, 200);
   if (slide.querySelector('#enla-lec-chart'))   setTimeout(initEnlaCharts, 200);
   if (slide.querySelector('#enla-lec-2025'))    setTimeout(initEnlaDonut, 200);
   if (slide.querySelector('#inicial-chart'))    setTimeout(initInicialChart, 200);
   if (slide.querySelector('#ebr-chart'))        setTimeout(initEbrChart, 200);
   if (slide.querySelector('#prim-chart'))       setTimeout(initPrimChart, 200);
+  if (slide.querySelector('#sec-breakdown-chart')) setTimeout(initSecBreakdownChart, 200);
   if (slide.querySelector('#mat-reg-chart'))    setTimeout(initMatRegChart, 200);
   if (slide.querySelector('#hist-ugel-chart'))  setTimeout(initHistUgelChart, 200);
   if (slide.querySelector('#lec-reg-chart'))    setTimeout(initLecRegChart, 200);
   if (slide.querySelector('#hist-puno-chart'))  setTimeout(initHistPunoChart, 200);
   if (slide.querySelector('#sec-lec-chart'))    setTimeout(initSecChart, 200);
+  if (slide.querySelector('#adq-bienes-chart')) setTimeout(initAdqBienesChart, 200);
   animateSlideIn(slide);
   toggleParticles(slide);
   setTimeout(() => {

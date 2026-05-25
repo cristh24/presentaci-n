@@ -2,11 +2,12 @@ const http = require("http");
 const fs   = require("fs");
 const path = require("path");
 
-const ROOT           = __dirname;
-const IMAGES_DIR     = path.join(ROOT, "img");
-const INICIAL_DIR    = path.join(ROOT, "inicial");
-const PRIMARIA_DIR   = path.join(ROOT, "primaria");
-const COLEGIOS_DIR   = path.join(ROOT, "img colegios");
+const ROOT              = __dirname;
+const IMAGES_DIR        = path.join(ROOT, "img");
+const INICIAL_DIR       = path.join(ROOT, "inicial");
+const PRIMARIA_DIR      = path.join(ROOT, "primaria");
+const COLEGIOS_DIR      = path.join(ROOT, "img colegios");
+const INGENIERITOS_DIR  = path.join(ROOT, "img ingenieritos eduardo de habich");
 const HTML_FILE      = path.join(ROOT, "index.html");
 const SECTIONS_DIR   = path.join(ROOT, "sections");
 const SLIDES_DIR     = path.join(ROOT, "slides_png", "out");
@@ -37,6 +38,16 @@ const server = http.createServer((req, res) => {
       res.writeHead(500);
       return res.end("Error: " + e.message);
     }
+  }
+
+  /* ── Imágenes /img ingenieritos eduardo de habich/ ── */
+  if (req.url.startsWith("/img%20ingenieritos%20eduardo%20de%20habich/")) {
+    const name = decodeURIComponent(req.url.slice("/img%20ingenieritos%20eduardo%20de%20habich/".length));
+    const file = path.join(INGENIERITOS_DIR, path.basename(name));
+    if (!fs.existsSync(file)) { res.writeHead(404); return res.end(); }
+    const ext = path.extname(name).toLowerCase();
+    res.writeHead(200, { "Content-Type": MIME[ext] || "application/octet-stream" });
+    return fs.createReadStream(file).pipe(res);
   }
 
   /* ── Imágenes /img colegios/ ── */

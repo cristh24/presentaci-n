@@ -13,5 +13,8 @@
   "dependencies": {
     "jimp": "^1.6.1",
     "pptxgenjs": "^4.0.1"
+  },
+  "devDependencies": {
+    "pdf-parse": "^1.1.1"
   }
 }

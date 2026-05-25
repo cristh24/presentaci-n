@@ -24,20 +24,69 @@
     </div>
     <img class="s-hd-logo" src="/img/image8.png" alt="">
   </div>
-  <div class="s-bd" style="justify-content:center;align-items:center">
-    <div style="text-align:center;max-width:520px">
-      <div style="width:80px;height:80px;border-radius:50%;background:linear-gradient(135deg,#7A4A0A,#E8B824);display:flex;align-items:center;justify-content:center;margin:0 auto 20px;box-shadow:0 8px 24px rgba(245,158,11,.3)">
-        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+  <div class="s-bd">
+
+    <!-- KPI row -->
+    <div class="kpi-row" style="margin-bottom:10px">
+      <div class="kpi">
+        <div class="kpi-top" style="background:linear-gradient(90deg,#7A4A0A,#E8B824)"></div>
+        <div class="kpi-bd">
+          <div class="kpi-v" style="color:#7A4A0A;font-size:22px">3,099</div>
+          <div class="kpi-l">Expedientes registrados</div>
+        </div>
       </div>
-      <div style="font-size:18px;font-weight:800;color:var(--navy);margin-bottom:12px">INFORMACIÓN PENDIENTE</div>
-      <div style="background:#FFF7ED;border-radius:var(--r);border:1px solid #FED7AA;padding:16px 20px;font-size:11px;color:#92400E;line-height:2;text-align:left">
-        <strong>Responsables:</strong> CPC Benigno Pari Mamani · Dr. José Walter Cuba Pino<br>
-        <strong>Documento requerido:</strong> Informe — cantidad de beneficiarios y porcentaje de pagos<br>
-        <strong>Fecha límite:</strong> 11/05/2026
+      <div class="kpi">
+        <div class="kpi-top" style="background:linear-gradient(90deg,#0B1D3A,#1E4D9B)"></div>
+        <div class="kpi-bd">
+          <div class="kpi-v" style="color:#0B1D3A;font-size:13px">S/ 159,203,727</div>
+          <div class="kpi-l">Monto total deuda</div>
+        </div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-top" style="background:linear-gradient(90deg,#0F7A5E,#1A9E7A)"></div>
+        <div class="kpi-bd">
+          <div class="kpi-v" style="color:#0F7A5E;font-size:13px">S/ 67,799,848</div>
+          <div class="kpi-l">Pago a cuenta — 42.6%</div>
+        </div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-top" style="background:linear-gradient(90deg,#C2410C,#F97316)"></div>
+        <div class="kpi-bd">
+          <div class="kpi-v" style="color:#C2410C;font-size:13px">S/ 91,403,879</div>
+          <div class="kpi-l">Saldo por pagar — 57.4%</div>
+        </div>
       </div>
     </div>
+
+    <!-- Chart row -->
+    <div class="chart-row">
+      <div class="bars-wrap" style="flex:1;min-width:0">
+        <div class="bars-lbl">SENTENCIAS POR AÑO DE REGISTRO — Pagado vs. Saldo Pendiente (S/) · 2022–2026</div>
+        <div style="flex:1;min-height:0;position:relative;padding-bottom:4px">
+          <canvas id="deuda-social-chart"></canvas>
+        </div>
+      </div>
+      <div style="flex:0 0 176px;display:flex;flex-direction:column;gap:8px">
+        <div style="background:linear-gradient(135deg,#7A4A0A,#E8B824);border-radius:var(--r);padding:14px 16px;color:#fff;flex:1;display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden">
+          <div style="position:absolute;top:0;left:0;right:0;height:4px;background:rgba(255,255,255,.35)"></div>
+          <div style="font-size:8px;font-weight:700;letter-spacing:2px;color:rgba(255,255,255,.75);margin-bottom:6px">AVANCE GLOBAL</div>
+          <div style="font-size:32px;font-weight:800;line-height:1;margin-top:2px">42.6%</div>
+          <div style="font-size:10px;color:rgba(255,255,255,.8);margin-top:6px">de la deuda pagada</div>
+        </div>
+        <div style="background:#fff;border-radius:var(--r);border:1px solid var(--gbd);box-shadow:var(--sh);padding:12px 14px">
+          <div style="font-size:8px;font-weight:700;color:var(--gm);letter-spacing:2px;margin-bottom:4px">DEMANDANTES</div>
+          <div style="font-size:22px;font-weight:800;color:#0B1D3A">3,098</div>
+          <div style="font-size:9px;color:var(--gm);margin-top:2px">beneficiarios registrados</div>
+        </div>
+        <div style="background:var(--light);border-radius:var(--r);border:1px solid var(--gbd);padding:10px 14px">
+          <div style="font-size:8px;font-weight:700;color:var(--navy);letter-spacing:1px;margin-bottom:4px">FUENTE</div>
+          <div style="font-size:9px;font-weight:600;color:var(--navy);line-height:1.5">Listado MEF — Sentencias en ejecución<br>Gob. Regional Puno [902]<br>Corte: 22/05/2026</div>
+        </div>
+      </div>
+    </div>
+
   </div>
-  <div class="s-ft"><span class="s-ft-t">Pendiente · Deuda Social · UGEL San Román</span><div class="s-ft-n">—</div></div>
+  <div class="s-ft"><span class="s-ft-t">Fuente: Reporte MEF — Deuda Social · Gobierno Regional Puno [902] · 22/05/2026</span><div class="s-ft-n">—</div></div>
 </div>
 </section>
 

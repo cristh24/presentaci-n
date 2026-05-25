@@ -260,21 +260,22 @@
 .cepre-desc{font-size:15px;color:rgba(255,255,255,.65);line-height:1.5}
 
 /* ── CLOSING ── */
-.slide-closing{flex-direction:row;background:var(--snow)}
+.slide-closing{flex-direction:row;background:var(--navy)}
 .cl-left{width:420px;flex-shrink:0;background:var(--navy);padding:42px 34px;display:flex;flex-direction:column;position:relative;overflow:hidden;z-index:2;clip-path:polygon(0 0,calc(100% + 65px) 0,100% 100%,0 100%)}
 .cl-d1{position:absolute;bottom:-70px;left:-55px;width:280px;height:280px;border-radius:50%;background:rgba(0,0,0,.2)}
 .cl-d2{position:absolute;top:-70px;right:20px;width:210px;height:210px;border-radius:50%;background:rgba(14,165,233,.06)}
 .cl-tbar{position:absolute;bottom:0;left:0;right:0;height:8px;background:var(--teal)}
-.cl-logo{width:170px;height:auto;object-fit:contain;margin-bottom:26px;position:relative;z-index:2}
+.cl-logo{width:230px;height:auto;object-fit:contain;margin-bottom:10px;position:relative;z-index:2}
 .cl-div{width:46px;height:4px;background:var(--gold);border-radius:2px;margin-bottom:16px;position:relative;z-index:2}
 .cl-msg{font-size:32px;font-weight:800;color:#fff;line-height:1.15;margin-bottom:18px;position:relative;z-index:2}
 .cl-dir{margin-top:auto;padding-top:18px;border-top:1px solid rgba(255,255,255,.1);font-size:14px;color:rgba(149,178,212,.85);line-height:1.6;position:relative;z-index:2}
 .cl-right{flex:1;display:flex;align-items:center;justify-content:center;flex-direction:column;position:relative;overflow:hidden;z-index:1}
-.cl-yr-a{font-size:115px;font-weight:800;color:#D4E4FF;line-height:1}
-.cl-yr-b{font-size:115px;font-weight:800;color:var(--navy);line-height:1}
+.cl-yr-a{font-size:115px;font-weight:800;color:var(--blue);line-height:1}
+.cl-yr-b{font-size:115px;font-weight:800;color:var(--gold);line-height:1}
 .cl-yr-div{height:6px;background:linear-gradient(90deg,var(--gold),var(--sky));border-radius:3px;margin:8px 50px}
 .cl-yr-lbl{font-size:10px;font-weight:700;letter-spacing:4px;color:var(--sky);text-transform:uppercase;margin-top:10px}
-.cl-img{position:absolute;right:0;top:0;height:100%;width:175px;object-fit:cover;object-position:center;opacity:.18}
+.cl-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:.55}
+.cl-right-ov{position:absolute;inset:0;background:rgba(255,255,255,.55);z-index:1}
 
 /* ── INDEX ── */
 .idx-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;flex:1;min-height:0;align-content:center}
@@ -398,6 +399,11 @@
 .glightbox-open{overflow:hidden}
 .gslide-image img{max-height:90vh;border-radius:8px}
 .photo-link{display:block;width:100%;height:100%;cursor:zoom-in;position:relative}
+.photo-link img{transition:transform .4s ease}
+.photo-link:hover img{transform:scale(1.06)}
+/* popup flotante hover imágenes */
+#img-hover-popup{position:fixed;z-index:9999;pointer-events:none;border-radius:12px;overflow:hidden;box-shadow:0 16px 48px rgba(0,0,0,.8);border:2px solid rgba(255,255,255,.18);background:#050E1D;display:none;opacity:0;transition:opacity .18s ease}
+#img-hover-popup img{display:block;width:360px;height:auto;max-height:280px;object-fit:contain}
 .photo-link::after{content:'+';position:absolute;top:10px;right:10px;background:rgba(0,0,0,.55);color:#fff;font-size:20px;font-weight:300;width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .2s;pointer-events:none;line-height:32px;text-align:center}
 .photo-link:hover::after{opacity:1}
 
@@ -580,6 +586,19 @@ canvas { cursor: crosshair; }
 
 /* ── PAUSA CARRUSEL AL HOVER ── */
 .ienc-track:hover,.iienc-track:hover{animation-play-state:paused}
+
+/* ── GALERÍA CARRUSELES VERTICALES — COLEGIOS ── */
+.gal-col{overflow:hidden;border-radius:14px;position:relative}
+.gal-col::before,.gal-col::after{content:'';position:absolute;left:0;right:0;height:70px;z-index:3;pointer-events:none}
+.gal-col::before{top:0;background:linear-gradient(to bottom,#050E1D 0%,transparent 100%)}
+.gal-col::after{bottom:0;background:linear-gradient(to top,#050E1D 0%,transparent 100%)}
+.gal-track{display:flex;flex-direction:column;gap:8px;will-change:transform}
+.gal-down{animation:galDown 50s linear infinite}
+.gal-up{animation:galUp 50s linear infinite}
+@keyframes galDown{0%{transform:translateY(-50%)}100%{transform:translateY(0)}}
+@keyframes galUp{0%{transform:translateY(0)}100%{transform:translateY(-50%)}}
+.gal-track img{width:100%;border-radius:10px;display:block;object-fit:cover;aspect-ratio:4/3}
+.gal-track:hover{animation-play-state:paused}
 </style>
 </head>
 <body>
@@ -1007,6 +1026,185 @@ canvas { cursor: crosshair; }
 </div>
 </section>
 
+<!-- ═══════════════════════════════════════════════
+     GALERÍA FOTOGRÁFICA — IIs.EE. CREADAS
+═══════════════════════════════════════════════ -->
+<section data-transition="fade">
+<div class="slide" style="background:linear-gradient(160deg,#050E1D 0%,#0B1D3A 100%);position:relative;overflow:hidden">
+  <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(43,93,163,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(43,93,163,.035) 1px,transparent 1px);background-size:64px 64px;pointer-events:none;z-index:0"></div>
+  <!-- Header -->
+  <div style="display:flex;align-items:center;gap:14px;padding:16px 26px 10px;flex-shrink:0;position:relative;z-index:2">
+    <img src="img/image8.png" style="height:40px;object-fit:contain" alt="">
+    <div style="flex:1">
+      <div style="font-size:9px;font-weight:700;letter-spacing:5px;text-transform:uppercase;color:rgba(232,184,36,.9);margin-bottom:2px">Registro Fotográfico</div>
+      <h2 style="font-size:20px;font-weight:800;color:#fff;margin:0;line-height:1">Nuevas Instituciones Educativas · UGEL San Román 2023–2026</h2>
+    </div>
+    <div style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);border-radius:8px;padding:5px 14px;text-align:center">
+      <div style="font-size:18px;font-weight:800;color:#E8B824">67</div>
+      <div style="font-size:8px;color:rgba(148,180,220,.7);font-weight:600">FOTOS</div>
+    </div>
+  </div>
+  <!-- 3 Columnas de carrusel -->
+  <div style="flex:1;display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;padding:0 20px 18px;overflow:hidden;position:relative;z-index:2">
+
+    <!-- Izquierda: arriba → abajo -->
+    <div class="gal-col">
+      <div class="gal-track gal-down">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.30.36%20PM.jpeg" alt="">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.30.37%20PM%20(1).jpeg" alt="">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.30.37%20PM.jpeg" alt="">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.30.38%20PM%20(1).jpeg" alt="">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.30.38%20PM.jpeg" alt="">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.30.39%20PM%20(1).jpeg" alt="">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.30.39%20PM%20(2).jpeg" alt="">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.30.39%20PM.jpeg" alt="">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.30.40%20PM%20(1).jpeg" alt="">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.30.40%20PM%20(2).jpeg" alt="">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.30.40%20PM.jpeg" alt="">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.30.41%20PM%20(1).jpeg" alt="">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.30.41%20PM%20(2).jpeg" alt="">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.30.41%20PM.jpeg" alt="">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.37.45%20PM.jpeg" alt="">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.37.46%20PM.jpeg" alt="">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.37.47%20PM.jpeg" alt="">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.37.48%20PM%20(1).jpeg" alt="">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.37.48%20PM.jpeg" alt="">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.37.49%20PM%20(1).jpeg" alt="">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.37.49%20PM.jpeg" alt="">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.37.50%20PM%20(1).jpeg" alt="">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.37.50%20PM.jpeg" alt="">
+        <!-- duplicado para loop sin cortes -->
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.30.36%20PM.jpeg" alt="">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.30.37%20PM%20(1).jpeg" alt="">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.30.37%20PM.jpeg" alt="">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.30.38%20PM%20(1).jpeg" alt="">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.30.38%20PM.jpeg" alt="">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.30.39%20PM%20(1).jpeg" alt="">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.30.39%20PM%20(2).jpeg" alt="">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.30.39%20PM.jpeg" alt="">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.30.40%20PM%20(1).jpeg" alt="">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.30.40%20PM%20(2).jpeg" alt="">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.30.40%20PM.jpeg" alt="">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.30.41%20PM%20(1).jpeg" alt="">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.30.41%20PM%20(2).jpeg" alt="">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.30.41%20PM.jpeg" alt="">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.37.45%20PM.jpeg" alt="">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.37.46%20PM.jpeg" alt="">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.37.47%20PM.jpeg" alt="">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.37.48%20PM%20(1).jpeg" alt="">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.37.48%20PM.jpeg" alt="">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.37.49%20PM%20(1).jpeg" alt="">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.37.49%20PM.jpeg" alt="">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.37.50%20PM%20(1).jpeg" alt="">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.37.50%20PM.jpeg" alt="">
+      </div>
+    </div>
+
+    <!-- Centro: abajo → arriba -->
+    <div class="gal-col">
+      <div class="gal-track gal-up">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.37.51%20PM%20(1).jpeg" alt="">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.37.51%20PM.jpeg" alt="">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.37.52%20PM.jpeg" alt="">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.37.53%20PM%20(1).jpeg" alt="">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.37.53%20PM%20(2).jpeg" alt="">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.37.53%20PM.jpeg" alt="">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.37.54%20PM.jpeg" alt="">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.37.56%20PM.jpeg" alt="">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.37.57%20PM.jpeg" alt="">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.37.58%20PM.jpeg" alt="">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.37.59%20PM%20(1).jpeg" alt="">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.37.59%20PM.jpeg" alt="">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.38.00%20PM%20(1).jpeg" alt="">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.38.00%20PM.jpeg" alt="">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.38.01%20PM%20(1).jpeg" alt="">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.38.01%20PM.jpeg" alt="">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.38.03%20PM.jpeg" alt="">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.38.04%20PM.jpeg" alt="">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.38.05%20PM.jpeg" alt="">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.38.06%20PM%20(1).jpeg" alt="">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.38.06%20PM.jpeg" alt="">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.38.07%20PM.jpeg" alt="">
+        <!-- duplicado para loop sin cortes -->
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.37.51%20PM%20(1).jpeg" alt="">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.37.51%20PM.jpeg" alt="">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.37.52%20PM.jpeg" alt="">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.37.53%20PM%20(1).jpeg" alt="">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.37.53%20PM%20(2).jpeg" alt="">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.37.53%20PM.jpeg" alt="">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.37.54%20PM.jpeg" alt="">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.37.56%20PM.jpeg" alt="">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.37.57%20PM.jpeg" alt="">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.37.58%20PM.jpeg" alt="">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.37.59%20PM%20(1).jpeg" alt="">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.37.59%20PM.jpeg" alt="">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.38.00%20PM%20(1).jpeg" alt="">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.38.00%20PM.jpeg" alt="">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.38.01%20PM%20(1).jpeg" alt="">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.38.01%20PM.jpeg" alt="">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.38.03%20PM.jpeg" alt="">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.38.04%20PM.jpeg" alt="">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.38.05%20PM.jpeg" alt="">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.38.06%20PM%20(1).jpeg" alt="">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.38.06%20PM.jpeg" alt="">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.38.07%20PM.jpeg" alt="">
+      </div>
+    </div>
+
+    <!-- Derecha: arriba → abajo -->
+    <div class="gal-col">
+      <div class="gal-track gal-down">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.38.08%20PM.jpeg" alt="">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.38.09%20PM.jpeg" alt="">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.38.12%20PM.jpeg" alt="">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.38.13%20PM.jpeg" alt="">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.38.14%20PM.jpeg" alt="">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.38.15%20PM.jpeg" alt="">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.38.17%20PM.jpeg" alt="">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.38.18%20PM.jpeg" alt="">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.38.19%20PM.jpeg" alt="">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.38.20%20PM.jpeg" alt="">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.38.22%20PM.jpeg" alt="">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.38.27%20PM.jpeg" alt="">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.38.28%20PM%20(1).jpeg" alt="">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.38.28%20PM.jpeg" alt="">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.38.30%20PM.jpeg" alt="">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.38.33%20PM.jpeg" alt="">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.38.34%20PM.jpeg" alt="">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.38.35%20PM.jpeg" alt="">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.38.36%20PM.jpeg" alt="">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.38.48%20PM.jpeg" alt="">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.38.49%20PM.jpeg" alt="">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.39.12%20PM.jpeg" alt="">
+        <!-- duplicado para loop sin cortes -->
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.38.08%20PM.jpeg" alt="">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.38.09%20PM.jpeg" alt="">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.38.12%20PM.jpeg" alt="">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.38.13%20PM.jpeg" alt="">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.38.14%20PM.jpeg" alt="">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.38.15%20PM.jpeg" alt="">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.38.17%20PM.jpeg" alt="">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.38.18%20PM.jpeg" alt="">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.38.19%20PM.jpeg" alt="">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.38.20%20PM.jpeg" alt="">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.38.22%20PM.jpeg" alt="">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.38.27%20PM.jpeg" alt="">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.38.28%20PM%20(1).jpeg" alt="">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.38.28%20PM.jpeg" alt="">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.38.30%20PM.jpeg" alt="">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.38.33%20PM.jpeg" alt="">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.38.34%20PM.jpeg" alt="">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.38.35%20PM.jpeg" alt="">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.38.36%20PM.jpeg" alt="">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.38.48%20PM.jpeg" alt="">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.38.49%20PM.jpeg" alt="">
+        <img src="img%20colegios/WhatsApp%20Image%202026-05-22%20at%202.39.12%20PM.jpeg" alt="">
+      </div>
+    </div>
+
+  </div>
+</div>
+</section>
 
 ﻿<!-- ═══════════════════════════════════════════════
      SECCIÓN 02 — SANEAMIENTO FÍSICO LEGAL
@@ -1471,18 +1669,24 @@ canvas { cursor: crosshair; }
       <!-- Foto principal CEPRE UNI -->
       <div style="flex:2;display:flex;flex-direction:column;gap:8px">
         <div style="flex:1;border-radius:var(--r);overflow:hidden;box-shadow:var(--sm);position:relative">
-          <img src="img/image98.jpg" alt="CEPRE UNI Sede Juliaca" style="width:100%;height:100%;object-fit:cover;object-position:top">
-          <div style="position:absolute;bottom:0;left:0;right:0;padding:14px 18px;background:linear-gradient(to top,rgba(10,22,40,.92),transparent)">
+          <a href="img/image98.jpg" class="glightbox photo-link" data-gallery="cepre" data-title="CEPRE UNI — Sede Juliaca">
+            <img src="img/image98.jpg" alt="CEPRE UNI Sede Juliaca" style="width:100%;height:100%;object-fit:cover;object-position:top;transition:transform .4s ease">
+          </a>
+          <div style="position:absolute;bottom:0;left:0;right:0;padding:14px 18px;background:linear-gradient(to top,rgba(10,22,40,.92),transparent);pointer-events:none">
             <div style="font-size:18px;font-weight:800;color:#fff">CEPRE UNI — Sede Juliaca</div>
             <div style="font-size:13px;color:rgba(255,255,255,.7);margin-top:3px">Centro Pre-Universitario · Universidad Nacional de Ingeniería</div>
           </div>
         </div>
         <div style="display:flex;gap:8px;flex-shrink:0">
-          <div style="flex:1;border-radius:var(--r);overflow:hidden;box-shadow:var(--sh);height:90px">
-            <img src="img/image99.jpg" alt="CEPRE UNI actividad" style="width:100%;height:100%;object-fit:cover;object-position:top">
+          <div class="cepre-thumb" style="flex:1;border-radius:var(--r);overflow:hidden;box-shadow:var(--sh);height:90px">
+            <a href="img/image99.jpg" class="glightbox photo-link" data-gallery="cepre" data-title="CEPRE UNI — Actividad académica" style="display:block;width:100%;height:100%">
+              <img src="img/image99.jpg" alt="CEPRE UNI actividad" style="width:100%;height:100%;object-fit:cover;object-position:top">
+            </a>
           </div>
-          <div style="flex:1;border-radius:var(--r);overflow:hidden;box-shadow:var(--sh);height:90px">
-            <img src="img/image100.jpg" alt="CEPRE UNI estudiantes" style="width:100%;height:100%;object-fit:cover;object-position:top">
+          <div class="cepre-thumb" style="flex:1;border-radius:var(--r);overflow:hidden;box-shadow:var(--sh);height:90px">
+            <a href="img/image100.jpg" class="glightbox photo-link" data-gallery="cepre" data-title="CEPRE UNI — Estudiantes" style="display:block;width:100%;height:100%">
+              <img src="img/image100.jpg" alt="CEPRE UNI estudiantes" style="width:100%;height:100%;object-fit:cover;object-position:top">
+            </a>
           </div>
         </div>
       </div>
@@ -3169,15 +3373,17 @@ canvas { cursor: crosshair; }
   <div class="cl-left">
     <div class="cl-d1"></div><div class="cl-d2"></div><div class="cl-tbar"></div>
     <img class="cl-logo" src="img/image8.png" alt="">
+    <div style="font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:rgba(232,184,36,.9);margin-bottom:20px;position:relative;z-index:2">Educación Pública de Calidad</div>
     <div class="cl-div"></div>
     <div class="cl-msg">¡Comprometidos<br>con la Calidad<br>Educativa!</div>
     <div class="cl-dir">
-      <strong style="color:rgba(255,255,255,.85)">L. Jarid Mamani Llano</strong><br>
+      <strong style="color:#fff;font-size:26px;display:block;line-height:1.2;letter-spacing:.3px">L. Jarid Mamani Llano</strong>
       Director · UGEL San Román
     </div>
   </div>
   <div class="cl-right">
     <img class="cl-img" src="img/image31-clean.png" alt="">
+    <div class="cl-right-ov"></div>
     <div style="position:relative;z-index:2;text-align:center">
       <div class="cl-yr-a">2022</div>
       <div class="cl-yr-div"></div>
@@ -4454,6 +4660,53 @@ Reveal.on('ready', e => {
   onSlide(e.currentSlide);
   initGLightbox();
 });
+
+/* ── Hover popup — todas las fotos recortadas ── */
+(function(){
+  const popup = document.createElement('div');
+  popup.id = 'img-hover-popup';
+  const pi = document.createElement('img');
+  popup.appendChild(pi);
+  document.body.appendChild(popup);
+
+  function pos(e) {
+    const W = popup.offsetWidth || 360, H = popup.offsetHeight || 280, margin = 18;
+    let x = e.clientX + margin;
+    let y = e.clientY - H / 2;
+    if (x + W > window.innerWidth - 8) x = e.clientX - W - margin;
+    if (y < 8) y = 8;
+    if (y + H > window.innerHeight - 8) y = window.innerHeight - H - 8;
+    popup.style.left = x + 'px';
+    popup.style.top  = y + 'px';
+  }
+
+  function attach(img) {
+    img.style.cursor = 'zoom-in';
+    img.addEventListener('mouseenter', e => {
+      pi.src = img.src;
+      popup.style.display = 'block';
+      requestAnimationFrame(() => { popup.style.opacity = '1'; pos(e); });
+    });
+    img.addEventListener('mousemove', pos);
+    img.addEventListener('mouseleave', () => {
+      popup.style.opacity = '0';
+      setTimeout(() => { if (popup.style.opacity === '0') popup.style.display = 'none'; }, 180);
+    });
+  }
+
+  // Excluir: portada bg, carruseles horizontales/verticales, logos
+  const skip = '.pv2-bg, .ienc-slide img, .iienc-slide img, .gal-track img';
+
+  document.querySelectorAll('img').forEach(img => {
+    if (img.matches(skip)) return;
+    if (img.closest('.ienc-track, .iienc-track, .gal-track')) return;
+    const s = img.getAttribute('style') || '';
+    const cls = Array.from(img.classList);
+    const isCoverInline = s.includes('object-fit:cover');
+    const isCoverClass  = img.matches('.onem-photo, .onem-stu');
+    if (isCoverInline || isCoverClass) attach(img);
+  });
+})();
 </script>
 
 </body>

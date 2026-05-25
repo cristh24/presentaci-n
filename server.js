@@ -2,13 +2,14 @@ const http = require("http");
 const fs   = require("fs");
 const path = require("path");
 
-const ROOT        = __dirname;
-const IMAGES_DIR  = path.join(ROOT, "img");
-const INICIAL_DIR = path.join(ROOT, "inicial");
-const PRIMARIA_DIR= path.join(ROOT, "primaria");
-const HTML_FILE   = path.join(ROOT, "presentacion.html");
-const SECTIONS_DIR= path.join(ROOT, "sections");
-const SLIDES_DIR  = path.join(ROOT, "slides_png", "out");
+const ROOT           = __dirname;
+const IMAGES_DIR     = path.join(ROOT, "img");
+const INICIAL_DIR    = path.join(ROOT, "inicial");
+const PRIMARIA_DIR   = path.join(ROOT, "primaria");
+const COLEGIOS_DIR   = path.join(ROOT, "img colegios");
+const HTML_FILE      = path.join(ROOT, "index.html");
+const SECTIONS_DIR   = path.join(ROOT, "sections");
+const SLIDES_DIR     = path.join(ROOT, "slides_png", "out");
 const PORT = 3000;
 
 const MIME = { ".png":"image/png", ".jpg":"image/jpeg", ".jpeg":"image/jpeg", ".gif":"image/gif" };
@@ -29,13 +30,23 @@ const server = http.createServer((req, res) => {
   /* ── Presentación principal ── */
   if (req.url === "/" || req.url === "/index.html") {
     try {
-      const html = buildPresentation();
+      const html = fs.readFileSync(HTML_FILE, "utf8");
       res.writeHead(200, { "Content-Type": "text/html; charset=utf-8" });
       return res.end(html);
     } catch (e) {
       res.writeHead(500);
       return res.end("Error: " + e.message);
     }
+  }
+
+  /* ── Imágenes /img colegios/ ── */
+  if (req.url.startsWith("/img%20colegios/")) {
+    const name = decodeURIComponent(req.url.slice("/img%20colegios/".length));
+    const file = path.join(COLEGIOS_DIR, path.basename(name));
+    if (!fs.existsSync(file)) { res.writeHead(404); return res.end(); }
+    const ext = path.extname(name).toLowerCase();
+    res.writeHead(200, { "Content-Type": MIME[ext] || "application/octet-stream" });
+    return fs.createReadStream(file).pipe(res);
   }
 
   /* ── Imágenes /img/ ── */

@@ -8,6 +8,7 @@ const INICIAL_DIR       = path.join(ROOT, "inicial");
 const PRIMARIA_DIR      = path.join(ROOT, "primaria");
 const COLEGIOS_DIR      = path.join(ROOT, "img colegios");
 const INGENIERITOS_DIR  = path.join(ROOT, "img ingenieritos eduardo de habich");
+const PORTADAS_DIR      = path.join(ROOT, "img-portadas");
 const HTML_FILE      = path.join(ROOT, "index.html");
 const SECTIONS_DIR   = path.join(ROOT, "sections");
 const SLIDES_DIR     = path.join(ROOT, "slides_png", "out");
@@ -75,6 +76,16 @@ const server = http.createServer((req, res) => {
   if (req.url.startsWith("/inicial/")) {
     const name = path.basename(decodeURIComponent(req.url));
     const file = path.join(INICIAL_DIR, name);
+    if (!fs.existsSync(file)) { res.writeHead(404); return res.end(); }
+    const ext = path.extname(name).toLowerCase();
+    res.writeHead(200, { "Content-Type": MIME[ext] || "application/octet-stream" });
+    return fs.createReadStream(file).pipe(res);
+  }
+
+  /* ── Imágenes /img-portadas/ ── */
+  if (req.url.startsWith("/img-portadas/")) {
+    const name = path.basename(decodeURIComponent(req.url));
+    const file = path.join(PORTADAS_DIR, name);
     if (!fs.existsSync(file)) { res.writeHead(404); return res.end(); }
     const ext = path.extname(name).toLowerCase();
     res.writeHead(200, { "Content-Type": MIME[ext] || "application/octet-stream" });

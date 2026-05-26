@@ -67,7 +67,7 @@
 .pv2-card::before{content:'';position:absolute;top:0;left:12px;right:12px;height:2px;
   background:linear-gradient(90deg,transparent,rgba(212,160,23,.9),rgba(232,184,36,.98),rgba(212,160,23,.7),transparent);
   border-radius:2px}
-.pv2-logo{width:172px;height:auto;object-fit:contain}
+.pv2-logo{width:360px;height:auto;object-fit:contain}
 .pv2-tag{font-size:10px;font-weight:700;letter-spacing:5px;text-transform:uppercase;
   color:rgba(232,184,36,.95);margin:18px 0 0}
 .pv2-accent{width:40px;height:3px;background:linear-gradient(90deg,var(--gold),var(--amber));
@@ -139,7 +139,7 @@
 .s-hd-t{flex:1}
 .s-hd-t h2{font-size:22px;font-weight:800;color:var(--navy);line-height:1.2}
 .s-hd-t p{font-size:13px;color:var(--gm);margin-top:4px;font-style:italic}
-.s-hd-logo{height:64px;width:auto;object-fit:contain}
+.s-hd-logo{height:120px;width:auto;object-fit:contain}
 .s-bd{flex:1;min-height:0;padding:14px 24px 12px;display:flex;flex-direction:column;gap:10px}
 .s-ft{height:36px;background:#fff;border-top:1px solid var(--gbd);display:flex;align-items:center;padding:0 14px;flex-shrink:0;position:relative}
 .s-ft::before{content:'';position:absolute;left:0;top:0;bottom:0;width:8px;background:linear-gradient(to bottom,var(--navy),var(--blue))}
@@ -392,7 +392,7 @@
 .secdiv-ghost{position:absolute;font-size:340px;font-weight:800;color:rgba(255,255,255,.04);line-height:1;top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none;user-select:none;z-index:0;letter-spacing:-20px}
 .secdiv-grid{position:absolute;inset:0;z-index:0;background-image:linear-gradient(rgba(255,255,255,.028) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.028) 1px,transparent 1px);background-size:72px 72px}
 .secdiv-content{position:relative;z-index:2;text-align:center;display:flex;flex-direction:column;align-items:center}
-.secdiv-logo{width:96px;height:auto;object-fit:contain;margin-bottom:18px;opacity:.9;filter:drop-shadow(0 4px 14px rgba(0,0,0,.5))}
+.secdiv-logo{width:230px;height:auto;object-fit:contain;margin-bottom:18px;opacity:.95;filter:drop-shadow(0 4px 18px rgba(0,0,0,.55))}
 .secdiv-tag{font-size:11px;font-weight:700;letter-spacing:7px;text-transform:uppercase;color:rgba(180,210,255,.5);margin-bottom:10px}
 .secdiv-title{font-size:72px;font-weight:800;color:#fff;line-height:1.05;text-shadow:0 4px 30px rgba(0,0,0,.4);margin:0}
 .secdiv-line{width:90px;height:5px;border-radius:3px;margin:18px auto 14px}
@@ -670,7 +670,7 @@ canvas { cursor: crosshair; }
   <div style="position:absolute;bottom:-60px;left:-40px;width:260px;height:260px;background:radial-gradient(circle,rgba(212,160,23,.06) 0%,transparent 65%);z-index:0;pointer-events:none"></div>
 
   <div style="display:flex;align-items:center;gap:16px;padding:13px 26px 9px;flex-shrink:0;position:relative;z-index:2;border-bottom:3px solid transparent;border-image:linear-gradient(90deg,#0B1D3A,#1E4D9B,#2E6BC8) 1">
-    <img src="img/image8.png" style="height:40px;object-fit:contain" alt="">
+    <img src="img/image8.png" style="height:88px;object-fit:contain" alt="">
     <div style="flex:1">
       <div style="font-size:8px;font-weight:700;letter-spacing:5px;text-transform:uppercase;color:#D4A017;margin-bottom:2px">Contenido</div>
       <h2 style="font-size:20px;font-weight:900;color:#0B1D3A;margin:0;line-height:1;letter-spacing:-.3px">ÍNDICE GENERAL — Memoria de Gestión Pedagógica · UGEL San Román 2022–2026</h2>
@@ -803,14 +803,14 @@ canvas { cursor: crosshair; }
      SECCIÓN 01 — COLEGIOS DEL CENTENARIO / IEs NUEVAS
 ═══════════════════════════════════════════════ -->
 <section data-transition="zoom-in fade-out">
-<div class="slide secdiv gold">
+<div class="slide secdiv blue" style="background:linear-gradient(145deg,rgba(4,17,34,.82) 0%,rgba(10,44,104,.74) 58%,rgba(24,90,188,.62) 100%),url('/img-portadas/01-colegios.jpg') center/cover no-repeat">
   <div class="secdiv-grid"></div>
   <div class="secdiv-ghost">01</div>
   <div class="secdiv-content">
     <img class="secdiv-logo" src="img/image8.png" alt="UGEL San Román">
     <p class="secdiv-tag">Gestión Institucional</p>
     <h2 class="secdiv-title" style="font-size:44px">CREACIÓN DE<br>INSTITUCIONES EDUCATIVAS</h2>
-    <div class="secdiv-line" style="background:linear-gradient(90deg,#E8B824,#DDB830)"></div>
+    <div class="secdiv-line"></div>
     <p class="secdiv-sub">16 nuevas IIs.EE. creadas · Niveles Inicial, Primaria y Secundaria<br>UGEL San Román · Período 2023–2026</p>
   </div>
 </div>
@@ -1033,7 +1033,7 @@ canvas { cursor: crosshair; }
   <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(43,93,163,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(43,93,163,.035) 1px,transparent 1px);background-size:64px 64px;pointer-events:none;z-index:0"></div>
   <!-- Header -->
   <div style="display:flex;align-items:center;gap:14px;padding:16px 26px 10px;flex-shrink:0;position:relative;z-index:2">
-    <img src="img/image8.png" style="height:40px;object-fit:contain" alt="">
+    <img src="img/image8.png" style="height:88px;object-fit:contain" alt="">
     <div style="flex:1">
       <div style="font-size:9px;font-weight:700;letter-spacing:5px;text-transform:uppercase;color:rgba(232,184,36,.9);margin-bottom:2px">Registro Fotográfico</div>
       <h2 style="font-size:20px;font-weight:800;color:#fff;margin:0;line-height:1">Nuevas Instituciones Educativas · UGEL San Román 2023–2026</h2>
@@ -1205,7 +1205,7 @@ canvas { cursor: crosshair; }
      SECCIÓN 02 — SANEAMIENTO FÍSICO LEGAL
 ═══════════════════════════════════════════════ -->
 <section data-transition="zoom-in fade-out">
-<div class="slide secdiv cyan">
+<div class="slide secdiv cyan" style="background:linear-gradient(145deg,rgba(4,13,22,.82) 0%,rgba(10,30,58,.74) 58%,rgba(22,78,115,.62) 100%),url('/img-portadas/02-saneamiento.jpg') center/cover no-repeat">
   <div class="secdiv-grid"></div>
   <div class="secdiv-ghost">02</div>
   <div class="secdiv-content">
@@ -1367,7 +1367,7 @@ canvas { cursor: crosshair; }
      S4 · DIVISOR CTS / ATS
 ═══════════════════════════════════════════════ -->
 <section data-transition="zoom-in fade-out">
-<div class="slide secdiv navy">
+<div class="slide secdiv navy" style="background:linear-gradient(145deg,rgba(4,11,22,.82) 0%,rgba(7,23,46,.76) 58%,rgba(18,58,118,.64) 100%),url('/img-portadas/03-cts-rrhh.jpg') center/cover no-repeat">
   <div class="secdiv-grid"></div>
   <div class="secdiv-ghost">04</div>
   <div class="secdiv-content">
@@ -1448,7 +1448,7 @@ canvas { cursor: crosshair; }
      SECCIÓN 04 — ACCIONES FORMATIVAS Y CAPACITACIÓN
 ═══════════════════════════════════════════════ -->
 <section data-transition="zoom-in fade-out">
-<div class="slide secdiv navy">
+<div class="slide secdiv navy" style="background:linear-gradient(145deg,rgba(4,11,22,.82) 0%,rgba(7,23,46,.76) 58%,rgba(18,58,118,.64) 100%),url('/img-portadas/04-capacitacion.jpg') center/cover no-repeat">
   <div class="secdiv-grid"></div>
   <div class="secdiv-ghost">04</div>
   <div class="secdiv-content">
@@ -1637,7 +1637,7 @@ canvas { cursor: crosshair; }
      SECCIÓN 05 — COLEGIO INGENIERITOS + CEPRE UNI
 ═══════════════════════════════════════════════ -->
 <section data-transition="zoom-in fade-out">
-<div class="slide secdiv blue">
+<div class="slide secdiv blue" style="background:linear-gradient(145deg,rgba(4,17,34,.82) 0%,rgba(10,44,104,.74) 58%,rgba(24,90,188,.62) 100%),url('/img-portadas/05-ingenieritos.jpg') center/cover no-repeat">
   <div class="secdiv-grid"></div>
   <div class="secdiv-ghost">05</div>
   <div class="secdiv-content">
@@ -1657,7 +1657,7 @@ canvas { cursor: crosshair; }
 <div class="slide" style="background:linear-gradient(160deg,#050E1D 0%,#0B1D3A 100%);position:relative;overflow:hidden">
   <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(43,93,163,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(43,93,163,.035) 1px,transparent 1px);background-size:64px 64px;pointer-events:none;z-index:0"></div>
   <div style="display:flex;align-items:center;gap:14px;padding:16px 26px 10px;flex-shrink:0;position:relative;z-index:2">
-    <img src="img/image8.png" style="height:40px;object-fit:contain" alt="">
+    <img src="img/image8.png" style="height:88px;object-fit:contain" alt="">
     <div style="flex:1">
       <div style="font-size:9px;font-weight:700;letter-spacing:5px;text-transform:uppercase;color:rgba(232,184,36,.9);margin-bottom:2px">Registro Fotográfico</div>
       <h2 style="font-size:20px;font-weight:800;color:#fff;margin:0;line-height:1">IES Ingenieritos del Perú "Eduardo de Habich" · UGEL San Román</h2>
@@ -1859,14 +1859,14 @@ canvas { cursor: crosshair; }
      S24 · SECCIÓN 05 — COMPROMISOS DE DESEMPEÑO
 ═══════════════════════════════════════════════ -->
 <section data-transition="zoom-in fade-out">
-<div class="slide secdiv gold">
+<div class="slide secdiv navy" style="background:linear-gradient(145deg,rgba(4,11,22,.82) 0%,rgba(7,23,46,.76) 58%,rgba(18,58,118,.64) 100%),url('/img-portadas/06-compromisos.jpg') center/cover no-repeat">
   <div class="secdiv-grid"></div>
   <div class="secdiv-ghost">06</div>
   <div class="secdiv-content">
     <img class="secdiv-logo" src="img/image8.png" alt="UGEL San Román">
     <p class="secdiv-tag">Gestión Institucional</p>
     <h2 class="secdiv-title" style="font-size:46px" data-typed="COMPROMISOS<br>DE DESEMPEÑO">COMPROMISOS<br>DE DESEMPEÑO</h2>
-    <div class="secdiv-line" style="background:linear-gradient(90deg,#E8B824,#DDB830)"></div>
+    <div class="secdiv-line"></div>
     <p class="secdiv-sub">Transferencias CdD · S/ 1,406,934 total · 2022–2025<br>Cumplimiento de indicadores de gestión educativa · MINEDU</p>
   </div>
 </div>
@@ -2023,7 +2023,7 @@ canvas { cursor: crosshair; }
      SECCIÓN 07 — PEAS · GESTIÓN DE PLAZAS Y RACIONALIZACIÓN
 ═══════════════════════════════════════════════ -->
 <section data-transition="zoom-in fade-out">
-<div class="slide secdiv emerald">
+<div class="slide secdiv emerald" style="background:linear-gradient(145deg,rgba(3,13,8,.82) 0%,rgba(7,32,18,.74) 58%,rgba(10,75,44,.62) 100%),url('/img-portadas/07-racionalizacion.jpg') center/cover no-repeat">
   <div class="secdiv-grid"></div>
   <div class="secdiv-ghost">07</div>
   <div class="secdiv-content">
@@ -2127,7 +2127,7 @@ canvas { cursor: crosshair; }
      SECCIÓN 08 — EDU CUNA & ACCIONES FORMATIVAS INICIAL
 ═══════════════════════════════════════════════ -->
 <section data-transition="zoom-in fade-out">
-<div class="slide secdiv emerald">
+<div class="slide secdiv emerald" style="background:linear-gradient(145deg,rgba(3,13,8,.82) 0%,rgba(7,32,18,.74) 58%,rgba(10,75,44,.62) 100%),url('/img-portadas/08-educuna.jpg') center/cover no-repeat">
   <div class="secdiv-grid"></div>
   <div class="secdiv-ghost">08</div>
   <div class="secdiv-content">
@@ -2275,7 +2275,7 @@ canvas { cursor: crosshair; }
      S3 · SECCIÓN 01 — SIAGIE
 ═══════════════════════════════════════════════ -->
 <section data-transition="zoom-in fade-out">
-<div class="slide secdiv navy">
+<div class="slide secdiv navy" style="background:linear-gradient(145deg,rgba(4,11,22,.82) 0%,rgba(7,23,46,.76) 58%,rgba(18,58,118,.64) 100%),url('/img-portadas/09-siagie.jpg') center/cover no-repeat">
   <div class="secdiv-grid"></div>
   <div class="secdiv-ghost">09</div>
   <div class="secdiv-content">
@@ -2450,7 +2450,7 @@ canvas { cursor: crosshair; }
      S8 · SECCIÓN 02 — ENLA
 ═══════════════════════════════════════════════ -->
 <section data-transition="zoom-in fade-out">
-<div class="slide secdiv teal">
+<div class="slide secdiv teal" style="background:linear-gradient(145deg,rgba(3,13,10,.82) 0%,rgba(6,60,48,.74) 58%,rgba(11,120,100,.62) 100%),url('/img-portadas/10-enla.jpg') center/cover no-repeat">
   <div class="secdiv-grid"></div>
   <div class="secdiv-ghost">10</div>
   <div class="secdiv-content">
@@ -2584,7 +2584,7 @@ canvas { cursor: crosshair; }
      S14 · SECCIÓN 03 — CONCURSOS
 ═══════════════════════════════════════════════ -->
 <section data-transition="zoom-in fade-out">
-<div class="slide secdiv blue">
+<div class="slide secdiv blue" style="background:linear-gradient(145deg,rgba(4,17,34,.82) 0%,rgba(10,44,104,.74) 58%,rgba(24,90,188,.62) 100%),url('/img-portadas/11-concursos.jpg') center/cover no-repeat">
   <div class="secdiv-grid"></div>
   <div class="secdiv-ghost">11</div>
   <div class="secdiv-content">
@@ -2765,14 +2765,14 @@ canvas { cursor: crosshair; }
      SECCIÓN 10 — DEUDA SOCIAL (PENDIENTE)
 ═══════════════════════════════════════════════ -->
 <section data-transition="zoom-in fade-out">
-<div class="slide secdiv gold">
+<div class="slide secdiv teal" style="background:linear-gradient(145deg,rgba(3,13,10,.82) 0%,rgba(6,60,48,.74) 58%,rgba(11,120,100,.62) 100%),url('/img-portadas/12-deuda-social.jpg') center/cover no-repeat">
   <div class="secdiv-grid"></div>
   <div class="secdiv-ghost">12</div>
   <div class="secdiv-content">
     <img class="secdiv-logo" src="img/image8.png" alt="UGEL San Román">
     <p class="secdiv-tag">Gestión de Recursos Humanos</p>
     <h2 class="secdiv-title" style="font-size:52px" data-typed="PAGO DE LA<br>DEUDA SOCIAL">PAGO DE LA<br>DEUDA SOCIAL</h2>
-    <div class="secdiv-line" style="background:linear-gradient(90deg,#E8B824,#DDB830)"></div>
+    <div class="secdiv-line"></div>
     <p class="secdiv-sub">Beneficiarios pagados · Porcentaje de cumplimiento<br>CPC Pari Mamani · Dr. Cuba Pino · 2022–2026</p>
   </div>
 </div>
@@ -2859,7 +2859,7 @@ canvas { cursor: crosshair; }
      SECCIÓN 11 — INFRAESTRUCTURA SEDE ADMINISTRATIVA
 ═══════════════════════════════════════════════ -->
 <section data-transition="zoom-in fade-out">
-<div class="slide secdiv cyan">
+<div class="slide secdiv cyan" style="background:linear-gradient(145deg,rgba(4,13,22,.82) 0%,rgba(10,30,58,.74) 58%,rgba(22,78,115,.62) 100%),url('/img-portadas/13-infraestructura.jpg') center/cover no-repeat">
   <div class="secdiv-grid"></div>
   <div class="secdiv-ghost">13</div>
   <div class="secdiv-content">
@@ -2939,14 +2939,14 @@ canvas { cursor: crosshair; }
      SECCIÓN 14 — ORQUESTA / EXPRESARTE / BANDA
 ═══════════════════════════════════════════════ -->
 <section data-transition="zoom-in fade-out">
-<div class="slide secdiv gold">
+<div class="slide secdiv emerald" style="background:linear-gradient(145deg,rgba(3,13,8,.82) 0%,rgba(7,32,18,.74) 58%,rgba(10,75,44,.62) 100%),url('/img-portadas/14-orquesta.jpg') center/cover no-repeat">
   <div class="secdiv-grid"></div>
   <div class="secdiv-ghost">16</div>
   <div class="secdiv-content">
     <img class="secdiv-logo" src="img/image8.png" alt="UGEL San Román">
     <p class="secdiv-tag">Arte y Cultura · Intervenciones Pedagógicas</p>
     <h2 class="secdiv-title" style="font-size:42px" data-typed="ORQUESTANDO<br>&amp; EXPRESARTE">ORQUESTANDO<br>& EXPRESARTE</h2>
-    <div class="secdiv-line" style="background:linear-gradient(90deg,#E8B824,#DDB830)"></div>
+    <div class="secdiv-line"></div>
     <p class="secdiv-sub">Intervenciones Pedagógicas 2025 · UGEL San Román<br>820 est. Orquestando · 680 est. Expresarte · 4 núcleos activos</p>
   </div>
 </div>
@@ -3070,7 +3070,7 @@ canvas { cursor: crosshair; }
      SECCIÓN 15 — PROYECTOS DE INNOVACIÓN
 ═══════════════════════════════════════════════ -->
 <section data-transition="zoom-in fade-out">
-<div class="slide secdiv emerald">
+<div class="slide secdiv emerald" style="background:linear-gradient(145deg,rgba(3,13,8,.82) 0%,rgba(7,32,18,.74) 58%,rgba(10,75,44,.62) 100%),url('/img-portadas/15-innovacion.jpg') center/cover no-repeat">
   <div class="secdiv-grid"></div>
   <div class="secdiv-ghost">17</div>
   <div class="secdiv-content">
@@ -3297,7 +3297,7 @@ canvas { cursor: crosshair; }
      SECCIÓN 16 — ADQUISICIÓN DE BIENES MUEBLES (PENDIENTE)
 ═══════════════════════════════════════════════ -->
 <section data-transition="zoom-in fade-out">
-<div class="slide secdiv navy">
+<div class="slide secdiv navy" style="background:linear-gradient(145deg,rgba(4,11,22,.82) 0%,rgba(7,23,46,.76) 58%,rgba(18,58,118,.64) 100%),url('/img-portadas/16-bienes.jpg') center/cover no-repeat">
   <div class="secdiv-grid"></div>
   <div class="secdiv-ghost">18</div>
   <div class="secdiv-content">

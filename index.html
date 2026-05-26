@@ -370,6 +370,17 @@
 .idx2-ttl{font-size:13.5px;font-weight:700;color:#1E293B;line-height:1.3;margin-bottom:5px}
 .idx2-sub{font-size:11px;color:#64748B;line-height:1.45}
 
+/* ── ÍNDICE v3 — Light Premium 5×3 ── */
+.idx3-grid{flex:1;display:grid;grid-template-columns:repeat(5,1fr);gap:9px;padding:10px 22px 12px;align-content:stretch;position:relative;z-index:2}
+.idx3-card{background:#fff;border:1px solid rgba(11,29,58,.08);border-left:4px solid transparent;border-radius:14px;display:flex;flex-direction:column;justify-content:center;padding:12px 13px;gap:7px;transition:all .22s ease;position:relative;overflow:hidden;cursor:default;box-shadow:0 2px 10px rgba(11,29,58,.06)}
+.idx3-card::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,.8) 0%,transparent 60%);pointer-events:none}
+.idx3-card:hover{transform:translateY(-3px);box-shadow:0 10px 28px rgba(11,29,58,.14)}
+.idx3-head{display:flex;align-items:center;justify-content:space-between;gap:6px}
+.idx3-num{font-size:24px;font-weight:900;line-height:1;opacity:.9}
+.idx3-icon{width:36px;height:36px;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:0 3px 10px rgba(0,0,0,.18)}
+.idx3-ttl{font-size:11.5px;font-weight:800;color:#0B1D3A;line-height:1.3}
+.idx3-sub{font-size:9px;color:#64748B;line-height:1.5}
+
 /* ── SECTION DIVIDER v2 — Full Screen Cinematic ── */
 .secdiv{position:relative;overflow:hidden;justify-content:center;align-items:center;flex-direction:column;background:#050E1D}
 .secdiv.navy{background:linear-gradient(145deg,#050E1D 0%,#091526 55%,#0B1D3A 100%)}
@@ -597,7 +608,7 @@ canvas { cursor: crosshair; }
 .gal-up{animation:galUp 50s linear infinite}
 @keyframes galDown{0%{transform:translateY(-50%)}100%{transform:translateY(0)}}
 @keyframes galUp{0%{transform:translateY(0)}100%{transform:translateY(-50%)}}
-.gal-track img{width:100%;border-radius:10px;display:block;object-fit:cover;aspect-ratio:4/3}
+.gal-track img{width:100%;border-radius:10px;display:block;object-fit:cover;aspect-ratio:3/4}
 .gal-track:hover{animation-play-state:paused}
 </style>
 </head>
@@ -650,151 +661,139 @@ canvas { cursor: crosshair; }
 </section>
 
 <!-- ═══════════════════════════════════════════════
-     S2 · ÍNDICE
+     S2 · ÍNDICE — Light Premium 5×3
 ═══════════════════════════════════════════════ -->
 <section>
-<div class="slide slide-content" style="background:linear-gradient(150deg,#E8EFF8 0%,#F0F4FA 55%,#E4ECF5 100%)">
-  <div class="s-hd">
-    <div class="s-hd-t">
-      <h2>ÍNDICE GENERAL</h2>
-      <p>Informe de Gestión Pedagógica · UGEL San Román 2022–2026</p>
+<div class="slide" style="background:linear-gradient(150deg,#EEF2FA 0%,#F5F8FE 55%,#E8EFF8 100%);position:relative;overflow:hidden;flex-direction:column;display:flex">
+  <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(30,77,155,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(30,77,155,.03) 1px,transparent 1px);background-size:52px 52px;pointer-events:none;z-index:0"></div>
+  <div style="position:absolute;top:-80px;right:-60px;width:340px;height:340px;background:radial-gradient(circle,rgba(30,77,155,.07) 0%,transparent 65%);z-index:0;pointer-events:none"></div>
+  <div style="position:absolute;bottom:-60px;left:-40px;width:260px;height:260px;background:radial-gradient(circle,rgba(212,160,23,.06) 0%,transparent 65%);z-index:0;pointer-events:none"></div>
+
+  <div style="display:flex;align-items:center;gap:16px;padding:13px 26px 9px;flex-shrink:0;position:relative;z-index:2;border-bottom:3px solid transparent;border-image:linear-gradient(90deg,#0B1D3A,#1E4D9B,#2E6BC8) 1">
+    <img src="img/image8.png" style="height:40px;object-fit:contain" alt="">
+    <div style="flex:1">
+      <div style="font-size:8px;font-weight:700;letter-spacing:5px;text-transform:uppercase;color:#D4A017;margin-bottom:2px">Contenido</div>
+      <h2 style="font-size:20px;font-weight:900;color:#0B1D3A;margin:0;line-height:1;letter-spacing:-.3px">ÍNDICE GENERAL — Memoria de Gestión Pedagógica · UGEL San Román 2022–2026</h2>
     </div>
-    <img class="s-hd-logo" src="img/image8.png" alt="">
-  </div>
-  <div class="s-bd" style="padding:14px 22px 12px">
-    <div class="idx2-grid" style="grid-template-columns:repeat(3,1fr)">
-
-      <div class="idx2-card">
-        <div class="idx2-stripe" style="background:linear-gradient(90deg,#5C3A08,#D4A017)"></div>
-        <div class="idx2-icon" style="background:linear-gradient(135deg,#5C3A08,#D4A017)">
-          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" fill="rgba(255,255,255,.2)"/>
-            <polyline points="9 22 9 12 15 12 15 22"/>
-          </svg>
-        </div>
-        <div class="idx2-num" style="color:#7A5012">01</div>
-        <div class="idx2-ttl">Creación de Nuevas IIs.EE.</div>
-        <div class="idx2-sub">16 IIs.EE. creadas · 2023–2026</div>
-      </div>
-
-      <div class="idx2-card">
-        <div class="idx2-stripe" style="background:linear-gradient(90deg,#0B1D3A,#1E4D9B)"></div>
-        <div class="idx2-icon" style="background:linear-gradient(135deg,#0B1D3A,#1E4D9B)">
-          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="2" y="12" width="4" height="9" rx="1" fill="rgba(255,255,255,.25)"/>
-            <rect x="10" y="6" width="4" height="15" rx="1" fill="rgba(255,255,255,.25)"/>
-            <rect x="18" y="2" width="4" height="19" rx="1" fill="rgba(255,255,255,.25)"/>
-            <line x1="1" y1="22" x2="23" y2="22"/>
-          </svg>
-        </div>
-        <div class="idx2-num" style="color:#0B1D3A">02</div>
-        <div class="idx2-ttl">Logros de Aprendizaje SIAGIE</div>
-        <div class="idx2-sub">Inicial · Primaria · Secundaria · EBR 2025</div>
-      </div>
-
-      <div class="idx2-card">
-        <div class="idx2-stripe" style="background:linear-gradient(90deg,#1E4D9B,#2E6BC8)"></div>
-        <div class="idx2-icon" style="background:linear-gradient(135deg,#1E4D9B,#2E6BC8)">
-          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/>
-            <rect x="9" y="3" width="6" height="4" rx="1" fill="rgba(255,255,255,.3)"/>
-            <line x1="9" y1="12" x2="15" y2="12"/>
-            <line x1="9" y1="16" x2="13" y2="16"/>
-          </svg>
-        </div>
-        <div class="idx2-num" style="color:#1E4D9B">03</div>
-        <div class="idx2-ttl">Evaluación Nacional ENLA</div>
-        <div class="idx2-sub">4.° Primaria · 2.° Secundaria · UMC 2025</div>
-      </div>
-
-      <div class="idx2-card">
-        <div class="idx2-stripe" style="background:linear-gradient(90deg,#0F7A5E,#1A6B8A)"></div>
-        <div class="idx2-icon" style="background:linear-gradient(135deg,#0F7A5E,#1A6B8A)">
-          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="8" r="5" fill="rgba(255,255,255,.2)"/>
-            <path d="M8.5 13.5 7 21h10l-1.5-7.5"/>
-            <line x1="9" y1="21" x2="15" y2="21"/>
-            <path d="M10 6l1.5 2 3-3" stroke-width="1.6"/>
-          </svg>
-        </div>
-        <div class="idx2-num" style="color:#0F7A5E">04</div>
-        <div class="idx2-ttl">Concursos Educativos Nacionales</div>
-        <div class="idx2-sub">ONEM · El Perú Lee · Juegos Florales</div>
-      </div>
-
-      <div class="idx2-card">
-        <div class="idx2-stripe" style="background:linear-gradient(90deg,#1E4D9B,#2E6BC8)"></div>
-        <div class="idx2-icon" style="background:linear-gradient(135deg,#1E4D9B,#2E6BC8)">
-          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" fill="rgba(255,255,255,.2)"/>
-            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" fill="rgba(255,255,255,.2)"/>
-          </svg>
-        </div>
-        <div class="idx2-num" style="color:#1E4D9B">05</div>
-        <div class="idx2-ttl">Acciones Formativas</div>
-        <div class="idx2-sub">Encuentros · Diplomados · CEPRE UNI</div>
-      </div>
-
-      <div class="idx2-card">
-        <div class="idx2-stripe" style="background:linear-gradient(90deg,#7A4A0A,#D4A017)"></div>
-        <div class="idx2-icon" style="background:linear-gradient(135deg,#7A4A0A,#D4A017)">
-          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/>
-            <polyline points="16 7 22 7 22 13"/>
-          </svg>
-        </div>
-        <div class="idx2-num" style="color:#7A4A0A">06</div>
-        <div class="idx2-ttl">Compromisos de Desempeño</div>
-        <div class="idx2-sub">Transferencias S/1,406,934 · 2022–2025</div>
-      </div>
-
-      <div class="idx2-card">
-        <div class="idx2-stripe" style="background:linear-gradient(90deg,#0B1D3A,#2E6BC8)"></div>
-        <div class="idx2-icon" style="background:linear-gradient(135deg,#0B1D3A,#2E6BC8)">
-          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="4" y="10" width="11" height="11" rx="1" fill="rgba(255,255,255,.2)"/>
-            <path d="M4 14h11M9 10v11"/>
-            <path d="M15 10V7a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v3"/>
-            <path d="M18 10h1a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2h-4"/>
-          </svg>
-        </div>
-        <div class="idx2-num" style="color:#0B1D3A">07</div>
-        <div class="idx2-ttl">Infraestructura & Saneamiento</div>
-        <div class="idx2-sub">S/567,517 invertidos · 108/364 IEs saneadas</div>
-      </div>
-
-      <div class="idx2-card">
-        <div class="idx2-stripe" style="background:linear-gradient(90deg,#0A5030,#0F7A5E)"></div>
-        <div class="idx2-icon" style="background:linear-gradient(135deg,#0A5030,#0F7A5E)">
-          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-            <circle cx="9" cy="7" r="4" fill="rgba(255,255,255,.2)"/>
-            <path d="M14 11l2 2 4-4" stroke-width="1.9"/>
-          </svg>
-        </div>
-        <div class="idx2-num" style="color:#0A5030">08</div>
-        <div class="idx2-ttl">Programa EDU CUNA</div>
-        <div class="idx2-sub">4 sedes · 300 beneficiarios · 2024–2026</div>
-      </div>
-
-      <div class="idx2-card">
-        <div class="idx2-stripe" style="background:linear-gradient(90deg,#0B1D3A,#1E4D9B)"></div>
-        <div class="idx2-icon" style="background:linear-gradient(135deg,#0B1D3A,#1E4D9B)">
-          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-            <circle cx="9" cy="7" r="4" fill="rgba(255,255,255,.2)"/>
-            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
-            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-          </svg>
-        </div>
-        <div class="idx2-num" style="color:#0B1D3A">09</div>
-        <div class="idx2-ttl">PEAS</div>
-        <div class="idx2-sub">Mayor cantidad de PEAS · Racionalización Docente · 2022–2026</div>
-      </div>
-
+    <div style="background:linear-gradient(135deg,#0B1D3A,#1E4D9B);border-radius:10px;padding:7px 18px;text-align:center;flex-shrink:0;box-shadow:0 4px 14px rgba(11,29,58,.25)">
+      <div style="font-size:22px;font-weight:900;color:#E8B824;line-height:1">15</div>
+      <div style="font-size:8px;font-weight:700;color:rgba(255,255,255,.7);letter-spacing:2px">TEMAS</div>
     </div>
   </div>
-  <div class="s-ft"><span class="s-ft-t">UGEL San Román · Informe Memoria de Gestión 2022–2026</span><div class="s-ft-n">2</div></div>
+
+  <div class="idx3-grid">
+
+    <div class="idx3-card" style="border-left-color:#D4A017">
+      <div class="idx3-head"><div class="idx3-num" style="color:#D4A017">01</div>
+      <div class="idx3-icon" style="background:linear-gradient(135deg,#7A5012,#D4A017)"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" fill="rgba(255,255,255,.25)"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div></div>
+      <div class="idx3-ttl">Nuevas IIs.EE. Centenarias</div>
+      <div class="idx3-sub">16 IIs.EE. creadas · UGEL San Román · 2023–2026</div>
+    </div>
+
+    <div class="idx3-card" style="border-left-color:#0891B2">
+      <div class="idx3-head"><div class="idx3-num" style="color:#22D3EE">02</div>
+      <div class="idx3-icon" style="background:linear-gradient(135deg,#164E63,#0891B2)"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" fill="rgba(255,255,255,.2)"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/><line x1="7" y1="9" x2="17" y2="9"/><line x1="7" y1="12" x2="12" y2="12"/></svg></div></div>
+      <div class="idx3-ttl">Saneamiento & Infraestructura</div>
+      <div class="idx3-sub">108/364 IEs · S/ 567,517 invertidos · 2023–2025</div>
+    </div>
+
+    <div class="idx3-card" style="border-left-color:#3B82F6">
+      <div class="idx3-head"><div class="idx3-num" style="color:#60A5FA">03</div>
+      <div class="idx3-icon" style="background:linear-gradient(135deg,#1E3A8A,#2563EB)"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" fill="rgba(255,255,255,.15)"/><polyline points="12 6 12 12 16 14"/></svg></div></div>
+      <div class="idx3-ttl">Ejecución CTS & ATS</div>
+      <div class="idx3-sub">S/ 75.9M ejecutados · Ejecución 99.9% · 2022–2026</div>
+    </div>
+
+    <div class="idx3-card" style="border-left-color:#2563EB">
+      <div class="idx3-head"><div class="idx3-num" style="color:#93C5FD">04</div>
+      <div class="idx3-icon" style="background:linear-gradient(135deg,#0B1D3A,#1E4D9B)"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="12" width="4" height="9" rx="1" fill="rgba(255,255,255,.3)"/><rect x="10" y="6" width="4" height="15" rx="1" fill="rgba(255,255,255,.3)"/><rect x="18" y="2" width="4" height="19" rx="1" fill="rgba(255,255,255,.3)"/><line x1="1" y1="22" x2="23" y2="22"/></svg></div></div>
+      <div class="idx3-ttl">Logros de Aprendizaje SIAGIE</div>
+      <div class="idx3-sub">Inicial · Primaria · Secundaria · EBR 2025</div>
+    </div>
+
+    <div class="idx3-card" style="border-left-color:#0EA5E9">
+      <div class="idx3-head"><div class="idx3-num" style="color:#38BDF8">05</div>
+      <div class="idx3-icon" style="background:linear-gradient(135deg,#0369A1,#0EA5E9)"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2" fill="rgba(255,255,255,.15)"/><rect x="9" y="3" width="6" height="4" rx="1" fill="rgba(255,255,255,.3)"/><line x1="9" y1="12" x2="15" y2="12"/><line x1="9" y1="16" x2="13" y2="16"/></svg></div></div>
+      <div class="idx3-ttl">Evaluación Nacional ENLA 2025</div>
+      <div class="idx3-sub">4.° Primaria · 2.° Secundaria · UMC</div>
+    </div>
+
+    <div class="idx3-card" style="border-left-color:#059669">
+      <div class="idx3-head"><div class="idx3-num" style="color:#34D399">06</div>
+      <div class="idx3-icon" style="background:linear-gradient(135deg,#064E3B,#059669)"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6" fill="rgba(255,255,255,.2)"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg></div></div>
+      <div class="idx3-ttl">Concursos Educativos Nacionales</div>
+      <div class="idx3-sub">ONEM · El Perú Lee · Juegos Florales</div>
+    </div>
+
+    <div class="idx3-card" style="border-left-color:#6366F1">
+      <div class="idx3-head"><div class="idx3-num" style="color:#A5B4FC">07</div>
+      <div class="idx3-icon" style="background:linear-gradient(135deg,#312E81,#4F46E5)"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z" fill="rgba(255,255,255,.2)"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div></div>
+      <div class="idx3-ttl">Acciones Formativas</div>
+      <div class="idx3-sub">Encuentros · Diplomados · CEPRE UNI</div>
+    </div>
+
+    <div class="idx3-card" style="border-left-color:#2E6BC8">
+      <div class="idx3-head"><div class="idx3-num" style="color:#93C5FD">08</div>
+      <div class="idx3-icon" style="background:linear-gradient(135deg,#0B1D3A,#2E6BC8)"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2" fill="rgba(255,255,255,.15)"/><rect x="9" y="9" width="6" height="6" fill="rgba(255,255,255,.3)"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></svg></div></div>
+      <div class="idx3-ttl">Ingenieritos & CEPRE UNI</div>
+      <div class="idx3-sub">Convenio UNI · IES Eduardo de Habich · Juliaca</div>
+    </div>
+
+    <div class="idx3-card" style="border-left-color:#E8B824">
+      <div class="idx3-head"><div class="idx3-num" style="color:#FCD34D">09</div>
+      <div class="idx3-icon" style="background:linear-gradient(135deg,#7A4A0A,#E8B824)"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg></div></div>
+      <div class="idx3-ttl">Compromisos de Desempeño</div>
+      <div class="idx3-sub">S/ 1,406,934 transferidos · 2022–2025</div>
+    </div>
+
+    <div class="idx3-card" style="border-left-color:#94A3B8">
+      <div class="idx3-head"><div class="idx3-num" style="color:#CBD5E1">10</div>
+      <div class="idx3-icon" style="background:linear-gradient(135deg,#0B1D3A,#334155)"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4" fill="rgba(255,255,255,.2)"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div></div>
+      <div class="idx3-ttl">PEAS & Racionalización Docente</div>
+      <div class="idx3-sub">Mayor cantidad de PEAS · 2022–2026</div>
+    </div>
+
+    <div class="idx3-card" style="border-left-color:#0F7A5E">
+      <div class="idx3-head"><div class="idx3-num" style="color:#34D399">11</div>
+      <div class="idx3-icon" style="background:linear-gradient(135deg,#064E3B,#0F7A5E)"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" fill="rgba(255,255,255,.2)"/></svg></div></div>
+      <div class="idx3-ttl">Programa EDU CUNA</div>
+      <div class="idx3-sub">4 sedes · 300 beneficiarios · 2024–2026</div>
+    </div>
+
+    <div class="idx3-card" style="border-left-color:#EA580C">
+      <div class="idx3-head"><div class="idx3-num" style="color:#FB923C">12</div>
+      <div class="idx3-icon" style="background:linear-gradient(135deg,#7C2D12,#EA580C)"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div></div>
+      <div class="idx3-ttl">Pago de la Deuda Social</div>
+      <div class="idx3-sub">S/ 67.8M pagados · 42.6% avance · 3,099 exp.</div>
+    </div>
+
+    <div class="idx3-card" style="border-left-color:#7C3AED">
+      <div class="idx3-head"><div class="idx3-num" style="color:#C4B5FD">13</div>
+      <div class="idx3-icon" style="background:linear-gradient(135deg,#4C1D95,#7C3AED)"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3" fill="rgba(255,255,255,.25)"/><circle cx="18" cy="16" r="3" fill="rgba(255,255,255,.25)"/></svg></div></div>
+      <div class="idx3-ttl">Orquesta & ExpreSarte</div>
+      <div class="idx3-sub">Orquesta Sinfónica · Talleres Artísticos · 2022–2026</div>
+    </div>
+
+    <div class="idx3-card" style="border-left-color:#0D9488">
+      <div class="idx3-head"><div class="idx3-num" style="color:#5EEAD4">14</div>
+      <div class="idx3-icon" style="background:linear-gradient(135deg,#134E4A,#0D9488)"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7z" fill="rgba(255,255,255,.2)"/></svg></div></div>
+      <div class="idx3-ttl">Proyectos de Innovación</div>
+      <div class="idx3-sub">FONDEP · Innovación Pedagógica · UGEL San Román</div>
+    </div>
+
+    <div class="idx3-card" style="border-left-color:#6D28D9">
+      <div class="idx3-head"><div class="idx3-num" style="color:#A78BFA">15</div>
+      <div class="idx3-icon" style="background:linear-gradient(135deg,#3B0764,#6D28D9)"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" fill="rgba(255,255,255,.15)"/></svg></div></div>
+      <div class="idx3-ttl">Adquisición de Bienes Muebles</div>
+      <div class="idx3-sub">S/ 1'000,659 · Vehículos · TVs · Pantalla LED · 2022–2025</div>
+    </div>
+
+  </div>
+
+  <div style="display:flex;align-items:center;padding:7px 26px;flex-shrink:0;border-top:1px solid rgba(11,29,58,.08);position:relative;z-index:2">
+    <span style="font-size:10px;color:#64748B;font-weight:500;flex:1">UGEL San Román · Informe Memoria de Gestión Pedagógica 2022–2026</span>
+    <div style="width:22px;height:22px;background:linear-gradient(135deg,#0B1D3A,#1E4D9B);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:#fff">2</div>
+  </div>
 </div>
 </section>
 
@@ -1664,81 +1663,98 @@ canvas { cursor: crosshair; }
       <h2 style="font-size:20px;font-weight:800;color:#fff;margin:0;line-height:1">IES Ingenieritos del Perú "Eduardo de Habich" · UGEL San Román</h2>
     </div>
     <div style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);border-radius:8px;padding:5px 14px;text-align:center">
-      <div style="font-size:18px;font-weight:800;color:#E8B824">38</div>
+      <div style="font-size:18px;font-weight:800;color:#E8B824">50</div>
       <div style="font-size:8px;color:rgba(148,180,220,.7);font-weight:600">FOTOS</div>
     </div>
   </div>
   <div style="flex:1;display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;padding:0 20px 18px;overflow:hidden;position:relative;z-index:2">
 
-    <!-- Izquierda: arriba → abajo -->
+    <!-- Izquierda: arriba → abajo (img carrusel izquierda) -->
     <div class="gal-col">
       <div class="gal-track gal-down">
-        <img src="img%20ingenieritos%20eduardo%20de%20habich/499835880_122197445174115772_109031745872706434_n.jpg" alt="">
-        <img src="img%20ingenieritos%20eduardo%20de%20habich/512001958_122200839032115772_6425290173445615316_n.jpg" alt="">
-        <img src="img%20ingenieritos%20eduardo%20de%20habich/512006124_122200839086115772_165171513672846817_n.jpg" alt="">
-        <img src="img%20ingenieritos%20eduardo%20de%20habich/513085024_122200838990115772_2692887048754389812_n.jpg" alt="">
-        <img src="img%20ingenieritos%20eduardo%20de%20habich/513098969_122200838924115772_6141711517160224218_n.jpg" alt="">
-        <img src="img%20ingenieritos%20eduardo%20de%20habich/536272818_122208052736115772_8589187364545994923_n.jpg" alt="">
-        <img src="img%20ingenieritos%20eduardo%20de%20habich/573039575_122216238866115772_30377699034261936_n.jpg" alt="">
-        <img src="img%20ingenieritos%20eduardo%20de%20habich/574500776_122216590760115772_8753327299131150453_n.jpg" alt="">
-        <img src="img%20ingenieritos%20eduardo%20de%20habich/574846215_122216590904115772_6518577223866541032_n.jpg" alt="">
-        <img src="img%20ingenieritos%20eduardo%20de%20habich/574861834_122216590112115772_2075947461449129639_n.jpg" alt="">
-        <img src="img%20ingenieritos%20eduardo%20de%20habich/574960410_122216590856115772_7176228606262803042_n.jpg" alt="">
-        <img src="img%20ingenieritos%20eduardo%20de%20habich/575075341_122216590190115772_8908365921207771546_n.jpg" alt="">
-        <img src="img%20ingenieritos%20eduardo%20de%20habich/575734768_122216590808115772_4853767961883649389_n.jpg" alt="">
-        <!-- duplicado -->
-        <img src="img%20ingenieritos%20eduardo%20de%20habich/499835880_122197445174115772_109031745872706434_n.jpg" alt="">
-        <img src="img%20ingenieritos%20eduardo%20de%20habich/512001958_122200839032115772_6425290173445615316_n.jpg" alt="">
-        <img src="img%20ingenieritos%20eduardo%20de%20habich/512006124_122200839086115772_165171513672846817_n.jpg" alt="">
-        <img src="img%20ingenieritos%20eduardo%20de%20habich/513085024_122200838990115772_2692887048754389812_n.jpg" alt="">
-        <img src="img%20ingenieritos%20eduardo%20de%20habich/513098969_122200838924115772_6141711517160224218_n.jpg" alt="">
-        <img src="img%20ingenieritos%20eduardo%20de%20habich/536272818_122208052736115772_8589187364545994923_n.jpg" alt="">
-        <img src="img%20ingenieritos%20eduardo%20de%20habich/573039575_122216238866115772_30377699034261936_n.jpg" alt="">
-        <img src="img%20ingenieritos%20eduardo%20de%20habich/574500776_122216590760115772_8753327299131150453_n.jpg" alt="">
-        <img src="img%20ingenieritos%20eduardo%20de%20habich/574846215_122216590904115772_6518577223866541032_n.jpg" alt="">
-        <img src="img%20ingenieritos%20eduardo%20de%20habich/574861834_122216590112115772_2075947461449129639_n.jpg" alt="">
-        <img src="img%20ingenieritos%20eduardo%20de%20habich/574960410_122216590856115772_7176228606262803042_n.jpg" alt="">
-        <img src="img%20ingenieritos%20eduardo%20de%20habich/575075341_122216590190115772_8908365921207771546_n.jpg" alt="">
-        <img src="img%20ingenieritos%20eduardo%20de%20habich/575734768_122216590808115772_4853767961883649389_n.jpg" alt="">
+        <img src="img%20ingenieritos%20eduardo%20de%20habich/img%20carrusel%20izquierda/451765042_783330653959931_117709927800355950_n.jpg" alt="">
+        <img src="img%20ingenieritos%20eduardo%20de%20habich/img%20carrusel%20izquierda/476208625_920041436955518_6539266219203402298_n.jpg" alt="">
+        <img src="img%20ingenieritos%20eduardo%20de%20habich/img%20carrusel%20izquierda/476829527_920045710288424_8019627528718332228_n.jpg" alt="">
+        <img src="img%20ingenieritos%20eduardo%20de%20habich/img%20carrusel%20izquierda/476834466_920045663621762_7752816388321129059_n.jpg" alt="">
+        <img src="img%20ingenieritos%20eduardo%20de%20habich/img%20carrusel%20izquierda/476980022_920045616955100_6166855096774732426_n.jpg" alt="">
+        <img src="img%20ingenieritos%20eduardo%20de%20habich/img%20carrusel%20izquierda/481472783_939536481672680_5295253283174813727_n.jpg" alt="">
+        <img src="img%20ingenieritos%20eduardo%20de%20habich/img%20carrusel%20izquierda/481711122_937373465222315_2840934322727724204_n.jpg" alt="">
+        <img src="img%20ingenieritos%20eduardo%20de%20habich/img%20carrusel%20izquierda/482220601_939536311672697_1322333179800626973_n.jpg" alt="">
+        <img src="img%20ingenieritos%20eduardo%20de%20habich/img%20carrusel%20izquierda/482225108_939536471672681_2764111373179428309_n.jpg" alt="">
+        <img src="img%20ingenieritos%20eduardo%20de%20habich/img%20carrusel%20izquierda/483526303_939975788295416_8859212232305876209_n.jpg" alt="">
+        <img src="img%20ingenieritos%20eduardo%20de%20habich/img%20carrusel%20izquierda/483558674_939974461628882_5464878225354940103_n.jpg" alt="">
+        <img src="img%20ingenieritos%20eduardo%20de%20habich/img%20carrusel%20izquierda/483592386_939975641628764_3978769042477060856_n.jpg" alt="">
+        <!-- duplicado para loop -->
+        <img src="img%20ingenieritos%20eduardo%20de%20habich/img%20carrusel%20izquierda/451765042_783330653959931_117709927800355950_n.jpg" alt="">
+        <img src="img%20ingenieritos%20eduardo%20de%20habich/img%20carrusel%20izquierda/476208625_920041436955518_6539266219203402298_n.jpg" alt="">
+        <img src="img%20ingenieritos%20eduardo%20de%20habich/img%20carrusel%20izquierda/476829527_920045710288424_8019627528718332228_n.jpg" alt="">
+        <img src="img%20ingenieritos%20eduardo%20de%20habich/img%20carrusel%20izquierda/476834466_920045663621762_7752816388321129059_n.jpg" alt="">
+        <img src="img%20ingenieritos%20eduardo%20de%20habich/img%20carrusel%20izquierda/476980022_920045616955100_6166855096774732426_n.jpg" alt="">
+        <img src="img%20ingenieritos%20eduardo%20de%20habich/img%20carrusel%20izquierda/481472783_939536481672680_5295253283174813727_n.jpg" alt="">
+        <img src="img%20ingenieritos%20eduardo%20de%20habich/img%20carrusel%20izquierda/481711122_937373465222315_2840934322727724204_n.jpg" alt="">
+        <img src="img%20ingenieritos%20eduardo%20de%20habich/img%20carrusel%20izquierda/482220601_939536311672697_1322333179800626973_n.jpg" alt="">
+        <img src="img%20ingenieritos%20eduardo%20de%20habich/img%20carrusel%20izquierda/482225108_939536471672681_2764111373179428309_n.jpg" alt="">
+        <img src="img%20ingenieritos%20eduardo%20de%20habich/img%20carrusel%20izquierda/483526303_939975788295416_8859212232305876209_n.jpg" alt="">
+        <img src="img%20ingenieritos%20eduardo%20de%20habich/img%20carrusel%20izquierda/483558674_939974461628882_5464878225354940103_n.jpg" alt="">
+        <img src="img%20ingenieritos%20eduardo%20de%20habich/img%20carrusel%20izquierda/483592386_939975641628764_3978769042477060856_n.jpg" alt="">
       </div>
     </div>
 
-    <!-- Centro: abajo → arriba -->
+    <!-- Centro: abajo → arriba (imágenes 1–19 carpeta principal) -->
     <div class="gal-col">
       <div class="gal-track gal-up">
+        <img src="img%20ingenieritos%20eduardo%20de%20habich/499835880_122197445174115772_109031745872706434_n.jpg" alt="">
+        <img src="img%20ingenieritos%20eduardo%20de%20habich/512001958_122200839032115772_6425290173445615316_n.jpg" alt="">
+        <img src="img%20ingenieritos%20eduardo%20de%20habich/512006124_122200839086115772_165171513672846817_n.jpg" alt="">
+        <img src="img%20ingenieritos%20eduardo%20de%20habich/513085024_122200838990115772_2692887048754389812_n.jpg" alt="">
+        <img src="img%20ingenieritos%20eduardo%20de%20habich/513098969_122200838924115772_6141711517160224218_n.jpg" alt="">
+        <img src="img%20ingenieritos%20eduardo%20de%20habich/536272818_122208052736115772_8589187364545994923_n.jpg" alt="">
+        <img src="img%20ingenieritos%20eduardo%20de%20habich/573039575_122216238866115772_30377699034261936_n.jpg" alt="">
+        <img src="img%20ingenieritos%20eduardo%20de%20habich/574500776_122216590760115772_8753327299131150453_n.jpg" alt="">
+        <img src="img%20ingenieritos%20eduardo%20de%20habich/574846215_122216590904115772_6518577223866541032_n.jpg" alt="">
+        <img src="img%20ingenieritos%20eduardo%20de%20habich/574861834_122216590112115772_2075947461449129639_n.jpg" alt="">
+        <img src="img%20ingenieritos%20eduardo%20de%20habich/574960410_122216590856115772_7176228606262803042_n.jpg" alt="">
+        <img src="img%20ingenieritos%20eduardo%20de%20habich/575075341_122216590190115772_8908365921207771546_n.jpg" alt="">
+        <img src="img%20ingenieritos%20eduardo%20de%20habich/575734768_122216590808115772_4853767961883649389_n.jpg" alt="">
         <img src="img%20ingenieritos%20eduardo%20de%20habich/602918961_122222453960115772_1581548532414586778_n.jpg" alt="">
         <img src="img%20ingenieritos%20eduardo%20de%20habich/603078597_122222456354115772_239403662689389685_n.jpg" alt="">
         <img src="img%20ingenieritos%20eduardo%20de%20habich/604384828_122222456252115772_1101938786083203342_n.jpg" alt="">
         <img src="img%20ingenieritos%20eduardo%20de%20habich/605119821_122222456258115772_2941956613127910569_n.jpg" alt="">
         <img src="img%20ingenieritos%20eduardo%20de%20habich/660195447_122235613346115772_5446108118999904667_n.jpg" alt="">
         <img src="img%20ingenieritos%20eduardo%20de%20habich/663215410_122235259070115772_2007316231964294133_n.jpg" alt="">
-        <img src="img%20ingenieritos%20eduardo%20de%20habich/665807274_122235613166115772_6225827571692265704_n.jpg" alt="">
-        <img src="img%20ingenieritos%20eduardo%20de%20habich/665873001_122235613088115772_9009277702150593013_n.jpg" alt="">
-        <img src="img%20ingenieritos%20eduardo%20de%20habich/666461355_122235613022115772_7203320279327361576_n.jpg" alt="">
-        <img src="img%20ingenieritos%20eduardo%20de%20habich/667307443_122235613304115772_6275406363113733582_n.jpg" alt="">
-        <img src="img%20ingenieritos%20eduardo%20de%20habich/667699607_122235613028115772_2128217082827565314_n.jpg" alt="">
-        <img src="img%20ingenieritos%20eduardo%20de%20habich/667763196_122235613220115772_8710413755993714313_n.jpg" alt="">
-        <img src="img%20ingenieritos%20eduardo%20de%20habich/667821288_122235613484115772_5068835984040743576_n%20(1).jpg" alt="">
-        <!-- duplicado -->
+        <!-- duplicado para loop -->
+        <img src="img%20ingenieritos%20eduardo%20de%20habich/499835880_122197445174115772_109031745872706434_n.jpg" alt="">
+        <img src="img%20ingenieritos%20eduardo%20de%20habich/512001958_122200839032115772_6425290173445615316_n.jpg" alt="">
+        <img src="img%20ingenieritos%20eduardo%20de%20habich/512006124_122200839086115772_165171513672846817_n.jpg" alt="">
+        <img src="img%20ingenieritos%20eduardo%20de%20habich/513085024_122200838990115772_2692887048754389812_n.jpg" alt="">
+        <img src="img%20ingenieritos%20eduardo%20de%20habich/513098969_122200838924115772_6141711517160224218_n.jpg" alt="">
+        <img src="img%20ingenieritos%20eduardo%20de%20habich/536272818_122208052736115772_8589187364545994923_n.jpg" alt="">
+        <img src="img%20ingenieritos%20eduardo%20de%20habich/573039575_122216238866115772_30377699034261936_n.jpg" alt="">
+        <img src="img%20ingenieritos%20eduardo%20de%20habich/574500776_122216590760115772_8753327299131150453_n.jpg" alt="">
+        <img src="img%20ingenieritos%20eduardo%20de%20habich/574846215_122216590904115772_6518577223866541032_n.jpg" alt="">
+        <img src="img%20ingenieritos%20eduardo%20de%20habich/574861834_122216590112115772_2075947461449129639_n.jpg" alt="">
+        <img src="img%20ingenieritos%20eduardo%20de%20habich/574960410_122216590856115772_7176228606262803042_n.jpg" alt="">
+        <img src="img%20ingenieritos%20eduardo%20de%20habich/575075341_122216590190115772_8908365921207771546_n.jpg" alt="">
+        <img src="img%20ingenieritos%20eduardo%20de%20habich/575734768_122216590808115772_4853767961883649389_n.jpg" alt="">
         <img src="img%20ingenieritos%20eduardo%20de%20habich/602918961_122222453960115772_1581548532414586778_n.jpg" alt="">
         <img src="img%20ingenieritos%20eduardo%20de%20habich/603078597_122222456354115772_239403662689389685_n.jpg" alt="">
         <img src="img%20ingenieritos%20eduardo%20de%20habich/604384828_122222456252115772_1101938786083203342_n.jpg" alt="">
         <img src="img%20ingenieritos%20eduardo%20de%20habich/605119821_122222456258115772_2941956613127910569_n.jpg" alt="">
         <img src="img%20ingenieritos%20eduardo%20de%20habich/660195447_122235613346115772_5446108118999904667_n.jpg" alt="">
         <img src="img%20ingenieritos%20eduardo%20de%20habich/663215410_122235259070115772_2007316231964294133_n.jpg" alt="">
-        <img src="img%20ingenieritos%20eduardo%20de%20habich/665807274_122235613166115772_6225827571692265704_n.jpg" alt="">
-        <img src="img%20ingenieritos%20eduardo%20de%20habich/665873001_122235613088115772_9009277702150593013_n.jpg" alt="">
-        <img src="img%20ingenieritos%20eduardo%20de%20habich/666461355_122235613022115772_7203320279327361576_n.jpg" alt="">
-        <img src="img%20ingenieritos%20eduardo%20de%20habich/667307443_122235613304115772_6275406363113733582_n.jpg" alt="">
-        <img src="img%20ingenieritos%20eduardo%20de%20habich/667699607_122235613028115772_2128217082827565314_n.jpg" alt="">
-        <img src="img%20ingenieritos%20eduardo%20de%20habich/667763196_122235613220115772_8710413755993714313_n.jpg" alt="">
-        <img src="img%20ingenieritos%20eduardo%20de%20habich/667821288_122235613484115772_5068835984040743576_n%20(1).jpg" alt="">
       </div>
     </div>
 
-    <!-- Derecha: arriba → abajo -->
+    <!-- Derecha: arriba → abajo (imágenes 20–38 carpeta principal) -->
     <div class="gal-col">
       <div class="gal-track gal-down">
+        <img src="img%20ingenieritos%20eduardo%20de%20habich/665807274_122235613166115772_6225827571692265704_n.jpg" alt="">
+        <img src="img%20ingenieritos%20eduardo%20de%20habich/665873001_122235613088115772_9009277702150593013_n.jpg" alt="">
+        <img src="img%20ingenieritos%20eduardo%20de%20habich/666461355_122235613022115772_7203320279327361576_n.jpg" alt="">
+        <img src="img%20ingenieritos%20eduardo%20de%20habich/667307443_122235613304115772_6275406363113733582_n.jpg" alt="">
+        <img src="img%20ingenieritos%20eduardo%20de%20habich/667699607_122235613028115772_2128217082827565314_n.jpg" alt="">
+        <img src="img%20ingenieritos%20eduardo%20de%20habich/667763196_122235613220115772_8710413755993714313_n.jpg" alt="">
+        <img src="img%20ingenieritos%20eduardo%20de%20habich/667821288_122235613484115772_5068835984040743576_n%20(1).jpg" alt="">
         <img src="img%20ingenieritos%20eduardo%20de%20habich/667821288_122235613484115772_5068835984040743576_n%20(2).jpg" alt="">
         <img src="img%20ingenieritos%20eduardo%20de%20habich/667821288_122235613484115772_5068835984040743576_n.jpg" alt="">
         <img src="img%20ingenieritos%20eduardo%20de%20habich/667894983_122235613460115772_4275744272181732094_n.jpg" alt="">
@@ -1751,7 +1767,14 @@ canvas { cursor: crosshair; }
         <img src="img%20ingenieritos%20eduardo%20de%20habich/687749401_122239055366115772_3703175921546408375_n.jpg" alt="">
         <img src="img%20ingenieritos%20eduardo%20de%20habich/688446069_122239055300115772_4361297096881374868_n.jpg" alt="">
         <img src="img%20ingenieritos%20eduardo%20de%20habich/689892228_122239055294115772_4874864102171687469_n.jpg" alt="">
-        <!-- duplicado -->
+        <!-- duplicado para loop -->
+        <img src="img%20ingenieritos%20eduardo%20de%20habich/665807274_122235613166115772_6225827571692265704_n.jpg" alt="">
+        <img src="img%20ingenieritos%20eduardo%20de%20habich/665873001_122235613088115772_9009277702150593013_n.jpg" alt="">
+        <img src="img%20ingenieritos%20eduardo%20de%20habich/666461355_122235613022115772_7203320279327361576_n.jpg" alt="">
+        <img src="img%20ingenieritos%20eduardo%20de%20habich/667307443_122235613304115772_6275406363113733582_n.jpg" alt="">
+        <img src="img%20ingenieritos%20eduardo%20de%20habich/667699607_122235613028115772_2128217082827565314_n.jpg" alt="">
+        <img src="img%20ingenieritos%20eduardo%20de%20habich/667763196_122235613220115772_8710413755993714313_n.jpg" alt="">
+        <img src="img%20ingenieritos%20eduardo%20de%20habich/667821288_122235613484115772_5068835984040743576_n%20(1).jpg" alt="">
         <img src="img%20ingenieritos%20eduardo%20de%20habich/667821288_122235613484115772_5068835984040743576_n%20(2).jpg" alt="">
         <img src="img%20ingenieritos%20eduardo%20de%20habich/667821288_122235613484115772_5068835984040743576_n.jpg" alt="">
         <img src="img%20ingenieritos%20eduardo%20de%20habich/667894983_122235613460115772_4275744272181732094_n.jpg" alt="">

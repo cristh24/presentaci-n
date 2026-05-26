@@ -43,7 +43,8 @@ const server = http.createServer((req, res) => {
   /* ── Imágenes /img ingenieritos eduardo de habich/ ── */
   if (req.url.startsWith("/img%20ingenieritos%20eduardo%20de%20habich/")) {
     const name = decodeURIComponent(req.url.slice("/img%20ingenieritos%20eduardo%20de%20habich/".length));
-    const file = path.join(INGENIERITOS_DIR, path.basename(name));
+    const file = path.join(INGENIERITOS_DIR, name);
+    if (!file.startsWith(INGENIERITOS_DIR)) { res.writeHead(403); return res.end(); }
     if (!fs.existsSync(file)) { res.writeHead(404); return res.end(); }
     const ext = path.extname(name).toLowerCase();
     res.writeHead(200, { "Content-Type": MIME[ext] || "application/octet-stream" });

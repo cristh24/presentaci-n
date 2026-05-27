@@ -4833,17 +4833,11 @@ Reveal.on('ready', e => {
     });
   }
 
-  // Excluir: portada bg, carruseles horizontales/verticales, logos
-  const skip = '.pv2-bg, .ienc-slide img, .iienc-slide img, .gal-track img';
+  const skip = '.pv2-bg, .pv2-logo, .secdiv-logo, .s-hd-logo';
 
   document.querySelectorAll('img').forEach(img => {
     if (img.matches(skip)) return;
-    if (img.closest('.ienc-track, .iienc-track, .gal-track')) return;
-    const s = img.getAttribute('style') || '';
-    const cls = Array.from(img.classList);
-    const isCoverInline = s.includes('object-fit:cover');
-    const isCoverClass  = img.matches('.onem-photo, .onem-stu');
-    if (isCoverInline || isCoverClass) attach(img);
+    attach(img);
   });
 })();
 </script>

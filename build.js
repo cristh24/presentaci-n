@@ -16,13 +16,14 @@ html = html.replace('<!-- %%SECTIONS%% -->', sections);
 
 // ── Corrige rutas absolutas → relativas (GitHub Pages) ────
 html = html
-  .replace(/src="\/img\//g,        'src="img/')
-  .replace(/href="\/img\//g,       'href="img/')
-  .replace(/src="\/inicial\//g,    'src="inicial/')
-  .replace(/src="\/primaria\//g,   'src="primaria/')
+  .replace(/src="\/img\//g,           'src="img/')
+  .replace(/href="\/img\//g,          'href="img/')
+  .replace(/src="\/inicial\//g,       'src="inicial/')
+  .replace(/src="\/primaria\//g,      'src="primaria/')
   .replace(/src="\/secundaria\.png/g, 'src="secundaria.png')
-  .replace(/src="\/enla\.PNG/g,    'src="enla.PNG')
-  .replace(/url\('\/img\//g,       "url('img/");
+  .replace(/src="\/enla\.PNG/g,       'src="enla.PNG')
+  .replace(/url\('\/img\//g,          "url('img/")
+  .replace(/url\('\/img-portadas\//g, "url('img-portadas/");
 
 // ── Crea carpeta dist ──────────────────────────────────────
 if (!fs.existsSync(DIST)) fs.mkdirSync(DIST);
@@ -39,9 +40,10 @@ function copyDir(src, dest) {
   }
 }
 
-copyDir(path.join(ROOT, 'img'),       path.join(DIST, 'img'));
-copyDir(path.join(ROOT, 'inicial'),   path.join(DIST, 'inicial'));
-copyDir(path.join(ROOT, 'primaria'),  path.join(DIST, 'primaria'));
+copyDir(path.join(ROOT, 'img'),          path.join(DIST, 'img'));
+copyDir(path.join(ROOT, 'img-portadas'), path.join(DIST, 'img-portadas'));
+copyDir(path.join(ROOT, 'inicial'),      path.join(DIST, 'inicial'));
+copyDir(path.join(ROOT, 'primaria'),     path.join(DIST, 'primaria'));
 
 for (const f of ['secundaria.png', 'enla.PNG']) {
   const src = path.join(ROOT, f);

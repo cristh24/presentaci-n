@@ -29,6 +29,7 @@ copyDir(path.join(ROOT, 'img'),                                    path.join(DIS
 copyDir(path.join(ROOT, 'img-portadas'),                           path.join(DIST, 'img-portadas'));
 copyDir(path.join(ROOT, 'img colegios'),                           path.join(DIST, 'img colegios'));
 copyDir(path.join(ROOT, 'img ingenieritos eduardo de habich'),     path.join(DIST, 'img ingenieritos eduardo de habich'));
+copyDir(path.join(ROOT, 'img banda'),                              path.join(DIST, 'img banda'));
 copyDir(path.join(ROOT, 'logo'),                                   path.join(DIST, 'logo'));
 copyDir(path.join(ROOT, 'inicial'),                                path.join(DIST, 'inicial'));
 copyDir(path.join(ROOT, 'primaria'),                               path.join(DIST, 'primaria'));

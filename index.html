@@ -227,6 +227,13 @@
 .ienc-slide img{width:100%;height:100%;object-fit:cover;display:block}
 @keyframes ienc-scroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
 
+/* ── ARTE CARRUSELES — 4 agrupaciones musicales ── */
+.arte-track{display:flex;height:100%;width:max-content;animation:arte-scroll 32s linear infinite}
+.arte-track:hover{animation-play-state:paused}
+.arte-slide{flex-shrink:0;width:340px;height:100%;border-radius:0;overflow:hidden;margin-right:6px}
+.arte-slide img{width:100%;height:100%;object-fit:cover;display:block}
+@keyframes arte-scroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
 /* ── II ENCUENTRO CARRUSEL INFINITO (pequeño) ── */
 .iienc-track{display:flex;height:100%;width:max-content;animation:iienc-scroll 48s linear infinite}
 .iienc-slide{flex-shrink:0;width:250px;height:100%;border-radius:10px;overflow:hidden;box-shadow:0 3px 14px rgba(13,148,136,.18);margin-right:12px}
@@ -3070,137 +3077,160 @@ canvas { cursor: crosshair; }
      AGRUPACIONES ARTÍSTICAS MUSICALES — 4 GRUPOS
 ═══════════════════════════════════════════════ -->
 <section>
-<div class="slide slide-content" style="background:linear-gradient(150deg,#E8EFF8 0%,#F0F4FA 55%,#E4ECF5 100%)">
-  <div class="s-hd">
-    <div class="s-hd-t">
-      <h2>Agrupaciones Artísticas Musicales — UGEL San Román 2022–2026</h2>
-      <p>Estudiantina · Banda Sinfónica Unificada · Orquesta Sinfónica · Orquestando · Lic. Edgar Sucasaca Huaco · Director Musical</p>
+<div class="slide" style="background:#050E1D;display:flex;flex-direction:column;overflow:hidden">
+
+  <!-- Header compacto -->
+  <div style="display:flex;align-items:center;gap:14px;padding:10px 22px 8px;flex-shrink:0;border-bottom:1px solid rgba(255,255,255,.08);position:relative;z-index:2">
+    <img src="img/image8.png" style="height:44px;object-fit:contain" alt="">
+    <div style="flex:1">
+      <div style="font-size:8px;font-weight:700;letter-spacing:5px;text-transform:uppercase;color:rgba(232,184,36,.85)">Arte y Cultura · UGEL San Román 2022–2026</div>
+      <h2 style="font-size:19px;font-weight:900;color:#fff;margin:0;line-height:1">Agrupaciones Artísticas Musicales</h2>
     </div>
-    <img class="s-hd-logo" src="img/image8.png" alt="">
-  </div>
-  <div class="s-bd" style="padding:10px 20px 8px;gap:10px">
-
-    <!-- KPI strip -->
-    <div style="display:flex;gap:8px;flex-shrink:0">
-      <div class="kpi-dk" style="position:relative;overflow:hidden">
-        <div style="position:absolute;top:0;left:0;right:0;height:4px;background:var(--gold)"></div>
-        <div class="kpi-l">AGRUPACIONES ACTIVAS</div>
-        <div style="font-size:38px;font-weight:800;color:#fff;line-height:1;margin-top:4px">4</div>
-        <div style="font-size:9px;color:var(--sky);margin-top:3px">Arte y Cultura · 2022–2026</div>
+    <div style="display:flex;gap:8px">
+      <div style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:8px;padding:6px 12px;text-align:center">
+        <div style="font-size:22px;font-weight:800;color:var(--gold);line-height:1">4</div>
+        <div style="font-size:8px;color:rgba(255,255,255,.5);margin-top:1px">Agrupaciones</div>
       </div>
-      <div class="kpi"><div class="kpi-top" style="background:linear-gradient(90deg,#B8860B,#D4A017)"></div><div class="kpi-bd"><div class="kpi-v" style="color:#7A5012;font-size:22px">2022</div><div class="kpi-l">Estudiantina fundada</div></div></div>
-      <div class="kpi"><div class="kpi-top" style="background:linear-gradient(90deg,var(--navy),var(--blue))"></div><div class="kpi-bd"><div class="kpi-v" style="color:var(--navy);font-size:22px">2024</div><div class="kpi-l">Banda Sinfónica fundada</div></div></div>
-      <div class="kpi"><div class="kpi-top" style="background:linear-gradient(90deg,var(--teal),#1A9E7A)"></div><div class="kpi-bd"><div class="kpi-v" style="color:#0A5030;font-size:22px">2023</div><div class="kpi-l">Orquesta Sinfónica fundada</div></div></div>
-      <div class="kpi"><div class="kpi-top" style="background:linear-gradient(90deg,#7C3AED,#A855F7)"></div><div class="kpi-bd"><div class="kpi-v" style="color:#7C3AED;font-size:22px">820</div><div class="kpi-l">Estudiantes Orquestando</div></div></div>
-    </div>
-
-    <!-- 4 tarjetas -->
-    <div style="flex:1;min-height:0;display:grid;grid-template-columns:repeat(4,1fr);gap:10px">
-
-      <!-- 1 · Estudiantina Magisterial -->
-      <div style="display:flex;flex-direction:column;border-radius:14px;overflow:hidden;box-shadow:var(--sm);border:1px solid var(--gbd)">
-        <div style="background:linear-gradient(145deg,#5C3A08,#B88716);padding:14px 16px;color:#fff;position:relative;overflow:hidden;flex-shrink:0">
-          <div style="position:absolute;top:-20px;right:-20px;width:80px;height:80px;border-radius:50%;background:rgba(255,255,255,.07)"></div>
-          <div style="font-size:8px;font-weight:700;letter-spacing:3px;color:rgba(255,255,255,.65);margin-bottom:5px">DESDE 2022</div>
-          <div style="font-size:13px;font-weight:800;color:#fff;line-height:1.2">Estudiantina<br>Magisterial Unificada</div>
-          <div style="font-size:9px;color:rgba(255,255,255,.7);margin-top:4px">Docentes músicos · Música tradicional</div>
-        </div>
-        <div style="flex:1;background:#fff;padding:12px 14px;display:flex;flex-direction:column;gap:8px">
-          <!-- Logro destacado -->
-          <div style="background:linear-gradient(135deg,#FEF3C7,#FDE68A);border-radius:8px;padding:8px 10px;border-left:3px solid #D97706">
-            <div style="display:flex;align-items:center;gap:6px">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#92400E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H2V4h4M18 9h4V4h-4M9 21h6M12 17v4M8 3h8v9a4 4 0 0 1-8 0z"/><path d="M6 9a4 4 0 0 0 4 4h4a4 4 0 0 0 4-4"/></svg>
-              <div style="font-size:10px;font-weight:800;color:#92400E">1.er Puesto Regional</div>
-            </div>
-            <div style="font-size:9px;color:#78350F;margin-top:2px;margin-left:20px">Concurso DRE Puno 2025</div>
-          </div>
-          <div style="display:flex;flex-direction:column;gap:5px;flex:1">
-            <div style="display:flex;align-items:flex-start;gap:6px;font-size:10px;color:var(--gd)"><span style="width:6px;height:6px;border-radius:50%;background:#D4A017;flex-shrink:0;margin-top:3px"></span>4 conciertos "Saludo Musical" anuales (2022–2025)</div>
-            <div style="display:flex;align-items:flex-start;gap:6px;font-size:10px;color:var(--gd)"><span style="width:6px;height:6px;border-radius:50%;background:#D4A017;flex-shrink:0;margin-top:3px"></span>Producción audiovisual 2026</div>
-            <div style="display:flex;align-items:flex-start;gap:6px;font-size:10px;color:var(--gd)"><span style="width:6px;height:6px;border-radius:50%;background:#D4A017;flex-shrink:0;margin-top:3px"></span>Plaza Mayor de Juliaca</div>
-          </div>
-          <div style="background:var(--light);border-radius:6px;padding:6px 10px;font-size:8.5px;color:var(--gm)">Dir. Musical: Lic. Edgar Sucasaca Huaco</div>
-        </div>
+      <div style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:8px;padding:6px 12px;text-align:center">
+        <div style="font-size:22px;font-weight:800;color:#A78BFA;line-height:1">820</div>
+        <div style="font-size:8px;color:rgba(255,255,255,.5);margin-top:1px">Est. Orquestando</div>
       </div>
-
-      <!-- 2 · Banda Sinfónica Unificada -->
-      <div style="display:flex;flex-direction:column;border-radius:14px;overflow:hidden;box-shadow:var(--sm);border:1px solid var(--gbd)">
-        <div style="background:linear-gradient(145deg,#07172E,#185ABC);padding:14px 16px;color:#fff;position:relative;overflow:hidden;flex-shrink:0">
-          <div style="position:absolute;top:-20px;right:-20px;width:80px;height:80px;border-radius:50%;background:rgba(255,255,255,.07)"></div>
-          <div style="font-size:8px;font-weight:700;letter-spacing:3px;color:rgba(255,255,255,.65);margin-bottom:5px">DESDE 2024</div>
-          <div style="font-size:13px;font-weight:800;color:#fff;line-height:1.2">Banda Sinfónica<br>Unificada</div>
-          <div style="font-size:9px;color:rgba(255,255,255,.7);margin-top:4px">Docentes + estudiantes · Música sinfónica</div>
-        </div>
-        <div style="flex:1;background:#fff;padding:12px 14px;display:flex;flex-direction:column;gap:8px">
-          <div style="background:linear-gradient(135deg,#DBEAFE,#BFDBFE);border-radius:8px;padding:8px 10px;border-left:3px solid #1D4ED8">
-            <div style="display:flex;align-items:center;gap:6px">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
-              <div style="font-size:10px;font-weight:800;color:#1E40AF">3 Festivales de Bandas</div>
-            </div>
-            <div style="font-size:9px;color:#1E3A8A;margin-top:2px;margin-left:20px">2024 · 2025 · 2026</div>
-          </div>
-          <div style="display:flex;flex-direction:column;gap:5px;flex:1">
-            <div style="display:flex;align-items:flex-start;gap:6px;font-size:10px;color:var(--gd)"><span style="width:6px;height:6px;border-radius:50%;background:var(--blue);flex-shrink:0;margin-top:3px"></span>Creada 09/04/2024 — 52.° aniversario UGEL</div>
-            <div style="display:flex;align-items:flex-start;gap:6px;font-size:10px;color:var(--gd)"><span style="width:6px;height:6px;border-radius:50%;background:var(--blue);flex-shrink:0;margin-top:3px"></span>Desfile 18/10/2024 · 98.° aniv. provincia</div>
-            <div style="display:flex;align-items:flex-start;gap:6px;font-size:10px;color:var(--gd)"><span style="width:6px;height:6px;border-radius:50%;background:var(--blue);flex-shrink:0;margin-top:3px"></span>9 bandas de IIs.EE. unificadas</div>
-          </div>
-          <div style="background:var(--light);border-radius:6px;padding:6px 10px;font-size:8.5px;color:var(--gm)">Dir. Musical: Lic. Edgar Sucasaca Huaco</div>
-        </div>
+      <div style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:8px;padding:6px 12px;text-align:center">
+        <div style="font-size:22px;font-weight:800;color:#34D399;line-height:1">8</div>
+        <div style="font-size:8px;color:rgba(255,255,255,.5);margin-top:1px">Conciertos/año</div>
       </div>
-
-      <!-- 3 · Orquesta Sinfónica -->
-      <div style="display:flex;flex-direction:column;border-radius:14px;overflow:hidden;box-shadow:var(--sm);border:1px solid var(--gbd)">
-        <div style="background:linear-gradient(145deg,#04372A,#0B7A68);padding:14px 16px;color:#fff;position:relative;overflow:hidden;flex-shrink:0">
-          <div style="position:absolute;top:-20px;right:-20px;width:80px;height:80px;border-radius:50%;background:rgba(255,255,255,.07)"></div>
-          <div style="font-size:8px;font-weight:700;letter-spacing:3px;color:rgba(255,255,255,.65);margin-bottom:5px">DESDE 2023</div>
-          <div style="font-size:13px;font-weight:800;color:#fff;line-height:1.2">Orquesta Sinfónica<br>Gran Prov. San Román</div>
-          <div style="font-size:9px;color:rgba(255,255,255,.7);margin-top:4px">Estudiantes y jóvenes talentos</div>
-        </div>
-        <div style="flex:1;background:#fff;padding:12px 14px;display:flex;flex-direction:column;gap:8px">
-          <div style="background:linear-gradient(135deg,#D1FAE5,#A7F3D0);border-radius:8px;padding:8px 10px;border-left:3px solid #059669">
-            <div style="display:flex;align-items:center;gap:6px">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#065F46" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-              <div style="font-size:10px;font-weight:800;color:#065F46">8 Conciertos de Gala</div>
-            </div>
-            <div style="font-size:9px;color:#064E3B;margin-top:2px;margin-left:20px">4 por año · 2024 y 2025</div>
-          </div>
-          <div style="display:flex;flex-direction:column;gap:5px;flex:1">
-            <div style="display:flex;align-items:flex-start;gap:6px;font-size:10px;color:var(--gd)"><span style="width:6px;height:6px;border-radius:50%;background:var(--teal);flex-shrink:0;margin-top:3px"></span>Fiestas Patrias · Aniv. Municipalidad</div>
-            <div style="display:flex;align-items:flex-start;gap:6px;font-size:10px;color:var(--gd)"><span style="width:6px;height:6px;border-radius:50%;background:var(--teal);flex-shrink:0;margin-top:3px"></span>Fin de año · Aniversario ciudad Puno</div>
-            <div style="display:flex;align-items:flex-start;gap:6px;font-size:10px;color:var(--gd)"><span style="width:6px;height:6px;border-radius:50%;background:var(--teal);flex-shrink:0;margin-top:3px"></span>Conciertos en UDAI y escenarios regionales</div>
-          </div>
-          <div style="background:var(--light);border-radius:6px;padding:6px 10px;font-size:8.5px;color:var(--gm)">Dir. Musical: Lic. Edgar Sucasaca Huaco</div>
-        </div>
-      </div>
-
-      <!-- 4 · ORQUESTANDO -->
-      <div style="display:flex;flex-direction:column;border-radius:14px;overflow:hidden;box-shadow:var(--sm);border:1px solid var(--gbd)">
-        <div style="background:linear-gradient(145deg,#4C1D95,#7C3AED);padding:14px 16px;color:#fff;position:relative;overflow:hidden;flex-shrink:0">
-          <div style="position:absolute;top:-20px;right:-20px;width:80px;height:80px;border-radius:50%;background:rgba(255,255,255,.07)"></div>
-          <div style="font-size:8px;font-weight:700;letter-spacing:3px;color:rgba(255,255,255,.65);margin-bottom:5px">DESDE 2022</div>
-          <div style="font-size:13px;font-weight:800;color:#fff;line-height:1.2">"Orquestando"<br>Núcleo H. Zevallos</div>
-          <div style="font-size:9px;color:rgba(255,255,255,.7);margin-top:4px">Iniciativa pedagógica escolar · MINEDU</div>
-        </div>
-        <div style="flex:1;background:#fff;padding:12px 14px;display:flex;flex-direction:column;gap:8px">
-          <div style="background:linear-gradient(135deg,#EDE9FE,#DDD6FE);border-radius:8px;padding:8px 10px;border-left:3px solid #7C3AED">
-            <div style="display:flex;align-items:center;gap:6px">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#5B21B6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H2V4h4M18 9h4V4h-4M9 21h6M12 17v4M8 3h8v9a4 4 0 0 1-8 0z"/><path d="M6 9a4 4 0 0 0 4 4h4a4 4 0 0 0 4-4"/></svg>
-              <div style="font-size:10px;font-weight:800;color:#5B21B6">Mejor Núcleo Nacional</div>
-            </div>
-            <div style="font-size:9px;color:#4C1D95;margin-top:2px;margin-left:20px">Niveles I, II y III — Único en Puno</div>
-          </div>
-          <div style="display:flex;flex-direction:column;gap:5px;flex:1">
-            <div style="display:flex;align-items:flex-start;gap:6px;font-size:10px;color:var(--gd)"><span style="width:6px;height:6px;border-radius:50%;background:#7C3AED;flex-shrink:0;margin-top:3px"></span>820 estudiantes · 5 a 17 años · 2025</div>
-            <div style="display:flex;align-items:flex-start;gap:6px;font-size:10px;color:var(--gd)"><span style="width:6px;height:6px;border-radius:50%;background:#7C3AED;flex-shrink:0;margin-top:3px"></span>Financiado por MINEDU desde 2024</div>
-            <div style="display:flex;align-items:flex-start;gap:6px;font-size:10px;color:var(--gd)"><span style="width:6px;height:6px;border-radius:50%;background:#7C3AED;flex-shrink:0;margin-top:3px"></span>Autorización oficial MINEDU 2023</div>
-          </div>
-          <div style="background:var(--light);border-radius:6px;padding:6px 10px;font-size:8.5px;color:var(--gm)">Dir. Nacional: Mtro. Wilfredo Tarazona Padilla</div>
-        </div>
-      </div>
-
     </div>
   </div>
-  <div class="s-ft"><span class="s-ft-t">Arte y Cultura · UGEL San Román 2022–2026 · Dr. Luis Jarid Mamani Llano · Director UGEL San Román · Lic. Edgar Sucasaca Huaco</span><div class="s-ft-n">—</div></div>
+
+  <!-- Grid 2x2 carruseles -->
+  <div style="flex:1;min-height:0;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:4px;padding:4px">
+
+    <!-- ① Estudiantina Magisterial -->
+    <div style="position:relative;border-radius:10px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,.5)">
+      <!-- Carrusel -->
+      <div style="position:absolute;inset:0;overflow:hidden">
+        <div class="arte-track" style="animation-duration:36s">
+          <div class="arte-slide"><img src="img banda/est_1.jpg" alt="" onerror="this.parentNode.style.background='linear-gradient(135deg,#5C3A08,#B88716)'"></div>
+          <div class="arte-slide"><img src="img banda/est_2.jpg" alt="" onerror="this.parentNode.style.background='linear-gradient(135deg,#7A5012,#D4A017)'"></div>
+          <div class="arte-slide"><img src="img banda/est_3.jpg" alt="" onerror="this.parentNode.style.background='linear-gradient(135deg,#5C3A08,#B88716)'"></div>
+          <div class="arte-slide"><img src="img banda/est_4.jpg" alt="" onerror="this.parentNode.style.background='linear-gradient(135deg,#7A5012,#D4A017)'"></div>
+          <!-- duplicados para loop -->
+          <div class="arte-slide"><img src="img banda/est_1.jpg" alt="" onerror="this.parentNode.style.background='linear-gradient(135deg,#5C3A08,#B88716)'"></div>
+          <div class="arte-slide"><img src="img banda/est_2.jpg" alt="" onerror="this.parentNode.style.background='linear-gradient(135deg,#7A5012,#D4A017)'"></div>
+          <div class="arte-slide"><img src="img banda/est_3.jpg" alt="" onerror="this.parentNode.style.background='linear-gradient(135deg,#5C3A08,#B88716)'"></div>
+          <div class="arte-slide"><img src="img banda/est_4.jpg" alt="" onerror="this.parentNode.style.background='linear-gradient(135deg,#7A5012,#D4A017)'"></div>
+        </div>
+      </div>
+      <!-- Overlay gradiente -->
+      <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(5,5,5,.95) 0%,rgba(5,5,5,.5) 40%,rgba(92,58,8,.25) 100%);pointer-events:none"></div>
+      <!-- Badge logro -->
+      <div style="position:absolute;top:10px;right:10px;background:linear-gradient(135deg,#D97706,#F59E0B);border-radius:20px;padding:4px 10px;display:flex;align-items:center;gap:4px;box-shadow:0 4px 12px rgba(217,119,6,.5)">
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H2V4h4M18 9h4V4h-4M9 21h6M12 17v4M8 3h8v9a4 4 0 0 1-8 0z"/><path d="M6 9a4 4 0 0 0 4 4h4a4 4 0 0 0 4-4"/></svg>
+        <span style="font-size:9px;font-weight:800;color:#fff">1.er Puesto · DRE Puno 2025</span>
+      </div>
+      <!-- Texto info -->
+      <div style="position:absolute;bottom:0;left:0;right:0;padding:10px 14px">
+        <div style="font-size:8px;font-weight:700;letter-spacing:3px;color:rgba(212,160,23,.9);margin-bottom:3px">DESDE 2022</div>
+        <div style="font-size:16px;font-weight:800;color:#fff;line-height:1.15">Estudiantina Magisterial Unificada</div>
+        <div style="display:flex;gap:10px;margin-top:5px">
+          <span style="font-size:9px;color:rgba(255,255,255,.7)">🎵 4 conciertos anuales Plaza Mayor</span>
+          <span style="font-size:9px;color:rgba(255,255,255,.7)">📹 Prod. audiovisual 2026</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ② Banda Sinfónica Unificada -->
+    <div style="position:relative;border-radius:10px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,.5)">
+      <div style="position:absolute;inset:0;overflow:hidden">
+        <div class="arte-track" style="animation-duration:30s;animation-direction:reverse">
+          <div class="arte-slide"><img src="img banda/banda_1.jpg" alt="" onerror="this.parentNode.style.background='linear-gradient(135deg,#07172E,#185ABC)'"></div>
+          <div class="arte-slide"><img src="img banda/banda_2.jpg" alt="" onerror="this.parentNode.style.background='linear-gradient(135deg,#0A1F3D,#1E4D9B)'"></div>
+          <div class="arte-slide"><img src="img banda/banda_3.jpg" alt="" onerror="this.parentNode.style.background='linear-gradient(135deg,#07172E,#185ABC)'"></div>
+          <div class="arte-slide"><img src="img banda/banda_4.jpg" alt="" onerror="this.parentNode.style.background='linear-gradient(135deg,#0A1F3D,#1E4D9B)'"></div>
+          <div class="arte-slide"><img src="img banda/banda_1.jpg" alt="" onerror="this.parentNode.style.background='linear-gradient(135deg,#07172E,#185ABC)'"></div>
+          <div class="arte-slide"><img src="img banda/banda_2.jpg" alt="" onerror="this.parentNode.style.background='linear-gradient(135deg,#0A1F3D,#1E4D9B)'"></div>
+          <div class="arte-slide"><img src="img banda/banda_3.jpg" alt="" onerror="this.parentNode.style.background='linear-gradient(135deg,#07172E,#185ABC)'"></div>
+          <div class="arte-slide"><img src="img banda/banda_4.jpg" alt="" onerror="this.parentNode.style.background='linear-gradient(135deg,#0A1F3D,#1E4D9B)'"></div>
+        </div>
+      </div>
+      <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(5,5,5,.95) 0%,rgba(5,5,5,.5) 40%,rgba(7,23,46,.25) 100%);pointer-events:none"></div>
+      <div style="position:absolute;top:10px;right:10px;background:linear-gradient(135deg,#1D4ED8,#3B82F6);border-radius:20px;padding:4px 10px;display:flex;align-items:center;gap:4px;box-shadow:0 4px 12px rgba(29,78,216,.5)">
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+        <span style="font-size:9px;font-weight:800;color:#fff">3 Festivales · 2024–2026</span>
+      </div>
+      <div style="position:absolute;bottom:0;left:0;right:0;padding:10px 14px">
+        <div style="font-size:8px;font-weight:700;letter-spacing:3px;color:rgba(96,165,250,.9);margin-bottom:3px">DESDE 2024</div>
+        <div style="font-size:16px;font-weight:800;color:#fff;line-height:1.15">Banda Sinfónica Unificada</div>
+        <div style="display:flex;gap:10px;margin-top:5px">
+          <span style="font-size:9px;color:rgba(255,255,255,.7)">🎺 9 bandas unificadas</span>
+          <span style="font-size:9px;color:rgba(255,255,255,.7)">📅 Creada 09/04/2024</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ③ Orquesta Sinfónica -->
+    <div style="position:relative;border-radius:10px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,.5)">
+      <div style="position:absolute;inset:0;overflow:hidden">
+        <div class="arte-track" style="animation-duration:34s">
+          <div class="arte-slide"><img src="img banda/orq_1.jpg" alt="" onerror="this.parentNode.style.background='linear-gradient(135deg,#04372A,#0B7A68)'"></div>
+          <div class="arte-slide"><img src="img banda/orq_2.jpg" alt="" onerror="this.parentNode.style.background='linear-gradient(135deg,#065F46,#059669)'"></div>
+          <div class="arte-slide"><img src="img banda/orq_3.jpg" alt="" onerror="this.parentNode.style.background='linear-gradient(135deg,#04372A,#0B7A68)'"></div>
+          <div class="arte-slide"><img src="img banda/orq_4.jpg" alt="" onerror="this.parentNode.style.background='linear-gradient(135deg,#065F46,#059669)'"></div>
+          <div class="arte-slide"><img src="img banda/orq_1.jpg" alt="" onerror="this.parentNode.style.background='linear-gradient(135deg,#04372A,#0B7A68)'"></div>
+          <div class="arte-slide"><img src="img banda/orq_2.jpg" alt="" onerror="this.parentNode.style.background='linear-gradient(135deg,#065F46,#059669)'"></div>
+          <div class="arte-slide"><img src="img banda/orq_3.jpg" alt="" onerror="this.parentNode.style.background='linear-gradient(135deg,#04372A,#0B7A68)'"></div>
+          <div class="arte-slide"><img src="img banda/orq_4.jpg" alt="" onerror="this.parentNode.style.background='linear-gradient(135deg,#065F46,#059669)'"></div>
+        </div>
+      </div>
+      <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(5,5,5,.95) 0%,rgba(5,5,5,.5) 40%,rgba(4,55,42,.25) 100%);pointer-events:none"></div>
+      <div style="position:absolute;top:10px;right:10px;background:linear-gradient(135deg,#059669,#10B981);border-radius:20px;padding:4px 10px;display:flex;align-items:center;gap:4px;box-shadow:0 4px 12px rgba(5,150,105,.5)">
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        <span style="font-size:9px;font-weight:800;color:#fff">8 Conciertos Gala · 2024–2025</span>
+      </div>
+      <div style="position:absolute;bottom:0;left:0;right:0;padding:10px 14px">
+        <div style="font-size:8px;font-weight:700;letter-spacing:3px;color:rgba(52,211,153,.9);margin-bottom:3px">DESDE 2023</div>
+        <div style="font-size:16px;font-weight:800;color:#fff;line-height:1.15">Orquesta Sinfónica · Gran Prov. San Román</div>
+        <div style="display:flex;gap:10px;margin-top:5px">
+          <span style="font-size:9px;color:rgba(255,255,255,.7)">🎻 Jóvenes talentos</span>
+          <span style="font-size:9px;color:rgba(255,255,255,.7)">🏛️ Fiestas Patrias · Aniv. Puno</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ④ ORQUESTANDO -->
+    <div style="position:relative;border-radius:10px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,.5)">
+      <div style="position:absolute;inset:0;overflow:hidden">
+        <div class="arte-track" style="animation-duration:28s;animation-direction:reverse">
+          <div class="arte-slide"><img src="img/image67.jpeg" alt="Orquestando 1" style="width:100%;height:100%;object-fit:cover"></div>
+          <div class="arte-slide"><img src="img/image68.jpeg" alt="Orquestando 2" style="width:100%;height:100%;object-fit:cover"></div>
+          <div class="arte-slide"><img src="img/image69.jpeg" alt="Orquestando 3" style="width:100%;height:100%;object-fit:cover"></div>
+          <div class="arte-slide"><img src="img/image70.jpeg" alt="Orquestando 4" style="width:100%;height:100%;object-fit:cover"></div>
+          <div class="arte-slide"><img src="img/image67.jpeg" alt="" style="width:100%;height:100%;object-fit:cover"></div>
+          <div class="arte-slide"><img src="img/image68.jpeg" alt="" style="width:100%;height:100%;object-fit:cover"></div>
+          <div class="arte-slide"><img src="img/image69.jpeg" alt="" style="width:100%;height:100%;object-fit:cover"></div>
+          <div class="arte-slide"><img src="img/image70.jpeg" alt="" style="width:100%;height:100%;object-fit:cover"></div>
+        </div>
+      </div>
+      <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(5,5,5,.95) 0%,rgba(5,5,5,.5) 40%,rgba(76,29,149,.25) 100%);pointer-events:none"></div>
+      <div style="position:absolute;top:10px;right:10px;background:linear-gradient(135deg,#7C3AED,#A855F7);border-radius:20px;padding:4px 10px;display:flex;align-items:center;gap:4px;box-shadow:0 4px 12px rgba(124,58,237,.5)">
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H2V4h4M18 9h4V4h-4M9 21h6M12 17v4M8 3h8v9a4 4 0 0 1-8 0z"/><path d="M6 9a4 4 0 0 0 4 4h4a4 4 0 0 0 4-4"/></svg>
+        <span style="font-size:9px;font-weight:800;color:#fff">Mejor Núcleo Nacional I, II y III</span>
+      </div>
+      <div style="position:absolute;bottom:0;left:0;right:0;padding:10px 14px">
+        <div style="font-size:8px;font-weight:700;letter-spacing:3px;color:rgba(167,139,250,.9);margin-bottom:3px">DESDE 2022 · MINEDU 2024</div>
+        <div style="font-size:16px;font-weight:800;color:#fff;line-height:1.15">"Orquestando" — Núcleo H. Zevallos Gámez</div>
+        <div style="display:flex;gap:10px;margin-top:5px">
+          <span style="font-size:9px;color:rgba(255,255,255,.7)">🎓 820 estudiantes · 5–17 años</span>
+          <span style="font-size:9px;color:rgba(255,255,255,.7)">🏆 Único en región Puno</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div style="padding:5px 22px;flex-shrink:0;border-top:1px solid rgba(255,255,255,.06)">
+    <span style="font-size:9px;color:rgba(255,255,255,.35)">Arte y Cultura · UGEL San Román 2022–2026 · Dr. Luis Jarid Mamani Llano · Dir. Musical: Lic. Edgar Sucasaca Huaco</span>
+  </div>
 </div>
 </section>
 

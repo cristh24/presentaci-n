@@ -4,9 +4,7 @@
 <section data-transition="zoom-in convex-out">
 <div class="slide slide-portada">
 
-  <!-- Capas de fondo -->
-  <img class="pv2-bg" src="/img/pagina%201.png" alt="">
-  <div class="pv2-ov"></div>
+  <!-- Fondo decorativo -->
   <div class="pv2-grid"></div>
   <div class="pv2-ghost">2026</div>
   <div class="pv2-glow1"></div>
@@ -14,15 +12,27 @@
 
   <!-- ── Tarjeta glass (izquierda) ── -->
   <div class="pv2-card">
-    <img class="pv2-logo" src="/img/image8.png" alt="UGEL San Román">
+    <img class="pv2-logo" src="/img%20logos/LOGO%20AZUL-crop.png" alt="UGEL San Román">
     <p class="pv2-tag">Logros de Aprendizaje · UGEL San Román</p>
     <div class="pv2-accent"></div>
     <h1 class="pv2-title">INFORME<br>GESTIÓN<br>PEDAGÓGICA</h1>
     <div class="pv2-years">2022–2026</div>
     <div class="pv2-dir">
-      <strong style="color:rgba(255,255,255,.95);font-size:20px;display:block;margin-bottom:3px">L. Jarid Mamani Llano</strong>
-      <span style="font-size:14px">Director · UGEL San Román</span>
+      <strong style="color:rgba(255,255,255,.95);font-size:23px;display:block;margin-bottom:3px">L. Jarid Mamani Llano</strong>
+      <span style="font-size:17px">Director · UGEL San Román</span>
     </div>
+  </div>
+
+  <!-- ── Panel derecho: fachada + director ── -->
+  <div style="flex:1;position:relative;z-index:2;overflow:hidden">
+    <!-- Degradado de fusión izquierda -->
+    <div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(5,14,29,.92) 0%,rgba(5,14,29,.45) 28%,rgba(5,14,29,.08) 55%,transparent 80%);z-index:3;pointer-events:none"></div>
+    <!-- Fachada UGEL -->
+    <img src="/img%20logos/fachada_.png" alt="Sede UGEL San Román"
+         style="position:absolute;bottom:0;right:0;width:100%;height:auto;object-fit:contain;object-position:bottom right;z-index:1;opacity:.92;filter:drop-shadow(0 16px 56px rgba(0,0,0,.75))">
+    <!-- Director (recortado, primer plano) -->
+    <img src="/img%20logos/dr.png" alt="Director L. Jarid Mamani Llano"
+         style="position:absolute;bottom:0;right:3%;height:92%;object-fit:contain;object-position:bottom;z-index:4;filter:drop-shadow(0 8px 36px rgba(0,0,0,.65))">
   </div>
 
   <!-- ── Barra inferior ── -->
@@ -33,7 +43,7 @@
     <div class="pv2-bs"></div>
     <div class="pv2-bi"><div class="pv2-bd"></div>Gestión Pedagógica 2022–2026</div>
     <div style="flex:1"></div>
-    <div class="pv2-bi" style="color:#D4A017;font-weight:700;font-style:italic;font-size:12px">
+    <div class="pv2-bi" style="color:#D4A017;font-weight:700;font-style:italic;font-size:15px">
       "Comprometidos con una Gestión de Calidad"
     </div>
   </div>
@@ -54,14 +64,14 @@
 
   <!-- Header -->
   <div style="display:flex;align-items:center;gap:16px;padding:13px 26px 9px;flex-shrink:0;position:relative;z-index:2;border-bottom:1px solid rgba(255,255,255,.07)">
-    <img src="/img/image8.png" style="height:40px;object-fit:contain" alt="">
+    <img src="/img/image8.png" style="height:40px;object-fit:contain" alt="Logo UGEL San Román">
     <div style="flex:1">
-      <div style="font-size:8px;font-weight:700;letter-spacing:5px;text-transform:uppercase;color:rgba(232,184,36,.85);margin-bottom:2px">Contenido</div>
-      <h2 style="font-size:20px;font-weight:900;color:#fff;margin:0;line-height:1;letter-spacing:-.3px">ÍNDICE GENERAL — Memoria de Gestión Pedagógica · UGEL San Román 2022–2026</h2>
+      <div style="font-size:11px;font-weight:700;letter-spacing:5px;text-transform:uppercase;color:rgba(232,184,36,.85);margin-bottom:2px">Contenido</div>
+      <h2 style="font-size:23px;font-weight:900;color:#fff;margin:0;line-height:1;letter-spacing:-.3px">ÍNDICE GENERAL — Memoria de Gestión Pedagógica · UGEL San Román 2022–2026</h2>
     </div>
     <div style="background:rgba(232,184,36,.1);border:1px solid rgba(232,184,36,.28);border-radius:10px;padding:7px 18px;text-align:center;flex-shrink:0">
-      <div style="font-size:22px;font-weight:900;color:#E8B824;line-height:1">15</div>
-      <div style="font-size:8px;font-weight:700;color:rgba(232,184,36,.65);letter-spacing:2px">TEMAS</div>
+      <div style="font-size:26px;font-weight:900;color:#E8B824;line-height:1">15</div>
+      <div style="font-size:11px;font-weight:700;color:rgba(232,184,36,.65);letter-spacing:2px">TEMAS</div>
     </div>
   </div>
 
@@ -252,8 +262,8 @@
 
   <!-- Footer -->
   <div style="display:flex;align-items:center;padding:7px 26px;flex-shrink:0;border-top:1px solid rgba(255,255,255,.07);position:relative;z-index:2">
-    <span style="font-size:10px;color:rgba(148,180,220,.6);font-weight:500;flex:1">UGEL San Román · Informe Memoria de Gestión Pedagógica 2022–2026</span>
-    <div style="width:22px;height:22px;background:linear-gradient(135deg,#0B1D3A,#1E4D9B);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:#fff">2</div>
+    <span style="font-size:15px;color:rgba(148,180,220,.88);font-weight:600;flex:1">UGEL San Román · Informe Memoria de Gestión Pedagógica 2022–2026</span>
+    <div style="width:22px;height:22px;background:linear-gradient(135deg,#0B1D3A,#1E4D9B);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:#fff">2</div>
   </div>
 
 </div>

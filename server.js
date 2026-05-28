@@ -9,13 +9,17 @@ const PRIMARIA_DIR      = path.join(ROOT, "primaria");
 const COLEGIOS_DIR      = path.join(ROOT, "img colegios");
 const INGENIERITOS_DIR  = path.join(ROOT, "img ingenieritos eduardo de habich");
 const BANDA_DIR         = path.join(ROOT, "img banda");
+const LOGOS_DIR         = path.join(ROOT, "img logos");
+const LOGO_DIR          = path.join(ROOT, "logo");
 const PORTADAS_DIR      = path.join(ROOT, "img-portadas");
 const HTML_FILE      = path.join(ROOT, "index.html");
 const SECTIONS_DIR   = path.join(ROOT, "sections");
 const SLIDES_DIR     = path.join(ROOT, "slides_png", "out");
 const PORT = 3000;
 
-const MIME = { ".png":"image/png", ".jpg":"image/jpeg", ".jpeg":"image/jpeg", ".gif":"image/gif" };
+const IE_PHOTOS_DIR = path.join(ROOT, "img-ies");
+
+const MIME = { ".png":"image/png", ".jpg":"image/jpeg", ".jpeg":"image/jpeg", ".jfif":"image/jpeg", ".gif":"image/gif" };
 
 /* Combina shell + secciones en memoria */
 function buildPresentation() {
@@ -42,6 +46,17 @@ const server = http.createServer((req, res) => {
     }
   }
 
+  /* ── Fotos IEs nuevas creadas /img-ies/ ── */
+  if (req.url.startsWith("/img-ies/")) {
+    const name = path.basename(decodeURIComponent(req.url.slice("/img-ies/".length)));
+    const file = path.join(IE_PHOTOS_DIR, name);
+    if (!file.startsWith(IE_PHOTOS_DIR)) { res.writeHead(403); return res.end(); }
+    if (!fs.existsSync(file)) { res.writeHead(404); return res.end(); }
+    const ext = path.extname(name).toLowerCase();
+    res.writeHead(200, { "Content-Type": MIME[ext] || "application/octet-stream" });
+    return fs.createReadStream(file).pipe(res);
+  }
+
   /* ── Imágenes /img ingenieritos eduardo de habich/ ── */
   if (req.url.startsWith("/img%20ingenieritos%20eduardo%20de%20habich/")) {
     const name = decodeURIComponent(req.url.slice("/img%20ingenieritos%20eduardo%20de%20habich/".length));
@@ -57,6 +72,26 @@ const server = http.createServer((req, res) => {
   if (req.url.startsWith("/img%20banda/")) {
     const name = decodeURIComponent(req.url.slice("/img%20banda/".length));
     const file = path.join(BANDA_DIR, path.basename(name));
+    if (!fs.existsSync(file)) { res.writeHead(404); return res.end(); }
+    const ext = path.extname(name).toLowerCase();
+    res.writeHead(200, { "Content-Type": MIME[ext] || "application/octet-stream" });
+    return fs.createReadStream(file).pipe(res);
+  }
+
+  /* ── Imágenes /img logos/ ── */
+  if (req.url.startsWith("/img%20logos/")) {
+    const name = decodeURIComponent(req.url.slice("/img%20logos/".length));
+    const file = path.join(LOGOS_DIR, path.basename(name));
+    if (!fs.existsSync(file)) { res.writeHead(404); return res.end(); }
+    const ext = path.extname(name).toLowerCase();
+    res.writeHead(200, { "Content-Type": MIME[ext] || "application/octet-stream" });
+    return fs.createReadStream(file).pipe(res);
+  }
+
+  /* ── Imágenes /logo/ ── */
+  if (req.url.startsWith("/logo/")) {
+    const name = decodeURIComponent(req.url.slice("/logo/".length));
+    const file = path.join(LOGO_DIR, path.basename(name));
     if (!fs.existsSync(file)) { res.writeHead(404); return res.end(); }
     const ext = path.extname(name).toLowerCase();
     res.writeHead(200, { "Content-Type": MIME[ext] || "application/octet-stream" });

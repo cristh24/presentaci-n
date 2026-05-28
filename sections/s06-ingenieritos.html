@@ -1,14 +1,14 @@
 ﻿<!-- ═══════════════════════════════════════════════
      SECCIÓN 05 — COLEGIO INGENIERITOS + CEPRE UNI
 ═══════════════════════════════════════════════ -->
-<section data-transition="zoom-in fade-out">
+<section data-transition="convex-in fade-out">
 <div class="slide secdiv blue" style="background:linear-gradient(145deg,rgba(4,17,34,.82) 0%,rgba(10,44,104,.74) 58%,rgba(24,90,188,.62) 100%),url('/img-portadas/05-ingenieritos.jpg') center/cover no-repeat">
   <div class="secdiv-grid"></div>
   <div class="secdiv-ghost">05</div>
   <div class="secdiv-content">
     <img class="secdiv-logo" src="/img/image8.png" alt="UGEL San Román">
     <p class="secdiv-tag">Educación de Alta Competencia</p>
-    <h2 class="secdiv-title" style="font-size:38px" data-typed="COLEGIO<br>INGENIERITOS &amp; CEPRE UNI">COLEGIO<br>INGENIERITOS & CEPRE UNI</h2>
+    <h2 class="secdiv-title" style="font-size:42px" data-typed="COLEGIO<br>INGENIERITOS &amp; CEPRE UNI">COLEGIO<br>INGENIERITOS & CEPRE UNI</h2>
     <div class="secdiv-line" style="background:linear-gradient(90deg,#60A5FA,#3B82F6)"></div>
     <p class="secdiv-sub">IES Eduardo de Habich · Colegio de alta competencia · Sede Juliaca<br>Convenio CEPRE UNI · Ingresantes a la UNI · 2022–2026</p>
   </div>
@@ -22,49 +22,110 @@
 <div class="slide slide-content">
   <div class="s-hd">
     <div class="s-hd-t"><h2>CEPRE UNI — Sede Juliaca</h2><p>Centro Pre-Universitario · Universidad Nacional de Ingeniería · Convenio UGEL San Román</p></div>
-    <img class="s-hd-logo" src="/img/image8.png" alt="">
+    <img class="s-hd-logo" src="/img/image8.png" alt="Logo UGEL San Román">
   </div>
   <div class="s-bd">
     <div style="display:flex;gap:12px;flex:1;min-height:0">
-      <!-- Foto principal CEPRE UNI -->
-      <div style="flex:2;display:flex;flex-direction:column;gap:8px">
-        <div style="flex:1;border-radius:var(--r);overflow:hidden;box-shadow:var(--sm);position:relative">
-          <img src="/img/image98.jpg" alt="CEPRE UNI Sede Juliaca" style="width:100%;height:100%;object-fit:cover;object-position:top">
-          <div style="position:absolute;bottom:0;left:0;right:0;padding:14px 18px;background:linear-gradient(to top,rgba(10,22,40,.92),transparent)">
-            <div style="font-size:18px;font-weight:800;color:#fff">CEPRE UNI — Sede Juliaca</div>
-            <div style="font-size:13px;color:rgba(255,255,255,.7);margin-top:3px">Centro Pre-Universitario · Universidad Nacional de Ingeniería</div>
+
+      <!-- Carrusel único con las 3 fotos -->
+      <div id="cepre-c" style="flex:1.6;position:relative;border-radius:var(--r);overflow:hidden;box-shadow:0 8px 32px rgba(10,22,40,.28)">
+
+        <!-- Slide 1: Sede Juliaca -->
+        <div class="cprs" style="position:absolute;inset:0;opacity:1;transition:opacity .9s ease;z-index:1">
+          <img src="/img/image98.jpg" alt="CEPRE UNI Sede Juliaca" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block">
+          <div style="position:absolute;bottom:0;left:0;right:0;padding:18px 22px;background:linear-gradient(to top,rgba(10,22,40,.95) 0%,rgba(10,22,40,.4) 60%,transparent 100%)">
+            <div style="display:inline-block;background:rgba(229,184,36,.92);color:#0B1D3A;font-size:10px;font-weight:800;letter-spacing:2px;padding:3px 10px;border-radius:20px;margin-bottom:8px">FOTO 1 DE 3</div>
+            <div style="font-size:20px;font-weight:800;color:#fff;line-height:1.2">CEPRE UNI — Sede Juliaca</div>
+            <div style="font-size:13px;color:rgba(255,255,255,.75);margin-top:4px">Centro Pre-Universitario · Universidad Nacional de Ingeniería</div>
           </div>
         </div>
-        <div style="display:flex;gap:8px;flex-shrink:0">
-          <div style="flex:1;border-radius:var(--r);overflow:hidden;box-shadow:var(--sh);height:90px">
-            <img src="/img/image99.jpg" alt="CEPRE UNI actividad" style="width:100%;height:100%;object-fit:cover;object-position:top">
+
+        <!-- Slide 2: Actividad académica -->
+        <div class="cprs" style="position:absolute;inset:0;opacity:0;transition:opacity .9s ease;z-index:0">
+          <img src="/img/image99.jpg" alt="CEPRE UNI Actividad Académica" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block">
+          <div style="position:absolute;bottom:0;left:0;right:0;padding:18px 22px;background:linear-gradient(to top,rgba(10,22,40,.95) 0%,rgba(10,22,40,.4) 60%,transparent 100%)">
+            <div style="display:inline-block;background:rgba(229,184,36,.92);color:#0B1D3A;font-size:10px;font-weight:800;letter-spacing:2px;padding:3px 10px;border-radius:20px;margin-bottom:8px">FOTO 2 DE 3</div>
+            <div style="font-size:20px;font-weight:800;color:#fff;line-height:1.2">Actividad Académica</div>
+            <div style="font-size:13px;color:rgba(255,255,255,.75);margin-top:4px">Jornadas de preparación preuniversitaria · UGEL San Román</div>
           </div>
-          <div style="flex:1;border-radius:var(--r);overflow:hidden;box-shadow:var(--sh);height:90px">
-            <img src="/img/image100.jpg" alt="CEPRE UNI estudiantes" style="width:100%;height:100%;object-fit:cover;object-position:top">
+        </div>
+
+        <!-- Slide 3: Estudiantes ingresantes -->
+        <div class="cprs" style="position:absolute;inset:0;opacity:0;transition:opacity .9s ease;z-index:0">
+          <img src="/img/image100.jpg" alt="CEPRE UNI Estudiantes" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block">
+          <div style="position:absolute;bottom:0;left:0;right:0;padding:18px 22px;background:linear-gradient(to top,rgba(10,22,40,.95) 0%,rgba(10,22,40,.4) 60%,transparent 100%)">
+            <div style="display:inline-block;background:rgba(229,184,36,.92);color:#0B1D3A;font-size:10px;font-weight:800;letter-spacing:2px;padding:3px 10px;border-radius:20px;margin-bottom:8px">FOTO 3 DE 3</div>
+            <div style="font-size:20px;font-weight:800;color:#fff;line-height:1.2">Estudiantes Ingresantes a la UNI</div>
+            <div style="font-size:13px;color:rgba(255,255,255,.75);margin-top:4px">218 ingresantes · IES Eduardo de Habich · 2022–2026</div>
           </div>
+        </div>
+
+        <!-- Puntos indicadores -->
+        <div style="position:absolute;bottom:12px;right:16px;display:flex;gap:6px;z-index:10" id="cepre-dots">
+          <div style="width:8px;height:8px;border-radius:50%;background:#FFD700;transition:opacity .3s"></div>
+          <div style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.4);transition:opacity .3s"></div>
+          <div style="width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.4);transition:opacity .3s"></div>
         </div>
       </div>
-      <!-- Panel informativo -->
-      <div style="flex:1;display:flex;flex-direction:column;gap:10px">
-        <div style="background:linear-gradient(135deg,var(--navy),var(--blue));border-radius:var(--r);padding:18px 16px;color:#fff;flex:1;display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden">
-          <div style="position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,#E8B824,#EAC020)"></div>
-          <div style="font-size:28px;font-weight:900;color:#F5D84A;line-height:1;margin-bottom:8px">CEPRE UNI</div>
-          <div style="font-size:11px;font-weight:700;color:rgba(255,255,255,.85);margin-bottom:12px">Centro Pre-Universitario</div>
-          <div style="font-size:10px;color:rgba(255,255,255,.7);line-height:1.8">
-            <span style="display:flex;align-items:center;gap:6px;margin-bottom:2px"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.8)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>Universidad Nacional de Ingeniería</span>
-            <span style="display:flex;align-items:center;gap:6px;margin-bottom:2px"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.8)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Sede Juliaca — Región Puno</span>
-            <span style="display:flex;align-items:center;gap:6px;margin-bottom:2px"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.8)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>Convenio UGEL San Román</span>
-            <span style="display:flex;align-items:center;gap:6px"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.8)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 10 20 15 15 20"/><path d="M4 4v7a4 4 0 0 0 4 4h12"/></svg>IES Eduardo de Habich</span>
+
+      <!-- Panel derecho: KPI 218 + info -->
+      <div style="flex:1;display:flex;flex-direction:column;gap:8px">
+
+        <!-- KPI 218 resaltado -->
+        <div style="background:linear-gradient(135deg,#0D1B4B 0%,#1E3A8A 100%);border-radius:var(--r);padding:14px 18px;color:#fff;flex-shrink:0;position:relative;overflow:hidden;box-shadow:0 6px 24px rgba(13,27,75,.4)">
+          <div style="position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,#E8B824,#FFD700)"></div>
+          <div style="font-size:10px;font-weight:700;color:rgba(255,255,255,.55);letter-spacing:2.5px;margin-bottom:2px">INGRESANTES A LA UNI</div>
+          <div style="display:flex;align-items:flex-end;gap:10px">
+            <div style="font-size:64px;font-weight:900;color:#FFD700;line-height:1;text-shadow:0 2px 20px rgba(255,215,0,.45)">218</div>
+            <div style="padding-bottom:8px">
+              <div style="font-size:12px;color:rgba(255,255,255,.7);line-height:1.5">estudiantes<br>2022 – 2026</div>
+            </div>
+          </div>
+          <div style="font-size:11px;color:rgba(255,255,255,.5);margin-top:2px">CEPRE UNI</div>
+        </div>
+
+        <!-- Info CEPRE UNI -->
+        <div style="background:linear-gradient(135deg,var(--navy),var(--blue));border-radius:var(--r);padding:14px 16px;color:#fff;flex:1;display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden">
+          <div style="position:absolute;top:0;left:0;right:0;height:3px;background:rgba(255,215,0,.4)"></div>
+          <div style="font-size:22px;font-weight:900;color:#F5D84A;line-height:1;margin-bottom:6px">CEPRE UNI</div>
+          <div style="font-size:12px;font-weight:700;color:rgba(255,255,255,.8);margin-bottom:10px">Centro Pre-Universitario — Sede Juliaca</div>
+          <div style="font-size:12px;color:rgba(255,255,255,.65);line-height:2">
+            <div style="display:flex;align-items:center;gap:6px"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.75)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>Universidad Nacional de Ingeniería</div>
+            <div style="display:flex;align-items:center;gap:6px"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.75)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Sede Juliaca — Región Puno</div>
+            <div style="display:flex;align-items:center;gap:6px"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.75)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>Convenio UGEL San Román</div>
           </div>
         </div>
-        <div style="background:#fff;border-radius:var(--r);border:1px solid var(--gbd);box-shadow:var(--sh);padding:12px 14px">
-          <div style="font-size:8.5px;font-weight:700;color:var(--gm);letter-spacing:2px;margin-bottom:6px">OBJETIVO</div>
-          <div style="font-size:10px;color:var(--gd);line-height:1.6">Acceso a preparación universitaria de calidad para estudiantes de la región Puno, con énfasis en el IES "Ingenieritos del Perú Eduardo de Habich".</div>
+
+        <!-- Objetivo -->
+        <div style="background:#fff;border-radius:var(--r);border:1px solid var(--gbd);box-shadow:var(--sh);padding:10px 14px;flex-shrink:0">
+          <div style="font-size:8px;font-weight:700;color:var(--gm);letter-spacing:2px;margin-bottom:5px">OBJETIVO</div>
+          <div style="font-size:12px;color:var(--gd);line-height:1.55">Acceso a preparación universitaria de calidad para estudiantes de la región Puno, con énfasis en el IES "Ingenieritos del Perú Eduardo de Habich".</div>
         </div>
+
       </div>
     </div>
   </div>
-  <div class="s-ft"><span class="s-ft-t">CEPRE UNI — Universidad Nacional de Ingeniería · Sede Juliaca · UGEL San Román</span><div class="s-ft-n">—</div></div>
+  <div class="s-ft"><span class="s-ft-t">CEPRE UNI — Universidad Nacional de Ingeniería · Sede Juliaca · Convenio UGEL San Román · 218 ingresantes 2022–2026</span><div class="s-ft-n">—</div></div>
 </div>
 </section>
+
+<script>
+(function(){
+  if(window._cepreReady) return; window._cepreReady = true;
+  var slides = Array.from(document.querySelectorAll('#cepre-c .cprs'));
+  var dots   = Array.from(document.querySelectorAll('#cepre-dots div'));
+  var cur = 0;
+  function go(n){
+    slides[cur].style.opacity='0'; slides[cur].style.zIndex='0';
+    dots[cur].style.background='rgba(255,255,255,.4)';
+    cur = (n + slides.length) % slides.length;
+    slides[cur].style.opacity='1'; slides[cur].style.zIndex='1';
+    dots[cur].style.background='#FFD700';
+  }
+  var timer = setInterval(function(){ go(cur+1); }, 4000);
+  Reveal.on('slidechanged', function(e){
+    if(!e.currentSlide.querySelector('#cepre-c')){ clearInterval(timer); }
+  });
+})();
+</script>
 

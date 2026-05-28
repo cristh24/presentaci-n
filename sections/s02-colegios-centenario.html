@@ -1,16 +1,16 @@
-<!-- ═══════════════════════════════════════════════
+﻿<!-- ═══════════════════════════════════════════════
      SECCIÓN 01 — COLEGIOS DEL CENTENARIO / IEs NUEVAS
 ═══════════════════════════════════════════════ -->
-<section data-transition="zoom-in fade-out">
+<section data-transition="slide-in fade-out">
 <div class="slide secdiv blue" style="background:linear-gradient(145deg,rgba(4,17,34,.82) 0%,rgba(10,44,104,.74) 58%,rgba(24,90,188,.62) 100%),url('/img-portadas/01-colegios.jpg') center/cover no-repeat">
   <div class="secdiv-grid"></div>
   <div class="secdiv-ghost">01</div>
   <div class="secdiv-content">
     <img class="secdiv-logo" src="/img/image8.png" alt="UGEL San Román">
     <p class="secdiv-tag">Gestión Institucional</p>
-    <h2 class="secdiv-title" style="font-size:44px">CREACIÓN DE<br>INSTITUCIONES EDUCATIVAS</h2>
+    <h2 class="secdiv-title" style="font-size:48px">CREACIÓN DE<br>INSTITUCIONES EDUCATIVAS</h2>
     <div class="secdiv-line" style="background:linear-gradient(90deg,#E8B824,#DDB830)"></div>
-    <p class="secdiv-sub">16 nuevas IIs.EE. creadas · Niveles Inicial, Primaria y Secundaria<br>UGEL San Román · Período 2023–2026</p>
+    <p class="secdiv-sub">29 nuevas IIs.EE. creadas · Niveles Inicial, Primaria y Secundaria<br>UGEL San Román · Período 2023–2026</p>
   </div>
 </div>
 </section>
@@ -23,203 +23,287 @@
   <div class="s-hd">
     <div class="s-hd-t">
       <h2>Nuevas Instituciones Educativas y Matrícula 2023–2026</h2>
-      <p>16 IIs.EE. creadas · UGEL San Román · Matrícula 2026: 765 estudiantes</p>
+      <p>29 IIs.EE. creadas · UGEL San Román · Matrícula 2026: 765 estudiantes</p>
     </div>
-    <img class="s-hd-logo" src="/img/image8.png" alt="">
+    <img class="s-hd-logo" src="/img/image8.png" alt="Logo UGEL San Román">
   </div>
-  <div class="s-bd" style="padding:10px 20px 8px;gap:8px">
+  <div class="s-bd" style="padding:8px 20px 8px;gap:6px;flex-direction:column">
 
     <!-- KPI strip -->
-    <div style="display:flex;gap:8px;flex-shrink:0">
-      <div class="kpi"><div class="kpi-top" style="background:linear-gradient(90deg,#5C3A08,#E8B824)"></div><div class="kpi-bd"><div class="kpi-v" style="color:#5C3A08;font-size:26px">16</div><div class="kpi-l">IIs.EE. creadas 2023–2026</div></div></div>
+    <div style="display:flex;gap:6px;flex-shrink:0">
+      <div class="kpi" style="background:linear-gradient(145deg,#0B1D3A 0%,#1A3A7A 100%);flex:1.5;border-color:rgba(232,184,36,.35)"><div class="kpi-top" style="background:linear-gradient(90deg,#E8B824,#F5D040);height:5px"></div><div class="kpi-bd" style="gap:2px"><div class="kpi-v" style="color:#FFD700;font-size:44px;letter-spacing:-1px;text-shadow:0 2px 14px rgba(232,184,36,.45)">29</div><div class="kpi-l" style="color:rgba(255,255,255,.8);font-weight:700;letter-spacing:.5px">IIs.EE. creadas 2023&#8211;2026</div></div></div>
       <div class="kpi"><div class="kpi-top" style="background:linear-gradient(90deg,var(--navy),var(--blue))"></div><div class="kpi-bd"><div class="kpi-v" style="color:var(--navy);font-size:22px">765</div><div class="kpi-l">Estudiantes matriculados 2026</div></div></div>
-      <div class="kpi"><div class="kpi-top" style="background:linear-gradient(90deg,#1E4D9B,#2E6BC8)"></div><div class="kpi-bd"><div class="kpi-v" style="color:#1E4D9B;font-size:22px">599</div><div class="kpi-l">Secundaria · 9 IIs.EE.</div></div></div>
-      <div class="kpi"><div class="kpi-top" style="background:linear-gradient(90deg,#0F7A5E,#1A9E7A)"></div><div class="kpi-bd"><div class="kpi-v" style="color:#0F7A5E;font-size:22px">166</div><div class="kpi-l">Primaria · 7 IIs.EE.</div></div></div>
+      <div class="kpi"><div class="kpi-top" style="background:linear-gradient(90deg,#1E4D9B,#2E6BC8)"></div><div class="kpi-bd"><div class="kpi-v" style="color:#1E4D9B;font-size:22px">14</div><div class="kpi-l">Secundaria &#183; 14 IIs.EE.</div></div></div>
+      <div class="kpi"><div class="kpi-top" style="background:linear-gradient(90deg,#0F7A5E,#1A9E7A)"></div><div class="kpi-bd"><div class="kpi-v" style="color:#0F7A5E;font-size:22px">11</div><div class="kpi-l">Primaria &#183; 11 IIs.EE.</div></div></div>
+      <div class="kpi"><div class="kpi-top" style="background:linear-gradient(90deg,#7B3E00,#C25A0A)"></div><div class="kpi-bd"><div class="kpi-v" style="color:#7B3E00;font-size:22px">4</div><div class="kpi-l">Inicial &#183; 4 IEs</div></div></div>
     </div>
 
-    <!-- Main area: year grid + enrollment tables -->
-    <div style="flex:1;min-height:0;display:flex;gap:10px">
+    <!-- Carrusel + panel lateral de anos -->
+    <div style="flex:1;min-height:0;display:flex;gap:8px">
 
-      <!-- Left: 4-year grid -->
-      <div style="flex:1.15;display:flex;flex-direction:column;gap:6px;min-width:0">
+    <!-- Carrusel fotográfico IEs nuevas creadas -->
+    <div id="iec" style="flex:1;min-height:0;position:relative;overflow:hidden;border-radius:12px;background:#0B1D3A">
 
-        <!-- Year row headers + lists -->
-        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:6px;flex:1;min-height:0">
-
-          <!-- 2023 -->
-          <div style="display:flex;flex-direction:column;gap:4px;min-width:0">
-            <div style="background:linear-gradient(90deg,#5C3A08,#A0660E);border-radius:6px;padding:5px 10px;text-align:center;flex-shrink:0">
-              <div style="font-size:14px;font-weight:800;color:#fff">2023</div>
-              <div style="font-size:8px;color:rgba(255,255,255,.7)">2 IIs.EE.</div>
-            </div>
-            <div style="background:#fff;border-radius:8px;border:1px solid var(--gbd);padding:7px 9px;box-shadow:var(--sh)">
-              <div style="font-size:9px;font-weight:700;color:#A0660E;margin-bottom:3px">RDR 0537-2023</div>
-              <div style="font-size:10px;font-weight:700;color:var(--navy);line-height:1.3">"Carlos Condorena Yujra"</div>
-              <span style="background:#EEF2FF;color:#1E4D9B;font-size:8px;font-weight:700;padding:1px 7px;border-radius:10px">Secundaria</span>
-            </div>
-            <div style="background:#fff;border-radius:8px;border:1px solid var(--gbd);padding:7px 9px;box-shadow:var(--sh)">
-              <div style="font-size:9px;font-weight:700;color:#A0660E;margin-bottom:3px">RDR 2118-2025</div>
-              <div style="font-size:10px;font-weight:700;color:var(--navy);line-height:1.3">"Pluricultural Santa Lidia"</div>
-              <span style="background:#ECFDF5;color:#0F7A5E;font-size:8px;font-weight:700;padding:1px 7px;border-radius:10px">Primaria</span>
-            </div>
-          </div>
-
-          <!-- 2024 -->
-          <div style="display:flex;flex-direction:column;gap:4px;min-width:0">
-            <div style="background:linear-gradient(90deg,var(--navy),var(--blue));border-radius:6px;padding:5px 10px;text-align:center;flex-shrink:0">
-              <div style="font-size:14px;font-weight:800;color:#fff">2024</div>
-              <div style="font-size:8px;color:rgba(255,255,255,.7)">6 IIs.EE.</div>
-            </div>
-            <div style="background:#fff;border-radius:8px;border:1px solid var(--gbd);padding:6px 8px;box-shadow:var(--sh)">
-              <div style="font-size:9px;font-weight:700;color:var(--navy);margin-bottom:2px">RDR 2024-DREP</div>
-              <div style="font-size:10px;font-weight:700;color:var(--navy);line-height:1.3">N° 72771 "Fernando Tapia Suca"</div>
-              <span style="background:#ECFDF5;color:#0F7A5E;font-size:8px;font-weight:700;padding:1px 6px;border-radius:10px">Primaria</span>
-            </div>
-            <div style="background:#fff;border-radius:8px;border:1px solid var(--gbd);padding:6px 8px;box-shadow:var(--sh)">
-              <div style="font-size:9px;font-weight:700;color:var(--navy);margin-bottom:2px">RDR 3508-DREP</div>
-              <div style="font-size:10px;font-weight:700;color:var(--navy);line-height:1.3">"Santo Tomás"</div>
-              <span style="background:#ECFDF5;color:#0F7A5E;font-size:8px;font-weight:700;padding:1px 6px;border-radius:10px">Primaria</span>
-            </div>
-            <div style="background:#fff;border-radius:8px;border:1px solid var(--gbd);padding:6px 8px;box-shadow:var(--sh)">
-              <div style="font-size:9px;font-weight:700;color:var(--navy);margin-bottom:2px">RDR 3451-2023-DREP</div>
-              <div style="font-size:10px;font-weight:700;color:var(--navy);line-height:1.3">"Jorge Rivera del Mar"</div>
-              <span style="background:#EEF2FF;color:#1E4D9B;font-size:8px;font-weight:700;padding:1px 6px;border-radius:10px">Secundaria</span>
-            </div>
-            <div style="background:#fff;border-radius:8px;border:1px solid var(--gbd);padding:6px 8px;box-shadow:var(--sh)">
-              <div style="font-size:9px;font-weight:700;color:var(--navy);margin-bottom:2px">RDR 0164-2024-DREP</div>
-              <div style="font-size:10px;font-weight:700;color:var(--navy);line-height:1.3">"Marco A. Samillán Sanga"</div>
-              <span style="background:#EEF2FF;color:#1E4D9B;font-size:8px;font-weight:700;padding:1px 6px;border-radius:10px">Secundaria</span>
-            </div>
-            <div style="background:#fff;border-radius:8px;border:1px solid var(--gbd);padding:6px 8px;box-shadow:var(--sh)">
-              <div style="font-size:9px;font-weight:700;color:var(--navy);margin-bottom:2px">RDR 0165-2024-DREP</div>
-              <div style="font-size:10px;font-weight:700;color:var(--navy);line-height:1.3">"Walter Paz Quispe Santos"</div>
-              <span style="background:#EEF2FF;color:#1E4D9B;font-size:8px;font-weight:700;padding:1px 6px;border-radius:10px">Secundaria</span>
-            </div>
-            <div style="background:#fff;border-radius:8px;border:1px solid var(--gbd);padding:6px 8px;box-shadow:var(--sh)">
-              <div style="font-size:9px;font-weight:700;color:var(--navy);margin-bottom:2px">RDR 0117-2026-DREP</div>
-              <div style="font-size:10px;font-weight:700;color:var(--navy);line-height:1.3">"Ingenieritos del Perú E. de Habich"</div>
-              <span style="background:#EEF2FF;color:var(--blue);font-size:8px;font-weight:700;padding:1px 6px;border-radius:10px">Prim.+Sec.</span>
-            </div>
-          </div>
-
-          <!-- 2025 -->
-          <div style="display:flex;flex-direction:column;gap:4px;min-width:0">
-            <div style="background:linear-gradient(90deg,var(--blue),var(--sky));border-radius:6px;padding:5px 10px;text-align:center;flex-shrink:0">
-              <div style="font-size:14px;font-weight:800;color:#fff">2025</div>
-              <div style="font-size:8px;color:rgba(255,255,255,.7)">5 IIs.EE.</div>
-            </div>
-            <div style="background:#fff;border-radius:8px;border:1px solid var(--gbd);padding:6px 8px;box-shadow:var(--sh)">
-              <div style="font-size:9px;font-weight:700;color:var(--blue);margin-bottom:2px">RDR 5227-2024-DREP</div>
-              <div style="font-size:10px;font-weight:700;color:var(--navy);line-height:1.3">"Bolivarianos de las Américas"</div>
-              <span style="background:#EEF2FF;color:#1E4D9B;font-size:8px;font-weight:700;padding:1px 6px;border-radius:10px">Secundaria</span>
-            </div>
-            <div style="background:#fff;border-radius:8px;border:1px solid var(--gbd);padding:6px 8px;box-shadow:var(--sh)">
-              <div style="font-size:9px;font-weight:700;color:var(--blue);margin-bottom:2px">RDR 5225-2024-DREP</div>
-              <div style="font-size:10px;font-weight:700;color:var(--navy);line-height:1.3">"Clorinda Matto de Turner"</div>
-              <span style="background:#EEF2FF;color:#1E4D9B;font-size:8px;font-weight:700;padding:1px 6px;border-radius:10px">Secundaria</span>
-            </div>
-            <div style="background:#fff;border-radius:8px;border:1px solid var(--gbd);padding:6px 8px;box-shadow:var(--sh)">
-              <div style="font-size:9px;font-weight:700;color:var(--blue);margin-bottom:2px">RDR 0096-2025-DREP</div>
-              <div style="font-size:10px;font-weight:700;color:var(--navy);line-height:1.3">"José Portugal Catacora"</div>
-              <span style="background:#EEF2FF;color:#1E4D9B;font-size:8px;font-weight:700;padding:1px 6px;border-radius:10px">Secundaria</span>
-            </div>
-            <div style="background:#fff;border-radius:8px;border:1px solid var(--gbd);padding:6px 8px;box-shadow:var(--sh)">
-              <div style="font-size:9px;font-weight:700;color:var(--blue);margin-bottom:2px">RDR 0081-2025-DREP</div>
-              <div style="font-size:10px;font-weight:700;color:var(--navy);line-height:1.3">"Ntra. Sra. de Monserrat"</div>
-              <span style="background:#EEF2FF;color:#1E4D9B;font-size:8px;font-weight:700;padding:1px 6px;border-radius:10px">Secundaria</span>
-            </div>
-            <div style="background:#fff;border-radius:8px;border:1px solid var(--gbd);padding:6px 8px;box-shadow:var(--sh)">
-              <div style="font-size:9px;font-weight:700;color:var(--blue);margin-bottom:2px">RDR 0092-2025-DREP</div>
-              <div style="font-size:10px;font-weight:700;color:var(--navy);line-height:1.3">"Alicia Rodríguez Cáceres"</div>
-              <span style="background:#ECFDF5;color:#0F7A5E;font-size:8px;font-weight:700;padding:1px 6px;border-radius:10px">Primaria</span>
-            </div>
-          </div>
-
-          <!-- 2026 -->
-          <div style="display:flex;flex-direction:column;gap:4px;min-width:0">
-            <div style="background:linear-gradient(90deg,var(--teal),#1A8A7A);border-radius:6px;padding:5px 10px;text-align:center;flex-shrink:0">
-              <div style="font-size:14px;font-weight:800;color:#fff">2026</div>
-              <div style="font-size:8px;color:rgba(255,255,255,.7)">3 IIs.EE.</div>
-            </div>
-            <div style="background:#fff;border-radius:8px;border:1px solid var(--gbd);padding:7px 9px;box-shadow:var(--sh)">
-              <div style="font-size:9px;font-weight:700;color:var(--teal);margin-bottom:3px">RDR 0284-2026-DREP</div>
-              <div style="font-size:10px;font-weight:700;color:var(--navy);line-height:1.3">"Gilmar Madera Terán"</div>
-              <span style="background:#ECFDF5;color:#0F7A5E;font-size:8px;font-weight:700;padding:1px 6px;border-radius:10px">Ini.+Prim.+Sec.</span>
-            </div>
-            <div style="background:#fff;border-radius:8px;border:1px solid var(--gbd);padding:7px 9px;box-shadow:var(--sh)">
-              <div style="font-size:9px;font-weight:700;color:var(--teal);margin-bottom:3px">RDR 0283-2026-DREP</div>
-              <div style="font-size:10px;font-weight:700;color:var(--navy);line-height:1.3">"José Luis Ayala Olazábal"</div>
-              <span style="background:#EEF2FF;color:var(--blue);font-size:8px;font-weight:700;padding:1px 6px;border-radius:10px">Prim.+Sec.</span>
-            </div>
-            <div style="background:#fff;border-radius:8px;border:1px solid var(--gbd);padding:7px 9px;box-shadow:var(--sh)">
-              <div style="font-size:9px;font-weight:700;color:var(--teal);margin-bottom:3px">RDR 0282-2026-DREP</div>
-              <div style="font-size:10px;font-weight:700;color:var(--navy);line-height:1.3">"Omar Aramayo Cordero"</div>
-              <span style="background:#EEF2FF;color:var(--blue);font-size:8px;font-weight:700;padding:1px 6px;border-radius:10px">Prim.+Sec.</span>
-            </div>
-          </div>
-
+      <!-- 1 · Pluricultural Santa Lidia (Prim · 2023) -->
+      <div class="iec-s" style="position:absolute;top:0;left:0;right:0;bottom:0;opacity:1;z-index:2;transition:opacity .6s ease">
+        <img src="/img-ies/plu1.jfif" alt="Pluricultural Santa Lidia" style="width:100%;height:100%;object-fit:cover">
+        <div style="position:absolute;bottom:0;left:0;right:0;padding:22px 60px 14px;background:linear-gradient(transparent,rgba(5,15,35,.88))">
+          <div style="font-size:15px;font-weight:700;color:#fff;text-shadow:0 1px 4px rgba(0,0,0,.5)">I.E. Pluricultural Santa Lidia</div>
+          <div style="font-size:10px;color:rgba(255,255,255,.75);margin-top:3px">Primaria &#183; 2023</div>
         </div>
       </div>
 
-      <!-- Right: Enrollment tables -->
-      <div style="flex:0 0 280px;display:flex;flex-direction:column;gap:6px">
-
-        <!-- Secundaria table -->
-        <div style="flex:1;display:flex;flex-direction:column;border-radius:10px;overflow:hidden;box-shadow:var(--sm);border:1px solid var(--gbd)">
-          <div style="background:linear-gradient(90deg,var(--navy),var(--blue));padding:6px 12px;display:flex;justify-content:space-between;align-items:center;flex-shrink:0">
-            <span style="font-size:10px;font-weight:800;color:#fff">SECUNDARIA — F0</span>
-            <span style="background:rgba(255,255,255,.2);color:#fff;font-size:10px;font-weight:700;padding:2px 8px;border-radius:20px">599 est.</span>
-          </div>
-          <div style="flex:1;overflow-y:auto;background:#fff">
-            <table style="width:100%;border-collapse:collapse;font-size:9.5px">
-              <tbody>
-                <tr style="border-bottom:1px solid #F1F5F9"><td style="padding:4px 10px;color:var(--gd)">Carlos Condorena Yujra</td><td style="padding:4px 10px;text-align:right;font-weight:700;color:var(--navy)">66</td></tr>
-                <tr style="border-bottom:1px solid #F1F5F9;background:#FAFBFF"><td style="padding:4px 10px;color:var(--gd)">Ingenieritos del Perú</td><td style="padding:4px 10px;text-align:right;font-weight:700;color:var(--navy)">149</td></tr>
-                <tr style="border-bottom:1px solid #F1F5F9"><td style="padding:4px 10px;color:var(--gd)">Marco A. Samillán Sanga</td><td style="padding:4px 10px;text-align:right;font-weight:700;color:var(--navy)">54</td></tr>
-                <tr style="border-bottom:1px solid #F1F5F9;background:#FAFBFF"><td style="padding:4px 10px;color:var(--gd)">Walter Paz Quispe Santos</td><td style="padding:4px 10px;text-align:right;font-weight:700;color:var(--navy)">53</td></tr>
-                <tr style="border-bottom:1px solid #F1F5F9"><td style="padding:4px 10px;color:var(--gd)">Jorge Rivera del Mar</td><td style="padding:4px 10px;text-align:right;font-weight:700;color:var(--navy)">66</td></tr>
-                <tr style="border-bottom:1px solid #F1F5F9;background:#FAFBFF"><td style="padding:4px 10px;color:var(--gd)">Clorinda Matto de Turner</td><td style="padding:4px 10px;text-align:right;font-weight:700;color:var(--navy)">41</td></tr>
-                <tr style="border-bottom:1px solid #F1F5F9"><td style="padding:4px 10px;color:var(--gd)">Ntra. Sra. de Monserrat</td><td style="padding:4px 10px;text-align:right;font-weight:700;color:var(--navy)">47</td></tr>
-                <tr style="border-bottom:1px solid #F1F5F9;background:#FAFBFF"><td style="padding:4px 10px;color:var(--gd)">José Portugal Catacora</td><td style="padding:4px 10px;text-align:right;font-weight:700;color:var(--navy)">74</td></tr>
-                <tr><td style="padding:4px 10px;color:var(--gd)">Bolivariano de las Américas</td><td style="padding:4px 10px;text-align:right;font-weight:700;color:var(--navy)">49</td></tr>
-              </tbody>
-              <tfoot><tr style="background:linear-gradient(90deg,#EEF2FF,#E0E7FF)">
-                <td style="padding:5px 10px;font-weight:800;color:var(--navy);font-size:10px">SUBTOTAL</td>
-                <td style="padding:5px 10px;text-align:right;font-weight:800;color:var(--navy);font-size:12px">599</td>
-              </tr></tfoot>
-            </table>
-          </div>
+      <!-- 2 · Pluricultural Santa Lidia (Prim · 2023) -->
+      <div class="iec-s" style="position:absolute;top:0;left:0;right:0;bottom:0;opacity:0;z-index:1;transition:opacity .6s ease">
+        <img src="/img-ies/plu2.jfif" alt="Pluricultural Santa Lidia" style="width:100%;height:100%;object-fit:cover">
+        <div style="position:absolute;bottom:0;left:0;right:0;padding:22px 60px 14px;background:linear-gradient(transparent,rgba(5,15,35,.88))">
+          <div style="font-size:15px;font-weight:700;color:#fff;text-shadow:0 1px 4px rgba(0,0,0,.5)">I.E. Pluricultural Santa Lidia</div>
+          <div style="font-size:10px;color:rgba(255,255,255,.75);margin-top:3px">Primaria &#183; 2023</div>
         </div>
+      </div>
 
-        <!-- Primaria table -->
-        <div style="flex:1;display:flex;flex-direction:column;border-radius:10px;overflow:hidden;box-shadow:var(--sm);border:1px solid var(--gbd)">
-          <div style="background:linear-gradient(90deg,#0A3D2B,#0F7A5E);padding:6px 12px;display:flex;justify-content:space-between;align-items:center;flex-shrink:0">
-            <span style="font-size:10px;font-weight:800;color:#fff">PRIMARIA — B0</span>
-            <span style="background:rgba(255,255,255,.2);color:#fff;font-size:10px;font-weight:700;padding:2px 8px;border-radius:20px">166 est.</span>
-          </div>
-          <div style="flex:1;overflow-y:auto;background:#fff">
-            <table style="width:100%;border-collapse:collapse;font-size:9.5px">
-              <tbody>
-                <tr style="border-bottom:1px solid #F0FBF6"><td style="padding:4px 10px;color:var(--gd)">G. Domingo Vargas Avalos</td><td style="padding:4px 10px;text-align:right;font-weight:700;color:#0A3D2B">43</td></tr>
-                <tr style="border-bottom:1px solid #F0FBF6;background:#FAFFFE"><td style="padding:4px 10px;color:var(--gd)">Santo Tomás</td><td style="padding:4px 10px;text-align:right;font-weight:700;color:#0A3D2B">31</td></tr>
-                <tr style="border-bottom:1px solid #F0FBF6"><td style="padding:4px 10px;color:var(--gd)">72771 Fernando Tapia Suca</td><td style="padding:4px 10px;text-align:right;font-weight:700;color:#0A3D2B">46</td></tr>
-                <tr style="border-bottom:1px solid #F0FBF6;background:#FAFFFE"><td style="padding:4px 10px;color:var(--gd)">Pluricultural Santa Lidia</td><td style="padding:4px 10px;text-align:right;font-weight:700;color:#0A3D2B">12</td></tr>
-                <tr style="border-bottom:1px solid #F0FBF6"><td style="padding:4px 10px;color:var(--gd)">Ingenieritos del Perú</td><td style="padding:4px 10px;text-align:right;font-weight:700;color:#0A3D2B">11</td></tr>
-                <tr style="border-bottom:1px solid #F0FBF6;background:#FAFFFE"><td style="padding:4px 10px;color:var(--gd)">José Luis Ayala Olazábal</td><td style="padding:4px 10px;text-align:right;font-weight:700;color:#0A3D2B">5</td></tr>
-                <tr><td style="padding:4px 10px;color:var(--gd)">Omar Aramayo Cordero</td><td style="padding:4px 10px;text-align:right;font-weight:700;color:#0A3D2B">18</td></tr>
-              </tbody>
-              <tfoot><tr style="background:linear-gradient(90deg,#ECFDF5,#D1FAE5)">
-                <td style="padding:5px 10px;font-weight:800;color:#0A3D2B;font-size:10px">SUBTOTAL</td>
-                <td style="padding:5px 10px;text-align:right;font-weight:800;color:#0A3D2B;font-size:12px">166</td>
-              </tr></tfoot>
-            </table>
-          </div>
+      <!-- 3 · Carlos Condorena Yujra (Sec · 2023) -->
+      <div class="iec-s" style="position:absolute;top:0;left:0;right:0;bottom:0;opacity:0;z-index:1;transition:opacity .6s ease">
+        <img src="/img-ies/condorena.jfif" alt="Carlos Condorena Yujra" style="width:100%;height:100%;object-fit:cover">
+        <div style="position:absolute;bottom:0;left:0;right:0;padding:22px 60px 14px;background:linear-gradient(transparent,rgba(5,15,35,.88))">
+          <div style="font-size:15px;font-weight:700;color:#fff;text-shadow:0 1px 4px rgba(0,0,0,.5)">I.E. Carlos Condorena Yujra</div>
+          <div style="font-size:10px;color:rgba(255,255,255,.75);margin-top:3px">Secundaria &#183; 2023</div>
         </div>
+      </div>
 
+      <!-- 4 · Santo Tomás (Prim · 2024) -->
+      <div class="iec-s" style="position:absolute;top:0;left:0;right:0;bottom:0;opacity:0;z-index:1;transition:opacity .6s ease">
+        <img src="/img-ies/tomas1.jfif" alt="Santo Tomás" style="width:100%;height:100%;object-fit:cover">
+        <div style="position:absolute;bottom:0;left:0;right:0;padding:22px 60px 14px;background:linear-gradient(transparent,rgba(5,15,35,.88))">
+          <div style="font-size:15px;font-weight:700;color:#fff;text-shadow:0 1px 4px rgba(0,0,0,.5)">I.E. Santo Tom&#225;s</div>
+          <div style="font-size:10px;color:rgba(255,255,255,.75);margin-top:3px">Primaria &#183; 2024</div>
+        </div>
+      </div>
+
+      <!-- 5 · Santo Tomás (Prim · 2024) -->
+      <div class="iec-s" style="position:absolute;top:0;left:0;right:0;bottom:0;opacity:0;z-index:1;transition:opacity .6s ease">
+        <img src="/img-ies/tomas2.jfif" alt="Santo Tomás" style="width:100%;height:100%;object-fit:cover">
+        <div style="position:absolute;bottom:0;left:0;right:0;padding:22px 60px 14px;background:linear-gradient(transparent,rgba(5,15,35,.88))">
+          <div style="font-size:15px;font-weight:700;color:#fff;text-shadow:0 1px 4px rgba(0,0,0,.5)">I.E. Santo Tom&#225;s</div>
+          <div style="font-size:10px;color:rgba(255,255,255,.75);margin-top:3px">Primaria &#183; 2024</div>
+        </div>
+      </div>
+
+      <!-- 6 · Santo Tomás (Prim · 2024) -->
+      <div class="iec-s" style="position:absolute;top:0;left:0;right:0;bottom:0;opacity:0;z-index:1;transition:opacity .6s ease">
+        <img src="/img-ies/tomas3.jfif" alt="Santo Tomás" style="width:100%;height:100%;object-fit:cover">
+        <div style="position:absolute;bottom:0;left:0;right:0;padding:22px 60px 14px;background:linear-gradient(transparent,rgba(5,15,35,.88))">
+          <div style="font-size:15px;font-weight:700;color:#fff;text-shadow:0 1px 4px rgba(0,0,0,.5)">I.E. Santo Tom&#225;s</div>
+          <div style="font-size:10px;color:rgba(255,255,255,.75);margin-top:3px">Primaria &#183; 2024</div>
+        </div>
+      </div>
+
+      <!-- 7 · Ingenieritos E. de Habich (Prim+Sec · 2024) -->
+      <div class="iec-s" style="position:absolute;top:0;left:0;right:0;bottom:0;opacity:0;z-index:1;transition:opacity .6s ease">
+        <img src="/img-ies/ingenieritos1.jpg" alt="Ingenieritos E. de Habich" style="width:100%;height:100%;object-fit:cover">
+        <div style="position:absolute;bottom:0;left:0;right:0;padding:22px 60px 14px;background:linear-gradient(transparent,rgba(5,15,35,.88))">
+          <div style="font-size:15px;font-weight:700;color:#fff;text-shadow:0 1px 4px rgba(0,0,0,.5)">I.E. Ingenieritos del Per&#250; Eduardo de Habich</div>
+          <div style="font-size:10px;color:rgba(255,255,255,.75);margin-top:3px">Primaria y Secundaria &#183; 2024</div>
+        </div>
+      </div>
+
+      <!-- 8 · Ingenieritos E. de Habich (Prim+Sec · 2024) -->
+      <div class="iec-s" style="position:absolute;top:0;left:0;right:0;bottom:0;opacity:0;z-index:1;transition:opacity .6s ease">
+        <img src="/img-ies/ingenieritos2.jpg" alt="Ingenieritos E. de Habich" style="width:100%;height:100%;object-fit:cover">
+        <div style="position:absolute;bottom:0;left:0;right:0;padding:22px 60px 14px;background:linear-gradient(transparent,rgba(5,15,35,.88))">
+          <div style="font-size:15px;font-weight:700;color:#fff;text-shadow:0 1px 4px rgba(0,0,0,.5)">I.E. Ingenieritos del Per&#250; Eduardo de Habich</div>
+          <div style="font-size:10px;color:rgba(255,255,255,.75);margin-top:3px">Primaria y Secundaria &#183; 2024</div>
+        </div>
+      </div>
+
+      <!-- 9 · Ingenieritos E. de Habich (Prim+Sec · 2024) -->
+      <div class="iec-s" style="position:absolute;top:0;left:0;right:0;bottom:0;opacity:0;z-index:1;transition:opacity .6s ease">
+        <img src="/img-ies/ingenieritos3.jpg" alt="Ingenieritos E. de Habich" style="width:100%;height:100%;object-fit:cover">
+        <div style="position:absolute;bottom:0;left:0;right:0;padding:22px 60px 14px;background:linear-gradient(transparent,rgba(5,15,35,.88))">
+          <div style="font-size:15px;font-weight:700;color:#fff;text-shadow:0 1px 4px rgba(0,0,0,.5)">I.E. Ingenieritos del Per&#250; Eduardo de Habich</div>
+          <div style="font-size:10px;color:rgba(255,255,255,.75);margin-top:3px">Primaria y Secundaria &#183; 2024</div>
+        </div>
+      </div>
+
+      <!-- 10 · Marco A. Samillán Sanga (Sec · 2024) -->
+      <div class="iec-s" style="position:absolute;top:0;left:0;right:0;bottom:0;opacity:0;z-index:1;transition:opacity .6s ease">
+        <img src="/img-ies/samillan1.jfif" alt="Marco A. Samillán Sanga" style="width:100%;height:100%;object-fit:cover">
+        <div style="position:absolute;bottom:0;left:0;right:0;padding:22px 60px 14px;background:linear-gradient(transparent,rgba(5,15,35,.88))">
+          <div style="font-size:15px;font-weight:700;color:#fff;text-shadow:0 1px 4px rgba(0,0,0,.5)">I.E. Marco A. Samill&#225;n Sanga</div>
+          <div style="font-size:10px;color:rgba(255,255,255,.75);margin-top:3px">Secundaria &#183; 2024</div>
+        </div>
+      </div>
+
+      <!-- 11 · Marco A. Samillán Sanga (Sec · 2024) -->
+      <div class="iec-s" style="position:absolute;top:0;left:0;right:0;bottom:0;opacity:0;z-index:1;transition:opacity .6s ease">
+        <img src="/img-ies/samillan2.jfif" alt="Marco A. Samillán Sanga" style="width:100%;height:100%;object-fit:cover">
+        <div style="position:absolute;bottom:0;left:0;right:0;padding:22px 60px 14px;background:linear-gradient(transparent,rgba(5,15,35,.88))">
+          <div style="font-size:15px;font-weight:700;color:#fff;text-shadow:0 1px 4px rgba(0,0,0,.5)">I.E. Marco A. Samill&#225;n Sanga</div>
+          <div style="font-size:10px;color:rgba(255,255,255,.75);margin-top:3px">Secundaria &#183; 2024</div>
+        </div>
+      </div>
+
+      <!-- 12 · Marco A. Samillán Sanga (Sec · 2024) -->
+      <div class="iec-s" style="position:absolute;top:0;left:0;right:0;bottom:0;opacity:0;z-index:1;transition:opacity .6s ease">
+        <img src="/img-ies/samillan3.jfif" alt="Marco A. Samillán Sanga" style="width:100%;height:100%;object-fit:cover">
+        <div style="position:absolute;bottom:0;left:0;right:0;padding:22px 60px 14px;background:linear-gradient(transparent,rgba(5,15,35,.88))">
+          <div style="font-size:15px;font-weight:700;color:#fff;text-shadow:0 1px 4px rgba(0,0,0,.5)">I.E. Marco A. Samill&#225;n Sanga</div>
+          <div style="font-size:10px;color:rgba(255,255,255,.75);margin-top:3px">Secundaria &#183; 2024</div>
+        </div>
+      </div>
+
+      <!-- 13 · Walter Paz Quispe Santos (Sec · 2024) -->
+      <div class="iec-s" style="position:absolute;top:0;left:0;right:0;bottom:0;opacity:0;z-index:1;transition:opacity .6s ease">
+        <img src="/img-ies/walter_paz1.jpg" alt="Walter Paz Quispe Santos" style="width:100%;height:100%;object-fit:cover">
+        <div style="position:absolute;bottom:0;left:0;right:0;padding:22px 60px 14px;background:linear-gradient(transparent,rgba(5,15,35,.88))">
+          <div style="font-size:15px;font-weight:700;color:#fff;text-shadow:0 1px 4px rgba(0,0,0,.5)">I.E. Walter Paz Quispe Santos</div>
+          <div style="font-size:10px;color:rgba(255,255,255,.75);margin-top:3px">Secundaria &#183; 2024</div>
+        </div>
+      </div>
+
+      <!-- 14 · Walter Paz Quispe Santos (Sec · 2024) -->
+      <div class="iec-s" style="position:absolute;top:0;left:0;right:0;bottom:0;opacity:0;z-index:1;transition:opacity .6s ease">
+        <img src="/img-ies/walter_paz2.jpg" alt="Walter Paz Quispe Santos" style="width:100%;height:100%;object-fit:cover">
+        <div style="position:absolute;bottom:0;left:0;right:0;padding:22px 60px 14px;background:linear-gradient(transparent,rgba(5,15,35,.88))">
+          <div style="font-size:15px;font-weight:700;color:#fff;text-shadow:0 1px 4px rgba(0,0,0,.5)">I.E. Walter Paz Quispe Santos</div>
+          <div style="font-size:10px;color:rgba(255,255,255,.75);margin-top:3px">Secundaria &#183; 2024</div>
+        </div>
+      </div>
+
+      <!-- 15 · Walter Paz Quispe Santos (Sec · 2024) -->
+      <div class="iec-s" style="position:absolute;top:0;left:0;right:0;bottom:0;opacity:0;z-index:1;transition:opacity .6s ease">
+        <img src="/img-ies/walter_paz3.jpg" alt="Walter Paz Quispe Santos" style="width:100%;height:100%;object-fit:cover">
+        <div style="position:absolute;bottom:0;left:0;right:0;padding:22px 60px 14px;background:linear-gradient(transparent,rgba(5,15,35,.88))">
+          <div style="font-size:15px;font-weight:700;color:#fff;text-shadow:0 1px 4px rgba(0,0,0,.5)">I.E. Walter Paz Quispe Santos</div>
+          <div style="font-size:10px;color:rgba(255,255,255,.75);margin-top:3px">Secundaria &#183; 2024</div>
+        </div>
+      </div>
+
+      <!-- 16 · Bolivarianos de las Américas (Sec · 2025) -->
+      <div class="iec-s" style="position:absolute;top:0;left:0;right:0;bottom:0;opacity:0;z-index:1;transition:opacity .6s ease">
+        <img src="/img-ies/bolivariano.jfif" alt="Bolivarianos de las Américas" style="width:100%;height:100%;object-fit:cover">
+        <div style="position:absolute;bottom:0;left:0;right:0;padding:22px 60px 14px;background:linear-gradient(transparent,rgba(5,15,35,.88))">
+          <div style="font-size:15px;font-weight:700;color:#fff;text-shadow:0 1px 4px rgba(0,0,0,.5)">I.E. Bolivarianos de las Am&#233;ricas</div>
+          <div style="font-size:10px;color:rgba(255,255,255,.75);margin-top:3px">Secundaria &#183; 2025</div>
+        </div>
+      </div>
+
+      <!-- 17 · Clorinda Matto de Turner (Sec · 2025) -->
+      <div class="iec-s" style="position:absolute;top:0;left:0;right:0;bottom:0;opacity:0;z-index:1;transition:opacity .6s ease">
+        <img src="/img-ies/clorinda1.jpg" alt="Clorinda Matto de Turner" style="width:100%;height:100%;object-fit:cover">
+        <div style="position:absolute;bottom:0;left:0;right:0;padding:22px 60px 14px;background:linear-gradient(transparent,rgba(5,15,35,.88))">
+          <div style="font-size:15px;font-weight:700;color:#fff;text-shadow:0 1px 4px rgba(0,0,0,.5)">I.E. Clorinda Matto de Turner</div>
+          <div style="font-size:10px;color:rgba(255,255,255,.75);margin-top:3px">Secundaria &#183; 2025</div>
+        </div>
+      </div>
+
+      <!-- 18 · Clorinda Matto de Turner (Sec · 2025) -->
+      <div class="iec-s" style="position:absolute;top:0;left:0;right:0;bottom:0;opacity:0;z-index:1;transition:opacity .6s ease">
+        <img src="/img-ies/clorinda2.jpg" alt="Clorinda Matto de Turner" style="width:100%;height:100%;object-fit:cover">
+        <div style="position:absolute;bottom:0;left:0;right:0;padding:22px 60px 14px;background:linear-gradient(transparent,rgba(5,15,35,.88))">
+          <div style="font-size:15px;font-weight:700;color:#fff;text-shadow:0 1px 4px rgba(0,0,0,.5)">I.E. Clorinda Matto de Turner</div>
+          <div style="font-size:10px;color:rgba(255,255,255,.75);margin-top:3px">Secundaria &#183; 2025</div>
+        </div>
+      </div>
+
+      <!-- 19 · José Portugal Catacora (Sec · 2025) -->
+      <div class="iec-s" style="position:absolute;top:0;left:0;right:0;bottom:0;opacity:0;z-index:1;transition:opacity .6s ease">
+        <img src="/img-ies/portugal1.jfif" alt="José Portugal Catacora" style="width:100%;height:100%;object-fit:cover">
+        <div style="position:absolute;bottom:0;left:0;right:0;padding:22px 60px 14px;background:linear-gradient(transparent,rgba(5,15,35,.88))">
+          <div style="font-size:15px;font-weight:700;color:#fff;text-shadow:0 1px 4px rgba(0,0,0,.5)">I.E. Jos&#233; Portugal Catacora</div>
+          <div style="font-size:10px;color:rgba(255,255,255,.75);margin-top:3px">Secundaria &#183; 2025</div>
+        </div>
+      </div>
+
+      <!-- 20 · José Portugal Catacora (Sec · 2025) -->
+      <div class="iec-s" style="position:absolute;top:0;left:0;right:0;bottom:0;opacity:0;z-index:1;transition:opacity .6s ease">
+        <img src="/img-ies/portugal2.jfif" alt="José Portugal Catacora" style="width:100%;height:100%;object-fit:cover">
+        <div style="position:absolute;bottom:0;left:0;right:0;padding:22px 60px 14px;background:linear-gradient(transparent,rgba(5,15,35,.88))">
+          <div style="font-size:15px;font-weight:700;color:#fff;text-shadow:0 1px 4px rgba(0,0,0,.5)">I.E. Jos&#233; Portugal Catacora</div>
+          <div style="font-size:10px;color:rgba(255,255,255,.75);margin-top:3px">Secundaria &#183; 2025</div>
+        </div>
+      </div>
+
+      <!-- 21 · José Portugal Catacora (Sec · 2025) -->
+      <div class="iec-s" style="position:absolute;top:0;left:0;right:0;bottom:0;opacity:0;z-index:1;transition:opacity .6s ease">
+        <img src="/img-ies/portugal3.jfif" alt="José Portugal Catacora" style="width:100%;height:100%;object-fit:cover">
+        <div style="position:absolute;bottom:0;left:0;right:0;padding:22px 60px 14px;background:linear-gradient(transparent,rgba(5,15,35,.88))">
+          <div style="font-size:15px;font-weight:700;color:#fff;text-shadow:0 1px 4px rgba(0,0,0,.5)">I.E. Jos&#233; Portugal Catacora</div>
+          <div style="font-size:10px;color:rgba(255,255,255,.75);margin-top:3px">Secundaria &#183; 2025</div>
+        </div>
+      </div>
+
+      <!-- 22 · Nuestra Señora de Monserrat (Sec · 2025) -->
+      <div class="iec-s" style="position:absolute;top:0;left:0;right:0;bottom:0;opacity:0;z-index:1;transition:opacity .6s ease">
+        <img src="/img-ies/monserrat.jfif" alt="Nuestra Señora de Monserrat" style="width:100%;height:100%;object-fit:cover">
+        <div style="position:absolute;bottom:0;left:0;right:0;padding:22px 60px 14px;background:linear-gradient(transparent,rgba(5,15,35,.88))">
+          <div style="font-size:15px;font-weight:700;color:#fff;text-shadow:0 1px 4px rgba(0,0,0,.5)">I.E. Ntra. Sra. de Monserrat</div>
+          <div style="font-size:10px;color:rgba(255,255,255,.75);margin-top:3px">Secundaria &#183; 2025</div>
+        </div>
+      </div>
+
+      <!-- Prev / Next -->
+      <button id="iec-p" style="position:absolute;left:10px;top:50%;transform:translateY(-50%);background:rgba(0,0,0,.5);border:2px solid rgba(255,255,255,.25);color:#fff;width:38px;height:38px;border-radius:50%;font-size:15px;cursor:pointer;z-index:20;display:flex;align-items:center;justify-content:center;line-height:1">&#9664;</button>
+      <button id="iec-n" style="position:absolute;right:10px;top:50%;transform:translateY(-50%);background:rgba(0,0,0,.5);border:2px solid rgba(255,255,255,.25);color:#fff;width:38px;height:38px;border-radius:50%;font-size:15px;cursor:pointer;z-index:20;display:flex;align-items:center;justify-content:center;line-height:1">&#9654;</button>
+
+      <!-- Slide counter -->
+      <div id="iec-ct" style="position:absolute;top:10px;right:14px;background:rgba(0,0,0,.45);color:rgba(255,255,255,.85);font-size:10px;font-weight:600;padding:3px 9px;border-radius:10px;z-index:20;letter-spacing:.5px">1 / 22</div>
+
+    </div>
+
+    <!-- Panel lateral: IEs creadas por ano -->
+    <div style="flex-shrink:0;width:84px;display:flex;flex-direction:column;gap:6px">
+      <div style="flex:1;background:#fff;border-radius:10px;border:1px solid #E2E8F0;display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:0 1px 4px rgba(0,0,0,.06)">
+        <div style="font-size:11px;font-weight:800;color:#C8892C;letter-spacing:1px">2023</div>
+        <div style="font-size:48px;font-weight:800;color:#A0660E;line-height:1">9</div>
+        <div style="font-size:8px;font-weight:600;color:#94A3B8">IEs</div>
+      </div>
+      <div style="flex:1;background:#fff;border-radius:10px;border:1px solid #E2E8F0;display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:0 1px 4px rgba(0,0,0,.06)">
+        <div style="font-size:11px;font-weight:800;color:var(--blue);letter-spacing:1px">2024</div>
+        <div style="font-size:48px;font-weight:800;color:var(--navy);line-height:1">3</div>
+        <div style="font-size:8px;font-weight:600;color:#94A3B8">IEs</div>
+      </div>
+      <div style="flex:1;background:#fff;border-radius:10px;border:1px solid #E2E8F0;display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:0 1px 4px rgba(0,0,0,.06)">
+        <div style="font-size:11px;font-weight:800;color:#0EA5E9;letter-spacing:1px">2025</div>
+        <div style="font-size:48px;font-weight:800;color:#0891B2;line-height:1">6</div>
+        <div style="font-size:8px;font-weight:600;color:#94A3B8">IEs</div>
+      </div>
+      <div style="flex:1;background:linear-gradient(145deg,#082820,#0D5C48);border-radius:10px;border:2px solid var(--teal);display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:0 4px 18px rgba(13,148,136,.4)">
+        <div style="font-size:11px;font-weight:800;color:rgba(255,255,255,.7);letter-spacing:1px">2026</div>
+        <div style="font-size:52px;font-weight:800;color:#fff;line-height:1;text-shadow:0 2px 12px rgba(13,148,136,.6)">11</div>
+        <div style="font-size:8px;font-weight:600;color:rgba(255,255,255,.55)">IEs</div>
       </div>
     </div>
+
+    </div><!-- /row -->
 
   </div>
   <div class="s-ft"><span class="s-ft-t">Fuente: Resoluciones Directorales Regionales · DREP Puno · Nóminas SIAGIE · UGEL San Román 2023–2026</span><div class="s-ft-n">—</div></div>
 </div>
 </section>
+<script>
+(function(){
+  if(window._iecReady)return;
+  window._iecReady=true;
+  var sl=document.querySelectorAll('#iec .iec-s'),total=sl.length,cur=0,tmr=null;
+  function show(n){
+    sl[cur].style.opacity='0';sl[cur].style.zIndex='1';
+    cur=((n%total)+total)%total;
+    sl[cur].style.opacity='1';sl[cur].style.zIndex='2';
+    var ct=document.getElementById('iec-ct');
+    if(ct)ct.textContent=(cur+1)+' / '+total;
+  }
+  function go(){tmr=setInterval(function(){show(cur+1);},5000);}
+  function stop(){clearInterval(tmr);}
+  var p=document.getElementById('iec-p'),n=document.getElementById('iec-n');
+  if(p)p.addEventListener('click',function(e){e.stopPropagation();stop();show(cur-1);go();});
+  if(n)n.addEventListener('click',function(e){e.stopPropagation();stop();show(cur+1);go();});
+  if(window.Reveal){
+    Reveal.on('slidechanged',function(e){
+      if(e.currentSlide&&e.currentSlide.querySelector&&e.currentSlide.querySelector('#iec')){stop();go();}
+      else{stop();}
+    });
+  }
+  go();
+})();
+</script>

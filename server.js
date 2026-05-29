@@ -215,6 +215,22 @@ header{background:#1e293b;border-bottom:3px solid #f59e0b;padding:14px 24px;colo
     return fs.createReadStream(file).pipe(res);
   }
 
+  /* ── Archivos sueltos en raíz (imágenes y favicon) ── */
+  if (/^\/([\w\-\s]+)\.(png|jpg|jpeg|gif|ico)$/i.test(req.url)) {
+    const file = path.join(ROOT, decodeURIComponent(path.basename(req.url)));
+    if (!fs.existsSync(file)) { res.writeHead(404); return res.end(); }
+    const ext = path.extname(file).toLowerCase();
+    const mimeTypes = {
+      '.png': 'image/png',
+      '.jpg': 'image/jpeg',
+      '.jpeg': 'image/jpeg',
+      '.gif': 'image/gif',
+      '.ico': 'image/x-icon'
+    };
+    res.writeHead(200, { "Content-Type": mimeTypes[ext] || "application/octet-stream" });
+    return fs.createReadStream(file).pipe(res);
+  }
+
   res.writeHead(404);
   res.end();
 });

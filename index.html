@@ -1573,7 +1573,7 @@ canvas { cursor: crosshair; }
     <!-- Contenedor principal con carrusel, KPIs finales e información -->
     <div style="display:flex;gap:12px;flex:1;min-height:0">
       <!-- Carrusel CEPRE UNI (izquierda, 70% ancho) -->
-      <div style="flex:0 0 50%;min-height:0">
+      <div style="flex:0 0 70%;min-height:0">
         <div id="cepre-carousel" style="width:100%;height:100%;position:relative;border-radius:12px;overflow:hidden;background:#0B1D3A;box-shadow:0 6px 24px rgba(13,27,75,.4)">
           <div style="position:absolute;top:0;left:0;right:0;bottom:0;opacity:1;z-index:2;transition:opacity 0.8s ease" class="cepre-img"><img src="cepre-uni/Captura-de-pantalla-2026-05-29-123658.png" alt="CEPRE UNI" style="width:100%;height:100%;object-fit:cover"></div>
           <div style="position:absolute;top:0;left:0;right:0;bottom:0;opacity:0;z-index:1;transition:opacity 0.8s ease" class="cepre-img"><img src="cepre-uni/528633881_1197925822368947_4024457540627860545_n.jpg" alt="CEPRE UNI" style="width:100%;height:100%;object-fit:cover"></div>
@@ -1589,47 +1589,45 @@ canvas { cursor: crosshair; }
         </div>
       </div>
 
-      <!-- Contenido (derecha) - KPIs finales + Información -->
-      <div style="display:flex;flex-direction:column;gap:12px;flex:1;min-height:0">
+      <!-- Últimos 3 KPIs de Ingenieritos (derecha, 30%) -->
+      <div style="display:flex;flex-direction:column;gap:6px;flex:0 0 30%;min-height:0">
+        <div class="kpi"><div class="kpi-top" style="background:linear-gradient(90deg,#F59E0B,#F59E0B)"></div><div class="kpi-bd"><div class="kpi-v" style="color:#F59E0B;font-size:24px">12</div><div class="kpi-l" style="font-size:10px">Juegos Mat.</div></div></div>
+        <div class="kpi"><div class="kpi-top" style="background:linear-gradient(90deg,#A78BFA,#A78BFA)"></div><div class="kpi-bd"><div class="kpi-v" style="color:#A78BFA;font-size:16px">Scarlett</div><div class="kpi-l" style="font-size:10px">IMC</div></div></div>
+        <div class="kpi"><div class="kpi-top" style="background:linear-gradient(90deg,#F87171,#F87171)"></div><div class="kpi-bd"><div class="kpi-v" style="color:#F87171;font-size:16px">Fredelyn</div><div class="kpi-l" style="font-size:10px">Física</div></div></div>
+      </div>
+    </div>
 
-        <!-- Últimos 3 KPIs de Ingenieritos -->
-        <div style="display:flex;flex-direction:column;gap:6px;flex-shrink:0">
-          <div class="kpi"><div class="kpi-top" style="background:linear-gradient(90deg,#F59E0B,#F59E0B)"></div><div class="kpi-bd"><div class="kpi-v" style="color:#F59E0B;font-size:24px">12</div><div class="kpi-l" style="font-size:10px">Juegos Mat.</div></div></div>
-          <div class="kpi"><div class="kpi-top" style="background:linear-gradient(90deg,#A78BFA,#A78BFA)"></div><div class="kpi-bd"><div class="kpi-v" style="color:#A78BFA;font-size:16px">Scarlett</div><div class="kpi-l" style="font-size:10px">IMC</div></div></div>
-          <div class="kpi"><div class="kpi-top" style="background:linear-gradient(90deg,#F87171,#F87171)"></div><div class="kpi-bd"><div class="kpi-v" style="color:#F87171;font-size:16px">Fredelyn</div><div class="kpi-l" style="font-size:10px">Física</div></div></div>
+    <!-- Información CEPRE UNI (debajo del carrusel) -->
+    <div style="display:flex;flex-direction:column;gap:12px;flex-shrink:0">
+      <!-- KPI 218 -->
+      <div style="background:linear-gradient(135deg,#0D1B4B 0%,#1E3A8A 100%);border-radius:var(--r);padding:16px 20px;color:#fff;position:relative;overflow:hidden;box-shadow:0 6px 24px rgba(13,27,75,.4);display:flex;align-items:center;gap:16px">
+        <div style="position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,#E8B824,#FFD700)"></div>
+        <div style="flex-shrink:0">
+          <div style="font-size:9px;font-weight:700;color:rgba(255,255,255,.55);letter-spacing:2.5px;margin-bottom:4px">INGRESANTES</div>
+          <div style="font-size:64px;font-weight:900;color:#FFD700;line-height:1;text-shadow:0 2px 20px rgba(255,215,0,.45)">218</div>
         </div>
-
-        <!-- KPI 218 -->
-        <div style="background:linear-gradient(135deg,#0D1B4B 0%,#1E3A8A 100%);border-radius:var(--r);padding:16px 20px;color:#fff;flex-shrink:0;position:relative;overflow:hidden;box-shadow:0 6px 24px rgba(13,27,75,.4);display:flex;align-items:center;gap:16px">
-          <div style="position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,#E8B824,#FFD700)"></div>
-          <div style="flex-shrink:0">
-            <div style="font-size:9px;font-weight:700;color:rgba(255,255,255,.55);letter-spacing:2.5px;margin-bottom:4px">INGRESANTES</div>
-            <div style="font-size:64px;font-weight:900;color:#FFD700;line-height:1;text-shadow:0 2px 20px rgba(255,215,0,.45)">218</div>
-          </div>
-          <div style="flex:1">
-            <div style="font-size:12px;color:rgba(255,255,255,.8);line-height:1.6">
-              <div style="font-weight:700">A la Universidad Nacional de Ingeniería</div>
-              <div style="font-size:11px;color:rgba(255,255,255,.65);margin-top:3px">Período 2022 – 2026</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Info CEPRE UNI -->
-        <div style="background:linear-gradient(135deg,var(--navy),var(--blue));border-radius:var(--r);padding:14px 16px;color:#fff;flex:1;display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden;min-height:0">
-          <div style="position:absolute;top:0;left:0;right:0;height:3px;background:rgba(255,215,0,.4)"></div>
-          <div style="font-size:14px;font-weight:700;color:rgba(255,255,255,.8);margin-bottom:10px">Información General</div>
-          <div style="font-size:12px;color:rgba(255,255,255,.7);line-height:1.8">
-            <div style="display:flex;align-items:flex-start;gap:8px;margin-bottom:6px"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="rgba(255,215,0,.8)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg><span>Universidad Nacional de Ingeniería</span></div>
-            <div style="display:flex;align-items:flex-start;gap:8px;margin-bottom:6px"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="rgba(255,215,0,.8)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Sede Juliaca — Región Puno</span></div>
+        <div style="flex:1">
+          <div style="font-size:12px;color:rgba(255,255,255,.8);line-height:1.6">
+            <div style="font-weight:700">A la Universidad Nacional de Ingeniería</div>
+            <div style="font-size:11px;color:rgba(255,255,255,.65);margin-top:3px">Período 2022 – 2026</div>
           </div>
         </div>
+      </div>
 
-        <!-- Objetivo -->
-        <div style="background:#fff;border-radius:var(--r);border:1px solid var(--gbd);box-shadow:var(--sh);padding:12px 14px;flex:1;display:flex;flex-direction:column;justify-content:center;min-height:0">
-          <div style="font-size:8px;font-weight:700;color:var(--gm);letter-spacing:2px;margin-bottom:6px">OBJETIVO</div>
-          <div style="font-size:12px;color:var(--gd);line-height:1.5">Acceso a preparación universitaria de calidad para estudiantes de la región Puno.</div>
+      <!-- Info CEPRE UNI -->
+      <div style="background:linear-gradient(135deg,var(--navy),var(--blue));border-radius:var(--r);padding:14px 16px;color:#fff;display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden;flex-shrink:0">
+        <div style="position:absolute;top:0;left:0;right:0;height:3px;background:rgba(255,215,0,.4)"></div>
+        <div style="font-size:14px;font-weight:700;color:rgba(255,255,255,.8);margin-bottom:10px">Información General</div>
+        <div style="font-size:12px;color:rgba(255,255,255,.7);line-height:1.8">
+          <div style="display:flex;align-items:flex-start;gap:8px;margin-bottom:6px"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="rgba(255,215,0,.8)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg><span>Universidad Nacional de Ingeniería</span></div>
+          <div style="display:flex;align-items:flex-start;gap:8px;margin-bottom:6px"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="rgba(255,215,0,.8)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Sede Juliaca — Región Puno</span></div>
         </div>
+      </div>
 
+      <!-- Objetivo -->
+      <div style="background:#fff;border-radius:var(--r);border:1px solid var(--gbd);box-shadow:var(--sh);padding:12px 14px;display:flex;flex-direction:column;justify-content:center;flex-shrink:0">
+        <div style="font-size:8px;font-weight:700;color:var(--gm);letter-spacing:2px;margin-bottom:6px">OBJETIVO</div>
+        <div style="font-size:12px;color:var(--gd);line-height:1.5">Acceso a preparación universitaria de calidad para estudiantes de la región Puno.</div>
       </div>
     </div>
   </div>

@@ -11,10 +11,10 @@
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
-    "jimp": "^1.6.1",
     "pptxgenjs": "^4.0.1"
   },
   "devDependencies": {
+    "jimp": "^1.6.1",
     "pdf-parse": "^1.1.1",
     "sharp": "^0.34.5"
   }

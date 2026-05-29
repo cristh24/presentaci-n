@@ -400,8 +400,6 @@
 .photo-link{display:block;width:100%;height:100%;cursor:zoom-in;position:relative}
 .photo-link::after{content:'+';position:absolute;top:10px;right:10px;background:rgba(0,0,0,.55);color:#fff;font-size:20px;font-weight:300;width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .2s;pointer-events:none;line-height:32px;text-align:center}
 .photo-link:hover::after{opacity:1}
-#img-hover-popup{position:fixed;z-index:9999;pointer-events:none;border-radius:12px;overflow:hidden;box-shadow:0 16px 48px rgba(0,0,0,.8);border:2px solid rgba(255,255,255,.18);background:#050E1D;display:none;opacity:0;transition:opacity .18s ease}
-#img-hover-popup img{display:block;width:360px;height:auto;max-height:280px;object-fit:contain}
 
 /* ── LEGEND ROW ── */
 .legend-row{display:flex;gap:16px;justify-content:center;align-items:center;padding:6px 0}
@@ -495,17 +493,6 @@
 }
 .ienc-slide img,.iienc-slide img{
   transform-origin:center center;
-}
-.ienc-slide:hover img,.iienc-slide:hover img{
-  transform:scale(1.22);filter:saturate(1.08) brightness(1.04);
-}
-.photo-link:hover img,.swiper-slide:hover img{
-  transform:scale(1.08);filter:saturate(1.06) brightness(1.03);
-}
-.photo-link::after{
-  content:'+';
-  background:rgba(7,23,46,.72);border:1px solid rgba(255,255,255,.16);
-  box-shadow:0 8px 24px rgba(0,0,0,.22)
 }
 .idx2-card{border-radius:12px}
 .idx2-icon{border-radius:10px}
@@ -838,9 +825,10 @@ function initTypedTitle(slide) {
 function initSwipers(slide) {
   if (!window.Swiper) return;
   slide.querySelectorAll('.swiper:not(.swiper-initialized)').forEach(el => {
+    const delay = parseInt(el.dataset.delay) || 3200;
     new Swiper(el, {
       loop: true,
-      autoplay: { delay: 3200, disableOnInteraction: false },
+      autoplay: { delay: delay, disableOnInteraction: false },
       pagination: { el: el.querySelector('.swiper-pagination'), clickable: true },
       navigation: { nextEl: el.querySelector('.swiper-button-next'), prevEl: el.querySelector('.swiper-button-prev') },
       effect: 'fade',
@@ -1084,20 +1072,25 @@ function initEbrChart() {
     data: {
       labels: ['2023', '2024', '2025'],
       datasets: [
-        { label: 'Inicial',    data: [95.4, 97.5, 94.8], borderColor: '#1A5F6E', backgroundColor: 'rgba(8,145,178,.08)',  tension: .4, fill: false, pointRadius: 7, pointHoverRadius: 9, borderWidth: 2.5, pointStyle: 'circle' },
-        { label: 'Primaria',   data: [94.0, 97.0, 98.0], borderColor: '#1A3F77', backgroundColor: 'rgba(37,99,235,.08)', tension: .4, fill: false, pointRadius: 7, pointHoverRadius: 9, borderWidth: 2.5, pointStyle: 'circle' },
-        { label: 'Secundaria', data: [69.0, 73.5, 77.4], borderColor: '#7C3AED', backgroundColor: 'rgba(124,58,237,.08)',tension: .4, fill: false, pointRadius: 7, pointHoverRadius: 9, borderWidth: 2.5, pointStyle: 'circle' },
-        { label: 'EBR Total',  data: [72.2, 78.07, 88.13],borderColor: '#0D2240', backgroundColor:'rgba(13,34,64,.07)', tension: .4, fill: true,  pointRadius: 9, pointHoverRadius: 11, borderWidth: 3.5, pointStyle: 'rectRot', borderDash: [] }
+        { label: 'Inicial',    data: [95.4, 97.5, 94.8], borderColor: '#1A5F6E', backgroundColor: 'rgba(8,145,178,.08)',  tension: .4, fill: false, pointRadius: 7, pointHoverRadius: 9, borderWidth: 2.5, pointStyle: 'circle',
+          datalabels: { display: true, anchor: 'end', align: 'top',    formatter: v => v+'%',            font: { size: 10, weight: '700' }, color: '#1A5F6E' } },
+        { label: 'Primaria',   data: [94.0, 97.0, 98.0], borderColor: '#1A3F77', backgroundColor: 'rgba(37,99,235,.08)', tension: .4, fill: false, pointRadius: 7, pointHoverRadius: 9, borderWidth: 2.5, pointStyle: 'circle',
+          datalabels: { display: true, anchor: 'end', align: 'bottom', formatter: v => v+'%',            font: { size: 10, weight: '700' }, color: '#1A3F77' } },
+        { label: 'Secundaria', data: [69.0, 73.5, 77.4], borderColor: '#7C3AED', backgroundColor: 'rgba(124,58,237,.08)', tension: .4, fill: false, pointRadius: 7, pointHoverRadius: 9, borderWidth: 2.5, pointStyle: 'circle',
+          datalabels: { display: true, anchor: 'end', align: 'bottom', formatter: v => v+'%',            font: { size: 10, weight: '700' }, color: '#7C3AED' } },
+        { label: 'Promedio General EBR', data: [72.2, 78.07, 88.13], borderColor: '#D4A017', backgroundColor: 'rgba(212,160,23,.13)', tension: .4, fill: true, pointRadius: 11, pointHoverRadius: 13, borderWidth: 4, pointStyle: 'rectRot', pointBackgroundColor: '#D4A017', pointBorderColor: '#fff', pointBorderWidth: 2,
+          datalabels: { display: true, anchor: 'end', align: 'top',    formatter: v => v.toFixed(2)+'%', font: { size: 12, weight: '800' }, color: '#fff', backgroundColor: '#D4A017', borderRadius: 5, padding: { top: 3, bottom: 3, left: 6, right: 6 } } }
       ]
     },
     options: {
       responsive: true, maintainAspectRatio: false,
       plugins: {
         legend: { position: 'top', labels: { usePointStyle: true, padding: 16, font: { size: 10, weight: '600' }, color: '#1E293B' } },
-        tooltip: { callbacks: { label: ctx => ` ${ctx.dataset.label}: ${ctx.raw}%` } }
+        tooltip: { callbacks: { label: ctx => ` ${ctx.dataset.label}: ${ctx.raw}%` } },
+        datalabels: { display: false }
       },
       scales: {
-        y: { min: 60, max: 100, border: { dash: [4,4] },
+        y: { min: 60, max: 103, border: { dash: [4,4] },
              ticks: { callback: v => v+'%', font: { size: 9 }, color: '#94A3B8' }, grid: { color: '#F1F5F9' } },
         x: { grid: { display: false }, ticks: { font: { weight: '700', size: 13 }, color: '#1E293B' } }
       }
@@ -1755,15 +1748,83 @@ function initAdqBienesChart() {
           }
         },
         datalabels: {
+          display: true,
           anchor: 'end', align: 'end',
-          formatter: v => 'S/' + (v/1000).toFixed(0) + 'K',
-          font: { weight: '800', size: 11 },
-          color: ['#1E4D9B','#0A5030','#7A5012','#7C3AED']
+          formatter: v => 'S/ ' + v.toLocaleString('es-PE', { minimumFractionDigits: 2 }),
+          font: { weight: '800', size: 15 },
+          color: ['#1E4D9B','#0A5030','#7A5012','#7C3AED'],
+          backgroundColor: ['rgba(238,242,255,.9)','rgba(240,251,246,.9)','rgba(255,247,237,.9)','rgba(245,243,255,.9)'],
+          borderRadius: 5,
+          padding: { top: 4, bottom: 4, left: 7, right: 7 }
         }
       },
       scales: {
-        x: { border: { display: false }, grid: { display: false }, ticks: { font: { size: 11, weight: '700' }, color: '#475569' } },
-        y: { beginAtZero: true, border: { dash: [4,4] }, ticks: { callback: v => 'S/' + (v/1000).toFixed(0) + 'K', font: { size: 9 }, color: '#94A3B8' }, grid: { color: '#F1F5F9' } }
+        x: { border: { display: false }, grid: { display: false }, ticks: { font: { size: 12, weight: '700' }, color: '#475569' } },
+        y: { beginAtZero: true, max: 520000, border: { dash: [4,4] }, ticks: { callback: v => 'S/' + (v/1000).toFixed(0) + 'K', font: { size: 9 }, color: '#94A3B8' }, grid: { color: '#F1F5F9' } }
+      }
+    }
+  });
+}
+
+/* ── Chart.js: Presupuesto Destinado vs Gasto Real 2022–2025 ── */
+let _presupuestoInit = false;
+function initPresupuestoChart() {
+  if (_presupuestoInit) return;
+  const ctx = document.getElementById('presupuesto-chart');
+  if (!ctx) return;
+  _presupuestoInit = true;
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ['2022', '2023', '2024', '2025'],
+      datasets: [
+        {
+          label: 'Presupuesto Destinado',
+          data: [4402897, 20283322, 3204048, 2772225],
+          backgroundColor: 'rgba(30,77,155,.82)',
+          borderColor: '#1E4D9B',
+          borderWidth: 2,
+          borderRadius: 8,
+          borderSkipped: false,
+          datalabels: {
+            display: true, anchor: 'end', align: 'end', offset: 2,
+            formatter: v => 'S/' + (v/1000000).toFixed(2) + 'M',
+            font: { size: 14, weight: '800' }, color: '#1E4D9B'
+          }
+        },
+        {
+          label: 'Gasto Real Ejecutado',
+          data: [4736344.49, 20326376.63, 3184992.68, 3883598.97],
+          backgroundColor: ['rgba(194,65,12,.82)','rgba(194,65,12,.82)','rgba(15,122,94,.82)','rgba(194,65,12,.82)'],
+          borderColor: ['#C2410C','#C2410C','#0F7A5E','#C2410C'],
+          borderWidth: 2,
+          borderRadius: 8,
+          borderSkipped: false,
+          datalabels: {
+            display: true, anchor: 'end', align: 'end', offset: 2,
+            formatter: v => 'S/' + (v/1000000).toFixed(2) + 'M',
+            font: { size: 14, weight: '800' },
+            color: ['#C2410C','#C2410C','#0F7A5E','#C2410C']
+          }
+        }
+      ]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      animation: { duration: 900, easing: 'easeOutQuart' },
+      plugins: {
+        legend: { position: 'top', labels: { font: { family: 'Plus Jakarta Sans,sans-serif', size: 10, weight: '700' }, color: '#1E293B', boxWidth: 12, padding: 12 } },
+        tooltip: {
+          backgroundColor: '#0B1D3A',
+          callbacks: { label: c => '  ' + c.dataset.label + ': S/ ' + Number(c.raw).toLocaleString('es-PE', { minimumFractionDigits: 2 }) }
+        },
+        datalabels: { display: false }
+      },
+      scales: {
+        x: { grid: { display: false }, ticks: { font: { weight: '700', size: 12 }, color: '#1E293B' } },
+        y: { beginAtZero: true, max: 25000000, border: { dash: [4,4] },
+             ticks: { callback: v => 'S/' + (v/1000000).toFixed(0) + 'M', font: { size: 9 }, color: '#94A3B8' },
+             grid: { color: '#F1F5F9' } }
       }
     }
   });
@@ -1840,6 +1901,7 @@ function onSlide(slide) {
   if (slide.querySelector('#hist-puno-chart'))  setTimeout(initHistPunoChart, 200);
   if (slide.querySelector('#sec-lec-chart'))    setTimeout(initSecChart, 200);
   if (slide.querySelector('#adq-bienes-chart')) setTimeout(initAdqBienesChart, 200);
+  if (slide.querySelector('#presupuesto-chart'))   setTimeout(initPresupuestoChart, 200);
   if (slide.querySelector('#deuda-social-chart')) setTimeout(initDeudaSocialChart, 200);
   animateSlideIn(slide);
   toggleParticles(slide);
@@ -1856,46 +1918,6 @@ Reveal.on('ready', e => {
   initGLightbox();
 });
 
-/* ── Hover popup — todas las fotos recortadas ── */
-(function(){
-  const popup = document.createElement('div');
-  popup.id = 'img-hover-popup';
-  const pi = document.createElement('img');
-  popup.appendChild(pi);
-  document.body.appendChild(popup);
-
-  function pos(e) {
-    const W = popup.offsetWidth || 360, H = popup.offsetHeight || 280, margin = 18;
-    let x = e.clientX + margin;
-    let y = e.clientY - H / 2;
-    if (x + W > window.innerWidth - 8) x = e.clientX - W - margin;
-    if (y < 8) y = 8;
-    if (y + H > window.innerHeight - 8) y = window.innerHeight - H - 8;
-    popup.style.left = x + 'px';
-    popup.style.top  = y + 'px';
-  }
-
-  function attach(img) {
-    img.style.cursor = 'zoom-in';
-    img.addEventListener('mouseenter', e => {
-      pi.src = img.src;
-      popup.style.display = 'block';
-      requestAnimationFrame(() => { popup.style.opacity = '1'; pos(e); });
-    });
-    img.addEventListener('mousemove', pos);
-    img.addEventListener('mouseleave', () => {
-      popup.style.opacity = '0';
-      setTimeout(() => { if (popup.style.opacity === '0') popup.style.display = 'none'; }, 180);
-    });
-  }
-
-  const skip = '.pv2-bg, .pv2-logo, .secdiv-logo, .s-hd-logo';
-
-  document.querySelectorAll('img').forEach(img => {
-    if (img.matches(skip)) return;
-    attach(img);
-  });
-})();
 </script>
 
 </body>

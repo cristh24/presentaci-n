@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1280">
+<title>Infografía ENLA — 4.° Primaria 2022–2025</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#F0F4F8;display:flex;justify-content:center;align-items:center;min-height:100vh;font-family:'Segoe UI',Arial,sans-serif}
+
+.infografia{
+  width:1280px;height:720px;background:#fff;
+  border-radius:12px;overflow:hidden;
+  box-shadow:0 8px 40px rgba(0,0,0,.18);
+  display:flex;flex-direction:column;
+  position:relative;
+}
+
+/* ── TÍTULO ── */
+.title-bar{
+  background:linear-gradient(135deg,#0B1D3A 0%,#1E3A6E 100%);
+  padding:10px 28px;display:flex;align-items:center;justify-content:space-between;
+  flex-shrink:0;border-bottom:3px solid #D4A017;
+}
+.title-main{font-size:16px;font-weight:800;color:#fff;letter-spacing:1px;text-transform:uppercase}
+.title-sub{font-size:12px;color:rgba(255,255,255,.6);margin-top:2px;letter-spacing:.5px}
+.title-badge{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:8px;padding:5px 14px;text-align:center}
+.title-badge div:first-child{font-size:11px;color:rgba(255,255,255,.6);font-weight:600;letter-spacing:1px}
+.title-badge div:last-child{font-size:14px;color:#D4A017;font-weight:800}
+
+/* ── BODY ── */
+.body{flex:1;display:flex;min-height:0}
+
+/* ── PANELES ── */
+.panel{flex:1;display:flex;flex-direction:column;padding:0}
+.panel-lec{border-right:2px solid #E2E8F0}
+
+.panel-header{
+  padding:8px 20px;display:flex;align-items:center;gap:10px;flex-shrink:0;
+}
+.panel-header-lec{background:linear-gradient(90deg,#0F2552,#1E4D9B)}
+.panel-header-mat{background:linear-gradient(90deg,#14532D,#16A34A)}
+.panel-icon{width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,.15);display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0}
+.panel-title{font-size:16px;font-weight:800;color:#fff;letter-spacing:2px;text-transform:uppercase}
+.panel-subtitle{font-size:11px;color:rgba(255,255,255,.65);margin-top:1px}
+
+.panel-content{flex:1;min-height:0;display:flex;align-items:flex-end;padding:8px 14px 0;gap:8px}
+
+/* ── YEAR GROUP ── */
+.year-group{flex:1;display:flex;flex-direction:column;align-items:center;gap:0}
+
+.year-source{text-align:center;margin-bottom:4px}
+.year-source .src-org{font-size:9.5px;font-weight:700;color:#1E4D9B;letter-spacing:.5px}
+.year-source .src-type{font-size:8.5px;color:#64748B;font-style:italic}
+
+.chart-area{width:100%;display:flex;align-items:flex-end;justify-content:center;gap:3px;height:210px;position:relative}
+
+/* Y-axis lines */
+.chart-area::before{
+  content:'';position:absolute;left:0;right:0;bottom:0;top:0;
+  background:repeating-linear-gradient(
+    to top,
+    #F1F5F9 0px,#F1F5F9 1px,
+    transparent 1px,transparent 42px
+  );
+  pointer-events:none;z-index:0;
+}
+
+.bar-wrap{display:flex;flex-direction:column;align-items:center;gap:1px;z-index:1}
+.bar-pct{font-size:8px;font-weight:800;color:#374151;white-space:nowrap;line-height:1;margin-bottom:2px}
+.bar{width:21px;border-radius:3px 3px 0 0;transition:opacity .2s}
+.bar:hover{opacity:.85}
+
+.year-label{font-size:13px;font-weight:800;color:#0B1D3A;margin-top:4px;letter-spacing:.5px}
+.year-divider{width:100%;height:2px;background:linear-gradient(90deg,transparent,#CBD5E1,transparent);margin-top:2px}
+
+/* ── LEYENDA ── */
+.legend{
+  flex-shrink:0;padding:7px 24px;
+  background:#F8FAFC;border-top:1.5px solid #E2E8F0;
+  display:flex;align-items:center;justify-content:center;gap:28px;
+}
+.leg-item{display:flex;align-items:center;gap:7px}
+.leg-dot{width:16px;height:16px;border-radius:4px;flex-shrink:0}
+.leg-txt{font-size:12px;font-weight:700;color:#374151}
+
+/* ── COLORS ── */
+.c-previo{background:#EF4444}
+.c-inicio{background:#EAB308}
+.c-proceso{background:#2563EB}
+.c-sat{background:#16A34A}
+
+/* Source badge 2024 */
+.src-org.ugel{color:#0F7A5E}
+</style>
+</head>
+<body>
+<div class="infografia">
+
+  <!-- TÍTULO -->
+  <div class="title-bar">
+    <div>
+      <div class="title-main">Histórico de Resultados — Evaluación Nacional de Logros de Aprendizaje (ENLA)</div>
+      <div class="title-sub">4.° Grado de Primaria · 2022–2025 · UGEL San Román</div>
+    </div>
+    <div style="display:flex;gap:10px">
+      <div class="title-badge">
+        <div>LECTURA SAT. 2025</div>
+        <div>34.1%</div>
+      </div>
+      <div class="title-badge">
+        <div>MATEMÁTICA SAT. 2025</div>
+        <div>42.1%</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BODY -->
+  <div class="body">
+
+    <!-- ══ PANEL LECTURA ══ -->
+    <div class="panel panel-lec">
+      <div class="panel-header panel-header-lec">
+        <div class="panel-icon">📖</div>
+        <div>
+          <div class="panel-title">Lectura</div>
+          <div class="panel-subtitle">Niveles de logro por año de evaluación</div>
+        </div>
+      </div>
+      <div class="panel-content">
+
+        <!-- 2022 -->
+        <div class="year-group">
+          <div class="year-source"><div class="src-org">DRE Puno</div><div class="src-type">Eval. Muestral</div></div>
+          <div class="chart-area">
+            <div class="bar-wrap"><div class="bar-pct">4.3%</div><div class="bar c-previo" style="height:calc(4.3/50*210px)"></div></div>
+            <div class="bar-wrap"><div class="bar-pct">31.5%</div><div class="bar c-inicio" style="height:calc(31.5/50*210px)"></div></div>
+            <div class="bar-wrap"><div class="bar-pct">38.0%</div><div class="bar c-proceso" style="height:calc(38.0/50*210px)"></div></div>
+            <div class="bar-wrap"><div class="bar-pct">26.2%</div><div class="bar c-sat" style="height:calc(26.2/50*210px)"></div></div>
+          </div>
+          <div class="year-label">2022</div>
+          <div class="year-divider"></div>
+        </div>
+
+        <!-- 2023 -->
+        <div class="year-group">
+          <div class="year-source"><div class="src-org">DRE Puno</div><div class="src-type">Eval. Muestral</div></div>
+          <div class="chart-area">
+            <div class="bar-wrap"><div class="bar-pct">7.1%</div><div class="bar c-previo" style="height:calc(7.1/50*210px)"></div></div>
+            <div class="bar-wrap"><div class="bar-pct">31.6%</div><div class="bar c-inicio" style="height:calc(31.6/50*210px)"></div></div>
+            <div class="bar-wrap"><div class="bar-pct">32.5%</div><div class="bar c-proceso" style="height:calc(32.5/50*210px)"></div></div>
+            <div class="bar-wrap"><div class="bar-pct">28.8%</div><div class="bar c-sat" style="height:calc(28.8/50*210px)"></div></div>
+          </div>
+          <div class="year-label">2023</div>
+          <div class="year-divider"></div>
+        </div>
+
+        <!-- 2024 -->
+        <div class="year-group">
+          <div class="year-source"><div class="src-org ugel">UGEL San Román</div><div class="src-type">Eval. Censal</div></div>
+          <div class="chart-area">
+            <div class="bar-wrap"><div class="bar-pct">1.5%</div><div class="bar c-previo" style="height:calc(1.5/50*210px)"></div></div>
+            <div class="bar-wrap"><div class="bar-pct">11.6%</div><div class="bar c-inicio" style="height:calc(11.6/50*210px)"></div></div>
+            <div class="bar-wrap"><div class="bar-pct">43.5%</div><div class="bar c-proceso" style="height:calc(43.5/50*210px)"></div></div>
+            <div class="bar-wrap"><div class="bar-pct">33.4%</div><div class="bar c-sat" style="height:calc(33.4/50*210px)"></div></div>
+          </div>
+          <div class="year-label">2024</div>
+          <div class="year-divider"></div>
+        </div>
+
+        <!-- 2025 -->
+        <div class="year-group">
+          <div class="year-source"><div class="src-org">DRE Puno</div><div class="src-type">Eval. Muestral</div></div>
+          <div class="chart-area">
+            <div class="bar-wrap"><div class="bar-pct">0.5%</div><div class="bar c-previo" style="height:calc(0.5/50*210px)"></div></div>
+            <div class="bar-wrap"><div class="bar-pct">22.0%</div><div class="bar c-inicio" style="height:calc(22.0/50*210px)"></div></div>
+            <div class="bar-wrap"><div class="bar-pct">43.4%</div><div class="bar c-proceso" style="height:calc(43.4/50*210px)"></div></div>
+            <div class="bar-wrap"><div class="bar-pct" style="color:#15803D;font-size:9px">34.1%</div><div class="bar c-sat" style="height:calc(34.1/50*210px);box-shadow:0 0 0 2px #15803D"></div></div>
+          </div>
+          <div class="year-label" style="color:#15803D">2025</div>
+          <div class="year-divider"></div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ══ PANEL MATEMÁTICA ══ -->
+    <div class="panel panel-mat">
+      <div class="panel-header panel-header-mat">
+        <div class="panel-icon">🔢</div>
+        <div>
+          <div class="panel-title">Matemática</div>
+          <div class="panel-subtitle">Niveles de logro por año de evaluación</div>
+        </div>
+      </div>
+      <div class="panel-content">
+
+        <!-- 2022 -->
+        <div class="year-group">
+          <div class="year-source"><div class="src-org">DRE Puno</div><div class="src-type">Eval. Muestral</div></div>
+          <div class="chart-area">
+            <div class="bar-wrap"><div class="bar-pct">13.7%</div><div class="bar c-previo" style="height:calc(13.7/50*210px)"></div></div>
+            <div class="bar-wrap"><div class="bar-pct">18.3%</div><div class="bar c-inicio" style="height:calc(18.3/50*210px)"></div></div>
+            <div class="bar-wrap"><div class="bar-pct">38.3%</div><div class="bar c-proceso" style="height:calc(38.3/50*210px)"></div></div>
+            <div class="bar-wrap"><div class="bar-pct">29.7%</div><div class="bar c-sat" style="height:calc(29.7/50*210px)"></div></div>
+          </div>
+          <div class="year-label">2022</div>
+          <div class="year-divider"></div>
+        </div>
+
+        <!-- 2023 -->
+        <div class="year-group">
+          <div class="year-source"><div class="src-org">DRE Puno</div><div class="src-type">Eval. Muestral</div></div>
+          <div class="chart-area">
+            <div class="bar-wrap"><div class="bar-pct">13.7%</div><div class="bar c-previo" style="height:calc(13.7/50*210px)"></div></div>
+            <div class="bar-wrap"><div class="bar-pct">18.3%</div><div class="bar c-inicio" style="height:calc(18.3/50*210px)"></div></div>
+            <div class="bar-wrap"><div class="bar-pct">38.3%</div><div class="bar c-proceso" style="height:calc(38.3/50*210px)"></div></div>
+            <div class="bar-wrap"><div class="bar-pct">29.7%</div><div class="bar c-sat" style="height:calc(29.7/50*210px)"></div></div>
+          </div>
+          <div class="year-label">2023</div>
+          <div class="year-divider"></div>
+        </div>
+
+        <!-- 2024 -->
+        <div class="year-group">
+          <div class="year-source"><div class="src-org ugel">UGEL San Román</div><div class="src-type">Eval. Censal</div></div>
+          <div class="chart-area">
+            <div class="bar-wrap"><div class="bar-pct">7.0%</div><div class="bar c-previo" style="height:calc(7.0/50*210px)"></div></div>
+            <div class="bar-wrap"><div class="bar-pct">12.6%</div><div class="bar c-inicio" style="height:calc(12.6/50*210px)"></div></div>
+            <div class="bar-wrap"><div class="bar-pct">36.1%</div><div class="bar c-proceso" style="height:calc(36.1/50*210px)"></div></div>
+            <div class="bar-wrap"><div class="bar-pct">44.3%</div><div class="bar c-sat" style="height:calc(44.3/50*210px)"></div></div>
+          </div>
+          <div class="year-label">2024</div>
+          <div class="year-divider"></div>
+        </div>
+
+        <!-- 2025 -->
+        <div class="year-group">
+          <div class="year-source"><div class="src-org">DRE Puno</div><div class="src-type">Eval. Muestral</div></div>
+          <div class="chart-area">
+            <div class="bar-wrap"><div class="bar-pct">5.6%</div><div class="bar c-previo" style="height:calc(5.6/50*210px)"></div></div>
+            <div class="bar-wrap"><div class="bar-pct">14.6%</div><div class="bar c-inicio" style="height:calc(14.6/50*210px)"></div></div>
+            <div class="bar-wrap"><div class="bar-pct">37.7%</div><div class="bar c-proceso" style="height:calc(37.7/50*210px)"></div></div>
+            <div class="bar-wrap"><div class="bar-pct" style="color:#15803D;font-size:9px">42.1%</div><div class="bar c-sat" style="height:calc(42.1/50*210px);box-shadow:0 0 0 2px #15803D"></div></div>
+          </div>
+          <div class="year-label" style="color:#15803D">2025</div>
+          <div class="year-divider"></div>
+        </div>
+
+      </div>
+    </div>
+
+  </div><!-- /body -->
+
+  <!-- LEYENDA -->
+  <div class="legend">
+    <div style="font-size:11px;font-weight:700;color:#64748B;letter-spacing:1px;margin-right:8px">NIVELES DE LOGRO:</div>
+    <div class="leg-item"><div class="leg-dot c-previo"></div><span class="leg-txt">Previo al inicio</span></div>
+    <div class="leg-item"><div class="leg-dot c-inicio"></div><span class="leg-txt">En inicio</span></div>
+    <div class="leg-item"><div class="leg-dot c-proceso"></div><span class="leg-txt">En proceso</span></div>
+    <div class="leg-item"><div class="leg-dot c-sat"></div><span class="leg-txt">Satisfactorio</span></div>
+    <div style="margin-left:16px;padding-left:16px;border-left:1px solid #CBD5E1;font-size:10px;color:#64748B;line-height:1.5">
+      <div>🔵 Evaluación Muestral = DRE Puno (muestra representativa)</div>
+      <div>🟢 Evaluación Censal = UGEL San Román (todos los estudiantes)</div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

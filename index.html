@@ -258,7 +258,7 @@
 
 /* ── CEPRE ── */
 .cepre-wrap{flex:1;min-height:0;display:flex;align-items:center;justify-content:center}
-.cepre-main{background:linear-gradient(135deg,var(--navy),var(--blue));border-radius:18px;padding:34px 50px;color:#fff;text-align:center;max-width:580px;width:100%;position:relative;overflow:hidden;box-shadow:var(--sm)}
+.cepre-main{background:linear-gradient(135deg,var(--navy),var(--blue));border-radius:var(--r);padding:34px 50px;color:#fff;text-align:center;max-width:580px;width:100%;position:relative;overflow:hidden;box-shadow:var(--sm)}
 .cepre-main::before{content:'';position:absolute;top:0;left:0;right:0;height:5px;background:var(--gold)}
 .cepre-deco{position:absolute;bottom:-55px;right:-55px;width:190px;height:190px;border-radius:50%;background:rgba(255,255,255,.04)}
 .cepre-pre{font-size:16px;letter-spacing:5px;color:var(--sky);font-weight:700;margin-bottom:8px;text-transform:uppercase}
@@ -363,7 +363,7 @@
 /* ── ÍNDICE v2 — Icon cards 4 cols ── */
 .idx2-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:13px;flex:1;min-height:0;align-content:center}
 .idx2-card{
-  background:#fff;border-radius:18px;
+  background:#fff;border-radius:var(--r);
   box-shadow:0 4px 22px rgba(13,34,64,.11),0 1px 4px rgba(13,34,64,.07);
   border:1px solid rgba(37,99,235,.09);
   display:flex;flex-direction:column;align-items:center;text-align:center;
@@ -385,7 +385,7 @@
 .idx3-card:hover{transform:translateY(-3px);box-shadow:0 12px 32px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.12)}
 .idx3-head{display:flex;align-items:center;justify-content:space-between;gap:8px}
 .idx3-num{font-size:32px;font-weight:900;line-height:1;opacity:.95}
-.idx3-icon{width:42px;height:42px;border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:0 3px 12px rgba(0,0,0,.35)}
+.idx3-icon{width:42px;height:42px;border-radius:var(--r);display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:0 3px 12px rgba(0,0,0,.35)}
 .idx3-ttl{font-size:16px;font-weight:800;color:#fff;line-height:1.3}
 .idx3-sub{font-size:13px;color:rgba(148,180,212,.65);line-height:1.5}
 
@@ -609,7 +609,7 @@
 .ienc-slide img,.iienc-slide img{
   transform-origin:center center;
 }
-.idx2-card{border-radius:12px}
+.idx2-card{border-radius:var(--r)}
 .idx2-icon{border-radius:10px}
 .idx2-ttl{color:var(--navy)}
 .idx2-sub{color:var(--gl)}
@@ -620,7 +620,7 @@
 .secdiv-title{text-shadow:0 10px 38px rgba(0,0,0,.36)}
 .secdiv-line{box-shadow:0 8px 24px rgba(225,180,76,.24)}
 .pv2-card{
-  border-radius:16px;background:rgba(7,23,46,.76);
+  border-radius:var(--r);background:rgba(7,23,46,.76);
   border:1px solid rgba(255,255,255,.13);
   box-shadow:0 30px 80px rgba(0,0,0,.52),inset 0 1px 0 rgba(255,255,255,.12)
 }
@@ -851,7 +851,7 @@ canvas { cursor: crosshair; }
     <div style="flex:1;min-height:0;display:flex;gap:8px">
 
     <!-- Carrusel fotográfico IEs nuevas creadas -->
-    <div id="iec" style="flex:1;min-height:0;position:relative;overflow:hidden;border-radius:12px;background:#0B1D3A">
+    <div id="iec" style="flex:1;min-height:0;position:relative;overflow:hidden;border-radius:var(--r);background:#0B1D3A">
 
       <!-- Carrusel solo con imágenes -->
       <!-- 1. Foto -->
@@ -1143,7 +1143,7 @@ canvas { cursor: crosshair; }
     <div style="display:flex;gap:8px;flex-shrink:0;align-items:stretch;min-height:100px">
 
       <!-- KPI total -->
-      <div style="background:linear-gradient(135deg,#0D1B4B 0%,#1E3A8A 100%);border-radius:var(--r);padding:10px 20px;display:flex;flex-direction:column;align-items:center;justify-content:center;min-width:180px;box-shadow:0 6px 24px rgba(13,27,75,.4)">
+      <div style="background:linear-gradient(135deg,var(--navy) 0%,var(--blue) 100%);border-radius:var(--r);padding:10px 20px;display:flex;flex-direction:column;align-items:center;justify-content:center;min-width:180px;box-shadow:var(--sm)">
         <div style="font-size:12px;font-weight:700;color:rgba(255,255,255,.55);letter-spacing:2px;margin-bottom:0">TOTAL SANEADOS</div>
         <div style="font-size:62px;font-weight:800;color:#FFD700;line-height:1;text-shadow:0 2px 16px rgba(255,215,0,.4)">148</div>
         <div style="font-size:12px;color:rgba(255,255,255,.55);margin-top:2px">de 364 IEs · 40.7%</div>
@@ -1385,7 +1385,7 @@ canvas { cursor: crosshair; }
         </div>
 
         <!-- Carrusel unificado I + II Encuentro -->
-        <div style="flex:1;min-height:0;position:relative;overflow:hidden;border-radius:12px">
+        <div style="flex:1;min-height:0;position:relative;overflow:hidden;border-radius:var(--r)">
           <div style="position:absolute;left:0;top:0;bottom:0;width:50px;background:linear-gradient(to right,#E8EFF8,transparent);z-index:10;pointer-events:none"></div>
           <div style="position:absolute;right:0;top:0;bottom:0;width:50px;background:linear-gradient(to left,#F0F4FA,transparent);z-index:10;pointer-events:none"></div>
           <div style="height:100%;position:relative;overflow:hidden">
@@ -1435,7 +1435,7 @@ canvas { cursor: crosshair; }
       <!-- Right: Diplomados -->
       <div style="flex:0 0 290px;display:flex;flex-direction:column;gap:8px">
 
-        <div style="background:linear-gradient(135deg,var(--navy),var(--blue));border-radius:12px;padding:12px 16px;color:#fff;flex-shrink:0">
+        <div style="background:linear-gradient(135deg,var(--navy),var(--blue));border-radius:var(--r);padding:12px 16px;color:#fff;flex-shrink:0">
           <div style="font-size:11px;font-weight:700;letter-spacing:3px;color:rgba(255,255,255,.6)">DIPLOMADOS DE ESPECIALIZACIÓN</div>
           <div style="display:flex;align-items:center;gap:12px;margin-top:6px">
             <div style="font-size:46px;font-weight:800;color:#D4A017;line-height:1">3</div>
@@ -1443,7 +1443,7 @@ canvas { cursor: crosshair; }
           </div>
         </div>
 
-        <div style="flex:1;min-width:0;border-radius:12px;overflow:hidden;box-shadow:0 8px 32px rgba(0,0,0,.35);position:relative">
+        <div style="flex:1;min-width:0;border-radius:var(--r);overflow:hidden;box-shadow:0 8px 32px rgba(0,0,0,.35);position:relative">
           <div class="swiper" style="height:100%">
             <div class="swiper-wrapper">
               <div class="swiper-slide" style="position:relative">
@@ -1557,7 +1557,7 @@ canvas { cursor: crosshair; }
     <div style="display:flex;gap:12px;flex:1;min-height:0">
       <!-- Carrusel CEPRE UNI (izquierda, 70% ancho) -->
       <div style="flex:0 0 70%;min-height:0">
-        <div id="cepre-carousel" style="width:100%;height:100%;position:relative;border-radius:12px;overflow:hidden;background:#0B1D3A;box-shadow:0 6px 24px rgba(13,27,75,.4)">
+        <div id="cepre-carousel" style="width:100%;height:100%;position:relative;border-radius:var(--r);overflow:hidden;background:#0B1D3A;box-shadow:var(--sm)">
           <div style="position:absolute;top:0;left:0;right:0;bottom:0;opacity:1;z-index:2;transition:opacity 0.8s ease" class="cepre-img"><img src="/presentaci-n/cepre-uni/Captura-de-pantalla-2026-05-29-123658.png" alt="CEPRE UNI" style="width:100%;height:100%;object-fit:cover"></div>
           <div style="position:absolute;top:0;left:0;right:0;bottom:0;opacity:0;z-index:1;transition:opacity 0.8s ease" class="cepre-img"><img src="/presentaci-n/cepre-uni/528633881_1197925822368947_4024457540627860545_n.jpg" alt="CEPRE UNI" style="width:100%;height:100%;object-fit:cover"></div>
           <div style="position:absolute;top:0;left:0;right:0;bottom:0;opacity:0;z-index:1;transition:opacity 0.8s ease" class="cepre-img"><img src="/presentaci-n/cepre-uni/Captura-de-pantalla-2026-05-29-123705.png" alt="CEPRE UNI" style="width:100%;height:100%;object-fit:cover"></div>
@@ -1576,7 +1576,7 @@ canvas { cursor: crosshair; }
       <div style="display:flex;flex-direction:column;gap:12px;flex:1;min-height:0">
 
         <!-- KPI 218 -->
-        <div style="background:linear-gradient(135deg,#0D1B4B 0%,#1E3A8A 100%);border-radius:var(--r);padding:16px 20px;color:#fff;flex-shrink:0;position:relative;overflow:hidden;box-shadow:0 6px 24px rgba(13,27,75,.4);display:flex;align-items:center;gap:16px">
+        <div style="background:linear-gradient(135deg,var(--navy) 0%,var(--blue) 100%);border-radius:var(--r);padding:16px 20px;color:#fff;flex-shrink:0;position:relative;overflow:hidden;box-shadow:var(--sm);display:flex;align-items:center;gap:16px">
           <div style="position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,#E8B824,#FFD700)"></div>
           <div style="flex-shrink:0">
             <div style="font-size:9px;font-weight:700;color:rgba(255,255,255,.55);letter-spacing:2.5px;margin-bottom:4px">INGRESANTES</div>
@@ -1649,87 +1649,91 @@ canvas { cursor: crosshair; }
   <div class="s-hd">
     <div class="s-hd-t">
       <h2 style="color:#0B1D3A">Colegio de Alta Competencia Eduardo de Habich</h2>
-      <p style="color:#1E3A8A">I Bimestre · Concursos Nacionales e Internacionales 2026 · UGEL San Román</p>
+      <p style="color:var(--blue)">I Bimestre · Concursos Nacionales e Internacionales 2026 · UGEL San Román</p>
     </div>
     <img class="s-hd-logo" src="/presentaci-n/img-logos/LOGO%20AZUL.png" alt="Logo UGEL San Román">
   </div>
-  <div class="s-bd" style="padding:12px 18px 12px;gap:12px;flex-direction:row">
+  <div class="s-bd" style="padding:10px 18px 10px;gap:10px;flex-direction:column">
 
-    <!-- Carrusel (izquierda, 70%) -->
-    <div style="flex:0 0 70%;min-height:0">
-      <div id="ing-carousel" style="width:100%;height:100%;position:relative;border-radius:12px;overflow:hidden;background:#0B1D3A;box-shadow:0 6px 24px rgba(13,27,75,.4)">
+    <!-- FILA SUPERIOR: 3 tarjetas -->
+    <div style="display:flex;gap:10px;flex-shrink:0">
 
-        <!-- Imágenes de PDFs convertidos + imágenes de logros (10 total) -->
-        <div style="position:absolute;top:0;left:0;right:0;bottom:0;opacity:1;z-index:2;transition:opacity .6s ease;display:flex;align-items:center;justify-content:center;background:#fff" class="ing-img"><img src="/presentaci-n/img-ingenieritos-eduardo-de-habich/210011_RDR_2705_11082023.pdf%20(1)_page-0001.jpg" alt="RDR 2705" style="width:55%;height:75%;object-fit:contain;border:1px solid #ddd;border-radius:6px;box-shadow:0 2px 8px rgba(0,0,0,.1)"></div>
-        <div style="position:absolute;top:0;left:0;right:0;bottom:0;opacity:0;z-index:1;transition:opacity .6s ease;display:flex;align-items:center;justify-content:center;background:#fff" class="ing-img"><img src="/presentaci-n/img-ingenieritos-eduardo-de-habich/RDR%20N°%200117-2026-DREP.pdf%20(1)_page-0001.jpg" alt="RDR 0117" style="width:55%;height:75%;object-fit:contain;border:1px solid #ddd;border-radius:6px;box-shadow:0 2px 8px rgba(0,0,0,.1)"></div>
-        <div style="position:absolute;top:0;left:0;right:0;bottom:0;opacity:0;z-index:1;transition:opacity .6s ease" class="ing-img"><img src="/presentaci-n/img-ingenieritos-eduardo-de-habich/499835880_122197445174115772_109031745872706434_n.jpg" alt="Logros" style="width:100%;height:100%;object-fit:cover"></div>
-        <div style="position:absolute;top:0;left:0;right:0;bottom:0;opacity:0;z-index:1;transition:opacity .6s ease" class="ing-img"><img src="/presentaci-n/img-ingenieritos-eduardo-de-habich/512001958_122200839032115772_6425290173445615316_n.jpg" alt="Logros" style="width:100%;height:100%;object-fit:cover"></div>
-        <div style="position:absolute;top:0;left:0;right:0;bottom:0;opacity:0;z-index:1;transition:opacity .6s ease" class="ing-img"><img src="/presentaci-n/img-ingenieritos-eduardo-de-habich/512006124_122200839086115772_165171513672846817_n.jpg" alt="Logros" style="width:100%;height:100%;object-fit:cover"></div>
-        <div style="position:absolute;top:0;left:0;right:0;bottom:0;opacity:0;z-index:1;transition:opacity .6s ease" class="ing-img"><img src="/presentaci-n/img-ingenieritos-eduardo-de-habich/513085024_122200838990115772_2692887048754389812_n.jpg" alt="Logros" style="width:100%;height:100%;object-fit:cover"></div>
-        <div style="position:absolute;top:0;left:0;right:0;bottom:0;opacity:0;z-index:1;transition:opacity .6s ease" class="ing-img"><img src="/presentaci-n/img-ingenieritos-eduardo-de-habich/513098969_122200838924115772_6141711517160224218_n.jpg" alt="Logros" style="width:100%;height:100%;object-fit:cover"></div>
-        <div style="position:absolute;top:0;left:0;right:0;bottom:0;opacity:0;z-index:1;transition:opacity .6s ease" class="ing-img"><img src="/presentaci-n/img-ingenieritos-eduardo-de-habich/536272818_122208052736115772_8589187364545994923_n.jpg" alt="Logros" style="width:100%;height:100%;object-fit:cover"></div>
-        <div style="position:absolute;top:0;left:0;right:0;bottom:0;opacity:0;z-index:1;transition:opacity .6s ease" class="ing-img"><img src="/presentaci-n/img-ingenieritos-eduardo-de-habich/573039575_122216238866115772_30377699034261936_n.jpg" alt="Logros" style="width:100%;height:100%;object-fit:cover"></div>
-        <div style="position:absolute;top:0;left:0;right:0;bottom:0;opacity:0;z-index:1;transition:opacity .6s ease" class="ing-img"><img src="/presentaci-n/img-ingenieritos-eduardo-de-habich/574500776_122216590760115772_8753327299131150453_n.jpg" alt="Logros" style="width:100%;height:100%;object-fit:cover"></div>
-
-        <!-- Prev / Next -->
-        <button id="ing-p" style="position:absolute;left:10px;top:50%;transform:translateY(-50%);background:rgba(0,0,0,.5);border:2px solid rgba(255,255,255,.25);color:#fff;width:38px;height:38px;border-radius:50%;font-size:15px;cursor:pointer;z-index:20;display:flex;align-items:center;justify-content:center;line-height:1">&#9664;</button>
-        <button id="ing-n" style="position:absolute;right:10px;top:50%;transform:translateY(-50%);background:rgba(0,0,0,.5);border:2px solid rgba(255,255,255,.25);color:#fff;width:38px;height:38px;border-radius:50%;font-size:15px;cursor:pointer;z-index:20;display:flex;align-items:center;justify-content:center;line-height:1">&#9654;</button>
-        <div id="ing-ct" style="position:absolute;bottom:10px;right:10px;background:rgba(0,0,0,.6);color:rgba(255,255,255,.9);font-size:12px;font-weight:600;padding:4px 10px;border-radius:8px;z-index:20">1 / 10</div>
-      </div>
-    </div>
-
-    <!-- Datos (derecha, 30%) -->
-    <div style="display:flex;flex-direction:column;gap:12px;flex:1;min-height:0">
-
-      <!-- Logro 1: Spirit of Math -->
-      <div style="background:linear-gradient(135deg,#0D1B4B 0%,#1E3A8A 100%);border-radius:var(--r);padding:14px 14px;color:#fff;flex-shrink:0;position:relative;overflow:hidden;box-shadow:0 6px 24px rgba(13,27,75,.4);border-left:5px solid #FFD700">
-        <div style="position:absolute;top:0;left:0;right:0;height:3px;background:rgba(255,215,0,.3)"></div>
-        <div style="font-size:32px;font-weight:900;color:#FFD700;line-height:1;margin-bottom:4px">55</div>
-        <div style="font-size:12px;font-weight:700;color:rgba(255,255,255,.9);margin-bottom:3px">Spirit of Math</div>
-        <div style="font-size:10px;color:rgba(255,255,255,.7);line-height:1.5">Competencia Internacional de Matemática · Participantes destacados</div>
+      <!-- Spirit of Math -->
+      <div style="flex:1;background:linear-gradient(135deg,var(--navy),var(--blue));border-radius:var(--r);padding:12px 10px;color:#fff;position:relative;overflow:hidden;box-shadow:var(--sh);border-top:5px solid #FFD700;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:4px">
+        <div style="font-size:52px;font-weight:900;color:#FFD700;line-height:1">55</div>
+        <div style="font-size:16px;font-weight:800;color:#fff">Spirit of Math</div>
+        <div style="font-size:11px;color:rgba(255,255,255,.7);line-height:1.4">Competencia Internacional de Matemática</div>
       </div>
 
-      <!-- Logro 2: ONEM -->
-      <div style="background:linear-gradient(135deg,#0D1B4B 0%,#1E3A8A 100%);border-radius:var(--r);padding:14px 14px;color:#fff;flex-shrink:0;position:relative;overflow:hidden;box-shadow:0 6px 24px rgba(13,27,75,.4);border-left:5px solid #60A5FA">
-        <div style="position:absolute;top:0;left:0;right:0;height:3px;background:rgba(96,165,250,.3)"></div>
-        <div style="font-size:32px;font-weight:900;color:#60A5FA;line-height:1;margin-bottom:4px">33</div>
-        <div style="font-size:12px;font-weight:700;color:rgba(255,255,255,.9);margin-bottom:3px">ONEM</div>
-        <div style="font-size:10px;color:rgba(255,255,255,.7);line-height:1.5">Olimpiada Nacional de Matemática · Perú · Clasificados a siguiente fase</div>
+      <!-- ONEM -->
+      <div style="flex:1;background:linear-gradient(135deg,var(--navy),var(--blue));border-radius:var(--r);padding:12px 10px;color:#fff;position:relative;overflow:hidden;box-shadow:var(--sh);border-top:5px solid #60A5FA;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:4px">
+        <div style="font-size:52px;font-weight:900;color:#60A5FA;line-height:1">33</div>
+        <div style="font-size:16px;font-weight:800;color:#fff">ONEM</div>
+        <div style="font-size:11px;color:rgba(255,255,255,.7);line-height:1.4">Olimpiada Nacional de Matemática · Clasificados</div>
       </div>
 
-      <!-- Logro 3: Canguro Mat. -->
-      <div style="background:linear-gradient(135deg,#0D1B4B 0%,#1E3A8A 100%);border-radius:var(--r);padding:14px 14px;color:#fff;flex-shrink:0;position:relative;overflow:hidden;box-shadow:0 6px 24px rgba(13,27,75,.4);border-left:5px solid #34D399">
-        <div style="position:absolute;top:0;left:0;right:0;height:3px;background:rgba(52,211,153,.3)"></div>
-        <div style="font-size:32px;font-weight:900;color:#34D399;line-height:1;margin-bottom:4px">26</div>
-        <div style="font-size:12px;font-weight:700;color:rgba(255,255,255,.9);margin-bottom:3px">Canguro Matemático</div>
-        <div style="font-size:10px;color:rgba(255,255,255,.7);line-height:1.5">Concurso Internacional · Resolución de problemas · Estudiantes seleccionados</div>
-      </div>
-
-      <!-- Logro 4: Jue. Mat. -->
-      <div style="background:linear-gradient(135deg,#0D1B4B 0%,#1E3A8A 100%);border-radius:var(--r);padding:14px 14px;color:#fff;flex-shrink:0;position:relative;overflow:hidden;box-shadow:0 6px 24px rgba(13,27,75,.4);border-left:5px solid #F59E0B">
-        <div style="position:absolute;top:0;left:0;right:0;height:3px;background:rgba(245,158,11,.3)"></div>
-        <div style="font-size:32px;font-weight:900;color:#F59E0B;line-height:1;margin-bottom:4px">12</div>
-        <div style="font-size:12px;font-weight:700;color:rgba(255,255,255,.9);margin-bottom:3px">Juegos Matemáticos</div>
-        <div style="font-size:10px;color:rgba(255,255,255,.7);line-height:1.5">Razonamiento Lógico · Pensamiento Estratégico · Campeonato Nacional</div>
-      </div>
-
-      <!-- Logro 5: IMC (Scarlett) -->
-      <div style="background:linear-gradient(135deg,#0D1B4B 0%,#1E3A8A 100%);border-radius:var(--r);padding:14px 14px;color:#fff;flex-shrink:0;position:relative;overflow:hidden;box-shadow:0 6px 24px rgba(13,27,75,.4);border-left:5px solid #A78BFA">
-        <div style="position:absolute;top:0;left:0;right:0;height:3px;background:rgba(167,139,250,.3)"></div>
-        <div style="font-size:20px;font-weight:800;color:#A78BFA;line-height:1;margin-bottom:4px">Scarlett</div>
-        <div style="font-size:12px;font-weight:700;color:rgba(255,255,255,.9);margin-bottom:3px">IMC International</div>
-        <div style="font-size:10px;color:rgba(255,255,255,.7);line-height:1.5">Medalist en Competencia Matemática Internacional · Reconocimiento destacado</div>
-      </div>
-
-      <!-- Logro 6: Física (Fredelyn) -->
-      <div style="background:linear-gradient(135deg,#0D1B4B 0%,#1E3A8A 100%);border-radius:var(--r);padding:14px 14px;color:#fff;flex-shrink:0;position:relative;overflow:hidden;box-shadow:0 6px 24px rgba(13,27,75,.4);border-left:5px solid #F87171">
-        <div style="position:absolute;top:0;left:0;right:0;height:3px;background:rgba(248,113,113,.3)"></div>
-        <div style="font-size:20px;font-weight:800;color:#F87171;line-height:1;margin-bottom:4px">Fredelyn</div>
-        <div style="font-size:12px;font-weight:700;color:rgba(255,255,255,.9);margin-bottom:3px">Olimpiada de Física</div>
-        <div style="font-size:10px;color:rgba(255,255,255,.7);line-height:1.5">Excelencia en Ciencias · Desempeño destacado en física experimental</div>
+      <!-- Canguro Matemático -->
+      <div style="flex:1;background:linear-gradient(135deg,var(--navy),var(--blue));border-radius:var(--r);padding:12px 10px;color:#fff;position:relative;overflow:hidden;box-shadow:var(--sh);border-top:5px solid #34D399;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:4px">
+        <div style="font-size:52px;font-weight:900;color:#34D399;line-height:1">26</div>
+        <div style="font-size:16px;font-weight:800;color:#fff">Canguro Matemático</div>
+        <div style="font-size:11px;color:rgba(255,255,255,.7);line-height:1.4">Concurso Internacional · Estudiantes seleccionados</div>
       </div>
 
     </div>
+
+    <!-- FILA INFERIOR: Carrusel + 3 tarjetas -->
+    <div style="flex:1;min-height:0;display:flex;gap:10px">
+
+      <!-- Carrusel (68%) -->
+      <div style="flex:0 0 68%;min-height:0">
+        <div id="ing-carousel" style="width:100%;height:100%;position:relative;border-radius:var(--r);overflow:hidden;background:#0B1D3A;box-shadow:var(--sm)">
+          <div style="position:absolute;top:0;left:0;right:0;bottom:0;opacity:1;z-index:2;transition:opacity .6s ease;display:flex;align-items:center;justify-content:center;background:#fff" class="ing-img"><img src="/presentaci-n/img-ingenieritos-eduardo-de-habich/210011_RDR_2705_11082023.pdf%20(1)_page-0001.jpg" alt="RDR 2705" style="width:55%;height:75%;object-fit:contain;border:1px solid #ddd;border-radius:6px;box-shadow:var(--sh)"></div>
+          <div style="position:absolute;top:0;left:0;right:0;bottom:0;opacity:0;z-index:1;transition:opacity .6s ease;display:flex;align-items:center;justify-content:center;background:#fff" class="ing-img"><img src="/presentaci-n/img-ingenieritos-eduardo-de-habich/RDR%20N°%200117-2026-DREP.pdf%20(1)_page-0001.jpg" alt="RDR 0117" style="width:55%;height:75%;object-fit:contain;border:1px solid #ddd;border-radius:6px;box-shadow:var(--sh)"></div>
+          <div style="position:absolute;top:0;left:0;right:0;bottom:0;opacity:0;z-index:1;transition:opacity .6s ease" class="ing-img"><img src="/presentaci-n/img-ingenieritos-eduardo-de-habich/499835880_122197445174115772_109031745872706434_n.jpg" alt="Logros" style="width:100%;height:100%;object-fit:cover"></div>
+          <div style="position:absolute;top:0;left:0;right:0;bottom:0;opacity:0;z-index:1;transition:opacity .6s ease" class="ing-img"><img src="/presentaci-n/img-ingenieritos-eduardo-de-habich/512001958_122200839032115772_6425290173445615316_n.jpg" alt="Logros" style="width:100%;height:100%;object-fit:cover"></div>
+          <div style="position:absolute;top:0;left:0;right:0;bottom:0;opacity:0;z-index:1;transition:opacity .6s ease" class="ing-img"><img src="/presentaci-n/img-ingenieritos-eduardo-de-habich/512006124_122200839086115772_165171513672846817_n.jpg" alt="Logros" style="width:100%;height:100%;object-fit:cover"></div>
+          <div style="position:absolute;top:0;left:0;right:0;bottom:0;opacity:0;z-index:1;transition:opacity .6s ease" class="ing-img"><img src="/presentaci-n/img-ingenieritos-eduardo-de-habich/513085024_122200838990115772_2692887048754389812_n.jpg" alt="Logros" style="width:100%;height:100%;object-fit:cover"></div>
+          <div style="position:absolute;top:0;left:0;right:0;bottom:0;opacity:0;z-index:1;transition:opacity .6s ease" class="ing-img"><img src="/presentaci-n/img-ingenieritos-eduardo-de-habich/513098969_122200838924115772_6141711517160224218_n.jpg" alt="Logros" style="width:100%;height:100%;object-fit:cover"></div>
+          <div style="position:absolute;top:0;left:0;right:0;bottom:0;opacity:0;z-index:1;transition:opacity .6s ease" class="ing-img"><img src="/presentaci-n/img-ingenieritos-eduardo-de-habich/536272818_122208052736115772_8589187364545994923_n.jpg" alt="Logros" style="width:100%;height:100%;object-fit:cover"></div>
+          <div style="position:absolute;top:0;left:0;right:0;bottom:0;opacity:0;z-index:1;transition:opacity .6s ease" class="ing-img"><img src="/presentaci-n/img-ingenieritos-eduardo-de-habich/573039575_122216238866115772_30377699034261936_n.jpg" alt="Logros" style="width:100%;height:100%;object-fit:cover"></div>
+          <div style="position:absolute;top:0;left:0;right:0;bottom:0;opacity:0;z-index:1;transition:opacity .6s ease" class="ing-img"><img src="/presentaci-n/img-ingenieritos-eduardo-de-habich/574500776_122216590760115772_8753327299131150453_n.jpg" alt="Logros" style="width:100%;height:100%;object-fit:cover"></div>
+          <button id="ing-p" style="position:absolute;left:10px;top:50%;transform:translateY(-50%);background:rgba(0,0,0,.5);border:2px solid rgba(255,255,255,.25);color:#fff;width:38px;height:38px;border-radius:50%;font-size:15px;cursor:pointer;z-index:20;display:flex;align-items:center;justify-content:center">&#9664;</button>
+          <button id="ing-n" style="position:absolute;right:10px;top:50%;transform:translateY(-50%);background:rgba(0,0,0,.5);border:2px solid rgba(255,255,255,.25);color:#fff;width:38px;height:38px;border-radius:50%;font-size:15px;cursor:pointer;z-index:20;display:flex;align-items:center;justify-content:center">&#9654;</button>
+          <div id="ing-ct" style="position:absolute;bottom:10px;right:10px;background:rgba(0,0,0,.6);color:rgba(255,255,255,.9);font-size:12px;font-weight:600;padding:4px 10px;border-radius:8px;z-index:20">1 / 10</div>
+        </div>
+      </div>
+
+      <!-- 3 tarjetas derecha -->
+      <div style="flex:1;display:flex;flex-direction:column;gap:10px">
+
+        <!-- Juegos Matemáticos -->
+        <div style="flex:1;background:linear-gradient(135deg,var(--navy),var(--blue));border-radius:var(--r);padding:10px 8px;color:#fff;position:relative;overflow:hidden;box-shadow:var(--sh);border-top:5px solid #F59E0B;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:3px">
+          <div style="font-size:44px;font-weight:900;color:#F59E0B;line-height:1">12</div>
+          <div style="font-size:14px;font-weight:800;color:#fff">Juegos Matemáticos</div>
+          <div style="font-size:10px;color:rgba(255,255,255,.7);line-height:1.4">Razonamiento Lógico · Campeonato Nacional</div>
+        </div>
+
+        <!-- Scarlett M. Otazu Arivilca — RESALTADA -->
+        <div style="flex:1;background:linear-gradient(135deg,#4C1D95,#7C3AED);border-radius:var(--r);padding:10px 8px;color:#fff;position:relative;overflow:hidden;box-shadow:0 6px 24px rgba(124,58,237,.5);border:2px solid #A78BFA;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:3px">
+          <div style="position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,#A78BFA,#DDD6FE)"></div>
+          <div style="font-size:13px;color:rgba(255,255,255,.8)">🏅 Medalist</div>
+          <div style="font-size:16px;font-weight:900;color:#DDD6FE;line-height:1.2">Scarlett M. Otazu Arivilca</div>
+          <div style="font-size:13px;font-weight:700;color:#fff">IMC International</div>
+          <div style="font-size:10px;color:rgba(255,255,255,.75);line-height:1.4">Competencia Matemática Internacional</div>
+        </div>
+
+        <!-- Fredelyn Machaca Machaca — RESALTADA -->
+        <div style="flex:1;background:linear-gradient(135deg,#064E3B,#059669);border-radius:var(--r);padding:10px 8px;color:#fff;position:relative;overflow:hidden;box-shadow:0 6px 24px rgba(5,150,105,.5);border:2px solid #34D399;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:3px">
+          <div style="position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,#34D399,#A7F3D0)"></div>
+          <div style="font-size:13px;color:rgba(255,255,255,.8)">🏅 Destacada</div>
+          <div style="font-size:16px;font-weight:900;color:#A7F3D0;line-height:1.2">Fredelyn Machaca Machaca</div>
+          <div style="font-size:13px;font-weight:700;color:#fff">Olimpiada de Física</div>
+          <div style="font-size:10px;color:rgba(255,255,255,.75);line-height:1.4">Excelencia en Ciencias · Desempeño destacado</div>
+        </div>
+
+      </div>
+    </div>
+
   </div>
   <div class="s-ft"><span class="s-ft-t">I Bimestre 2026 · Concursos Nacionales e Internacionales · UGEL San Román</span><div class="s-ft-n">—</div></div>
 </div>
@@ -1966,8 +1970,8 @@ canvas { cursor: crosshair; }
         <div style="font-size:46px;font-weight:800;color:#fff;line-height:1">37</div>
         <div style="font-size:12px;color:var(--sky);margin-top:3px">8 Resoluciones DREP Puno · 2024–2026</div>
       </div>
-      <div class="kpi"><div class="kpi-top" style="background:var(--navy)"></div><div class="kpi-bd"><div class="kpi-v" style="color:var(--navy);font-size:20px">S/ 1,548,710</div><div class="kpi-l">Remuneraciones anuales (2.1.1)</div></div></div>
-      <div class="kpi"><div class="kpi-top" style="background:var(--blue)"></div><div class="kpi-bd"><div class="kpi-v" style="color:var(--blue);font-size:20px">S/ 1,673,109</div><div class="kpi-l">Costo total anual (inc. EsSalud)</div></div></div>
+      <div class="kpi"><div class="kpi-top" style="background:var(--navy)"></div><div class="kpi-bd"><div class="kpi-v" style="color:var(--navy);font-size:24px">S/ 1,548,710</div><div class="kpi-l">Remuneraciones anuales (2.1.1)</div></div></div>
+      <div class="kpi"><div class="kpi-top" style="background:var(--blue)"></div><div class="kpi-bd"><div class="kpi-v" style="color:var(--blue);font-size:24px">S/ 1,673,109</div><div class="kpi-l">Costo total anual (inc. EsSalud)</div></div></div>
       <div class="kpi"><div class="kpi-top" style="background:var(--teal)"></div><div class="kpi-bd"><div class="kpi-v" style="color:var(--teal)">116.69</div><div class="kpi-l">RIM — DS 277-2025-EF</div></div></div>
     </div>
     <div class="chart-row">
@@ -2028,7 +2032,7 @@ canvas { cursor: crosshair; }
       </div>
     </div>
     <!-- Monto total resaltado -->
-    <div style="flex-shrink:0;background:linear-gradient(135deg,#0D1B4B 0%,#1E3A8A 100%);border-radius:var(--r);padding:11px 22px;display:flex;align-items:center;justify-content:space-between;box-shadow:0 4px 20px rgba(13,27,75,.35)">
+    <div style="flex-shrink:0;background:linear-gradient(135deg,var(--navy) 0%,var(--blue) 100%);border-radius:var(--r);padding:11px 22px;display:flex;align-items:center;justify-content:space-between;box-shadow:0 4px 20px rgba(13,27,75,.35)">
       <div>
         <div style="font-size:10px;font-weight:700;color:rgba(255,255,255,.55);letter-spacing:2.5px">COSTO TOTAL ANUAL ESTIMADO — 37 DOCENTES RACIONALIZADOS</div>
         <div style="font-size:11px;color:rgba(255,255,255,.45);margin-top:3px">Remuneraciones · EsSalud · Escolaridad · Gratificaciones · DS 277-2025-EF</div>
@@ -2368,7 +2372,7 @@ canvas { cursor: crosshair; }
     <div style="display:flex;gap:10px;flex:0 0 auto">
       <div class="kpi"><div class="kpi-top" style="background:#1E4D9B"></div><div class="kpi-bd"><div class="kpi-v" style="color:#1E4D9B">36.7%</div><div class="kpi-l">Lectura Satisfactorio 2025</div></div></div>
       <div class="kpi"><div class="kpi-top" style="background:#0F7A5E"></div><div class="kpi-bd"><div class="kpi-v" style="color:#0F7A5E">42.2%</div><div class="kpi-l">Matemática Satisfactorio 2025</div></div></div>
-      <div class="kpi-dk" style="background:linear-gradient(135deg,#1E3A8A,#1E4D9B)">
+      <div class="kpi-dk" style="background:linear-gradient(135deg,var(--blue),#1E4D9B)">
         <div class="kpi-l" style="color:rgba(255,255,255,.7)">MEJORA LECTURA</div>
         <div class="kpi-v" style="font-size:26px">+17.8 pp</div>
         <div style="font-size:12px;color:#93C5FD;margin-top:2px">2023 → 2025</div>
@@ -2395,14 +2399,14 @@ canvas { cursor: crosshair; }
       </div>
     </div>
     <div style="display:flex;gap:14px;flex:1;min-height:0">
-      <div style="flex:1;background:#fff;border-radius:16px;border:1.5px solid #C3CFDF;box-shadow:0 4px 18px rgba(11,29,58,.08);padding:14px 18px;display:flex;flex-direction:column;gap:8px">
+      <div style="flex:1;background:#fff;border-radius:var(--r);border:1.5px solid #C3CFDF;box-shadow:0 4px 18px rgba(11,29,58,.08);padding:14px 18px;display:flex;flex-direction:column;gap:8px">
         <div style="display:flex;align-items:center;gap:8px">
           <div style="width:8px;height:28px;background:#1E4D9B;border-radius:4px"></div>
           <span style="font-size:13px;font-weight:700;letter-spacing:3px;color:#0B1D3A">LECTURA · 4.° PRIMARIA</span>
         </div>
         <div style="flex:1;min-height:0;position:relative"><canvas id="enla-lec-chart"></canvas></div>
       </div>
-      <div style="flex:1;background:#fff;border-radius:16px;border:1.5px solid #99F6E4;box-shadow:0 4px 18px rgba(15,122,94,.08);padding:14px 18px;display:flex;flex-direction:column;gap:8px">
+      <div style="flex:1;background:#fff;border-radius:var(--r);border:1.5px solid #99F6E4;box-shadow:0 4px 18px rgba(15,122,94,.08);padding:14px 18px;display:flex;flex-direction:column;gap:8px">
         <div style="display:flex;align-items:center;gap:8px">
           <div style="width:8px;height:28px;background:#0F7A5E;border-radius:4px"></div>
           <span style="font-size:13px;font-weight:700;letter-spacing:3px;color:#0F766E">MATEMÁTICA · 4.° PRIMARIA</span>
@@ -2503,13 +2507,13 @@ canvas { cursor: crosshair; }
         </div>
 
         <div style="flex:1;min-height:0;position:relative">
-        <div class="swiper" data-delay="5000" style="height:100%;border-radius:12px;overflow:hidden;box-shadow:var(--sm)">
+        <div class="swiper" data-delay="5000" style="height:100%;border-radius:var(--r);overflow:hidden;box-shadow:var(--sm)">
           <div class="swiper-wrapper">
 
             <!-- 1: El Perú Lee — 3.er Puesto Nacional -->
             <div class="swiper-slide" style="position:relative;background:#000">
               <img src="img/image56.jpg" style="width:100%;height:100%;object-fit:cover;object-position:top">
-              <div style="position:absolute;top:10px;left:10px;background:#DC2626;color:#fff;font-size:13px;font-weight:800;padding:4px 12px;border-radius:16px">3.er Puesto NACIONAL</div>
+              <div style="position:absolute;top:10px;left:10px;background:#DC2626;color:#fff;font-size:13px;font-weight:800;padding:4px 12px;border-radius:var(--r)">3.er Puesto NACIONAL</div>
               <div style="position:absolute;top:10px;right:10px;background:rgba(0,0,0,.55);backdrop-filter:blur(6px);color:#fff;font-size:11px;font-weight:700;padding:4px 10px;border-radius:10px">Concurso Nacional El Perú Lee</div>
               <div style="position:absolute;bottom:0;left:0;right:0;padding:16px 18px;background:linear-gradient(to top,rgba(5,14,29,.96) 55%,transparent)">
                 <div style="font-size:19px;font-weight:800;color:#fff">Categoría B</div>
@@ -2521,7 +2525,7 @@ canvas { cursor: crosshair; }
             <!-- 2: El Perú Lee — Cartelera Lectora -->
             <div class="swiper-slide" style="position:relative;background:#000">
               <img src="img/image57.jpg" style="width:100%;height:100%;object-fit:cover;object-position:top">
-              <div style="position:absolute;top:10px;left:10px;background:#1E4D9B;color:#fff;font-size:13px;font-weight:800;padding:4px 12px;border-radius:16px">1.er Lugar Macrorregional</div>
+              <div style="position:absolute;top:10px;left:10px;background:#1E4D9B;color:#fff;font-size:13px;font-weight:800;padding:4px 12px;border-radius:var(--r)">1.er Lugar Macrorregional</div>
               <div style="position:absolute;top:10px;right:10px;background:rgba(0,0,0,.55);backdrop-filter:blur(6px);color:#fff;font-size:11px;font-weight:700;padding:4px 10px;border-radius:10px">Concurso Nacional El Perú Lee</div>
               <div style="position:absolute;bottom:0;left:0;right:0;padding:16px 18px;background:linear-gradient(to top,rgba(5,14,29,.96) 55%,transparent)">
                 <div style="font-size:19px;font-weight:800;color:#fff">Mi Cartelera Lectora — Cat. C</div>
@@ -2532,7 +2536,7 @@ canvas { cursor: crosshair; }
             <!-- 3: El Perú Lee — Bitácora de Lectura -->
             <div class="swiper-slide" style="position:relative;background:#000">
               <img src="img/image58.jpg" style="width:100%;height:100%;object-fit:cover;object-position:top">
-              <div style="position:absolute;top:10px;left:10px;background:#0F7A5E;color:#fff;font-size:13px;font-weight:800;padding:4px 12px;border-radius:16px">1.er Lugar Macrorregional</div>
+              <div style="position:absolute;top:10px;left:10px;background:#0F7A5E;color:#fff;font-size:13px;font-weight:800;padding:4px 12px;border-radius:var(--r)">1.er Lugar Macrorregional</div>
               <div style="position:absolute;top:10px;right:10px;background:rgba(0,0,0,.55);backdrop-filter:blur(6px);color:#fff;font-size:11px;font-weight:700;padding:4px 10px;border-radius:10px">Concurso Nacional El Perú Lee</div>
               <div style="position:absolute;bottom:0;left:0;right:0;padding:16px 18px;background:linear-gradient(to top,rgba(5,14,29,.96) 55%,transparent)">
                 <div style="font-size:19px;font-weight:800;color:#fff">Mi Bitácora de Lectura — Cat. B</div>
@@ -2543,7 +2547,7 @@ canvas { cursor: crosshair; }
             <!-- 4: JFEN — Danza Cat. F -->
             <div class="swiper-slide" style="position:relative;background:#000">
               <img src="img/image60.jpg" style="width:100%;height:100%;object-fit:cover;object-position:top">
-              <div style="position:absolute;top:10px;left:10px;background:linear-gradient(90deg,#D4A017,#B8820F);color:#fff;font-size:13px;font-weight:800;padding:4px 12px;border-radius:16px">1.er Puesto Nacional</div>
+              <div style="position:absolute;top:10px;left:10px;background:linear-gradient(90deg,#D4A017,#B8820F);color:#fff;font-size:13px;font-weight:800;padding:4px 12px;border-radius:var(--r)">1.er Puesto Nacional</div>
               <div style="position:absolute;top:10px;right:10px;background:rgba(0,0,0,.55);backdrop-filter:blur(6px);color:#fff;font-size:11px;font-weight:700;padding:4px 10px;border-radius:10px">JFEN 2025 · Artes Escénicas</div>
               <div style="position:absolute;bottom:0;left:0;right:0;padding:16px 18px;background:linear-gradient(to top,rgba(5,14,29,.96) 55%,transparent)">
                 <div style="font-size:12px;font-weight:700;color:rgba(212,160,23,.9);letter-spacing:2px;margin-bottom:3px">CATEGORÍA F · DANZA</div>
@@ -2554,7 +2558,7 @@ canvas { cursor: crosshair; }
             <!-- 5: JFEN — Teatro Cat. E -->
             <div class="swiper-slide" style="position:relative;background:#000">
               <img src="img/image63.jpg" style="width:100%;height:100%;object-fit:cover;object-position:top">
-              <div style="position:absolute;top:10px;left:10px;background:linear-gradient(90deg,#D4A017,#B8820F);color:#fff;font-size:13px;font-weight:800;padding:4px 12px;border-radius:16px">1.er Puesto Nacional</div>
+              <div style="position:absolute;top:10px;left:10px;background:linear-gradient(90deg,#D4A017,#B8820F);color:#fff;font-size:13px;font-weight:800;padding:4px 12px;border-radius:var(--r)">1.er Puesto Nacional</div>
               <div style="position:absolute;top:10px;right:10px;background:rgba(0,0,0,.55);backdrop-filter:blur(6px);color:#fff;font-size:11px;font-weight:700;padding:4px 10px;border-radius:10px">JFEN 2025 · Artes Escénicas</div>
               <div style="position:absolute;bottom:0;left:0;right:0;padding:16px 18px;background:linear-gradient(to top,rgba(5,14,29,.96) 55%,transparent)">
                 <div style="font-size:12px;font-weight:700;color:rgba(212,160,23,.9);letter-spacing:2px;margin-bottom:3px">CATEGORÍA E · TEATRO</div>
@@ -2645,7 +2649,7 @@ canvas { cursor: crosshair; }
 
       <!-- Carrusel grande -->
       <div style="flex:1;min-height:0;position:relative">
-        <div class="swiper" data-delay="4000" style="height:100%;border-radius:12px;overflow:hidden;box-shadow:var(--sm)">
+        <div class="swiper" data-delay="4000" style="height:100%;border-radius:var(--r);overflow:hidden;box-shadow:var(--sm)">
           <div class="swiper-wrapper">
             <div class="swiper-slide" style="position:relative"><img src="/presentaci-n/img-ingenieritos-eduardo-de-habich/689892228_122239055294115772_4874864102171687469_n.jpg" style="width:100%;height:100%;object-fit:cover;object-position:top"><div style="position:absolute;bottom:0;left:0;right:0;padding:14px 16px;background:linear-gradient(to top,rgba(5,14,29,.92),transparent)"><div style="font-size:15px;font-weight:800;color:#F5D84A">Honor de Medallas · I Bimestre 2026</div><div style="font-size:12px;color:rgba(255,255,255,.75)">IES Eduardo de Habich</div></div></div>
             <div class="swiper-slide" style="position:relative"><img src="/presentaci-n/img-ingenieritos-eduardo-de-habich/688446069_122239055300115772_4361297096881374868_n.jpg" style="width:100%;height:100%;object-fit:cover;object-position:top"><div style="position:absolute;bottom:0;left:0;right:0;padding:14px 16px;background:linear-gradient(to top,rgba(5,14,29,.92),transparent)"><div style="font-size:15px;font-weight:800;color:#F5D84A">Honor de Medallas · I Bimestre 2026</div><div style="font-size:12px;color:rgba(255,255,255,.75)">IES Eduardo de Habich</div></div></div>
@@ -2697,11 +2701,11 @@ canvas { cursor: crosshair; }
     <div class="kpi-row" style="flex-shrink:0">
       <div class="kpi">
         <div class="kpi-top" style="background:linear-gradient(90deg,#0B1D3A,#1E4D9B)"></div>
-        <div class="kpi-bd"><div class="kpi-v" style="color:#0B1D3A;font-size:15px">S/ 30,662,492</div><div class="kpi-l">Presupuesto Asignado · 2022–2025</div></div>
+        <div class="kpi-bd"><div class="kpi-v" style="color:#0B1D3A;font-size:22px">S/ 30,662,492</div><div class="kpi-l">Presupuesto Asignado · 2022–2025</div></div>
       </div>
       <div class="kpi">
         <div class="kpi-top" style="background:linear-gradient(90deg,#0F7A5E,#1A9E7A)"></div>
-        <div class="kpi-bd"><div class="kpi-v" style="color:#0F7A5E;font-size:15px">S/ 32,131,312</div><div class="kpi-l">Total Ejecutado · 2022–2025</div></div>
+        <div class="kpi-bd"><div class="kpi-v" style="color:#0F7A5E;font-size:22px">S/ 32,131,312</div><div class="kpi-l">Total Ejecutado · 2022–2025</div></div>
       </div>
       <div class="kpi">
         <div class="kpi-top" style="background:linear-gradient(90deg,#C2410C,#F97316)"></div>
@@ -3245,7 +3249,7 @@ canvas { cursor: crosshair; }
       <div class="kpi">
         <div class="kpi-top" style="background:linear-gradient(90deg,var(--navy),var(--blue))"></div>
         <div class="kpi-bd">
-          <div class="kpi-v" style="color:var(--navy);font-size:17px;line-height:1.2">S/ 1&apos;000,659</div>
+          <div class="kpi-v" style="color:var(--navy);font-size:22px;line-height:1.2">S/ 1&apos;000,659</div>
           <div class="kpi-l">Total invertido 2022–2025</div>
         </div>
       </div>
@@ -3259,7 +3263,7 @@ canvas { cursor: crosshair; }
       <div class="kpi">
         <div class="kpi-top" style="background:linear-gradient(90deg,#D4A017,#EAC020)"></div>
         <div class="kpi-bd">
-          <div class="kpi-v" style="color:#7A5012;font-size:17px;line-height:1.2">S/ 431,076</div>
+          <div class="kpi-v" style="color:#7A5012;font-size:22px;line-height:1.2">S/ 431,076</div>
           <div class="kpi-l">Pico 2024 — mayor inversión</div>
         </div>
       </div>
@@ -3288,7 +3292,7 @@ canvas { cursor: crosshair; }
         <div style="font-size:12px;font-weight:700;letter-spacing:2px;color:var(--gm);flex-shrink:0">ÓRDENES DE COMPRA DESTACADAS</div>
 
         <!-- OC 0000151 — Camioneta -->
-        <div style="flex:1;background:#fff;border:1px solid var(--gbd);border-radius:12px;padding:14px 16px;box-shadow:var(--sh);display:flex;flex-direction:column;gap:6px;border-left:4px solid var(--navy)">
+        <div style="flex:1;background:#fff;border:1px solid var(--gbd);border-radius:var(--r);padding:14px 16px;box-shadow:var(--sh);display:flex;flex-direction:column;gap:6px;border-left:4px solid var(--navy)">
           <div style="display:flex;justify-content:space-between;align-items:center">
             <span style="background:#EEF2FF;color:var(--navy);font-size:12px;font-weight:700;padding:3px 10px;border-radius:20px">OC N° 0000151 · 29/11/2022</span>
             <span style="font-size:18px;font-weight:900;color:var(--navy)">S/ 180,990</span>
@@ -3298,7 +3302,7 @@ canvas { cursor: crosshair; }
         </div>
 
         <!-- OC 0000185 — TVs -->
-        <div style="flex:1;background:#fff;border:1px solid var(--gbd);border-radius:12px;padding:14px 16px;box-shadow:var(--sh);display:flex;flex-direction:column;gap:6px;border-left:4px solid #0A5030">
+        <div style="flex:1;background:#fff;border:1px solid var(--gbd);border-radius:var(--r);padding:14px 16px;box-shadow:var(--sh);display:flex;flex-direction:column;gap:6px;border-left:4px solid #0A5030">
           <div style="display:flex;justify-content:space-between;align-items:center">
             <span style="background:#F0FBF6;color:#0A5030;font-size:12px;font-weight:700;padding:3px 10px;border-radius:20px">OC N° 0000185 · 10/12/2024</span>
             <span style="font-size:18px;font-weight:900;color:#0A5030">S/ 77,000</span>
@@ -3308,7 +3312,7 @@ canvas { cursor: crosshair; }
         </div>
 
         <!-- OC 0000186 — Pantalla LED -->
-        <div style="flex:1;background:#fff;border:1px solid var(--gbd);border-radius:12px;padding:14px 16px;box-shadow:var(--sh);display:flex;flex-direction:column;gap:6px;border-left:4px solid #D4A017">
+        <div style="flex:1;background:#fff;border:1px solid var(--gbd);border-radius:var(--r);padding:14px 16px;box-shadow:var(--sh);display:flex;flex-direction:column;gap:6px;border-left:4px solid #D4A017">
           <div style="display:flex;justify-content:space-between;align-items:center">
             <span style="background:#FFFBEB;color:#7A5012;font-size:12px;font-weight:700;padding:3px 10px;border-radius:20px">OC N° 0000186 · 10/12/2024</span>
             <span style="font-size:18px;font-weight:900;color:#7A5012">S/ 59,500</span>
@@ -3435,7 +3439,7 @@ canvas { cursor: crosshair; }
       </div>
 
       <!-- Carrusel de Compras UGEL (Derecha - 70%) -->
-      <div style="flex:1;min-height:0;display:flex;position:relative;border-radius:12px;overflow:hidden;background:#0B1D3A;box-shadow:0 6px 24px rgba(13,27,75,.4)">
+      <div style="flex:1;min-height:0;display:flex;position:relative;border-radius:var(--r);overflow:hidden;background:#0B1D3A;box-shadow:var(--sm)">
         <div id="compras-carousel" style="width:100%;height:100%;position:relative;min-height:300px">
           <div style="position:absolute;top:0;left:0;right:0;bottom:0;opacity:1;z-index:2;transition:opacity 0.8s ease" class="compras-img"><img src="/presentaci-n/compras-ugel/carro.jpg" alt="Compras UGEL" style="width:100%;height:100%;object-fit:cover"></div>
           <div style="position:absolute;top:0;left:0;right:0;bottom:0;opacity:0;z-index:1;transition:opacity 0.8s ease" class="compras-img"><img src="/presentaci-n/compras-ugel/tv.jpg" alt="Compras UGEL" style="width:100%;height:100%;object-fit:cover"></div>
@@ -3871,7 +3875,7 @@ function initEnlaCharts() {
           display: ctx => ctx.dataset.data[ctx.dataIndex] >= 5,
           color: ctx => {
             if (ctx.datasetIndex === 3) return '#fff';
-            if (ctx.dataIndex === 3 && ctx.datasetIndex === 2) return '#1E3A8A';
+            if (ctx.dataIndex === 3 && ctx.datasetIndex === 2) return 'var(--blue)';
             return '#1E293B';
           },
           font: ctx => {
@@ -4162,7 +4166,7 @@ function initPrimChart() {
           datalabels: {
             display: true,
             formatter: v => v.toFixed(2) + '%',
-            color: '#1E3A8A',
+            color: 'var(--blue)',
             font: { size: 11, weight: '800' },
             anchor: 'center', align: 'center'
           }
@@ -4171,7 +4175,7 @@ function initPrimChart() {
           label: 'AD — Logro Destacado',
           data: DATA.AD,
           backgroundColor: '#1E4D9B',
-          hoverBackgroundColor: '#1E3A8A',
+          hoverBackgroundColor: 'var(--blue)',
           datalabels: {
             display: true,
             formatter: v => v.toFixed(2) + '%',

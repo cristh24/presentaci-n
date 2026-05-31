@@ -792,7 +792,7 @@ canvas { cursor: crosshair; }
     </div>
     <div class="idx-axis">
       <div class="idx-axis-head"><div class="idx-axis-num">Eje 04</div><div class="idx-axis-icon"><svg viewBox="0 0 24 24"><path d="M4 19V5"/><path d="M4 19h16"/><path d="M8 15l3-4 3 2 4-7"/></svg></div><h3 class="idx-axis-title">Logros de aprendizaje</h3><div class="idx-axis-desc">Resultados y reconocimientos.</div></div>
-      <ul class="idx-axis-list"><li>ENLA 2025</li><li>Concursos educativos nacionales</li><li>Proyectos de innovaci&oacute;n pedag&oacute;gica</li></ul>
+      <ul class="idx-axis-list"><li>ENLA 2025</li><li>Concursos educativos nacionales</li></ul>
     </div>
     <div class="idx-axis">
       <div class="idx-axis-head"><div class="idx-axis-num">Eje 05</div><div class="idx-axis-icon"><svg viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg></div><h3 class="idx-axis-title">Arte, cultura y cierre</h3><div class="idx-axis-desc">Formaci&oacute;n integral y cierre institucional.</div></div>
@@ -1139,76 +1139,91 @@ canvas { cursor: crosshair; }
   </div>
   <div class="s-bd" style="display:flex;flex-direction:column;gap:8px">
 
-    <!-- ── Fila superior: KPI + desglose por nivel ── -->
-    <div style="display:flex;gap:8px;flex-shrink:0;align-items:stretch;min-height:92px">
+    <!-- ── Fila superior: KPI + Inicial + Primaria ── -->
+    <div style="display:flex;gap:8px;flex-shrink:0;align-items:stretch;min-height:100px">
 
-      <!-- KPI total resaltado -->
-      <div style="background:linear-gradient(135deg,#0D1B4B 0%,#1E3A8A 100%);border-radius:var(--r);padding:10px 22px;display:flex;flex-direction:column;align-items:center;justify-content:center;min-width:160px;box-shadow:0 6px 24px rgba(13,27,75,.4)">
-        <div style="font-size:10px;font-weight:700;color:rgba(255,255,255,.55);letter-spacing:2.5px;margin-bottom:2px">TOTAL SANEADOS</div>
-        <div style="font-size:66px;font-weight:800;color:#FFD700;line-height:1;text-shadow:0 2px 16px rgba(255,215,0,.4)">148</div>
-        
+      <!-- KPI total -->
+      <div style="background:linear-gradient(135deg,#0D1B4B 0%,#1E3A8A 100%);border-radius:var(--r);padding:10px 20px;display:flex;flex-direction:column;align-items:center;justify-content:center;min-width:180px;box-shadow:0 6px 24px rgba(13,27,75,.4)">
+        <div style="font-size:12px;font-weight:700;color:rgba(255,255,255,.55);letter-spacing:2px;margin-bottom:0">TOTAL SANEADOS</div>
+        <div style="font-size:62px;font-weight:800;color:#FFD700;line-height:1;text-shadow:0 2px 16px rgba(255,215,0,.4)">148</div>
+        <div style="font-size:12px;color:rgba(255,255,255,.55);margin-top:2px">de 364 IEs · 40.7%</div>
       </div>
 
-      <!-- Desglose por nivel: 6 tarjetas compactas -->
-      <div style="flex:1;display:grid;grid-template-columns:repeat(6,1fr);gap:6px">
-
+      <div style="flex:1;display:grid;grid-template-columns:repeat(2,1fr);gap:6px">
         <!-- Inicial -->
-        <div style="background:#fff;border-radius:var(--r);box-shadow:var(--sh);border:1px solid var(--gbd);overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:8px 4px;position:relative">
+        <div style="background:#fff;border-radius:var(--r);box-shadow:var(--sh);border:1px solid var(--gbd);overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:8px 10px;position:relative;gap:3px">
           <div style="position:absolute;top:0;left:0;right:0;height:4px;background:var(--sky)"></div>
-          <div style="font-size:38px;font-weight:800;color:var(--sky);line-height:1">60</div>
-          <div style="font-size:10px;font-weight:600;color:var(--gm);text-align:center;margin-top:5px">Inicial</div>
+          <div style="font-size:44px;font-weight:800;color:var(--sky);line-height:1">60</div>
+          <div style="font-size:14px;font-weight:700;color:var(--navy)">Inicial</div>
+          <div style="font-size:11px;color:var(--gm);text-align:center">IEs inscritas a nombre<br>de MINEDU</div>
         </div>
-
         <!-- Primaria -->
-        <div style="background:#fff;border-radius:var(--r);box-shadow:var(--sh);border:1px solid var(--gbd);overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:8px 4px;position:relative">
+        <div style="background:#fff;border-radius:var(--r);box-shadow:var(--sh);border:1px solid var(--gbd);overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:8px 10px;position:relative;gap:3px">
           <div style="position:absolute;top:0;left:0;right:0;height:4px;background:var(--blue)"></div>
-          <div style="font-size:38px;font-weight:800;color:var(--blue);line-height:1">37</div>
-          <div style="font-size:10px;font-weight:600;color:var(--gm);text-align:center;margin-top:5px">Primaria</div>
+          <div style="font-size:44px;font-weight:800;color:var(--blue);line-height:1">37</div>
+          <div style="font-size:14px;font-weight:700;color:var(--navy)">Primaria</div>
+          <div style="font-size:11px;color:var(--gm);text-align:center">IEs inscritas a nombre<br>de MINEDU</div>
         </div>
-
-        <!-- Secundaria -->
-        <div style="background:#fff;border-radius:var(--r);box-shadow:var(--sh);border:1px solid var(--gbd);overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:8px 4px;position:relative">
-          <div style="position:absolute;top:0;left:0;right:0;height:4px;background:var(--navy)"></div>
-          <div style="font-size:38px;font-weight:800;color:var(--navy);line-height:1">14</div>
-          <div style="font-size:10px;font-weight:600;color:var(--gm);text-align:center;margin-top:5px">Secundaria</div>
-        </div>
-
-        <!-- CEBE -->
-        <div style="background:#fff;border-radius:var(--r);box-shadow:var(--sh);border:1px solid var(--gbd);overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:8px 4px;position:relative">
-          <div style="position:absolute;top:0;left:0;right:0;height:4px;background:var(--teal)"></div>
-          <div style="font-size:38px;font-weight:800;color:var(--teal);line-height:1">1</div>
-          <div style="font-size:9px;font-weight:600;color:var(--gm);text-align:center;margin-top:5px">CEBE Ini–Prim</div>
-        </div>
-
-        <!-- EBA -->
-        <div style="background:#fff;border-radius:var(--r);box-shadow:var(--sh);border:1px solid var(--gbd);overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:8px 4px;position:relative">
-          <div style="position:absolute;top:0;left:0;right:0;height:4px;background:#7C3AED"></div>
-          <div style="font-size:38px;font-weight:800;color:#7C3AED;line-height:1">1</div>
-          <div style="font-size:10px;font-weight:600;color:var(--gm);text-align:center;margin-top:5px">EBA</div>
-        </div>
-
-        <!-- Predios SFL -->
-        <div style="background:#fff;border-radius:var(--r);box-shadow:var(--sh);border:1px solid var(--gbd);overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:8px 4px;position:relative">
-          <div style="position:absolute;top:0;left:0;right:0;height:4px;background:#D97706"></div>
-          <div style="font-size:38px;font-weight:800;color:#D97706;line-height:1">35</div>
-          <div style="font-size:9px;font-weight:600;color:var(--gm);text-align:center;margin-top:5px;line-height:1.3">Predios<br>S.F.L.</div>
-        </div>
-
       </div>
     </div>
 
-    <!-- ── Carrusel (centro) ── -->
-    <div style="flex:1;min-height:0;position:relative;border-radius:var(--r);overflow:hidden">
-      <div id="sanc" style="position:relative;width:100%;height:100%;background:#EFF6FF">
+    <!-- ── Carrusel 70% + panel derecho 30% ── -->
+    <div style="flex:1;min-height:0;display:flex;gap:8px">
 
-        <!-- Slide placeholder — reemplazar con .sanc-s reales cuando haya fotos -->
-        <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;color:#93C5FD">
-          <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-          <div style="font-size:15px;font-weight:700;color:#60A5FA">Carrusel de fotografías</div>
-          <div style="font-size:12px;color:#93C5FD">Predios con saneamiento físico legal · UGEL San Román</div>
+      <!-- Carrusel (70%) -->
+      <div style="flex:0 0 70%;position:relative;border-radius:var(--r);overflow:hidden;background:#0B1D3A;box-shadow:var(--sh)">
+        <div id="sanc" style="position:relative;width:100%;height:100%">
+          <div class="sanc-s" style="position:absolute;inset:0;opacity:1;z-index:2;transition:opacity .8s ease"><img src="/presentaci-n/saneamiento/WhatsApp%20Image%202026-05-30%20at%206.43.19%20AM.jpeg" style="width:100%;height:100%;object-fit:contain" alt="Saneamiento físico legal"></div>
+          <div class="sanc-s" style="position:absolute;inset:0;opacity:0;z-index:1;transition:opacity .8s ease"><img src="/presentaci-n/saneamiento/WhatsApp%20Image%202026-05-30%20at%206.45.35%20AM.jpeg" style="width:100%;height:100%;object-fit:contain" alt="Saneamiento físico legal"></div>
+          <div class="sanc-s" style="position:absolute;inset:0;opacity:0;z-index:1;transition:opacity .8s ease"><img src="/presentaci-n/saneamiento/WhatsApp%20Image%202026-05-30%20at%206.47.41%20AM.jpeg" style="width:100%;height:100%;object-fit:contain" alt="Saneamiento físico legal"></div>
+          <div class="sanc-s" style="position:absolute;inset:0;opacity:0;z-index:1;transition:opacity .8s ease"><img src="/presentaci-n/saneamiento/WhatsApp%20Image%202026-05-30%20at%206.52.18%20AM.jpeg" style="width:100%;height:100%;object-fit:contain" alt="Saneamiento físico legal"></div>
+          <div class="sanc-s" style="position:absolute;inset:0;opacity:0;z-index:1;transition:opacity .8s ease"><img src="/presentaci-n/saneamiento/WhatsApp%20Image%202026-05-30%20at%206.53.51%20AM.jpeg" style="width:100%;height:100%;object-fit:contain" alt="Saneamiento físico legal"></div>
+          <div class="sanc-s" style="position:absolute;inset:0;opacity:0;z-index:1;transition:opacity .8s ease"><img src="/presentaci-n/saneamiento/WhatsApp%20Image%202026-05-30%20at%206.54.37%20AM.jpeg" style="width:100%;height:100%;object-fit:contain" alt="Saneamiento físico legal"></div>
+          <div class="sanc-s" style="position:absolute;inset:0;opacity:0;z-index:1;transition:opacity .8s ease"><img src="/presentaci-n/saneamiento/WhatsApp%20Image%202026-05-30%20at%206.55.38%20AM.jpeg" style="width:100%;height:100%;object-fit:contain" alt="Saneamiento físico legal"></div>
+          <div class="sanc-s" style="position:absolute;inset:0;opacity:0;z-index:1;transition:opacity .8s ease"><img src="/presentaci-n/saneamiento/WhatsApp%20Image%202026-05-30%20at%206.56.05%20AM.jpeg" style="width:100%;height:100%;object-fit:contain" alt="Saneamiento físico legal"></div>
+          <button id="sanc-p" style="position:absolute;left:8px;top:50%;transform:translateY(-50%);background:rgba(0,0,0,.5);border:1.5px solid rgba(255,255,255,.25);color:#fff;width:36px;height:36px;border-radius:50%;font-size:14px;cursor:pointer;z-index:20;display:flex;align-items:center;justify-content:center">&#9664;</button>
+          <button id="sanc-n" style="position:absolute;right:8px;top:50%;transform:translateY(-50%);background:rgba(0,0,0,.5);border:1.5px solid rgba(255,255,255,.25);color:#fff;width:36px;height:36px;border-radius:50%;font-size:14px;cursor:pointer;z-index:20;display:flex;align-items:center;justify-content:center">&#9654;</button>
+          <div id="sanc-ct" style="position:absolute;top:8px;right:10px;background:rgba(0,0,0,.45);color:rgba(255,255,255,.85);font-size:10px;font-weight:600;padding:3px 8px;border-radius:8px;z-index:20">1 / 8</div>
+        </div>
+      </div>
+
+      <!-- Panel derecho 30%: Secundaria, CEBE, EBA, Predios -->
+      <div style="flex:1;display:flex;flex-direction:column;gap:6px">
+
+        <!-- Secundaria -->
+        <div style="flex:1;background:#fff;border-radius:var(--r);box-shadow:var(--sh);border:1px solid var(--gbd);overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:8px 10px;gap:3px;position:relative;text-align:center">
+          <div style="position:absolute;top:0;left:0;right:0;height:5px;background:var(--navy)"></div>
+          <div style="font-size:48px;font-weight:800;color:var(--navy);line-height:1">14</div>
+          <div style="font-size:15px;font-weight:700;color:var(--navy)">Secundaria</div>
+          <div style="font-size:11px;color:var(--gm);line-height:1.4">IEs inscritas registralmente<br>a nombre de MINEDU</div>
+        </div>
+
+        <!-- CEBE -->
+        <div style="flex:1;background:#fff;border-radius:var(--r);box-shadow:var(--sh);border:1px solid var(--gbd);overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:8px 10px;gap:3px;position:relative;text-align:center">
+          <div style="position:absolute;top:0;left:0;right:0;height:5px;background:var(--teal)"></div>
+          <div style="font-size:48px;font-weight:800;color:var(--teal);line-height:1">1</div>
+          <div style="font-size:15px;font-weight:700;color:var(--navy)">CEBE</div>
+          <div style="font-size:11px;color:var(--gm);line-height:1.4">Modalidad Inicial–Primaria<br>Educación Básica Especial</div>
+        </div>
+
+        <!-- EBA -->
+        <div style="flex:1;background:#fff;border-radius:var(--r);box-shadow:var(--sh);border:1px solid var(--gbd);overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:8px 10px;gap:3px;position:relative;text-align:center">
+          <div style="position:absolute;top:0;left:0;right:0;height:5px;background:#7C3AED"></div>
+          <div style="font-size:48px;font-weight:800;color:#7C3AED;line-height:1">1</div>
+          <div style="font-size:15px;font-weight:700;color:var(--navy)">EBA</div>
+          <div style="font-size:11px;color:var(--gm);line-height:1.4">Educación Básica Alternativa<br>predio inscrito MINEDU</div>
+        </div>
+
+        <!-- Predios SFL -->
+        <div style="flex:1;background:linear-gradient(135deg,#FEF3C7,#FFFBEB);border-radius:var(--r);box-shadow:var(--sh);border:1px solid #FDE68A;overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:8px 10px;gap:3px;position:relative;text-align:center">
+          <div style="position:absolute;top:0;left:0;right:0;height:5px;background:#D97706"></div>
+          <div style="font-size:48px;font-weight:800;color:#D97706;line-height:1">35</div>
+          <div style="font-size:15px;font-weight:700;color:#92400E">Predios S.F.L.</div>
+          <div style="font-size:11px;color:#78350F;line-height:1.4">Predios en proceso de<br>saneamiento físico legal</div>
         </div>
 
       </div>
+
     </div>
 
   </div>
@@ -1508,9 +1523,9 @@ canvas { cursor: crosshair; }
   <div class="secdiv-content">
     <img class="secdiv-logo" src="/presentaci-n/img-logos/LOGO%20AZUL.png" alt="UGEL San Román">
     <p class="secdiv-tag">Educación de Alta Competencia</p>
-    <h2 class="secdiv-title" style="font-size:42px" data-typed="COLEGIO<br>INGENIERITOS &amp; CEPRE UNI">COLEGIO<br>INGENIERITOS & CEPRE UNI</h2>
+    <h2 class="secdiv-title" style="font-size:46px" data-typed="COLEGIO INGENIERITOS<br>&amp; CEPRE UNI">COLEGIO INGENIERITOS<br>& CEPRE UNI</h2>
     <div class="secdiv-line" style="background:linear-gradient(90deg,#60A5FA,#3B82F6)"></div>
-    <p class="secdiv-sub">IES Eduardo de Habich · Colegio de alta competencia · Sede Juliaca<br>Convenio CEPRE UNI · Ingresantes a la UNI · 2022–2026</p>
+    <p class="secdiv-sub">Colegio de Alta Competencia · Sede Juliaca · UGEL San Román<br>Convenio CEPRE UNI · Ingresantes a la UNI · 2022–2026</p>
   </div>
 </div>
 </section>
@@ -1633,8 +1648,8 @@ canvas { cursor: crosshair; }
 <div class="slide slide-content" style="background:linear-gradient(160deg,#F0F4FA 0%,#E8EFF8 60%,#F5F8FC 100%)">
   <div class="s-hd">
     <div class="s-hd-t">
-      <h2 style="color:#0B1D3A">IES Eduardo de Habich</h2>
-      <p style="color:#1E3A8A">Concursos Nacionales e Internacionales · Colegio Ingenieritos · UGEL San Román</p>
+      <h2 style="color:#0B1D3A">Colegio de Alta Competencia Eduardo de Habich</h2>
+      <p style="color:#1E3A8A">I Bimestre · Concursos Nacionales e Internacionales 2026 · UGEL San Román</p>
     </div>
     <img class="s-hd-logo" src="/presentaci-n/img-logos/LOGO%20AZUL.png" alt="Logo UGEL San Román">
   </div>
@@ -1716,7 +1731,7 @@ canvas { cursor: crosshair; }
 
     </div>
   </div>
-  <div class="s-ft"><span class="s-ft-t">I Bimestre 2026 · IES Eduardo de Habich · Colegio Ingenieritos · UGEL San Román</span><div class="s-ft-n">—</div></div>
+  <div class="s-ft"><span class="s-ft-t">I Bimestre 2026 · Concursos Nacionales e Internacionales · UGEL San Román</span><div class="s-ft-n">—</div></div>
 </div>
 </section>
 
@@ -1777,20 +1792,22 @@ canvas { cursor: crosshair; }
     </div>
     <img class="s-hd-logo" src="/presentaci-n/img-logos/LOGO%20AZUL.png" alt="">
   </div>
-  <div class="s-bd">
-    <div class="kpi-row">
+  <div class="s-bd" style="justify-content:center;gap:14px;padding:14px 24px">
+
+    <div class="kpi-row" style="flex-shrink:0">
       <div class="kpi-dk" style="flex:0 0 230px">
         <div style="position:absolute;top:0;left:0;right:0;height:4px;background:var(--gold)"></div>
         <div class="kpi-l">TOTAL TRANSFERIDO 2022–2025</div>
-        <div style="font-size:38px;font-weight:800;color:#fff;line-height:1.1;margin-top:4px">S/ 1,406,934</div>
+        <div style="font-size:32px;font-weight:800;color:#fff;line-height:1.1;margin-top:4px;white-space:nowrap">S/ 1,406,934</div>
         <div style="font-size:12px;color:var(--sky);margin-top:6px;font-style:italic">Financiamiento CdD MINEDU</div>
       </div>
-      <div class="kpi"><div class="kpi-top" style="background:var(--navy)"></div><div class="kpi-bd"><div class="kpi-v" style="color:var(--navy);font-size:28px">S/ 260,689</div><div class="kpi-l">Año 2022 · 4 tramos</div></div></div>
-      <div class="kpi"><div class="kpi-top" style="background:var(--blue)"></div><div class="kpi-bd"><div class="kpi-v" style="color:var(--blue);font-size:28px">S/ 373,902</div><div class="kpi-l">Año 2023 · 3 tramos</div></div></div>
-      <div class="kpi"><div class="kpi-top" style="background:var(--teal)"></div><div class="kpi-bd"><div class="kpi-v" style="color:var(--teal);font-size:28px">S/ 389,996</div><div class="kpi-l">Año 2024 · 2 tramos</div></div></div>
-      <div class="kpi"><div class="kpi-top" style="background:var(--gold)"></div><div class="kpi-bd"><div class="kpi-v" style="color:var(--gold);font-size:28px">S/ 382,347</div><div class="kpi-l">Año 2025 · 2 tramos</div></div></div>
+      <div class="kpi" style="display:flex;flex-direction:column"><div class="kpi-top" style="background:var(--navy)"></div><div class="kpi-bd" style="flex:1;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center"><div class="kpi-v" style="color:var(--navy);font-size:28px">S/ 260,689</div><div class="kpi-l">Año 2022 · 4 tramos</div></div></div>
+      <div class="kpi" style="display:flex;flex-direction:column"><div class="kpi-top" style="background:var(--blue)"></div><div class="kpi-bd" style="flex:1;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center"><div class="kpi-v" style="color:var(--blue);font-size:28px">S/ 373,902</div><div class="kpi-l">Año 2023 · 3 tramos</div></div></div>
+      <div class="kpi" style="display:flex;flex-direction:column"><div class="kpi-top" style="background:var(--teal)"></div><div class="kpi-bd" style="flex:1;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center"><div class="kpi-v" style="color:var(--teal);font-size:28px">S/ 389,996</div><div class="kpi-l">Año 2024 · 2 tramos</div></div></div>
+      <div class="kpi" style="display:flex;flex-direction:column"><div class="kpi-top" style="background:var(--gold)"></div><div class="kpi-bd" style="flex:1;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center"><div class="kpi-v" style="color:var(--gold);font-size:28px">S/ 382,347</div><div class="kpi-l">Año 2025 · 2 tramos</div></div></div>
     </div>
-    <div class="chart-row">
+
+    <div class="chart-row" style="flex:0 0 58%;min-height:0">
       <div class="bars-wrap" style="flex:1;min-width:0">
         <div class="bars-lbl">EVOLUCIÓN DE TRANSFERENCIAS POR AÑO (en soles)</div>
         <div style="flex:1;min-height:0;position:relative;padding-bottom:4px">
@@ -1804,17 +1821,18 @@ canvas { cursor: crosshair; }
           <div style="font-size:40px;font-weight:800;line-height:1">+46.7%</div>
           <div style="font-size:12px;color:rgba(255,255,255,.65);margin-top:4px">Incremento acumulado en transferencias recibidas</div>
         </div>
-        <div style="background:#fff;border-radius:var(--r);border:1px solid var(--gbd);box-shadow:var(--sh);padding:12px 14px">
+        <div style="background:#fff;border-radius:var(--r);border:1px solid var(--gbd);box-shadow:var(--sh);padding:12px 14px;text-align:center">
           <div style="font-size:11px;font-weight:700;color:var(--gm);letter-spacing:2px;margin-bottom:6px">PROMEDIO ANUAL</div>
-          <div style="font-size:32px;font-weight:800;color:var(--navy)">S/ 351,734</div>
+          <div style="font-size:26px;font-weight:800;color:var(--navy);white-space:nowrap">S/ 351,734</div>
           <div style="font-size:12px;color:var(--gm);margin-top:2px">por año (2022–2025)</div>
         </div>
-        <div style="background:var(--light);border-radius:var(--r);border:1px solid var(--gbd);padding:10px 14px">
+        <div style="background:var(--light);border-radius:var(--r);border:1px solid var(--gbd);padding:10px 14px;text-align:center">
           <div style="font-size:11px;font-weight:700;color:var(--navy);letter-spacing:1px;margin-bottom:3px">FIRMANTE DEL INFORME</div>
-          <div style="font-size:9.5px;color:var(--gd);line-height:1.4">CPC José I. Mamani Quispe<br><span style="color:var(--gm)">Jefe AGI — UGEL San Román</span></div>
+          <div style="font-size:11px;color:var(--gd);line-height:1.6">CPC José I. Mamani Quispe<br><span style="color:var(--gm)">Jefe AGI — UGEL San Román</span></div>
         </div>
       </div>
     </div>
+
   </div>
   <div class="s-ft"><span class="s-ft-t">Fuente: Informes CdD 2022–2025 · MINEDU · UGEL San Román</span><div class="s-ft-n">17</div></div>
 </div>
@@ -1922,9 +1940,9 @@ canvas { cursor: crosshair; }
   <div class="secdiv-content">
     <img class="secdiv-logo" src="/presentaci-n/img-logos/LOGO%20AZUL.png" alt="UGEL San Román">
     <p class="secdiv-tag">Gestión de Recursos Humanos</p>
-    <h2 class="secdiv-title" style="font-size:40px" data-typed="MAYOR CANTIDAD DE PEAS<br>&amp; RACIONALIZACIÓN">MAYOR CANTIDAD DE PEAS<br>& RACIONALIZACIÓN</h2>
+    <h2 class="secdiv-title" style="font-size:40px" data-typed="GESTIÓN DE PLAZAS<br>&amp; RACIONALIZACIÓN">GESTIÓN DE PLAZAS<br>& RACIONALIZACIÓN</h2>
     <div class="secdiv-line" style="background:linear-gradient(90deg,#12B870,#0F8A5A)"></div>
-    <p class="secdiv-sub">Mayor Cantidad de PEAS — Sede Administrativa · Comparativo 2022–2026<br>Responsable: Dr. Erick Calcina Canaza · Yefher AIRSHP · Julián</p>
+    <p class="secdiv-sub">Mayor Cantidad de PEAS — Sede Administrativa · Comparativo 2022–2026</p>
   </div>
 </div>
 </section>
@@ -1936,8 +1954,7 @@ canvas { cursor: crosshair; }
 <div class="slide slide-content">
   <div class="s-hd">
     <div class="s-hd-t">
-      <h2>Mayor Cantidad de PEAS — Racionalización Docente · UGEL San Román 2024–2026</h2>
-      <p>8 Resoluciones DREP Puno · R.VM. N° 071-2024-MINEDU · DS 277-2025-EF · Responsable: Dr. Erick Calcina Canaza · Yefher AIRSHP · Julián</p>
+      <h2>Gestión de Plazas — Racionalización Docente · UGEL San Román 2024–2026</h2>
     </div>
     <img class="s-hd-logo" src="/presentaci-n/img-logos/LOGO%20AZUL.png" alt="">
   </div>
@@ -2351,7 +2368,11 @@ canvas { cursor: crosshair; }
     <div style="display:flex;gap:10px;flex:0 0 auto">
       <div class="kpi"><div class="kpi-top" style="background:#1E4D9B"></div><div class="kpi-bd"><div class="kpi-v" style="color:#1E4D9B">36.7%</div><div class="kpi-l">Lectura Satisfactorio 2025</div></div></div>
       <div class="kpi"><div class="kpi-top" style="background:#0F7A5E"></div><div class="kpi-bd"><div class="kpi-v" style="color:#0F7A5E">42.2%</div><div class="kpi-l">Matemática Satisfactorio 2025</div></div></div>
-      <div class="kpi"><div class="kpi-top" style="background:#1E4D9B"></div><div class="kpi-bd"><div class="kpi-v" style="color:#1E4D9B;font-size:21px">+17.8 pp</div><div class="kpi-l">Mejora Lectura vs 2023</div></div></div>
+      <div class="kpi-dk" style="background:linear-gradient(135deg,#1E3A8A,#1E4D9B)">
+        <div class="kpi-l" style="color:rgba(255,255,255,.7)">MEJORA LECTURA</div>
+        <div class="kpi-v" style="font-size:26px">+17.8 pp</div>
+        <div style="font-size:12px;color:#93C5FD;margin-top:2px">2023 → 2025</div>
+      </div>
       <div class="kpi-dk" style="background:linear-gradient(135deg,#047857,#0F7A5E)">
         <div class="kpi-l" style="color:rgba(255,255,255,.7)">MEJORA MATEMÁTICA</div>
         <div class="kpi-v" style="font-size:26px">+32.6 pp</div>
@@ -2393,63 +2414,13 @@ canvas { cursor: crosshair; }
       <div style="display:flex;align-items:center;gap:5px"><div style="width:14px;height:10px;border-radius:2px;background:#CBD5E1"></div><span style="font-size:13px;color:#475569;font-weight:600">Previo al inicio</span></div>
       <div style="display:flex;align-items:center;gap:5px"><div style="width:14px;height:10px;border-radius:2px;background:#FCA5A5"></div><span style="font-size:13px;color:#475569;font-weight:600">En inicio</span></div>
       <div style="display:flex;align-items:center;gap:5px"><div style="width:14px;height:10px;border-radius:2px;background:#93C5FD"></div><span style="font-size:13px;color:#475569;font-weight:600">En proceso</span></div>
-      <div style="display:flex;align-items:center;gap:5px"><div style="width:14px;height:10px;border-radius:2px;background:#1E4D9B"></div><span style="font-size:13px;color:#475569;font-weight:600">Satisfactorio Lectura</span></div>
-      <div style="display:flex;align-items:center;gap:5px"><div style="width:14px;height:10px;border-radius:2px;background:#0F7A5E"></div><span style="font-size:13px;color:#475569;font-weight:600">Satisfactorio Matemática</span></div>
+      <div style="display:flex;align-items:center;gap:5px"><div style="width:14px;height:10px;border-radius:2px;background:#16A34A"></div><span style="font-size:13px;color:#475569;font-weight:600">Satisfactorio</span></div>
     </div>
   </div>
   <div class="s-ft"><span class="s-ft-t">Fuente: UMC MINEDU — Evaluación Nacional 4.° Primaria · UGEL San Román 2022–2025 · Puno 2.° Nacional Mat. · 6.° Nacional Lec.</span><div class="s-ft-n">—</div></div>
 </div>
 </section>
 
-<!-- ═══════════════════════════════════════════════
-     ENLA 2.° SECUNDARIA
-═══════════════════════════════════════════════ -->
-<section>
-<div class="slide slide-content" style="background:linear-gradient(150deg,#E8EFF8 0%,#F0F4FA 55%,#E4ECF5 100%)">
-  <div class="s-hd"><div class="s-hd-t"><h2>ENLA 2025 — 2.° Secundaria: Lectura y Matemática</h2><p>Región Puno · Comparativo 2023 vs 2025 · UMC MINEDU</p></div><img class="s-hd-logo" src="/presentaci-n/img-logos/LOGO%20AZUL.png" alt=""></div>
-  <div class="s-bd" style="padding:12px 22px;gap:12px">
-    <div style="display:flex;gap:14px;flex:1;min-height:0">
-
-      <!-- LECTURA 2° SEC -->
-      <div style="flex:1;background:#fff;border-radius:18px;border:1.5px solid #C3CFDF;box-shadow:0 6px 24px rgba(11,29,58,.1);padding:16px 18px;display:flex;flex-direction:column;gap:8px">
-        <div style="display:flex;align-items:center;gap:8px">
-          <div style="width:6px;height:28px;background:#1E4D9B;border-radius:3px;flex-shrink:0"></div>
-          <span style="font-size:13px;font-weight:700;letter-spacing:3px;color:#0B1D3A">LECTURA · 2.° SECUNDARIA</span>
-        </div>
-        <div style="display:flex;gap:12px;justify-content:center;padding:2px 0">
-          <div style="text-align:center"><div style="font-size:11px;color:#94A3B8;font-weight:700;letter-spacing:1px">MEDIDA 2023</div><div style="font-size:28px;font-weight:800;color:#94A3B8">580</div></div>
-          <div style="text-align:center"><div style="font-size:11px;color:#1E4D9B;font-weight:700;letter-spacing:1px">MEDIDA 2025</div><div style="font-size:28px;font-weight:800;color:#1E4D9B">583</div><div style="font-size:12px;color:#059669;font-weight:700">▲ +3</div></div>
-          <div style="text-align:center"><div style="font-size:11px;color:#94A3B8;font-weight:700;letter-spacing:1px">SATISF. 2025</div><div style="font-size:28px;font-weight:800;color:#1E4D9B">17.4%</div><div style="font-size:12px;color:#059669;font-weight:700">▲ +3.2 pp</div></div>
-        </div>
-        <div style="flex:1;min-height:0;position:relative"><canvas id="sec-lec-chart"></canvas></div>
-      </div>
-
-      <!-- MATEMÁTICA 2° SEC -->
-      <div style="flex:1;background:#fff;border-radius:18px;border:1.5px solid #99F6E4;box-shadow:0 6px 24px rgba(15,122,94,.1);padding:16px 18px;display:flex;flex-direction:column;gap:8px">
-        <div style="display:flex;align-items:center;gap:8px">
-          <div style="width:6px;height:28px;background:#0F7A5E;border-radius:3px;flex-shrink:0"></div>
-          <span style="font-size:13px;font-weight:700;letter-spacing:3px;color:#0F766E">MATEMÁTICA · 2.° SECUNDARIA</span>
-        </div>
-        <div style="display:flex;gap:12px;justify-content:center;padding:2px 0">
-          <div style="text-align:center"><div style="font-size:11px;color:#94A3B8;font-weight:700;letter-spacing:1px">MEDIDA 2023</div><div style="font-size:28px;font-weight:800;color:#94A3B8">569</div></div>
-          <div style="text-align:center"><div style="font-size:11px;color:#0F7A5E;font-weight:700;letter-spacing:1px">MEDIDA 2025</div><div style="font-size:28px;font-weight:800;color:#0F7A5E">577</div><div style="font-size:12px;color:#059669;font-weight:700">▲ +8</div></div>
-          <div style="text-align:center"><div style="font-size:11px;color:#94A3B8;font-weight:700;letter-spacing:1px">SATISF. 2025</div><div style="font-size:28px;font-weight:800;color:#0F7A5E">15.8%</div><div style="font-size:12px;color:#059669;font-weight:700">▲ +3.2 pp</div></div>
-        </div>
-        <div style="flex:1;min-height:0;position:relative"><canvas id="sec-mat-chart"></canvas></div>
-      </div>
-    </div>
-
-    <div style="display:flex;gap:20px;justify-content:center;align-items:center;flex:0 0 auto">
-      <div style="display:flex;align-items:center;gap:5px"><div style="width:14px;height:10px;border-radius:2px;background:#CBD5E1"></div><span style="font-size:13px;color:#475569;font-weight:600">Previo al inicio</span></div>
-      <div style="display:flex;align-items:center;gap:5px"><div style="width:14px;height:10px;border-radius:2px;background:#FCA5A5"></div><span style="font-size:13px;color:#475569;font-weight:600">En inicio</span></div>
-      <div style="display:flex;align-items:center;gap:5px"><div style="width:14px;height:10px;border-radius:2px;background:#93C5FD"></div><span style="font-size:13px;color:#475569;font-weight:600">En proceso</span></div>
-      <div style="display:flex;align-items:center;gap:5px"><div style="width:14px;height:10px;border-radius:2px;background:#1E4D9B"></div><span style="font-size:13px;color:#475569;font-weight:600">Satisfactorio Lectura</span></div>
-      <div style="display:flex;align-items:center;gap:5px"><div style="width:14px;height:10px;border-radius:2px;background:#0F7A5E"></div><span style="font-size:13px;color:#475569;font-weight:600">Satisfactorio Matemática</span></div>
-    </div>
-  </div>
-  <div class="s-ft"><span class="s-ft-t">Fuente: UMC 2025 – MINEDU · Evaluación Nacional 2.° Secundaria — Región Puno</span><div class="s-ft-n">—</div></div>
-</div>
-</section>
 
 
 <!-- ═══════════════════════════════════════════════
@@ -2611,7 +2582,7 @@ canvas { cursor: crosshair; }
   <div class="s-hd">
     <div class="s-hd-t">
       <h2>Concursos Nacionales e Internacionales 2026</h2>
-      <p>I Bimestre · IES Eduardo de Habich · UGEL San Román</p>
+      <p>I Bimestre · UGEL San Román</p>
     </div>
     <img class="s-hd-logo" src="/presentaci-n/img-logos/LOGO%20AZUL.png" alt="">
   </div>
@@ -2690,7 +2661,7 @@ canvas { cursor: crosshair; }
 
     </div>
   </div>
-  <div class="s-ft"><span class="s-ft-t">IES Eduardo de Habich · 132 Clasificados · Italia · Mongolia · Canadá · Brasil · Honduras · Lima 2026 · UGEL San Román</span><div class="s-ft-n">—</div></div>
+  <div class="s-ft"><span class="s-ft-t">132 Clasificados · Italia · Mongolia · Canadá · Brasil · Honduras · Lima 2026 · UGEL San Román</span><div class="s-ft-n">—</div></div>
 </div>
 </section>
 
@@ -2717,7 +2688,6 @@ canvas { cursor: crosshair; }
   <div class="s-hd">
     <div class="s-hd-t">
       <h2>Pago de la Deuda Social — UGEL San Román 2022–2026</h2>
-      <p>Responsable: CPC Benigno Pari Mamani · Dr. José Walter Cuba Pino</p>
     </div>
     <img class="s-hd-logo" src="/presentaci-n/img-logos/LOGO%20AZUL.png" alt="">
   </div>
@@ -2744,15 +2714,49 @@ canvas { cursor: crosshair; }
       </div>
     </div>
 
-    <!-- Charts -->
+    <!-- Área principal -->
     <div style="flex:1;min-height:0;display:flex;gap:10px">
 
-      <!-- Gráfico: Presupuesto Destinado vs Gasto Real -->
-      <div style="flex:1.3;background:#fff;border-radius:var(--r);border:1px solid var(--gbd);box-shadow:var(--sh);padding:12px 14px;display:flex;flex-direction:column;gap:6px">
-        <div style="font-size:11px;font-weight:700;letter-spacing:2px;color:#0B1D3A;border-bottom:2px solid #E2E8F0;padding-bottom:5px">PRESUPUESTO DESTINADO vs GASTO REAL · 2022–2025</div>
-        <div style="flex:1;min-height:0;position:relative">
-          <canvas id="presupuesto-chart"></canvas>
+      <!-- Izquierda: zona de toggle (gráfica ↔ fotos) + cards inferiores -->
+      <div style="flex:1.3;display:flex;flex-direction:column;gap:6px">
+
+        <!-- Zona toggle -->
+        <div style="flex:1;position:relative;border-radius:var(--r);overflow:hidden">
+
+          <!-- PANEL A: Gráfica (visible al inicio) -->
+          <div id="deuda-panel-chart" style="position:absolute;inset:0;opacity:1;transition:opacity 1.2s ease;background:#fff;border:1px solid var(--gbd);box-shadow:var(--sh);padding:12px 14px;display:flex;flex-direction:column;gap:6px;pointer-events:auto">
+            <div style="font-size:11px;font-weight:700;letter-spacing:2px;color:#0B1D3A;border-bottom:2px solid #E2E8F0;padding-bottom:5px;flex-shrink:0">PRESUPUESTO DESTINADO vs GASTO REAL · 2022–2025</div>
+            <div style="flex:1;min-height:0;position:relative">
+              <canvas id="presupuesto-chart"></canvas>
+            </div>
+            <!-- Barra de progreso 15s -->
+            <div style="position:absolute;bottom:0;left:0;right:0;height:4px;background:rgba(0,0,0,.07)">
+              <div id="deuda-progress" style="height:100%;width:100%;background:linear-gradient(90deg,#0F7A5E,#1A9E7A)"></div>
+            </div>
+          </div>
+
+          <!-- PANEL B: Carrusel de cheques (oculto al inicio) -->
+          <div id="deuda-panel-fotos" style="position:absolute;inset:0;opacity:0;transition:opacity 1.2s ease;background:#0B1D3A;pointer-events:none">
+            <div id="deuda-carousel" style="width:100%;height:100%;position:relative">
+              <div class="deuda-img" style="position:absolute;inset:0;opacity:1;z-index:2;transition:opacity .8s ease"><img src="/presentaci-n/cheques/482107677_939526585007003_8543363307536739729_n.jpg" style="width:100%;height:100%;object-fit:contain" alt="Pago deuda social"></div>
+              <div class="deuda-img" style="position:absolute;inset:0;opacity:0;z-index:1;transition:opacity .8s ease"><img src="/presentaci-n/cheques/481702213_939526711673657_4932729218751658062_n.jpg" style="width:100%;height:100%;object-fit:contain" alt="Pago deuda social"></div>
+              <div class="deuda-img" style="position:absolute;inset:0;opacity:0;z-index:1;transition:opacity .8s ease"><img src="/presentaci-n/cheques/482960848_939526551673673_3692585557772913683_n.jpg" style="width:100%;height:100%;object-fit:contain" alt="Pago deuda social"></div>
+              <div class="deuda-img" style="position:absolute;inset:0;opacity:0;z-index:1;transition:opacity .8s ease"><img src="/presentaci-n/cheques/482985713_939526688340326_2143886132701089182_n.jpg" style="width:100%;height:100%;object-fit:contain" alt="Pago deuda social"></div>
+              <div class="deuda-img" style="position:absolute;inset:0;opacity:0;z-index:1;transition:opacity .8s ease"><img src="/presentaci-n/cheques/482975845_939526445007017_5852799699851601532_n.jpg" style="width:100%;height:100%;object-fit:contain" alt="Pago deuda social"></div>
+              <div class="deuda-img" style="position:absolute;inset:0;opacity:0;z-index:1;transition:opacity .8s ease"><img src="/presentaci-n/cheques/482225831_939526721673656_1697538377394202493_n.jpg" style="width:100%;height:100%;object-fit:contain" alt="Pago deuda social"></div>
+              <div class="deuda-img" style="position:absolute;inset:0;opacity:0;z-index:1;transition:opacity .8s ease"><img src="/presentaci-n/cheques/482274214_939526691673659_3482910464507352021_n.jpg" style="width:100%;height:100%;object-fit:contain" alt="Pago deuda social"></div>
+              <div class="deuda-img" style="position:absolute;inset:0;opacity:0;z-index:1;transition:opacity .8s ease"><img src="/presentaci-n/cheques/482213542_939526645006997_4142435646338869506_n.jpg" style="width:100%;height:100%;object-fit:contain" alt="Pago deuda social"></div>
+              <div class="deuda-img" style="position:absolute;inset:0;opacity:0;z-index:1;transition:opacity .8s ease"><img src="/presentaci-n/cheques/481246923_939526438340351_2188334877747045708_n.jpg" style="width:100%;height:100%;object-fit:contain" alt="Pago deuda social"></div>
+              <button id="deuda-prev" style="position:absolute;left:8px;top:50%;transform:translateY(-50%);background:rgba(0,0,0,.5);border:1.5px solid rgba(255,255,255,.25);color:#fff;width:36px;height:36px;border-radius:50%;font-size:14px;cursor:pointer;z-index:20;display:flex;align-items:center;justify-content:center">&#9664;</button>
+              <button id="deuda-next" style="position:absolute;right:8px;top:50%;transform:translateY(-50%);background:rgba(0,0,0,.5);border:1.5px solid rgba(255,255,255,.25);color:#fff;width:36px;height:36px;border-radius:50%;font-size:14px;cursor:pointer;z-index:20;display:flex;align-items:center;justify-content:center">&#9654;</button>
+              <div id="deuda-ct" style="position:absolute;top:8px;right:10px;background:rgba(0,0,0,.45);color:rgba(255,255,255,.85);font-size:10px;font-weight:600;padding:3px 8px;border-radius:8px;z-index:20">1 / 9</div>
+              <button onclick="deudaVerGrafica()" style="position:absolute;top:8px;left:10px;background:rgba(11,29,58,.8);border:1px solid rgba(255,255,255,.2);color:rgba(255,255,255,.85);font-size:10px;font-weight:700;padding:4px 10px;border-radius:8px;cursor:pointer;z-index:20;letter-spacing:1px">📊 VER GRÁFICA</button>
+            </div>
+          </div>
+
         </div>
+
+        <!-- Cards inferiores (siempre visibles) -->
         <div style="display:flex;gap:6px;flex-shrink:0">
           <div style="flex:1;background:linear-gradient(135deg,#0B1D3A,#1E4D9B);border-radius:8px;padding:8px 14px">
             <div style="font-size:10px;font-weight:700;color:rgba(255,255,255,.6);letter-spacing:1px">TOTAL GASTADO 2022–2025</div>
@@ -2765,9 +2769,10 @@ canvas { cursor: crosshair; }
             <div style="font-size:10px;color:rgba(255,255,255,.5)">Diferencia vs presupuesto · 2022–2025</div>
           </div>
         </div>
+
       </div>
 
-      <!-- Panel resumen -->
+      <!-- Panel resumen derecho (siempre visible) -->
       <div style="flex:0 0 156px;display:flex;flex-direction:column;gap:8px">
         <div style="background:linear-gradient(135deg,#7A4A0A,#E8B824);border-radius:var(--r);padding:12px 14px;color:#fff;flex:1;display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden">
           <div style="position:absolute;top:0;left:0;right:0;height:4px;background:rgba(255,255,255,.35)"></div>
@@ -3230,7 +3235,6 @@ canvas { cursor: crosshair; }
   <div class="s-hd">
     <div class="s-hd-t">
       <h2>Adquisición de Bienes Muebles — 2022–2025</h2>
-      <p>Responsable: CPC Raymundo Benavente Calla · UGEL San Román · Gestión Administrativa</p>
     </div>
     <img class="s-hd-logo" src="/presentaci-n/img-logos/LOGO%20AZUL.png" alt="">
   </div>
@@ -3322,7 +3326,7 @@ canvas { cursor: crosshair; }
 </section>
 
 <!-- ═══════════════════════════════════════════════
-     SLIDE 2 — DETALLE GASTO POR AÑO
+     SLIDE 2 — DETALLE GASTO POR AÑO + CARRUSEL FOTOS
 ═══════════════════════════════════════════════ -->
 <section>
 <div class="slide slide-content">
@@ -3331,80 +3335,137 @@ canvas { cursor: crosshair; }
       <h2>Detalle de Bienes Adquiridos — 2022 al 2025</h2>
       <p>Principales ítems por año · Módulo de Logística SIGA · UGEL San Román</p>
     </div>
-    <img class="s-hd-logo" src="/presentaci-n/img-logos/LOGO%20AZUL.png" alt="">
+    <img class="s-hd-logo" src="/presentaci-n/img-logos/LOGO%20AZUL.png" alt="Logo UGEL San Román">
   </div>
   <div class="s-bd" style="gap:10px;padding:10px 22px 10px">
-    <div style="flex:1;min-height:0;display:flex;gap:10px">
+    <div style="flex:1;min-height:0;display:flex;gap:12px">
 
-      <!-- 2022 -->
-      <div style="flex:1;display:flex;flex-direction:column;gap:7px">
-        <div style="background:linear-gradient(135deg,var(--navy),var(--blue));border-radius:10px;padding:10px 14px;flex-shrink:0;box-shadow:0 4px 12px rgba(11,29,58,.25)">
-          <div style="font-size:12px;font-weight:700;letter-spacing:2px;color:rgba(255,255,255,.65)">GASTO ANUAL</div>
-          <div style="font-size:23px;font-weight:900;color:#fff;line-height:1.1">2022</div>
-          <div style="font-size:16px;font-weight:800;color:#EAC020;margin-top:2px">S/ 306,809.52</div>
+      <!-- Gastos por año (Izquierda - 30%) -->
+      <div style="flex:0 0 30%;display:flex;flex-direction:column;gap:7px">
+        <div style="font-size:11px;font-weight:700;letter-spacing:2px;color:var(--gm);flex-shrink:0;padding:0 4px">COMPRAS DESTACADAS</div>
+
+        <!-- 2022 -->
+        <div style="flex:1;background:linear-gradient(135deg,var(--navy),var(--blue));border-radius:10px;padding:10px 12px;box-shadow:0 2px 8px rgba(11,29,58,.25);display:flex;flex-direction:column;gap:6px">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;flex-shrink:0">
+            <div style="font-size:22px;font-weight:900;color:#fff;line-height:1">2022</div>
+            <div style="font-size:12px;font-weight:700;color:rgba(255,255,255,.6)">S/ 306,809</div>
+          </div>
+          <div style="border-top:1px solid rgba(255,255,255,.15);padding-top:6px;display:flex;flex-direction:column;gap:5px;flex:1;justify-content:space-evenly">
+            <div style="display:flex;justify-content:space-between;align-items:center;gap:6px">
+              <span style="font-size:11px;color:rgba(255,255,255,.9);line-height:1.3">Camioneta Minivan Toyota 4×2</span>
+              <span style="font-size:11px;font-weight:800;color:#EAC020;white-space:nowrap">S/ 180,990</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;align-items:center;gap:6px">
+              <span style="font-size:11px;color:rgba(255,255,255,.9);line-height:1.3">CPUs + Monitores LED 27"</span>
+              <span style="font-size:11px;font-weight:800;color:#EAC020;white-space:nowrap">S/ 37,700</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;align-items:center;gap:6px">
+              <span style="font-size:11px;color:rgba(255,255,255,.9);line-height:1.3">Tablets + Computadoras portátiles</span>
+              <span style="font-size:11px;font-weight:800;color:#EAC020;white-space:nowrap">S/ 18,200</span>
+            </div>
+          </div>
         </div>
-        <div style="flex:1;background:#F8FAFF;border:1px solid #C7D2FE;border-radius:10px;padding:12px 13px;display:flex;flex-direction:column;gap:5px;overflow:auto">
-          <div style="font-size:13px;font-weight:700;color:var(--blue);margin-bottom:2px">Principales bienes:</div>
-          <div style="font-size:13px;color:var(--navy);line-height:1.5">• Camioneta Toyota Minivan 4×2 — <strong>S/ 180,990</strong></div>
-          <div style="font-size:13px;color:var(--navy);line-height:1.5">• CPU + Monitores LED 27"</div>
-          <div style="font-size:13px;color:var(--navy);line-height:1.5">• Tablets / Computadoras portátiles</div>
-          <div style="font-size:13px;color:var(--navy);line-height:1.5">• Proyector + Pantalla Video Wall</div>
-          <div style="font-size:13px;color:var(--navy);line-height:1.5">• Mezclador de sonido, micrófonos, amplificadores</div>
-          <div style="font-size:13px;color:var(--navy);line-height:1.5">• Mobiliario infantil (cunas, sillas, mesas)</div>
+
+        <!-- 2023 -->
+        <div style="flex:1;background:linear-gradient(135deg,#0A5030,#0F7A5E);border-radius:10px;padding:10px 12px;box-shadow:0 2px 8px rgba(10,80,48,.25);display:flex;flex-direction:column;gap:6px">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;flex-shrink:0">
+            <div style="font-size:22px;font-weight:900;color:#fff;line-height:1">2023</div>
+            <div style="font-size:12px;font-weight:700;color:rgba(255,255,255,.6)">S/ 85,282</div>
+          </div>
+          <div style="border-top:1px solid rgba(255,255,255,.15);padding-top:6px;display:flex;flex-direction:column;gap:5px;flex:1;justify-content:space-evenly">
+            <div style="display:flex;justify-content:space-between;align-items:center;gap:6px">
+              <span style="font-size:11px;color:rgba(255,255,255,.9);line-height:1.3">Cámara fotográfica + trípode + gimbal</span>
+              <span style="font-size:11px;font-weight:800;color:#4ADE80;white-space:nowrap">S/ 14,800</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;align-items:center;gap:6px">
+              <span style="font-size:11px;color:rgba(255,255,255,.9);line-height:1.3">Copiadora multifuncional FAX/Scanner</span>
+              <span style="font-size:11px;font-weight:800;color:#4ADE80;white-space:nowrap">S/ 12,500</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;align-items:center;gap:6px">
+              <span style="font-size:11px;color:rgba(255,255,255,.9);line-height:1.3">Computadora portátil + Audífonos</span>
+              <span style="font-size:11px;font-weight:800;color:#4ADE80;white-space:nowrap">S/ 9,800</span>
+            </div>
+          </div>
         </div>
+
+        <!-- 2024 -->
+        <div style="flex:1;background:linear-gradient(135deg,#D4A017,#7A5012);border-radius:10px;padding:10px 12px;box-shadow:0 2px 8px rgba(122,80,18,.25);display:flex;flex-direction:column;gap:6px">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;flex-shrink:0">
+            <div style="font-size:22px;font-weight:900;color:#fff;line-height:1">2024</div>
+            <div style="font-size:12px;font-weight:700;color:rgba(255,255,255,.6)">S/ 431,076</div>
+          </div>
+          <div style="border-top:1px solid rgba(255,255,255,.15);padding-top:6px;display:flex;flex-direction:column;gap:5px;flex:1;justify-content:space-evenly">
+            <div style="display:flex;justify-content:space-between;align-items:center;gap:6px">
+              <span style="font-size:11px;color:rgba(255,255,255,.9);line-height:1.3">26 Televisores Smart 75" Hisense</span>
+              <span style="font-size:11px;font-weight:800;color:#FEF3C7;white-space:nowrap">S/ 77,000</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;align-items:center;gap:6px">
+              <span style="font-size:11px;color:rgba(255,255,255,.9);line-height:1.3">Pantalla LED Kinglight 4×3m</span>
+              <span style="font-size:11px;font-weight:800;color:#FEF3C7;white-space:nowrap">S/ 59,500</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;align-items:center;gap:6px">
+              <span style="font-size:11px;color:rgba(255,255,255,.9);line-height:1.3">Refrigeradoras + Estantes de metal</span>
+              <span style="font-size:11px;font-weight:800;color:#FEF3C7;white-space:nowrap">S/ 24,800</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2025 -->
+        <div style="flex:1;background:linear-gradient(135deg,#7C3AED,#A855F7);border-radius:10px;padding:10px 12px;box-shadow:0 2px 8px rgba(124,58,237,.25);display:flex;flex-direction:column;gap:6px">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;flex-shrink:0">
+            <div style="font-size:22px;font-weight:900;color:#fff;line-height:1">2025</div>
+            <div style="font-size:12px;font-weight:700;color:rgba(255,255,255,.6)">S/ 177,491</div>
+          </div>
+          <div style="border-top:1px solid rgba(255,255,255,.15);padding-top:6px;display:flex;flex-direction:column;gap:5px;flex:1;justify-content:space-evenly">
+            <div style="display:flex;justify-content:space-between;align-items:center;gap:6px">
+              <span style="font-size:11px;color:rgba(255,255,255,.9);line-height:1.3">Impresora láser + Copiadora multifuncional</span>
+              <span style="font-size:11px;font-weight:800;color:#E9D5FF;white-space:nowrap">S/ 28,400</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;align-items:center;gap:6px">
+              <span style="font-size:11px;color:rgba(255,255,255,.9);line-height:1.3">Escritorios de melamina + Sillas</span>
+              <span style="font-size:11px;font-weight:800;color:#E9D5FF;white-space:nowrap">S/ 18,900</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;align-items:center;gap:6px">
+              <span style="font-size:11px;color:rgba(255,255,255,.9);line-height:1.3">Escáner 3D + Monitor LED 27" + CPU</span>
+              <span style="font-size:11px;font-weight:800;color:#E9D5FF;white-space:nowrap">S/ 12,400</span>
+            </div>
+          </div>
+        </div>
+
       </div>
 
-      <!-- 2023 -->
-      <div style="flex:1;display:flex;flex-direction:column;gap:7px">
-        <div style="background:linear-gradient(135deg,#0A5030,#0F7A5E);border-radius:10px;padding:10px 14px;flex-shrink:0;box-shadow:0 4px 12px rgba(10,80,48,.25)">
-          <div style="font-size:12px;font-weight:700;letter-spacing:2px;color:rgba(255,255,255,.65)">GASTO ANUAL</div>
-          <div style="font-size:23px;font-weight:900;color:#fff;line-height:1.1">2023</div>
-          <div style="font-size:16px;font-weight:800;color:#4ADE80;margin-top:2px">S/ 85,282.17</div>
-        </div>
-        <div style="flex:1;background:#F0FBF6;border:1px solid #A7F3D0;border-radius:10px;padding:12px 13px;display:flex;flex-direction:column;gap:5px;overflow:auto">
-          <div style="font-size:13px;font-weight:700;color:#0A5030;margin-bottom:2px">Principales bienes:</div>
-          <div style="font-size:13px;color:var(--navy);line-height:1.5">• Computadora personal portátil</div>
-          <div style="font-size:13px;color:var(--navy);line-height:1.5">• Cámara fotográfica + trípode + gimbal</div>
-          <div style="font-size:13px;color:var(--navy);line-height:1.5">• Transmisor/receptor HDMI</div>
-          <div style="font-size:13px;color:var(--navy);line-height:1.5">• Audífonos profesionales</div>
-          <div style="font-size:13px;color:var(--navy);line-height:1.5">• Copiadora multifuncional FAX/Scanner</div>
-          <div style="font-size:13px;color:var(--navy);line-height:1.5">• Mobiliario: escritorios, sillones, cunas</div>
-        </div>
-      </div>
-
-      <!-- 2024 -->
-      <div style="flex:1;display:flex;flex-direction:column;gap:7px">
-        <div style="background:linear-gradient(135deg,#D4A017,#7A5012);border-radius:10px;padding:10px 14px;flex-shrink:0;box-shadow:0 4px 12px rgba(122,80,18,.25)">
-          <div style="font-size:12px;font-weight:700;letter-spacing:2px;color:rgba(255,255,255,.65)">GASTO ANUAL</div>
-          <div style="font-size:23px;font-weight:900;color:#fff;line-height:1.1">2024</div>
-          <div style="font-size:16px;font-weight:800;color:#FEF3C7;margin-top:2px">S/ 431,075.90</div>
-        </div>
-        <div style="flex:1;background:#FFFBEB;border:1px solid #FDE68A;border-radius:10px;padding:12px 13px;display:flex;flex-direction:column;gap:5px;overflow:auto">
-          <div style="font-size:13px;font-weight:700;color:#7A5012;margin-bottom:2px">Principales bienes:</div>
-          <div style="font-size:13px;color:var(--navy);line-height:1.5">• 26 Televisores Smart 75" Hisense — <strong>S/ 77,000</strong></div>
-          <div style="font-size:13px;color:var(--navy);line-height:1.5">• Pantalla LED Kinglight 4×3m — <strong>S/ 59,500</strong></div>
-          <div style="font-size:13px;color:var(--navy);line-height:1.5">• Estantes de metal (múltiples medidas)</div>
-          <div style="font-size:13px;color:var(--navy);line-height:1.5">• CPU + Monitores LED 27"</div>
-          <div style="font-size:13px;color:var(--navy);line-height:1.5">• Refrigeradoras domésticas 294L</div>
-          <div style="font-size:13px;color:var(--navy);line-height:1.5">• Equipos de audio, cámaras, trípodes</div>
-        </div>
-      </div>
-
-      <!-- 2025 -->
-      <div style="flex:1;display:flex;flex-direction:column;gap:7px">
-        <div style="background:linear-gradient(135deg,#7C3AED,#A855F7);border-radius:10px;padding:10px 14px;flex-shrink:0;box-shadow:0 4px 12px rgba(124,58,237,.25)">
-          <div style="font-size:12px;font-weight:700;letter-spacing:2px;color:rgba(255,255,255,.65)">GASTO ANUAL</div>
-          <div style="font-size:23px;font-weight:900;color:#fff;line-height:1.1">2025</div>
-          <div style="font-size:16px;font-weight:800;color:#E9D5FF;margin-top:2px">S/ 177,491.00</div>
-        </div>
-        <div style="flex:1;background:#F5F3FF;border:1px solid #DDD6FE;border-radius:10px;padding:12px 13px;display:flex;flex-direction:column;gap:5px;overflow:auto">
-          <div style="font-size:13px;font-weight:700;color:#7C3AED;margin-bottom:2px">Principales bienes:</div>
-          <div style="font-size:13px;color:var(--navy);line-height:1.5">• Impresora láser</div>
-          <div style="font-size:13px;color:var(--navy);line-height:1.5">• Escritorios de melamina (varios)</div>
-          <div style="font-size:13px;color:var(--navy);line-height:1.5">• Copiadora multifuncional FAX/Scanner</div>
-          <div style="font-size:13px;color:var(--navy);line-height:1.5">• Sillas giratorias de metal</div>
-          <div style="font-size:13px;color:var(--navy);line-height:1.5">• Escáner 3D de escritorio</div>
-          <div style="font-size:13px;color:var(--navy);line-height:1.5">• Monitor LED 27" · CPU</div>
+      <!-- Carrusel de Compras UGEL (Derecha - 70%) -->
+      <div style="flex:1;min-height:0;display:flex;position:relative;border-radius:12px;overflow:hidden;background:#0B1D3A;box-shadow:0 6px 24px rgba(13,27,75,.4)">
+        <div id="compras-carousel" style="width:100%;height:100%;position:relative;min-height:300px">
+          <div style="position:absolute;top:0;left:0;right:0;bottom:0;opacity:1;z-index:2;transition:opacity 0.8s ease" class="compras-img"><img src="/presentaci-n/compras-ugel/carro.jpg" alt="Compras UGEL" style="width:100%;height:100%;object-fit:cover"></div>
+          <div style="position:absolute;top:0;left:0;right:0;bottom:0;opacity:0;z-index:1;transition:opacity 0.8s ease" class="compras-img"><img src="/presentaci-n/compras-ugel/tv.jpg" alt="Compras UGEL" style="width:100%;height:100%;object-fit:cover"></div>
+          <div style="position:absolute;top:0;left:0;right:0;bottom:0;opacity:0;z-index:1;transition:opacity 0.8s ease" class="compras-img"><img src="/presentaci-n/compras-ugel/tvss.jpg" alt="Compras UGEL" style="width:100%;height:100%;object-fit:cover"></div>
+          <div style="position:absolute;top:0;left:0;right:0;bottom:0;opacity:0;z-index:1;transition:opacity 0.8s ease" class="compras-img"><img src="/presentaci-n/compras-ugel/tvsss.jpg" alt="Compras UGEL" style="width:100%;height:100%;object-fit:cover"></div>
+          <div style="position:absolute;top:0;left:0;right:0;bottom:0;opacity:0;z-index:1;transition:opacity 0.8s ease" class="compras-img"><img src="/presentaci-n/compras-ugel/471121015_885557477070581_7827264777621958103_n.jpg" alt="Compras UGEL" style="width:100%;height:100%;object-fit:cover"></div>
+          <div style="position:absolute;top:0;left:0;right:0;bottom:0;opacity:0;z-index:1;transition:opacity 0.8s ease" class="compras-img"><img src="/presentaci-n/compras-ugel/470865238_885557530403909_4532233622253151188_n.jpg" alt="Compras UGEL" style="width:100%;height:100%;object-fit:cover"></div>
+          <div style="position:absolute;top:0;left:0;right:0;bottom:0;opacity:0;z-index:1;transition:opacity 0.8s ease" class="compras-img"><img src="/presentaci-n/compras-ugel/471872463_892023813090614_653957545240664173_n (1).jpg" alt="Compras UGEL" style="width:100%;height:100%;object-fit:cover"></div>
+          <div style="position:absolute;top:0;left:0;right:0;bottom:0;opacity:0;z-index:1;transition:opacity 0.8s ease" class="compras-img"><img src="/presentaci-n/compras-ugel/471951304_892023829757279_4238279704098999414_n.jpg" alt="Compras UGEL" style="width:100%;height:100%;object-fit:cover"></div>
+          <div style="position:absolute;top:0;left:0;right:0;bottom:0;opacity:0;z-index:1;transition:opacity 0.8s ease" class="compras-img"><img src="/presentaci-n/compras-ugel/472037610_892023866423942_5549162968731157324_n.jpg" alt="Compras UGEL" style="width:100%;height:100%;object-fit:cover"></div>
+          <div style="position:absolute;top:0;left:0;right:0;bottom:0;opacity:0;z-index:1;transition:opacity 0.8s ease" class="compras-img"><img src="/presentaci-n/compras-ugel/471951509_892023889757273_321951822214115419_n.jpg" alt="Compras UGEL" style="width:100%;height:100%;object-fit:cover"></div>
+          <div style="position:absolute;top:0;left:0;right:0;bottom:0;opacity:0;z-index:1;transition:opacity 0.8s ease" class="compras-img"><img src="/presentaci-n/compras-ugel/472048452_892023926423936_8542835009114920235_n.jpg" alt="Compras UGEL" style="width:100%;height:100%;object-fit:cover"></div>
+          <div style="position:absolute;top:0;left:0;right:0;bottom:0;opacity:0;z-index:1;transition:opacity 0.8s ease" class="compras-img"><img src="/presentaci-n/compras-ugel/471811652_892023933090602_5817799122811790112_n.jpg" alt="Compras UGEL" style="width:100%;height:100%;object-fit:cover"></div>
+          <div style="position:absolute;top:0;left:0;right:0;bottom:0;opacity:0;z-index:1;transition:opacity 0.8s ease" class="compras-img"><img src="/presentaci-n/compras-ugel/482192502_939533718339623_7223505990408506209_n.jpg" alt="Compras UGEL" style="width:100%;height:100%;object-fit:cover"></div>
+          <div style="position:absolute;top:0;left:0;right:0;bottom:0;opacity:0;z-index:1;transition:opacity 0.8s ease" class="compras-img"><img src="/presentaci-n/compras-ugel/471862696_892023999757262_2088954322712435924_n.jpg" alt="Compras UGEL" style="width:100%;height:100%;object-fit:cover"></div>
+          <div style="position:absolute;top:0;left:0;right:0;bottom:0;opacity:0;z-index:1;transition:opacity 0.8s ease" class="compras-img"><img src="/presentaci-n/compras-ugel/472092631_892024003090595_6434295300656077247_n.jpg" alt="Compras UGEL" style="width:100%;height:100%;object-fit:cover"></div>
+          <div style="position:absolute;top:0;left:0;right:0;bottom:0;opacity:0;z-index:1;transition:opacity 0.8s ease" class="compras-img"><img src="/presentaci-n/compras-ugel/472113361_892024016423927_825844083067394193_n.jpg" alt="Compras UGEL" style="width:100%;height:100%;object-fit:cover"></div>
+          <div style="position:absolute;top:0;left:0;right:0;bottom:0;opacity:0;z-index:1;transition:opacity 0.8s ease" class="compras-img"><img src="/presentaci-n/compras-ugel/471857293_892024023090593_8414358188422427461_n.jpg" alt="Compras UGEL" style="width:100%;height:100%;object-fit:cover"></div>
+          <div style="position:absolute;top:0;left:0;right:0;bottom:0;opacity:0;z-index:1;transition:opacity 0.8s ease" class="compras-img"><img src="/presentaci-n/compras-ugel/482088836_939533918339603_3130843058430204031_n.jpg" alt="Compras UGEL" style="width:100%;height:100%;object-fit:cover"></div>
+          <div style="position:absolute;top:0;left:0;right:0;bottom:0;opacity:0;z-index:1;transition:opacity 0.8s ease" class="compras-img"><img src="/presentaci-n/compras-ugel/471998319_892024136423915_6786412663887921145_n.jpg" alt="Compras UGEL" style="width:100%;height:100%;object-fit:cover"></div>
+          <div style="position:absolute;top:0;left:0;right:0;bottom:0;opacity:0;z-index:1;transition:opacity 0.8s ease" class="compras-img"><img src="/presentaci-n/compras-ugel/482079227_939533955006266_4078024588679245423_n.jpg" alt="Compras UGEL" style="width:100%;height:100%;object-fit:cover"></div>
+          <div style="position:absolute;top:0;left:0;right:0;bottom:0;opacity:0;z-index:1;transition:opacity 0.8s ease" class="compras-img"><img src="/presentaci-n/compras-ugel/482214151_937853625174299_9071505565748096897_n.jpg" alt="Compras UGEL" style="width:100%;height:100%;object-fit:cover"></div>
+          <div style="position:absolute;top:0;left:0;right:0;bottom:0;opacity:0;z-index:1;transition:opacity 0.8s ease" class="compras-img"><img src="/presentaci-n/compras-ugel/482064405_939527751673553_5183070391963589322_n.jpg" alt="Compras UGEL" style="width:100%;height:100%;object-fit:cover"></div>
+          <div style="position:absolute;top:0;left:0;right:0;bottom:0;opacity:0;z-index:1;transition:opacity 0.8s ease" class="compras-img"><img src="/presentaci-n/compras-ugel/482051109_939527785006883_9199981902087561443_n.jpg" alt="Compras UGEL" style="width:100%;height:100%;object-fit:cover"></div>
+          <div style="position:absolute;top:0;left:0;right:0;bottom:0;opacity:0;z-index:1;transition:opacity 0.8s ease" class="compras-img"><img src="/presentaci-n/compras-ugel/484073671_939527551673573_8378750208305395760_n.jpg" alt="Compras UGEL" style="width:100%;height:100%;object-fit:cover"></div>
+          <div style="position:absolute;top:0;left:0;right:0;bottom:0;opacity:0;z-index:1;transition:opacity 0.8s ease" class="compras-img"><img src="/presentaci-n/compras-ugel/482122938_939527468340248_1944703029314178768_n.jpg" alt="Compras UGEL" style="width:100%;height:100%;object-fit:cover"></div>
+          <div style="position:absolute;top:0;left:0;right:0;bottom:0;opacity:0;z-index:1;transition:opacity 0.8s ease" class="compras-img"><img src="/presentaci-n/compras-ugel/482191498_939527475006914_235082794829772980_n.jpg" alt="Compras UGEL" style="width:100%;height:100%;object-fit:cover"></div>
+          <button id="compras-p" style="position:absolute;left:8px;top:50%;transform:translateY(-50%);background:rgba(0,0,0,.5);border:1.5px solid rgba(255,255,255,.25);color:#fff;width:36px;height:36px;border-radius:50%;font-size:14px;cursor:pointer;z-index:20;display:flex;align-items:center;justify-content:center">&#9664;</button>
+          <button id="compras-n" style="position:absolute;right:8px;top:50%;transform:translateY(-50%);background:rgba(0,0,0,.5);border:1.5px solid rgba(255,255,255,.25);color:#fff;width:36px;height:36px;border-radius:50%;font-size:14px;cursor:pointer;z-index:20;display:flex;align-items:center;justify-content:center">&#9654;</button>
+          <div id="compras-ct" style="position:absolute;top:8px;right:10px;background:rgba(0,0,0,.45);color:rgba(255,255,255,.85);font-size:10px;font-weight:600;padding:3px 8px;border-radius:8px;z-index:20">1 / 26</div>
         </div>
       </div>
 
@@ -3768,6 +3829,25 @@ function initEnlaCharts() {
   ];
   const levels = ['Previo al inicio', 'En inicio', 'En proceso', 'Satisfactorio'];
   const baseColors = ['#CBD5E1', '#FCA5A5', '#93C5FD', null];
+  const highlight2025 = {
+    id: 'highlight2025',
+    beforeDraw(chart) {
+      const idx = chart.data.labels.indexOf('2025');
+      if (idx < 0) return;
+      const meta = chart.getDatasetMeta(0);
+      if (!meta.data[idx]) return;
+      const bar = meta.data[idx];
+      const yAxis = chart.scales.y;
+      const hw = bar.width / 2 + 6;
+      chart.ctx.save();
+      chart.ctx.fillStyle = 'rgba(255, 215, 0, 0.10)';
+      chart.ctx.beginPath();
+      chart.ctx.roundRect(bar.x - hw, yAxis.top - 4, hw * 2, yAxis.bottom - yAxis.top + 8, 6);
+      chart.ctx.fill();
+      chart.ctx.restore();
+    }
+  };
+
   const mkCfg = (data, satColor) => ({
     type: 'bar',
     data: {
@@ -3780,23 +3860,53 @@ function initEnlaCharts() {
         borderSkipped: false
       }))
     },
+    plugins: [highlight2025],
     options: {
       responsive: true, maintainAspectRatio: false,
       plugins: {
         legend: {display: false},
-        tooltip: {callbacks: {label: ctx => ` ${ctx.dataset.label}: ${ctx.raw}%`}}
+        tooltip: {callbacks: {label: ctx => ` ${ctx.dataset.label}: ${ctx.raw}%`}},
+        datalabels: {
+          clip: false,
+          display: ctx => ctx.dataset.data[ctx.dataIndex] >= 5,
+          color: ctx => {
+            if (ctx.datasetIndex === 3) return '#fff';
+            if (ctx.dataIndex === 3 && ctx.datasetIndex === 2) return '#1E3A8A';
+            return '#1E293B';
+          },
+          font: ctx => {
+            const is2025 = ctx.dataIndex === 3;
+            const isSatisf = ctx.datasetIndex === 3;
+            const isEnProceso = ctx.datasetIndex === 2;
+            if (is2025 && isSatisf)    return { size: 17, weight: '900' };
+            if (is2025 && isEnProceso) return { size: 15, weight: '900' };
+            if (is2025)                return { size: 13, weight: '800' };
+            return { size: 11, weight: '700' };
+          },
+          formatter: v => v.toFixed(1) + '%',
+          anchor: 'center',
+          align: 'center',
+          backgroundColor: ctx => (ctx.dataIndex === 3 && ctx.datasetIndex === 3) ? 'rgba(255,255,255,0.25)' : null,
+          borderRadius: 4,
+          padding: ctx => (ctx.dataIndex === 3 && ctx.datasetIndex === 3) ? { top:4, bottom:4, left:6, right:6 } : 2,
+          textStrokeColor: ctx => (ctx.dataIndex === 3 && ctx.datasetIndex === 2) ? 'rgba(255,255,255,0.8)' : 'transparent',
+          textStrokeWidth: 3
+        }
       },
       scales: {
         x: {stacked: true, grid: {display: false},
-            ticks: {font: {weight: '700', size: 12}, color: '#1E293B'}},
+            ticks: {
+              font: ctx => ({ weight: '800', size: ctx.tick.label === '2025' ? 15 : 12 }),
+              color: ctx => ctx.tick.label === '2025' ? '#D4A017' : '#1E293B'
+            }},
         y: {stacked: true, max: 100, border: {dash: [4,4]},
             ticks: {callback: v => v + '%', font: {size: 9}, color: '#94A3B8'},
             grid: {color: '#F1F5F9'}}
       }
     }
   });
-  new Chart(lecCtx, mkCfg(lectData, '#1A3F77'));
-  new Chart(matCtx, mkCfg(matData, '#165F4F'));
+  new Chart(lecCtx, mkCfg(lectData, '#16A34A'));
+  new Chart(matCtx, mkCfg(matData, '#16A34A'));
 }
 
 /* ── Chart.js: ENLA 2025 Detalle (donuts) ── */
@@ -4911,6 +5021,158 @@ Reveal.on('ready', e => {
     if (img.matches(skip)) return;
     attach(img);
   });
+})();
+</script>
+
+<script>
+/* ── DEUDA SOCIAL: gráfica 15s → carrusel de cheques ── */
+(function() {
+  let deudaIdx = 0, deudaTimer = null, deudaAutoplay = null;
+
+  function deudaUpdate() {
+    const imgs = document.querySelectorAll('.deuda-img');
+    const ct = document.getElementById('deuda-ct');
+    imgs.forEach((el, i) => { el.style.opacity = i === deudaIdx ? '1' : '0'; el.style.zIndex = i === deudaIdx ? '2' : '1'; });
+    if (ct) ct.textContent = (deudaIdx + 1) + ' / ' + imgs.length;
+  }
+  function deudaNext() { deudaIdx = (deudaIdx + 1) % document.querySelectorAll('.deuda-img').length; deudaUpdate(); }
+  function deudaPrev() { const n = document.querySelectorAll('.deuda-img').length; deudaIdx = (deudaIdx - 1 + n) % n; deudaUpdate(); }
+  function resetAutoplay() { clearInterval(deudaAutoplay); deudaAutoplay = setInterval(deudaNext, 3500); }
+
+  function deudaMostrarFotos() {
+    const chart = document.getElementById('deuda-panel-chart');
+    const fotos = document.getElementById('deuda-panel-fotos');
+    if (!chart || !fotos) return;
+    chart.style.opacity = '0'; chart.style.pointerEvents = 'none';
+    fotos.style.opacity = '1'; fotos.style.pointerEvents = 'auto';
+    deudaIdx = 0; deudaUpdate(); resetAutoplay();
+  }
+
+  window.deudaVerGrafica = function() {
+    const chart = document.getElementById('deuda-panel-chart');
+    const fotos = document.getElementById('deuda-panel-fotos');
+    if (!chart || !fotos) return;
+    fotos.style.opacity = '0'; fotos.style.pointerEvents = 'none';
+    chart.style.opacity = '1'; chart.style.pointerEvents = 'auto';
+    clearInterval(deudaAutoplay);
+    deudaIniciarTimer();
+  };
+
+  function deudaIniciarTimer() {
+    clearTimeout(deudaTimer);
+    const bar = document.getElementById('deuda-progress');
+    if (bar) {
+      bar.style.transition = 'none'; bar.style.width = '100%';
+      requestAnimationFrame(() => requestAnimationFrame(() => {
+        bar.style.transition = 'width 15s linear'; bar.style.width = '0%';
+      }));
+    }
+    deudaTimer = setTimeout(deudaMostrarFotos, 15000);
+  }
+
+  function deudaReset() {
+    clearTimeout(deudaTimer); clearInterval(deudaAutoplay);
+    const chart = document.getElementById('deuda-panel-chart');
+    const fotos = document.getElementById('deuda-panel-fotos');
+    if (chart) { chart.style.opacity = '1'; chart.style.pointerEvents = 'auto'; }
+    if (fotos) { fotos.style.opacity = '0'; fotos.style.pointerEvents = 'none'; }
+    deudaIdx = 0; deudaUpdate();
+    deudaIniciarTimer();
+  }
+
+  function deudaSetupReveal() {
+    if (typeof Reveal === 'undefined') { setTimeout(deudaSetupReveal, 100); return; }
+
+    Reveal.on('slidechanged', function(e) {
+      if (e.currentSlide && e.currentSlide.querySelector('#deuda-panel-chart')) {
+        deudaReset();
+      } else {
+        clearTimeout(deudaTimer); clearInterval(deudaAutoplay);
+      }
+    });
+
+    /* Si el slide ya es el activo al cargar */
+    function checkCurrent() {
+      if (!Reveal.isReady()) { setTimeout(checkCurrent, 100); return; }
+      const cur = Reveal.getCurrentSlide();
+      if (cur && cur.querySelector('#deuda-panel-chart')) deudaReset();
+    }
+    checkCurrent();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', function() {
+      const prev = document.getElementById('deuda-prev');
+      const next = document.getElementById('deuda-next');
+      if (prev) prev.addEventListener('click', function() { deudaPrev(); resetAutoplay(); });
+      if (next) next.addEventListener('click', function() { deudaNext(); resetAutoplay(); });
+      deudaUpdate();
+      deudaSetupReveal();
+    });
+  } else {
+    const prev = document.getElementById('deuda-prev');
+    const next = document.getElementById('deuda-next');
+    if (prev) prev.addEventListener('click', function() { deudaPrev(); resetAutoplay(); });
+    if (next) next.addEventListener('click', function() { deudaNext(); resetAutoplay(); });
+    deudaUpdate();
+    deudaSetupReveal();
+  }
+})();
+
+/* ── SANEAMIENTO: carrusel ── */
+(function() {
+  let sancIdx = 0, sancAuto = null;
+  function sancUpdate() {
+    const imgs = document.querySelectorAll('.sanc-s');
+    const ct = document.getElementById('sanc-ct');
+    imgs.forEach((el,i) => { el.style.opacity = i===sancIdx?'1':'0'; el.style.zIndex = i===sancIdx?'2':'1'; });
+    if (ct) ct.textContent = (sancIdx+1) + ' / ' + imgs.length;
+  }
+  function sancNext() { sancIdx = (sancIdx+1) % document.querySelectorAll('.sanc-s').length; sancUpdate(); }
+  function sancPrev() { const n=document.querySelectorAll('.sanc-s').length; sancIdx=(sancIdx-1+n)%n; sancUpdate(); }
+  function sancReset() { clearInterval(sancAuto); sancAuto=setInterval(sancNext,3500); }
+  function initSanc() {
+    const p=document.getElementById('sanc-p'), n=document.getElementById('sanc-n');
+    if (p) p.addEventListener('click', function(){ sancPrev(); sancReset(); });
+    if (n) n.addEventListener('click', function(){ sancNext(); sancReset(); });
+    sancUpdate(); sancReset();
+  }
+  if (document.readyState==='loading') document.addEventListener('DOMContentLoaded', initSanc);
+  else initSanc();
+})();
+
+(function() {
+  function initComprasCarousel() {
+    const carousel = document.getElementById('compras-carousel');
+    if (!carousel) return;
+    const images = carousel.querySelectorAll('.compras-img');
+    const counter = document.getElementById('compras-ct');
+    const prevBtn = document.getElementById('compras-p');
+    const nextBtn = document.getElementById('compras-n');
+    let currentIndex = 0;
+    let autoplayInterval;
+
+    function updateCarousel() {
+      images.forEach((img, i) => { img.style.opacity = i === currentIndex ? '1' : '0'; img.style.zIndex = i === currentIndex ? '2' : '1'; });
+      counter.textContent = (currentIndex + 1) + ' / ' + images.length;
+    }
+    function nextImage() { currentIndex = (currentIndex + 1) % images.length; updateCarousel(); }
+    function prevImage() { currentIndex = (currentIndex - 1 + images.length) % images.length; updateCarousel(); }
+    function startAutoplay() { autoplayInterval = setInterval(nextImage, 3000); }
+    function resetAutoplay() { clearInterval(autoplayInterval); startAutoplay(); }
+
+    prevBtn.addEventListener('click', function() { prevImage(); resetAutoplay(); });
+    nextBtn.addEventListener('click', function() { nextImage(); resetAutoplay(); });
+
+    updateCarousel();
+    startAutoplay();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initComprasCarousel);
+  } else {
+    initComprasCarousel();
+  }
 })();
 </script>
 

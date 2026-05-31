@@ -48,6 +48,45 @@ const server = http.createServer((req, res) => {
     }
   }
 
+  /* ── Saneamiento /saneamiento/ ── */
+  if (req.url.startsWith("/saneamiento/")) {
+    const name = decodeURIComponent(req.url.slice("/saneamiento/".length).split('?')[0].split('#')[0]);
+    const dir  = path.join(ROOT, "saneamiento");
+    const file = path.join(dir, name);
+    if (!file.startsWith(dir)) { res.writeHead(403); return res.end(); }
+    if (!fs.existsSync(file)) { res.writeHead(404); return res.end(); }
+    const ext = path.extname(name).toLowerCase();
+    const ct  = { '.png':'image/png', '.jpg':'image/jpeg', '.jpeg':'image/jpeg' };
+    res.writeHead(200, { "Content-Type": ct[ext] || "application/octet-stream" });
+    return fs.createReadStream(file).pipe(res);
+  }
+
+  /* ── Cheques deuda social /cheques/ ── */
+  if (req.url.startsWith("/cheques/")) {
+    const name = decodeURIComponent(req.url.slice("/cheques/".length).split('?')[0].split('#')[0]);
+    const dir  = path.join(ROOT, "cheques");
+    const file = path.join(dir, name);
+    if (!file.startsWith(dir)) { res.writeHead(403); return res.end(); }
+    if (!fs.existsSync(file)) { res.writeHead(404); return res.end(); }
+    const ext = path.extname(name).toLowerCase();
+    const ct  = { '.png':'image/png', '.jpg':'image/jpeg', '.jpeg':'image/jpeg' };
+    res.writeHead(200, { "Content-Type": ct[ext] || "application/octet-stream" });
+    return fs.createReadStream(file).pipe(res);
+  }
+
+  /* ── Compras UGEL /compras-ugel/ ── */
+  if (req.url.startsWith("/compras-ugel/")) {
+    const name = decodeURIComponent(req.url.slice("/compras-ugel/".length).split('?')[0].split('#')[0]);
+    const dir  = path.join(ROOT, "compras-ugel");
+    const file = path.join(dir, name);
+    if (!file.startsWith(dir)) { res.writeHead(403); return res.end(); }
+    if (!fs.existsSync(file)) { res.writeHead(404); return res.end(); }
+    const ext = path.extname(name).toLowerCase();
+    const ct  = { '.png':'image/png', '.jpg':'image/jpeg', '.jpeg':'image/jpeg' };
+    res.writeHead(200, { "Content-Type": ct[ext] || "application/octet-stream" });
+    return fs.createReadStream(file).pipe(res);
+  }
+
   /* ── CEPRE UNI /cepre-uni/ ── */
   if (req.url.startsWith("/cepre-uni/")) {
     const name = decodeURIComponent(req.url.slice("/cepre-uni/".length).split('?')[0].split('#')[0]);
